@@ -1,0 +1,35 @@
+{
+  "reference": "GATE 2026 official pattern",
+  "exam": "GATE_EE",
+  "total_questions": 65,
+  "total_marks": 100,
+  "duration_minutes": 180,
+  "sections": {
+    "General Aptitude": {
+      "questions": 10,
+      "marks": 15
+    },
+    "Engineering Mathematics": {
+      "marks": 13
+    },
+    "Electrical Engineering": {
+      "marks": 72
+    }
+  },
+  "question_types": [
+    "MCQ",
+    "MSQ",
+    "NAT"
+  ],
+  "question_marks": [
+    1,
+    2
+  ],
+  "mcq_negative_marking": {
+    "1_mark": -0.3333333333333333,
+    "2_mark": -0.6666666666666666
+  },
+  "msq_negative_marking": false,
+  "nat_negative_marking": false,
+  "note": "Reference blueprint verified against the official GATE 2026 pattern; future exam-year releases must re-verify before publication."
+}
