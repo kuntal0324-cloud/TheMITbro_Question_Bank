@@ -1,0 +1,19 @@
+{
+  "manifest_version": "1.0.0",
+  "corpus": "GATE_EE_CORPUS_V1",
+  "question_id": "<QUESTION_ID>",
+  "revision": 1,
+  "checks": {
+    "technical_correctness": "PENDING",
+    "answer_independently_checked": "PENDING",
+    "solution_independently_checked": "PENDING",
+    "units_dimensions_checked": "PENDING",
+    "diagram_checked": "NOT_APPLICABLE",
+    "originality_checked": "PENDING",
+    "formatter_v2_validation": "PENDING",
+    "duplicate_family_check": "PENDING"
+  },
+  "quality_score": null,
+  "decision": "PENDING",
+  "reviewer_notes": []
+}

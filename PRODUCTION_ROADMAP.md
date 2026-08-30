@@ -15,3 +15,8 @@ Build JEE Mathematics and Physics banks by official release-year syllabus. Maint
 
 ## Stage 4 — Store publication
 Copy only approved release artifacts to the website private product store, update the server-side catalog, run payment/download tests, then publish the product.
+
+
+## GATE EE Corpus V1 Foundation
+
+Foundation established for a 220-question original master pool and blueprint-driven Set 01 production. See `GATE_EE/corpus_v1/README.md`.

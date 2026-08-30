@@ -1,0 +1,6 @@
+{
+  "registry_version": "1.0.0",
+  "corpus": "GATE_EE_CORPUS_V1",
+  "rule": "One family per materially shared construction/reasoning skeleton. Set 01 permits at most one question from each family.",
+  "families": []
+}

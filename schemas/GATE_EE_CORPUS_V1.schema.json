@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TheMITbro GATE EE Corpus V1 Question",
+  "type": "object",
+  "required": [
+    "id",
+    "exam",
+    "subject",
+    "topic",
+    "subtopic",
+    "concept",
+    "difficulty",
+    "type",
+    "marks",
+    "estimated_time_seconds",
+    "stem",
+    "answer",
+    "solution",
+    "family_id",
+    "revision",
+    "status",
+    "provenance",
+    "review"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^TMB-GATE-EE-[A-Z0-9]+-[0-9]{3}$"
+    },
+    "exam": {
+      "const": "GATE_EE"
+    },
+    "subject": {
+      "type": "string",
+      "minLength": 1
+    },
+    "topic": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subtopic": {
+      "type": "string",
+      "minLength": 1
+    },
+    "concept": {
+      "type": "string",
+      "minLength": 1
+    },
+    "difficulty": {
+      "enum": [
+        "Easy",
+        "Medium",
+        "Hard"
+      ]
+    },
+    "type": {
+      "enum": [
+        "MCQ",
+        "MSQ",
+        "NAT"
+      ]
+    },
+    "marks": {
+      "enum": [
+        1,
+        2
+      ]
+    },
+    "estimated_time_seconds": {
+      "type": "integer",
+      "minimum": 20,
+      "maximum": 900
+    },
+    "stem": {
+      "type": "string",
+      "minLength": 10
+    },
+    "options": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "answer": {},
+    "nat_tolerance": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "solution": {
+      "type": "string",
+      "minLength": 10
+    },
+    "diagram": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "family_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "enum": [
+        "DRAFT",
+        "TECHNICAL_REVIEW",
+        "ANSWER_VERIFIED",
+        "SOLUTION_VERIFIED",
+        "FORMATTER_VALIDATED",
+        "APPROVED",
+        "PAPER_ELIGIBLE",
+        "RELEASED"
+      ]
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "originality"
+      ],
+      "properties": {
+        "originality": {
+          "const": "ORIGINAL_THEMITBRO"
+        }
+      }
+    },
+    "review": {
+      "type": "object"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "enum": [
+              "MCQ",
+              "MSQ"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "options"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "NAT"
+          }
+        }
+      },
+      "then": {
+        "not": {
+          "required": [
+            "options"
+          ]
+        }
+      }
+    }
+  ],
+  "additionalProperties": true
+}

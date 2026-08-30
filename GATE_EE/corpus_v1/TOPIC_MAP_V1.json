@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0.0",
+  "corpus": "GATE_EE_CORPUS_V1",
+  "exam": "GATE_EE",
+  "purpose": "Production authoring taxonomy and allocation map. Counts are internal TheMITbro production targets, not official GATE weightage.",
+  "target_questions": 220,
+  "domains": [
+    {
+      "code": "GA",
+      "name": "General Aptitude",
+      "target": 30,
+      "topics": [
+        "Verbal Aptitude",
+        "Quantitative Aptitude",
+        "Analytical and Logical Reasoning",
+        "Spatial Aptitude"
+      ]
+    },
+    {
+      "code": "EM",
+      "name": "Engineering Mathematics",
+      "target": 35,
+      "topics": [
+        "Linear Algebra",
+        "Calculus",
+        "Differential Equations",
+        "Complex Variables",
+        "Probability and Statistics",
+        "Numerical Methods"
+      ]
+    },
+    {
+      "code": "NT",
+      "name": "Network Theory",
+      "target": 20,
+      "topics": [
+        "Circuit Laws and Analysis",
+        "Network Theorems",
+        "Transient Analysis",
+        "Sinusoidal Steady State",
+        "Resonance and Two-Port Networks"
+      ]
+    },
+    {
+      "code": "SS",
+      "name": "Signals and Systems",
+      "target": 15,
+      "topics": [
+        "Continuous and Discrete Signals",
+        "LTI Systems and Convolution",
+        "Fourier Analysis",
+        "Laplace Transform",
+        "Z Transform",
+        "Sampling"
+      ]
+    },
+    {
+      "code": "EMFT",
+      "name": "Electromagnetic Fields",
+      "target": 12,
+      "topics": [
+        "Electrostatics",
+        "Magnetostatics",
+        "Maxwell Equations",
+        "Magnetic Circuits",
+        "Electromagnetic Induction"
+      ]
+    },
+    {
+      "code": "MACH",
+      "name": "Electrical Machines",
+      "target": 24,
+      "topics": [
+        "Transformers",
+        "DC Machines",
+        "Induction Machines",
+        "Synchronous Machines"
+      ]
+    },
+    {
+      "code": "PS",
+      "name": "Power Systems",
+      "target": 24,
+      "topics": [
+        "Power Generation and Transmission",
+        "Per Unit and Load Flow",
+        "Fault Analysis",
+        "Protection",
+        "Stability",
+        "Power Factor and Distribution"
+      ]
+    },
+    {
+      "code": "CS",
+      "name": "Control Systems",
+      "target": 16,
+      "topics": [
+        "Modeling and Transfer Functions",
+        "Time Response",
+        "Stability",
+        "Root Locus",
+        "Frequency Response",
+        "State Space"
+      ]
+    },
+    {
+      "code": "MEAS",
+      "name": "Electrical and Electronic Measurements",
+      "target": 12,
+      "topics": [
+        "Measurement Errors",
+        "Bridges",
+        "Instrument Transformers",
+        "Analog and Digital Instruments",
+        "Transducers"
+      ]
+    },
+    {
+      "code": "AE",
+      "name": "Analog Electronics",
+      "target": 12,
+      "topics": [
+        "Diodes",
+        "BJT and MOSFET",
+        "Amplifiers",
+        "Operational Amplifiers",
+        "Oscillators and Filters"
+      ]
+    },
+    {
+      "code": "DE",
+      "name": "Digital Electronics",
+      "target": 10,
+      "topics": [
+        "Boolean Algebra",
+        "Combinational Logic",
+        "Sequential Logic",
+        "Data Converters"
+      ]
+    },
+    {
+      "code": "PE",
+      "name": "Power Electronics",
+      "target": 10,
+      "topics": [
+        "Power Semiconductor Devices",
+        "Rectifiers",
+        "Choppers",
+        "Inverters",
+        "AC Controllers"
+      ]
+    }
+  ]
+}

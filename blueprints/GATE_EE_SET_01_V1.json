@@ -1,0 +1,76 @@
+{
+  "blueprint_version": "1.0.0",
+  "id": "GATE_EE_SET_01_V1",
+  "exam": "GATE_EE",
+  "source_corpus": "GATE_EE_CORPUS_V1",
+  "reference": "blueprints/GATE_EE_2026_REFERENCE.json",
+  "paper": {
+    "questions": 65,
+    "marks": 100,
+    "duration_minutes": 180
+  },
+  "section_contract": {
+    "General Aptitude": {
+      "questions": 10,
+      "marks": 15
+    },
+    "Engineering Mathematics": {
+      "marks": 13
+    },
+    "Electrical Engineering": {
+      "marks": 72
+    }
+  },
+  "selection_policy": {
+    "minimum_quality_score": 0.85,
+    "allowed_status": [
+      "PAPER_ELIGIBLE"
+    ],
+    "unique_question_ids": true,
+    "unique_family_ids": true,
+    "require_answer_verified": true,
+    "require_solution_verified": true,
+    "require_originality_verified": true,
+    "require_diagram_verified_when_present": true,
+    "require_formatter_v2_validation": true
+  },
+  "balance_targets": {
+    "difficulty": {
+      "Easy": {
+        "min": 10,
+        "max": 20
+      },
+      "Medium": {
+        "min": 30,
+        "max": 42
+      },
+      "Hard": {
+        "min": 10,
+        "max": 20
+      }
+    },
+    "question_type": {
+      "MCQ": {
+        "min": 25,
+        "max": 45
+      },
+      "MSQ": {
+        "min": 5,
+        "max": 20
+      },
+      "NAT": {
+        "min": 10,
+        "max": 25
+      }
+    },
+    "visual_questions": {
+      "min": 4,
+      "max": 12
+    },
+    "estimated_time_seconds": {
+      "min": 9000,
+      "max": 10800
+    }
+  },
+  "release_gate": "HUMAN_FINAL_QA_REQUIRED"
+}

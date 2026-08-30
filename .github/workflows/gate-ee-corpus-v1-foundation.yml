@@ -1,0 +1,22 @@
+name: GATE EE Corpus V1 Foundation
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Validate Corpus V1 foundation
+        run: python scripts/validate_gate_ee_corpus_v1_foundation.py
