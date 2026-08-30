@@ -1,0 +1,120 @@
+{
+  "evidence_version": "1.0.0",
+  "batch": "BATCH_001",
+  "checks": [
+    {
+      "question_id": "TMB-GATE-EE-EM-001",
+      "check": "eigenvalues",
+      "computed": [
+        1,
+        3
+      ],
+      "expected": "C"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-002",
+      "check": "trace_inverse",
+      "computed": -6,
+      "expected": -6
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-004",
+      "check": "limit",
+      "computed": 2,
+      "expected": "B"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-005",
+      "check": "interval_minimum",
+      "computed": -2,
+      "expected": -2
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-006",
+      "check": "definite_integral",
+      "computed": "ln(2)/2",
+      "expected": "B"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-007",
+      "check": "initial_value_ode",
+      "computed": 1.75,
+      "expected": 1.75
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-009",
+      "check": "complex_power",
+      "computed": "-4",
+      "expected": "B"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-010",
+      "check": "root_distance",
+      "computed": 4,
+      "expected": 4
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-011",
+      "check": "probability_union",
+      "computed": 0.8,
+      "expected": "C"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-012",
+      "check": "second_moment",
+      "computed": 1.7,
+      "expected": 1.7
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-014",
+      "check": "newton_iteration",
+      "computed": 1.4166666667,
+      "expected": 1.4167
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-015",
+      "check": "linear_interpolation",
+      "computed": 4,
+      "expected": "C"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-016",
+      "check": "linear_system_parameter",
+      "computed": 4,
+      "expected": 4
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-017",
+      "check": "directional_derivative",
+      "computed": 6.4,
+      "expected": "B"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-018",
+      "check": "divergence_curl_circulation",
+      "computed": {
+        "divergence": 0,
+        "curl_z": -2,
+        "circulation": "-2*pi"
+      },
+      "expected": [
+        "A",
+        "B",
+        "D"
+      ]
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-019",
+      "check": "bernoulli_variance",
+      "computed": 0.24,
+      "expected": 0.24
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-020",
+      "check": "simpson_rule",
+      "computed": "8/3",
+      "expected": "C"
+    }
+  ],
+  "note": "Automated evidence is a consistency aid and does not replace independent human technical/solution review."
+}

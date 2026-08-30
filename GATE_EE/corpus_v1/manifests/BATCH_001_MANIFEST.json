@@ -1,0 +1,36 @@
+{
+  "manifest_version": "1.0.0",
+  "batch_id": "BATCH_001",
+  "corpus": "GATE_EE_CORPUS_V1",
+  "domain": "Engineering Mathematics",
+  "question_count": 20,
+  "status": "DRAFT_REVIEW_REQUIRED",
+  "paper_eligible_count": 0,
+  "type_counts": {
+    "MCQ": 8,
+    "NAT": 8,
+    "MSQ": 4
+  },
+  "marks_counts": {
+    "1": 5,
+    "2": 15
+  },
+  "difficulty_counts": {
+    "Easy": 6,
+    "Medium": 11,
+    "Hard": 3
+  },
+  "topics": {
+    "Linear Algebra": 4,
+    "Calculus": 5,
+    "Differential Equations": 2,
+    "Complex Variables": 2,
+    "Probability and Statistics": 4,
+    "Numerical Methods": 3
+  },
+  "source_files": [
+    "GATE_EE/corpus_v1/source_batches/BATCH_001_ENGINEERING_MATHEMATICS.md",
+    "GATE_EE/corpus_v1/source_batches/BATCH_001_ENGINEERING_MATHEMATICS.jsonl"
+  ],
+  "jsonl_sha256": "caca8a04e4af09995af0c03a6486812ba7a92f333093da0a6c669aee44a02ca0"
+}

@@ -1,0 +1,127 @@
+{
+  "registry_version": "1.0.0",
+  "batch": "BATCH_001",
+  "corpus": "GATE_EE_CORPUS_V1",
+  "families": [
+    {
+      "family_id": "EM-LA-EIG-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-001"
+      ]
+    },
+    {
+      "family_id": "EM-LA-INVTRACE-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-002"
+      ]
+    },
+    {
+      "family_id": "EM-LA-IDEMP-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-003"
+      ]
+    },
+    {
+      "family_id": "EM-CAL-LIMIT-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-004"
+      ]
+    },
+    {
+      "family_id": "EM-CAL-OPT-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-005"
+      ]
+    },
+    {
+      "family_id": "EM-CAL-INT-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-006"
+      ]
+    },
+    {
+      "family_id": "EM-DE-FIRSTORDER-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-007"
+      ]
+    },
+    {
+      "family_id": "EM-DE-SECONDORDER-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-008"
+      ]
+    },
+    {
+      "family_id": "EM-CV-POWER-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-009"
+      ]
+    },
+    {
+      "family_id": "EM-CV-ROOTDIST-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-010"
+      ]
+    },
+    {
+      "family_id": "EM-PS-INDEP-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-011"
+      ]
+    },
+    {
+      "family_id": "EM-PS-MOMENT-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-012"
+      ]
+    },
+    {
+      "family_id": "EM-PS-VARIDENT-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-013"
+      ]
+    },
+    {
+      "family_id": "EM-NM-NEWTON-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-014"
+      ]
+    },
+    {
+      "family_id": "EM-NM-INTERP-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-015"
+      ]
+    },
+    {
+      "family_id": "EM-LA-SYSTEM-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-016"
+      ]
+    },
+    {
+      "family_id": "EM-CAL-DIRDER-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-017"
+      ]
+    },
+    {
+      "family_id": "EM-CAL-VECCALC-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-018"
+      ]
+    },
+    {
+      "family_id": "EM-PS-BERNOULLI-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-019"
+      ]
+    },
+    {
+      "family_id": "EM-NM-SIMPSON-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-020"
+      ]
+    }
+  ]
+}
