@@ -20,11 +20,14 @@ if fmt.get("formatter_pass_count")!=20 or fmt.get("formatter_review_count")!=0:
     errors.append("Formatter evidence is not 20 PASS / 0 REVIEW.")
 if elig.get("paper_eligibility_candidate_count")!=20:
     errors.append("Eligibility candidate count mismatch.")
-if elig.get("paper_eligible_count")!=0:
-    errors.append("Paper eligibility must remain zero before human signoff.")
-if human.get("final_decision")!="PENDING":
-    errors.append("Human final QA template must remain pending before a real reviewer completes it.")
-if summary.get("current_stage")!="READY_FOR_HUMAN_FINAL_QA":
+stage=summary.get("current_stage")
+if stage=="READY_FOR_HUMAN_FINAL_QA":
+    if elig.get("paper_eligible_count")!=0: errors.append("Paper eligibility must remain zero before human signoff.")
+    if human.get("final_decision")!="PENDING": errors.append("Human final QA template must remain pending.")
+elif stage=="PAPER_ELIGIBILITY_CERTIFIED":
+    if human.get("final_decision")!="APPROVE_REVIEWED_RESULTS": errors.append("Certified stage requires human approval.")
+    if elig.get("human_final_qa")!="COMPLETE": errors.append("Certified stage requires human_final_qa COMPLETE.")
+else:
     errors.append("Qualification summary stage mismatch.")
 if errors:
     print("\n".join(errors)); raise SystemExit(1)
@@ -33,6 +36,6 @@ print("GATE EE BATCH 001 INDEPENDENT FINAL QA: PASSED")
 print("Independent AI technical/answer/solution QA: 20/20")
 print("Formatter v2.0 final qualification: 20 PASS / 0 REVIEW")
 print("Paper-eligibility candidates: 20")
-print("Certified paper-eligible: 0")
-print("Human final QA: PENDING")
-print("Release gate: BLOCKED_PENDING_HUMAN_SIGNOFF")
+print(f"Certified paper-eligible: {elig.get('paper_eligible_count',0)}")
+print(f"Human final QA: {'COMPLETE' if summary.get('current_stage')=='PAPER_ELIGIBILITY_CERTIFIED' else 'PENDING'}")
+print(f"Release gate: {elig.get('release_gate')}")

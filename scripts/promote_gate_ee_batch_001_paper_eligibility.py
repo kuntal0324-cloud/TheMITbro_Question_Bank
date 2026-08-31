@@ -1,52 +1,78 @@
 from pathlib import Path
-import json, hashlib
+import json, hashlib, sys
 
 ROOT=Path(__file__).resolve().parents[1]
-source=ROOT/"GATE_EE/corpus_v1/source_batches/BATCH_001_ENGINEERING_MATHEMATICS.jsonl"
-human_path=ROOT/"GATE_EE/corpus_v1/review_manifests/BATCH_001_HUMAN_FINAL_QA.json"
-elig_path=ROOT/"GATE_EE/corpus_v1/qualification/BATCH_001_PAPER_ELIGIBILITY_CANDIDATE.json"
+sys.path.insert(0,str(ROOT))
+from scripts.validate_gate_ee_batch_001_human_signoff import validate
 
-human=json.loads(human_path.read_text())
-elig=json.loads(elig_path.read_text())
-errors=[]
-sha=hashlib.sha256(source.read_bytes()).hexdigest()
-if human.get("source_sha256")!=sha:
-    errors.append("Human QA source checksum mismatch.")
+SOURCE=ROOT/"GATE_EE/corpus_v1/source_batches/BATCH_001_ENGINEERING_MATHEMATICS.jsonl"
+HUMAN=ROOT/"GATE_EE/corpus_v1/review_manifests/BATCH_001_HUMAN_FINAL_QA.json"
+CANDIDATE=ROOT/"GATE_EE/corpus_v1/qualification/BATCH_001_PAPER_ELIGIBILITY_CANDIDATE.json"
+SUMMARY=ROOT/"GATE_EE/corpus_v1/qualification/BATCH_001_QUALIFICATION_SUMMARY.json"
+REVIEW=ROOT/"GATE_EE/corpus_v1/review_manifests/BATCH_001_REVIEW.json"
+CERT=ROOT/"GATE_EE/corpus_v1/qualification/BATCH_001_PAPER_ELIGIBILITY_CERTIFICATE.json"
+ADMISSION=ROOT/"GATE_EE/corpus_v1/manifests/BATCH_001_CORPUS_ADMISSION.json"
 
-reviewer=human.get("reviewer",{})
-for k in ("name","role_or_qualification","review_date","attestation"):
-    if not str(reviewer.get(k,"")).strip():
-        errors.append(f"Missing reviewer field: {k}")
-if reviewer.get("attestation") != human.get("required_attestation"):
-    errors.append("Reviewer attestation does not exactly match required attestation.")
-
-approved=[]
-for q in human.get("questions",[]):
-    checks=[q.get("technical_correctness"),q.get("answer_correctness"),
-            q.get("solution_correctness"),q.get("clarity_ambiguity"),
-            q.get("originality_conflict_check")]
-    decision=q.get("decision")
-    if decision=="PASS":
-        if any(x!="PASS" for x in checks):
-            errors.append(f"{q.get('question_id')}: PASS decision without all PASS checks.")
-        else:
-            approved.append(q["question_id"])
-    elif decision not in {"REJECT","REVISE"}:
-        errors.append(f"{q.get('question_id')}: decision must be PASS, REJECT, or REVISE.")
-
-if human.get("final_decision")!="APPROVE_REVIEWED_RESULTS":
-    errors.append("Human final decision must be APPROVE_REVIEWED_RESULTS.")
-
+errors,approved,revise,reject,source_sha=validate()
 if errors:
     print("PAPER-ELIGIBILITY PROMOTION: BLOCKED")
-    for e in errors:
-        print("-",e)
+    for e in errors: print("-",e)
     raise SystemExit(1)
 
-elig["human_final_qa"]="COMPLETE"
-elig["certified_paper_eligible_question_ids"]=approved
-elig["paper_eligible_count"]=len(approved)
-elig["release_gate"]="PAPER_ELIGIBILITY_CERTIFIED"
-elig_path.write_text(json.dumps(elig,indent=2))
+human=json.loads(HUMAN.read_text(encoding="utf-8"))
+candidate=json.loads(CANDIDATE.read_text(encoding="utf-8"))
+summary=json.loads(SUMMARY.read_text(encoding="utf-8"))
+review=json.loads(REVIEW.read_text(encoding="utf-8"))
+signoff_sha=hashlib.sha256(HUMAN.read_bytes()).hexdigest()
+
+candidate.update({
+    "human_final_qa":"COMPLETE",
+    "certified_paper_eligible_question_ids":approved,
+    "paper_eligible_count":len(approved),
+    "release_gate":"PAPER_ELIGIBILITY_CERTIFIED",
+    "human_signoff_sha256":signoff_sha,
+})
+CANDIDATE.write_text(json.dumps(candidate,indent=2),encoding="utf-8")
+
+certificate={
+    "certificate_contract":"GATE_EE_BATCH001_PAPER_ELIGIBILITY_CERTIFICATE_V1",
+    "batch_id":"BATCH_001","source_sha256":source_sha,"human_signoff_sha256":signoff_sha,
+    "reviewer":{"name":human["reviewer"]["name"],"role_or_qualification":human["reviewer"]["role_or_qualification"],
+                "review_date":human["reviewer"]["review_date"]},
+    "approved_question_ids":approved,"revise_question_ids":revise,"rejected_question_ids":reject,
+    "paper_eligible_count":len(approved),"decision":"CERTIFIED",
+}
+CERT.write_text(json.dumps(certificate,indent=2),encoding="utf-8")
+
+admission={
+    "manifest_contract":"GATE_EE_CORPUS_V1_BATCH001_ADMISSION_V1","batch_id":"BATCH_001",
+    "source_sha256":source_sha,
+    "paper_eligibility_certificate_sha256":hashlib.sha256(CERT.read_bytes()).hexdigest(),
+    "admitted_question_ids":approved,"held_for_revision_question_ids":revise,"rejected_question_ids":reject,
+    "admitted_count":len(approved),"status":"ADMITTED_TO_CORPUS_V1",
+}
+ADMISSION.write_text(json.dumps(admission,indent=2),encoding="utf-8")
+
+summary.update({
+    "current_stage":"PAPER_ELIGIBILITY_CERTIFIED","paper_eligible_count":len(approved),
+    "remaining_gates":[],
+    "next_action":"Admit certified questions to Corpus V1 master pool and begin Production Batch 002.",
+    "human_final_qa":{"status":"COMPLETE","review_date":human["reviewer"]["review_date"],
+                      "paper_eligible":len(approved),"revise":len(revise),"reject":len(reject)}
+})
+SUMMARY.write_text(json.dumps(summary,indent=2),encoding="utf-8")
+
+review["status"]="HUMAN_FINAL_QA_COMPLETE"
+for row in review.get("questions",[]):
+    hr=next(x for x in human["questions"] if x["question_id"]==row["question_id"])
+    row["decision"]=hr["decision"]
+    row["checks"]["technical_correctness"]=hr["technical_correctness"]
+    row["checks"]["answer_independently_checked"]=hr["answer_correctness"]
+    row["checks"]["solution_independently_checked"]=hr["solution_correctness"]
+    row["checks"]["originality_checked"]=hr["originality_conflict_check"]
+REVIEW.write_text(json.dumps(review,indent=2),encoding="utf-8")
+
 print("PAPER-ELIGIBILITY PROMOTION: PASSED")
 print(f"Certified paper-eligible: {len(approved)}")
+print(f"Held for revision: {len(revise)}")
+print(f"Rejected: {len(reject)}")

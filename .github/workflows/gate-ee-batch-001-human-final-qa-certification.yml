@@ -1,0 +1,30 @@
+name: GATE EE Batch 001 Human Final QA Certification
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-human-final-qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Validate foundation
+        run: python scripts/validate_gate_ee_corpus_v1_foundation.py
+      - name: Validate Batch 001
+        run: python scripts/validate_gate_ee_batch_001.py
+      - name: Validate review lifecycle
+        run: python scripts/validate_gate_ee_batch_001_review_handoff.py
+      - name: Validate independent final QA evidence
+        run: python scripts/validate_gate_ee_batch_001_independent_final_qa.py
+      - name: Validate paper-eligibility certification state
+        run: python scripts/validate_gate_ee_batch_001_paper_eligibility.py
