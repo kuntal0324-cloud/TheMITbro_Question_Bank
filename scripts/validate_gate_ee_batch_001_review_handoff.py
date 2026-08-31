@@ -36,7 +36,11 @@ if handoff.get("source_sha256") != hashlib.sha256(batch_path.read_bytes()).hexdi
     errors.append("Formatter handoff source checksum mismatch.")
 if handoff.get("release_gate") != "BLOCKED":
     errors.append("Release gate must remain blocked.")
-if summary.get("current_stage") != "READY_FOR_FORMATTER_HANDOFF":
+allowed_stages = {
+    "READY_FOR_FORMATTER_HANDOFF",
+    "READY_FOR_FORMATTER_REQUALIFICATION",
+}
+if summary.get("current_stage") not in allowed_stages:
     errors.append("Qualification stage mismatch.")
 if summary.get("paper_eligible_count") != 0:
     errors.append("Qualification summary paper eligibility mismatch.")
