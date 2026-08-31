@@ -1,7 +1,7 @@
 {
   "qualification_version": "1.0.0",
   "batch_id": "BATCH_001",
-  "current_stage": "READY_FOR_FORMATTER_HANDOFF",
+  "current_stage": "READY_FOR_FORMATTER_REQUALIFICATION",
   "questions_total": 20,
   "internal_technical_second_pass": {
     "passed": 20,
@@ -16,5 +16,5 @@
     "independent answer/solution review",
     "final approval"
   ],
-  "next_action": "Transfer handoff package to TheMITBro_Formatter v2.0 qualification workflow."
+  "next_action": "Run revised Batch 001 through Formatter v2.0 qualification; independent human review still required."
 }

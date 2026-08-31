@@ -1,0 +1,25 @@
+{
+  "resolution_version": "1.0.0",
+  "batch_id": "BATCH_001",
+  "resolved_formatter_review_cases": [
+    {
+      "question_id": "TMB-GATE-EE-EM-005",
+      "from_revision": 1,
+      "to_revision": 2,
+      "reason": "Conservative classifier did not detect a calculus task from the original wording.",
+      "change": "Added explicit derivative wording while preserving the original mathematics and answer.",
+      "answer_changed": false
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-016",
+      "from_revision": 1,
+      "to_revision": 2,
+      "reason": "Conservative classifier did not detect a linear-algebra task from the original wording.",
+      "change": "Added explicit coefficient-matrix/linear-system wording.",
+      "answer_changed": false
+    }
+  ],
+  "new_source_sha256": "2c218be6055cfa977da0842a6bdbc1edb61fe1712bf88794dc461052ae050b9e",
+  "paper_eligible_count": 0,
+  "independent_human_review": "PENDING"
+}

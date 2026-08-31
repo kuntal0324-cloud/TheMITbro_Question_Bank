@@ -1,7 +1,7 @@
 {
   "manifest_version": "1.0.0",
   "batch_id": "BATCH_001",
-  "stage": "INTERNAL_TECHNICAL_REVIEW_COMPLETE",
+  "stage": "READY_FOR_FORMATTER_REQUALIFICATION",
   "question_count": 20,
   "technical_second_pass_passed": 20,
   "independent_human_review_required": true,
@@ -59,7 +59,7 @@
     },
     {
       "question_id": "TMB-GATE-EE-EM-005",
-      "revision": 1,
+      "revision": 2,
       "structure_check": "PASS",
       "answer_solution_consistency": "PASS",
       "option_contract_check": "NOT_APPLICABLE",
@@ -67,7 +67,7 @@
       "family_uniqueness_check": "PASS",
       "technical_second_pass": "PASS",
       "independent_human_review": "PENDING",
-      "formatter_v2_validation": "PENDING"
+      "formatter_v2_validation": "REQUALIFICATION_REQUIRED"
     },
     {
       "question_id": "TMB-GATE-EE-EM-006",
@@ -191,7 +191,7 @@
     },
     {
       "question_id": "TMB-GATE-EE-EM-016",
-      "revision": 1,
+      "revision": 2,
       "structure_check": "PASS",
       "answer_solution_consistency": "PASS",
       "option_contract_check": "NOT_APPLICABLE",
@@ -199,7 +199,7 @@
       "family_uniqueness_check": "PASS",
       "technical_second_pass": "PASS",
       "independent_human_review": "PENDING",
-      "formatter_v2_validation": "PENDING"
+      "formatter_v2_validation": "REQUALIFICATION_REQUIRED"
     },
     {
       "question_id": "TMB-GATE-EE-EM-017",

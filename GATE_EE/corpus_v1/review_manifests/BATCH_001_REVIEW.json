@@ -2,7 +2,7 @@
   "manifest_version": "1.0.0",
   "batch": "BATCH_001",
   "question_count": 20,
-  "status": "REVIEW_REQUIRED",
+  "status": "FORMATTER_REQUALIFICATION_REQUIRED",
   "automated_validation": "PASS",
   "independent_review_required": true,
   "questions": [
@@ -68,7 +68,7 @@
     },
     {
       "question_id": "TMB-GATE-EE-EM-005",
-      "revision": 1,
+      "revision": 2,
       "decision": "PENDING",
       "checks": {
         "technical_correctness": "PENDING",
@@ -233,7 +233,7 @@
     },
     {
       "question_id": "TMB-GATE-EE-EM-016",
-      "revision": 1,
+      "revision": 2,
       "decision": "PENDING",
       "checks": {
         "technical_correctness": "PENDING",

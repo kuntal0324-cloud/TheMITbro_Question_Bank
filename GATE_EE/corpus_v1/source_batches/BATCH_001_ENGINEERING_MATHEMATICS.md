@@ -3,10 +3,8 @@
 **Domain:** Engineering Mathematics  
 **Questions:** 20  
 **Commercial status:** NOT YET PAPER-ELIGIBLE  
-**Lifecycle state:** DRAFT — automated structural/mathematical checks included; independent human review remains mandatory.  
+**Qualification state:** FORMATTER RESOLUTION CANDIDATE — independent human review remains mandatory.  
 **Originality:** ORIGINAL_THEMITBRO
-
-> This is original TheMITbro-style practice content. It is not copied from an official GATE paper.
 
 ---
 
@@ -39,14 +37,6 @@ C
 ### Detailed Solution
 The characteristic polynomial is $\det(A-\lambda I)=(2-\lambda)^2-1=\lambda^2-4\lambda+3$. Hence the eigenvalues are $1$ and $3$. The largest eigenvalue is $3$.
 
-### Review State
-- Technical correctness: PENDING independent review
-- Answer verification: PENDING independent review
-- Solution verification: PENDING independent review
-- Originality review: PENDING independent review
-- Formatter v2.0 validation: PENDING
-- Duplicate/family review: PENDING
-
 ---
 
 ## TMB-GATE-EE-EM-002
@@ -73,14 +63,6 @@ Let $A=\begin{bmatrix}1&2\\3&5\end{bmatrix}$. The value of $\operatorname{tr}(A^
 
 ### Detailed Solution
 Here $\det A=1\cdot5-2\cdot3=-1$. Therefore $A^{-1}=\frac{1}{-1}\begin{bmatrix}5&-2\\-3&1\end{bmatrix}=\begin{bmatrix}-5&2\\3&-1\end{bmatrix}$. Thus $\operatorname{tr}(A^{-1})=-5-1=-6$.
-
-### Review State
-- Technical correctness: PENDING independent review
-- Answer verification: PENDING independent review
-- Solution verification: PENDING independent review
-- Originality review: PENDING independent review
-- Formatter v2.0 validation: PENDING
-- Duplicate/family review: PENDING
 
 ---
 
@@ -113,14 +95,6 @@ A, B, C
 ### Detailed Solution
 If $Pv=\lambda v$, then $P^2v=\lambda^2v$, but $P^2=P$, so $\lambda^2=\lambda$ and $\lambda\in\{0,1\}$. Since $P$ is symmetric, it is orthogonally diagonalizable with nonnegative eigenvalues, hence positive semidefinite. The trace is the sum of eigenvalues and therefore equals the number of unit eigenvalues, which is the rank. The determinant need not be $1$; it is $0$ whenever $P$ has a zero eigenvalue.
 
-### Review State
-- Technical correctness: PENDING independent review
-- Answer verification: PENDING independent review
-- Solution verification: PENDING independent review
-- Originality review: PENDING independent review
-- Formatter v2.0 validation: PENDING
-- Duplicate/family review: PENDING
-
 ---
 
 ## TMB-GATE-EE-EM-004
@@ -152,14 +126,6 @@ B
 ### Detailed Solution
 Using $e^{2x}=1+2x+\frac{(2x)^2}{2}+O(x^3)=1+2x+2x^2+O(x^3)$, the numerator is $2x^2+O(x^3)$. Dividing by $x^2$ and taking the limit gives $2$.
 
-### Review State
-- Technical correctness: PENDING independent review
-- Answer verification: PENDING independent review
-- Solution verification: PENDING independent review
-- Originality review: PENDING independent review
-- Formatter v2.0 validation: PENDING
-- Duplicate/family review: PENDING
-
 ---
 
 ## TMB-GATE-EE-EM-005
@@ -173,11 +139,11 @@ Using $e^{2x}=1+2x+\frac{(2x)^2}{2}+O(x^3)=1+2x+2x^2+O(x^3)$, the numerator is $
 - **Marks:** 2
 - **Estimated Time:** 120 s
 - **Family ID:** EM-CAL-OPT-001
-- **Revision:** 1
+- **Revision:** 2
 - **Status:** DRAFT
 
 ### Question
-For $f(x)=x^3-3x^2+2$ on the interval $0\le x\le3$, the minimum value of $f(x)$ is ______.
+Using the derivative of $f(x)=x^3-3x^2+2$, determine its absolute minimum value on the interval $0\le x\le3$. The minimum value is ______.
 
 ### Answer
 -2
@@ -186,14 +152,6 @@ For $f(x)=x^3-3x^2+2$ on the interval $0\le x\le3$, the minimum value of $f(x)$ 
 
 ### Detailed Solution
 $f'(x)=3x(x-2)$, so the interior critical point is $x=2$. Evaluate the candidates: $f(0)=2$, $f(2)=8-12+2=-2$, and $f(3)=27-27+2=2$. Hence the minimum value is $-2$.
-
-### Review State
-- Technical correctness: PENDING independent review
-- Answer verification: PENDING independent review
-- Solution verification: PENDING independent review
-- Originality review: PENDING independent review
-- Formatter v2.0 validation: PENDING
-- Duplicate/family review: PENDING
 
 ---
 
@@ -226,14 +184,6 @@ B
 ### Detailed Solution
 Put $u=1+x^2$, so $du=2x\,dx$. Then $\int_0^1\frac{x}{1+x^2}dx=\frac12\int_1^2\frac{du}{u}=\frac12\ln2$.
 
-### Review State
-- Technical correctness: PENDING independent review
-- Answer verification: PENDING independent review
-- Solution verification: PENDING independent review
-- Originality review: PENDING independent review
-- Formatter v2.0 validation: PENDING
-- Duplicate/family review: PENDING
-
 ---
 
 ## TMB-GATE-EE-EM-007
@@ -260,14 +210,6 @@ The solution of $y'+2y=4$ satisfies $y(0)=1$. The value of $y(\ln2)$ is ______.
 
 ### Detailed Solution
 The solution is $y=2+Ce^{-2x}$. From $y(0)=1$, $C=-1$, hence $y=2-e^{-2x}$. At $x=\ln2$, $e^{-2\ln2}=1/4$, so $y=2-1/4=7/4=1.75$.
-
-### Review State
-- Technical correctness: PENDING independent review
-- Answer verification: PENDING independent review
-- Solution verification: PENDING independent review
-- Originality review: PENDING independent review
-- Formatter v2.0 validation: PENDING
-- Duplicate/family review: PENDING
 
 ---
 
@@ -300,14 +242,6 @@ A, B, D
 ### Detailed Solution
 The characteristic equation is $r^2+4r+3=(r+1)(r+3)=0$, giving roots $-1$ and $-3$. Hence every solution has the form $C_1e^{-x}+C_2e^{-3x}$. Therefore A, B and D are solutions, while $e^{-2x}$ is not.
 
-### Review State
-- Technical correctness: PENDING independent review
-- Answer verification: PENDING independent review
-- Solution verification: PENDING independent review
-- Originality review: PENDING independent review
-- Formatter v2.0 validation: PENDING
-- Duplicate/family review: PENDING
-
 ---
 
 ## TMB-GATE-EE-EM-009
@@ -339,14 +273,6 @@ B
 ### Detailed Solution
 $(1+i)^2=1+2i+i^2=2i$. Therefore $(1+i)^4=(2i)^2=-4$.
 
-### Review State
-- Technical correctness: PENDING independent review
-- Answer verification: PENDING independent review
-- Solution verification: PENDING independent review
-- Originality review: PENDING independent review
-- Formatter v2.0 validation: PENDING
-- Duplicate/family review: PENDING
-
 ---
 
 ## TMB-GATE-EE-EM-010
@@ -373,14 +299,6 @@ If $z_1$ and $z_2$ are the roots of $z^2-2z+5=0$, then $|z_1-z_2|$ is ______.
 
 ### Detailed Solution
 The roots are $z=\frac{2\pm\sqrt{4-20}}{2}=1\pm2i$. Thus $z_1-z_2=4i$ up to sign, and therefore $|z_1-z_2|=4$.
-
-### Review State
-- Technical correctness: PENDING independent review
-- Answer verification: PENDING independent review
-- Solution verification: PENDING independent review
-- Originality review: PENDING independent review
-- Formatter v2.0 validation: PENDING
-- Duplicate/family review: PENDING
 
 ---
 
@@ -413,14 +331,6 @@ C
 ### Detailed Solution
 Independence gives $P(A\cap B)=0.6\times0.5=0.3$. Therefore $P(A\cup B)=P(A)+P(B)-P(A\cap B)=0.6+0.5-0.3=0.8$.
 
-### Review State
-- Technical correctness: PENDING independent review
-- Answer verification: PENDING independent review
-- Solution verification: PENDING independent review
-- Originality review: PENDING independent review
-- Formatter v2.0 validation: PENDING
-- Duplicate/family review: PENDING
-
 ---
 
 ## TMB-GATE-EE-EM-012
@@ -447,14 +357,6 @@ A random variable $X$ takes values $0,1,2$ with probabilities $0.2,0.5,0.3$, res
 
 ### Detailed Solution
 $E[X^2]=0^2(0.2)+1^2(0.5)+2^2(0.3)=0+0.5+1.2=1.7$.
-
-### Review State
-- Technical correctness: PENDING independent review
-- Answer verification: PENDING independent review
-- Solution verification: PENDING independent review
-- Originality review: PENDING independent review
-- Formatter v2.0 validation: PENDING
-- Duplicate/family review: PENDING
 
 ---
 
@@ -487,14 +389,6 @@ A, B, C, D
 ### Detailed Solution
 By definition $\mu=E[X]$, so $E[X-\mu]=0$. Also $\sigma^2=E[X^2]-\mu^2$, giving $E[X^2]=\sigma^2+\mu^2$. Adding a constant does not change variance and scaling by $a$ scales variance by $a^2$. Finally, variance is defined as $E[(X-\mu)^2]$. Hence all four statements are true.
 
-### Review State
-- Technical correctness: PENDING independent review
-- Answer verification: PENDING independent review
-- Solution verification: PENDING independent review
-- Originality review: PENDING independent review
-- Formatter v2.0 validation: PENDING
-- Duplicate/family review: PENDING
-
 ---
 
 ## TMB-GATE-EE-EM-014
@@ -521,14 +415,6 @@ Newton-Raphson iteration is applied to $f(x)=x^2-2$ with $x_0=1.5$. The value of
 
 ### Detailed Solution
 Newton-Raphson gives $x_{n+1}=x_n-f(x_n)/f'(x_n)=\frac12(x_n+2/x_n)$. Thus $x_1=\frac12(1.5+2/1.5)=1.416666\ldots$, which rounds to $1.4167$.
-
-### Review State
-- Technical correctness: PENDING independent review
-- Answer verification: PENDING independent review
-- Solution verification: PENDING independent review
-- Originality review: PENDING independent review
-- Formatter v2.0 validation: PENDING
-- Duplicate/family review: PENDING
 
 ---
 
@@ -561,14 +447,6 @@ C
 ### Detailed Solution
 The slope is $(5-1)/(2-0)=2$, so the interpolating line is $y=1+2x$. At $x=1.5$, $y=1+3=4$.
 
-### Review State
-- Technical correctness: PENDING independent review
-- Answer verification: PENDING independent review
-- Solution verification: PENDING independent review
-- Originality review: PENDING independent review
-- Formatter v2.0 validation: PENDING
-- Duplicate/family review: PENDING
-
 ---
 
 ## TMB-GATE-EE-EM-016
@@ -582,11 +460,11 @@ The slope is $(5-1)/(2-0)=2$, so the interpolating line is $y=1+2x$. At $x=1.5$,
 - **Marks:** 2
 - **Estimated Time:** 90 s
 - **Family ID:** EM-LA-SYSTEM-001
-- **Revision:** 1
+- **Revision:** 2
 - **Status:** DRAFT
 
 ### Question
-The system $x+y=2$ and $2x+2y=k$ has infinitely many solutions for $k=$ ______.
+Consider the linear system whose coefficient matrix has proportional rows: $x+y=2$ and $2x+2y=k$. The system has infinitely many solutions for $k=$ ______.
 
 ### Answer
 4
@@ -595,14 +473,6 @@ The system $x+y=2$ and $2x+2y=k$ has infinitely many solutions for $k=$ ______.
 
 ### Detailed Solution
 For infinitely many solutions, the second equation must be exactly twice the first. Twice $x+y=2$ gives $2x+2y=4$. Hence $k=4$.
-
-### Review State
-- Technical correctness: PENDING independent review
-- Answer verification: PENDING independent review
-- Solution verification: PENDING independent review
-- Originality review: PENDING independent review
-- Formatter v2.0 validation: PENDING
-- Duplicate/family review: PENDING
 
 ---
 
@@ -635,14 +505,6 @@ B
 ### Detailed Solution
 $\nabla f=(2xy,x^2+2y)$. At $(1,2)$, $\nabla f=(4,5)$. The unit vector in the direction $(3,4)$ is $(3/5,4/5)$. Hence the directional derivative is $(4,5)\cdot(3/5,4/5)=12/5+20/5=32/5$.
 
-### Review State
-- Technical correctness: PENDING independent review
-- Answer verification: PENDING independent review
-- Solution verification: PENDING independent review
-- Originality review: PENDING independent review
-- Formatter v2.0 validation: PENDING
-- Duplicate/family review: PENDING
-
 ---
 
 ## TMB-GATE-EE-EM-018
@@ -674,14 +536,6 @@ A, B, D
 ### Detailed Solution
 With $P=y$ and $Q=-x$, divergence is $\partial P/\partial x+\partial Q/\partial y=0+0=0$. The scalar curl is $\partial Q/\partial x-\partial P/\partial y=-1-1=-2$, i.e. $-2\mathbf{k}$. Since the curl is nonzero, the field is not conservative. Green's theorem gives the counter-clockwise circulation as $\iint_D(-2)\,dA=-2\pi$ for the unit disk.
 
-### Review State
-- Technical correctness: PENDING independent review
-- Answer verification: PENDING independent review
-- Solution verification: PENDING independent review
-- Originality review: PENDING independent review
-- Formatter v2.0 validation: PENDING
-- Duplicate/family review: PENDING
-
 ---
 
 ## TMB-GATE-EE-EM-019
@@ -708,14 +562,6 @@ If $X$ is a Bernoulli random variable with $P(X=1)=0.4$, then $\operatorname{Var
 
 ### Detailed Solution
 For a Bernoulli random variable with parameter $p$, $\operatorname{Var}(X)=p(1-p)$. Thus the variance is $0.4\times0.6=0.24$.
-
-### Review State
-- Technical correctness: PENDING independent review
-- Answer verification: PENDING independent review
-- Solution verification: PENDING independent review
-- Originality review: PENDING independent review
-- Formatter v2.0 validation: PENDING
-- Duplicate/family review: PENDING
 
 ---
 
@@ -747,13 +593,5 @@ C
 
 ### Detailed Solution
 With $h=1$, Simpson's rule gives $\frac{h}{3}[f(0)+4f(1)+f(2)]=\frac13[0+4(1)+4]=\frac83$. Since the integrand is a polynomial of degree two, Simpson's rule is exact here.
-
-### Review State
-- Technical correctness: PENDING independent review
-- Answer verification: PENDING independent review
-- Solution verification: PENDING independent review
-- Originality review: PENDING independent review
-- Formatter v2.0 validation: PENDING
-- Duplicate/family review: PENDING
 
 ---
