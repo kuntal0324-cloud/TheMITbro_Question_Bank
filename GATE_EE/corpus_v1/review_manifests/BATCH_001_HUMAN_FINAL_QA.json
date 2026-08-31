@@ -1,0 +1,235 @@
+{
+  "signoff_contract": "GATE_EE_BATCH001_HUMAN_FINAL_QA_V1",
+  "batch_id": "BATCH_001",
+  "source_sha256": "2c218be6055cfa977da0842a6bdbc1edb61fe1712bf88794dc461052ae050b9e",
+  "reviewer": {
+    "name": "",
+    "role_or_qualification": "",
+    "review_date": "",
+    "attestation": ""
+  },
+  "required_attestation": "I independently reviewed the Batch 001 questions, answers and solutions and approve only the question IDs marked PASS below.",
+  "questions": [
+    {
+      "question_id": "TMB-GATE-EE-EM-001",
+      "revision": 1,
+      "technical_correctness": "PENDING",
+      "answer_correctness": "PENDING",
+      "solution_correctness": "PENDING",
+      "clarity_ambiguity": "PENDING",
+      "originality_conflict_check": "PENDING",
+      "decision": "PENDING",
+      "notes": ""
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-002",
+      "revision": 1,
+      "technical_correctness": "PENDING",
+      "answer_correctness": "PENDING",
+      "solution_correctness": "PENDING",
+      "clarity_ambiguity": "PENDING",
+      "originality_conflict_check": "PENDING",
+      "decision": "PENDING",
+      "notes": ""
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-003",
+      "revision": 1,
+      "technical_correctness": "PENDING",
+      "answer_correctness": "PENDING",
+      "solution_correctness": "PENDING",
+      "clarity_ambiguity": "PENDING",
+      "originality_conflict_check": "PENDING",
+      "decision": "PENDING",
+      "notes": ""
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-004",
+      "revision": 1,
+      "technical_correctness": "PENDING",
+      "answer_correctness": "PENDING",
+      "solution_correctness": "PENDING",
+      "clarity_ambiguity": "PENDING",
+      "originality_conflict_check": "PENDING",
+      "decision": "PENDING",
+      "notes": ""
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-005",
+      "revision": 2,
+      "technical_correctness": "PENDING",
+      "answer_correctness": "PENDING",
+      "solution_correctness": "PENDING",
+      "clarity_ambiguity": "PENDING",
+      "originality_conflict_check": "PENDING",
+      "decision": "PENDING",
+      "notes": ""
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-006",
+      "revision": 1,
+      "technical_correctness": "PENDING",
+      "answer_correctness": "PENDING",
+      "solution_correctness": "PENDING",
+      "clarity_ambiguity": "PENDING",
+      "originality_conflict_check": "PENDING",
+      "decision": "PENDING",
+      "notes": ""
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-007",
+      "revision": 1,
+      "technical_correctness": "PENDING",
+      "answer_correctness": "PENDING",
+      "solution_correctness": "PENDING",
+      "clarity_ambiguity": "PENDING",
+      "originality_conflict_check": "PENDING",
+      "decision": "PENDING",
+      "notes": ""
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-008",
+      "revision": 1,
+      "technical_correctness": "PENDING",
+      "answer_correctness": "PENDING",
+      "solution_correctness": "PENDING",
+      "clarity_ambiguity": "PENDING",
+      "originality_conflict_check": "PENDING",
+      "decision": "PENDING",
+      "notes": ""
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-009",
+      "revision": 1,
+      "technical_correctness": "PENDING",
+      "answer_correctness": "PENDING",
+      "solution_correctness": "PENDING",
+      "clarity_ambiguity": "PENDING",
+      "originality_conflict_check": "PENDING",
+      "decision": "PENDING",
+      "notes": ""
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-010",
+      "revision": 1,
+      "technical_correctness": "PENDING",
+      "answer_correctness": "PENDING",
+      "solution_correctness": "PENDING",
+      "clarity_ambiguity": "PENDING",
+      "originality_conflict_check": "PENDING",
+      "decision": "PENDING",
+      "notes": ""
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-011",
+      "revision": 1,
+      "technical_correctness": "PENDING",
+      "answer_correctness": "PENDING",
+      "solution_correctness": "PENDING",
+      "clarity_ambiguity": "PENDING",
+      "originality_conflict_check": "PENDING",
+      "decision": "PENDING",
+      "notes": ""
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-012",
+      "revision": 1,
+      "technical_correctness": "PENDING",
+      "answer_correctness": "PENDING",
+      "solution_correctness": "PENDING",
+      "clarity_ambiguity": "PENDING",
+      "originality_conflict_check": "PENDING",
+      "decision": "PENDING",
+      "notes": ""
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-013",
+      "revision": 1,
+      "technical_correctness": "PENDING",
+      "answer_correctness": "PENDING",
+      "solution_correctness": "PENDING",
+      "clarity_ambiguity": "PENDING",
+      "originality_conflict_check": "PENDING",
+      "decision": "PENDING",
+      "notes": ""
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-014",
+      "revision": 1,
+      "technical_correctness": "PENDING",
+      "answer_correctness": "PENDING",
+      "solution_correctness": "PENDING",
+      "clarity_ambiguity": "PENDING",
+      "originality_conflict_check": "PENDING",
+      "decision": "PENDING",
+      "notes": ""
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-015",
+      "revision": 1,
+      "technical_correctness": "PENDING",
+      "answer_correctness": "PENDING",
+      "solution_correctness": "PENDING",
+      "clarity_ambiguity": "PENDING",
+      "originality_conflict_check": "PENDING",
+      "decision": "PENDING",
+      "notes": ""
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-016",
+      "revision": 2,
+      "technical_correctness": "PENDING",
+      "answer_correctness": "PENDING",
+      "solution_correctness": "PENDING",
+      "clarity_ambiguity": "PENDING",
+      "originality_conflict_check": "PENDING",
+      "decision": "PENDING",
+      "notes": ""
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-017",
+      "revision": 1,
+      "technical_correctness": "PENDING",
+      "answer_correctness": "PENDING",
+      "solution_correctness": "PENDING",
+      "clarity_ambiguity": "PENDING",
+      "originality_conflict_check": "PENDING",
+      "decision": "PENDING",
+      "notes": ""
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-018",
+      "revision": 1,
+      "technical_correctness": "PENDING",
+      "answer_correctness": "PENDING",
+      "solution_correctness": "PENDING",
+      "clarity_ambiguity": "PENDING",
+      "originality_conflict_check": "PENDING",
+      "decision": "PENDING",
+      "notes": ""
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-019",
+      "revision": 1,
+      "technical_correctness": "PENDING",
+      "answer_correctness": "PENDING",
+      "solution_correctness": "PENDING",
+      "clarity_ambiguity": "PENDING",
+      "originality_conflict_check": "PENDING",
+      "decision": "PENDING",
+      "notes": ""
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-020",
+      "revision": 1,
+      "technical_correctness": "PENDING",
+      "answer_correctness": "PENDING",
+      "solution_correctness": "PENDING",
+      "clarity_ambiguity": "PENDING",
+      "originality_conflict_check": "PENDING",
+      "decision": "PENDING",
+      "notes": ""
+    }
+  ],
+  "final_decision": "PENDING"
+}

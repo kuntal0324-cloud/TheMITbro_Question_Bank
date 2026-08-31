@@ -1,7 +1,7 @@
 {
   "qualification_version": "1.0.0",
   "batch_id": "BATCH_001",
-  "current_stage": "READY_FOR_FORMATTER_REQUALIFICATION",
+  "current_stage": "READY_FOR_HUMAN_FINAL_QA",
   "questions_total": 20,
   "internal_technical_second_pass": {
     "passed": 20,
@@ -11,10 +11,17 @@
   "unique_families": true,
   "paper_eligible_count": 0,
   "remaining_gates": [
-    "Formatter v2.0 qualification",
     "independent human technical review",
-    "independent answer/solution review",
-    "final approval"
+    "independent human answer/solution review",
+    "human final approval"
   ],
-  "next_action": "Run revised Batch 001 through Formatter v2.0 qualification; independent human review still required."
+  "next_action": "Complete BATCH_001_HUMAN_FINAL_QA.json, then run paper-eligibility promotion.",
+  "formatter_v2_final_qualification": {
+    "passed": 20,
+    "review": 0
+  },
+  "independent_ai_qa": {
+    "passed": 20,
+    "human_review_substitute": false
+  }
 }

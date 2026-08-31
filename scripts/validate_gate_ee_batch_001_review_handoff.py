@@ -39,6 +39,7 @@ if handoff.get("release_gate") != "BLOCKED":
 allowed_stages = {
     "READY_FOR_FORMATTER_HANDOFF",
     "READY_FOR_FORMATTER_REQUALIFICATION",
+    "READY_FOR_HUMAN_FINAL_QA",
 }
 if summary.get("current_stage") not in allowed_stages:
     errors.append("Qualification stage mismatch.")

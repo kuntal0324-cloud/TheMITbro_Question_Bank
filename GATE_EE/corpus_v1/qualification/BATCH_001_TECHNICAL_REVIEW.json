@@ -1,7 +1,7 @@
 {
   "manifest_version": "1.0.0",
   "batch_id": "BATCH_001",
-  "stage": "READY_FOR_FORMATTER_REQUALIFICATION",
+  "stage": "READY_FOR_HUMAN_FINAL_QA",
   "question_count": 20,
   "technical_second_pass_passed": 20,
   "independent_human_review_required": true,
@@ -19,7 +19,7 @@
       "family_uniqueness_check": "PASS",
       "technical_second_pass": "PASS",
       "independent_human_review": "PENDING",
-      "formatter_v2_validation": "PENDING"
+      "formatter_v2_validation": "PASS"
     },
     {
       "question_id": "TMB-GATE-EE-EM-002",
@@ -31,7 +31,7 @@
       "family_uniqueness_check": "PASS",
       "technical_second_pass": "PASS",
       "independent_human_review": "PENDING",
-      "formatter_v2_validation": "PENDING"
+      "formatter_v2_validation": "PASS"
     },
     {
       "question_id": "TMB-GATE-EE-EM-003",
@@ -43,7 +43,7 @@
       "family_uniqueness_check": "PASS",
       "technical_second_pass": "PASS",
       "independent_human_review": "PENDING",
-      "formatter_v2_validation": "PENDING"
+      "formatter_v2_validation": "PASS"
     },
     {
       "question_id": "TMB-GATE-EE-EM-004",
@@ -55,7 +55,7 @@
       "family_uniqueness_check": "PASS",
       "technical_second_pass": "PASS",
       "independent_human_review": "PENDING",
-      "formatter_v2_validation": "PENDING"
+      "formatter_v2_validation": "PASS"
     },
     {
       "question_id": "TMB-GATE-EE-EM-005",
@@ -67,7 +67,7 @@
       "family_uniqueness_check": "PASS",
       "technical_second_pass": "PASS",
       "independent_human_review": "PENDING",
-      "formatter_v2_validation": "REQUALIFICATION_REQUIRED"
+      "formatter_v2_validation": "PASS"
     },
     {
       "question_id": "TMB-GATE-EE-EM-006",
@@ -79,7 +79,7 @@
       "family_uniqueness_check": "PASS",
       "technical_second_pass": "PASS",
       "independent_human_review": "PENDING",
-      "formatter_v2_validation": "PENDING"
+      "formatter_v2_validation": "PASS"
     },
     {
       "question_id": "TMB-GATE-EE-EM-007",
@@ -91,7 +91,7 @@
       "family_uniqueness_check": "PASS",
       "technical_second_pass": "PASS",
       "independent_human_review": "PENDING",
-      "formatter_v2_validation": "PENDING"
+      "formatter_v2_validation": "PASS"
     },
     {
       "question_id": "TMB-GATE-EE-EM-008",
@@ -103,7 +103,7 @@
       "family_uniqueness_check": "PASS",
       "technical_second_pass": "PASS",
       "independent_human_review": "PENDING",
-      "formatter_v2_validation": "PENDING"
+      "formatter_v2_validation": "PASS"
     },
     {
       "question_id": "TMB-GATE-EE-EM-009",
@@ -115,7 +115,7 @@
       "family_uniqueness_check": "PASS",
       "technical_second_pass": "PASS",
       "independent_human_review": "PENDING",
-      "formatter_v2_validation": "PENDING"
+      "formatter_v2_validation": "PASS"
     },
     {
       "question_id": "TMB-GATE-EE-EM-010",
@@ -127,7 +127,7 @@
       "family_uniqueness_check": "PASS",
       "technical_second_pass": "PASS",
       "independent_human_review": "PENDING",
-      "formatter_v2_validation": "PENDING"
+      "formatter_v2_validation": "PASS"
     },
     {
       "question_id": "TMB-GATE-EE-EM-011",
@@ -139,7 +139,7 @@
       "family_uniqueness_check": "PASS",
       "technical_second_pass": "PASS",
       "independent_human_review": "PENDING",
-      "formatter_v2_validation": "PENDING"
+      "formatter_v2_validation": "PASS"
     },
     {
       "question_id": "TMB-GATE-EE-EM-012",
@@ -151,7 +151,7 @@
       "family_uniqueness_check": "PASS",
       "technical_second_pass": "PASS",
       "independent_human_review": "PENDING",
-      "formatter_v2_validation": "PENDING"
+      "formatter_v2_validation": "PASS"
     },
     {
       "question_id": "TMB-GATE-EE-EM-013",
@@ -163,7 +163,7 @@
       "family_uniqueness_check": "PASS",
       "technical_second_pass": "PASS",
       "independent_human_review": "PENDING",
-      "formatter_v2_validation": "PENDING"
+      "formatter_v2_validation": "PASS"
     },
     {
       "question_id": "TMB-GATE-EE-EM-014",
@@ -175,7 +175,7 @@
       "family_uniqueness_check": "PASS",
       "technical_second_pass": "PASS",
       "independent_human_review": "PENDING",
-      "formatter_v2_validation": "PENDING"
+      "formatter_v2_validation": "PASS"
     },
     {
       "question_id": "TMB-GATE-EE-EM-015",
@@ -187,7 +187,7 @@
       "family_uniqueness_check": "PASS",
       "technical_second_pass": "PASS",
       "independent_human_review": "PENDING",
-      "formatter_v2_validation": "PENDING"
+      "formatter_v2_validation": "PASS"
     },
     {
       "question_id": "TMB-GATE-EE-EM-016",
@@ -199,7 +199,7 @@
       "family_uniqueness_check": "PASS",
       "technical_second_pass": "PASS",
       "independent_human_review": "PENDING",
-      "formatter_v2_validation": "REQUALIFICATION_REQUIRED"
+      "formatter_v2_validation": "PASS"
     },
     {
       "question_id": "TMB-GATE-EE-EM-017",
@@ -211,7 +211,7 @@
       "family_uniqueness_check": "PASS",
       "technical_second_pass": "PASS",
       "independent_human_review": "PENDING",
-      "formatter_v2_validation": "PENDING"
+      "formatter_v2_validation": "PASS"
     },
     {
       "question_id": "TMB-GATE-EE-EM-018",
@@ -223,7 +223,7 @@
       "family_uniqueness_check": "PASS",
       "technical_second_pass": "PASS",
       "independent_human_review": "PENDING",
-      "formatter_v2_validation": "PENDING"
+      "formatter_v2_validation": "PASS"
     },
     {
       "question_id": "TMB-GATE-EE-EM-019",
@@ -235,7 +235,7 @@
       "family_uniqueness_check": "PASS",
       "technical_second_pass": "PASS",
       "independent_human_review": "PENDING",
-      "formatter_v2_validation": "PENDING"
+      "formatter_v2_validation": "PASS"
     },
     {
       "question_id": "TMB-GATE-EE-EM-020",
@@ -247,7 +247,7 @@
       "family_uniqueness_check": "PASS",
       "technical_second_pass": "PASS",
       "independent_human_review": "PENDING",
-      "formatter_v2_validation": "PENDING"
+      "formatter_v2_validation": "PASS"
     }
   ],
   "note": "This stage is a second-pass technical/consistency audit performed during build. It is not represented as independent human editorial review and does not make questions paper-eligible."
