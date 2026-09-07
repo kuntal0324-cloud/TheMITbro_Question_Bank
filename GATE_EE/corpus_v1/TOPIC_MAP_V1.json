@@ -25,20 +25,21 @@
         "Calculus",
         "Differential Equations",
         "Complex Variables",
-        "Probability and Statistics",
-        "Numerical Methods"
+        "Probability and Statistics"
       ]
     },
     {
       "code": "NT",
-      "name": "Network Theory",
+      "name": "Electric Circuits",
       "target": 20,
       "topics": [
+        "Network Elements",
         "Circuit Laws and Analysis",
         "Network Theorems",
         "Transient Analysis",
         "Sinusoidal Steady State",
-        "Resonance and Two-Port Networks"
+        "Resonance and Two-Port Networks",
+        "Balanced Three-Phase Circuits and Complex Power"
       ]
     },
     {
@@ -61,7 +62,6 @@
       "topics": [
         "Electrostatics",
         "Magnetostatics",
-        "Maxwell Equations",
         "Magnetic Circuits",
         "Electromagnetic Induction"
       ]
@@ -112,7 +112,8 @@
         "Bridges",
         "Instrument Transformers",
         "Analog and Digital Instruments",
-        "Transducers"
+        "Phase, Time and Frequency Measurement",
+        "Oscilloscopes"
       ]
     },
     {
@@ -121,7 +122,7 @@
       "target": 12,
       "topics": [
         "Diodes",
-        "BJT and MOSFET",
+        "Amplifier Biasing and Equivalent Circuits",
         "Amplifiers",
         "Operational Amplifiers",
         "Oscillators and Filters"
@@ -147,7 +148,9 @@
         "Rectifiers",
         "Choppers",
         "Inverters",
-        "AC Controllers"
+        "Bidirectional AC-DC Converters",
+        "Harmonics, Power Factor and Distortion Factor",
+        "Sinusoidal PWM"
       ]
     }
   ]

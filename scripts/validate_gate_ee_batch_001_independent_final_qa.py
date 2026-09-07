@@ -1,41 +1,67 @@
 from pathlib import Path
-import json, hashlib
+import hashlib
+import json
 
-ROOT=Path(__file__).resolve().parents[1]
-source=ROOT/"GATE_EE/corpus_v1/source_batches/BATCH_001_ENGINEERING_MATHEMATICS.jsonl"
-qa=json.loads((ROOT/"GATE_EE/corpus_v1/qualification/BATCH_001_INDEPENDENT_AI_QA.json").read_text())
-fmt=json.loads((ROOT/"GATE_EE/corpus_v1/qualification/BATCH_001_FORMATTER_FINAL_EVIDENCE.json").read_text())
-elig=json.loads((ROOT/"GATE_EE/corpus_v1/qualification/BATCH_001_PAPER_ELIGIBILITY_CANDIDATE.json").read_text())
-human=json.loads((ROOT/"GATE_EE/corpus_v1/review_manifests/BATCH_001_HUMAN_FINAL_QA.json").read_text())
-summary=json.loads((ROOT/"GATE_EE/corpus_v1/qualification/BATCH_001_QUALIFICATION_SUMMARY.json").read_text())
+ROOT = Path(__file__).resolve().parents[1]
+SOURCE = ROOT / "GATE_EE/corpus_v1/source_batches/BATCH_001_ENGINEERING_MATHEMATICS.jsonl"
 
-sha=hashlib.sha256(source.read_bytes()).hexdigest()
-errors=[]
-for name,obj in [("AI QA",qa),("Formatter evidence",fmt),("Eligibility candidate",elig),("Human QA",human)]:
-    if obj.get("source_sha256") != sha:
-        errors.append(f"{name}: source checksum mismatch")
-if qa.get("technical_pass_count")!=20 or qa.get("answer_recomputed_pass_count")!=20 or qa.get("solution_consistency_pass_count")!=20:
-    errors.append("AI QA is not 20/20.")
-if fmt.get("formatter_pass_count")!=20 or fmt.get("formatter_review_count")!=0:
-    errors.append("Formatter evidence is not 20 PASS / 0 REVIEW.")
-if elig.get("paper_eligibility_candidate_count")!=20:
-    errors.append("Eligibility candidate count mismatch.")
-stage=summary.get("current_stage")
-if stage=="READY_FOR_HUMAN_FINAL_QA":
-    if elig.get("paper_eligible_count")!=0: errors.append("Paper eligibility must remain zero before human signoff.")
-    if human.get("final_decision")!="PENDING": errors.append("Human final QA template must remain pending.")
-elif stage=="PAPER_ELIGIBILITY_CERTIFIED":
-    if human.get("final_decision")!="APPROVE_REVIEWED_RESULTS": errors.append("Certified stage requires human approval.")
-    if elig.get("human_final_qa")!="COMPLETE": errors.append("Certified stage requires human_final_qa COMPLETE.")
+
+def load(relative: str) -> dict:
+    return json.loads((ROOT / relative).read_text(encoding="utf-8"))
+
+
+qa = load("GATE_EE/corpus_v1/qualification/BATCH_001_INDEPENDENT_AI_QA.json")
+fmt = load("GATE_EE/corpus_v1/qualification/BATCH_001_FORMATTER_FINAL_EVIDENCE.json")
+elig = load("GATE_EE/corpus_v1/qualification/BATCH_001_PAPER_ELIGIBILITY_CANDIDATE.json")
+human = load("GATE_EE/corpus_v1/review_manifests/BATCH_001_HUMAN_FINAL_QA.json")
+summary = load("GATE_EE/corpus_v1/qualification/BATCH_001_QUALIFICATION_SUMMARY.json")
+
+sha = hashlib.sha256(SOURCE.read_bytes()).hexdigest()
+stage = summary.get("current_stage")
+errors: list[str] = []
+
+if elig.get("source_sha256") != sha:
+    errors.append("Eligibility artifact checksum does not match the current source.")
+if human.get("source_sha256") != sha:
+    errors.append("Human-QA template checksum does not match the current source.")
+if elig.get("paper_eligible_count") != 0:
+    errors.append("No item may be paper-eligible before requalification and human signoff.")
+if human.get("final_decision") != "PENDING" and stage != "PAPER_ELIGIBILITY_CERTIFIED":
+    errors.append("Human final QA must remain pending before certification.")
+
+if stage == "READY_FOR_FORMATTER_REQUALIFICATION":
+    if qa.get("status") != "STALE_SOURCE_CHANGED" or qa.get("evidence_valid_for_current_source") is not False:
+        errors.append("Old independent-AI evidence must be explicitly marked stale.")
+    if fmt.get("status") != "STALE_SOURCE_CHANGED" or fmt.get("evidence_valid_for_current_source") is not False:
+        errors.append("Old Formatter evidence must be explicitly marked stale.")
+    if summary.get("formatter_v2_final_qualification", {}).get("passed") != 0:
+        errors.append("Formatter pass count must reset to zero after a source change.")
+    if elig.get("paper_eligibility_candidate_count") != 0:
+        errors.append("Candidate count must reset to zero until requalification.")
+elif stage == "FORMATTER_REVIEW_REQUIRED":
+    if fmt.get("source_sha256") != sha or fmt.get("evidence_valid_for_current_source") is not True:
+        errors.append("Strict Formatter evidence must match the current source.")
+    if fmt.get("status") != "REVIEW_REQUIRED" or fmt.get("formatter_pass_count") != 0 or fmt.get("formatter_review_count") != 20:
+        errors.append("Expected the recorded strict result: 0 PASS / 20 REVIEW.")
+    if elig.get("paper_eligibility_candidate_count") != 0:
+        errors.append("Review-required records cannot become eligibility candidates.")
+elif stage == "READY_FOR_HUMAN_FINAL_QA":
+    if qa.get("source_sha256") != sha or fmt.get("source_sha256") != sha:
+        errors.append("Current qualification evidence checksum mismatch.")
+    if qa.get("technical_pass_count") != 20 or fmt.get("formatter_pass_count") != 20:
+        errors.append("Human-QA stage requires 20 current technical and Formatter passes.")
+elif stage == "PAPER_ELIGIBILITY_CERTIFIED":
+    if human.get("final_decision") != "APPROVE_REVIEWED_RESULTS":
+        errors.append("Certified stage requires recorded human approval.")
 else:
-    errors.append("Qualification summary stage mismatch.")
-if errors:
-    print("\n".join(errors)); raise SystemExit(1)
+    errors.append(f"Unsupported qualification stage: {stage!r}")
 
-print("GATE EE BATCH 001 INDEPENDENT FINAL QA: PASSED")
-print("Independent AI technical/answer/solution QA: 20/20")
-print("Formatter v2.0 final qualification: 20 PASS / 0 REVIEW")
-print("Paper-eligibility candidates: 20")
-print(f"Certified paper-eligible: {elig.get('paper_eligible_count',0)}")
-print(f"Human final QA: {'COMPLETE' if summary.get('current_stage')=='PAPER_ELIGIBILITY_CERTIFIED' else 'PENDING'}")
+if errors:
+    print("\n".join(errors))
+    raise SystemExit(1)
+
+print("GATE EE BATCH 001 QUALIFICATION STATE: CONSISTENT")
+print(f"Current stage: {stage}")
+print(f"Current source SHA-256: {sha}")
+print(f"Paper-eligible: {elig.get('paper_eligible_count', 0)}")
 print(f"Release gate: {elig.get('release_gate')}")

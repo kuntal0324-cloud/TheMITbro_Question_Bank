@@ -1,18 +1,13 @@
-# Batch 001 Human Final QA → Paper-Eligibility Certification
+# Batch 001 Human QA certification guide
 
-Current state: 20 Formatter PASS / 0 REVIEW; 20 independent-AI QA PASS; 0 certified paper-eligible.
+Human final QA is currently **blocked** because strict Formatter qualification is 0 PASS / 20 REVIEW.
 
-A real human reviewer must complete `GATE_EE/corpus_v1/review_manifests/BATCH_001_HUMAN_FINAL_QA.json`.
+When and only when the qualification summary reaches `READY_FOR_HUMAN_FINAL_QA` with current checksum-linked evidence showing 20 PASS / 0 REVIEW:
 
-## Procedure
-1. Use `BATCH_001_HUMAN_REVIEW_PACKET.md`.
+1. Generate a fresh detailed review packet from the canonical JSONL.
 2. Independently check each question, answer, solution, clarity and originality-conflict risk.
-3. For every required check, set `PASS` or `FAIL`.
-4. Set `decision` to `PASS`, `REVISE`, or `REJECT`.
-5. Fill reviewer name, role/qualification, date (`YYYY-MM-DD`) and exact attestation.
-6. Set `final_decision` to `APPROVE_REVIEWED_RESULTS`.
-7. Run `python scripts/validate_gate_ee_batch_001_human_signoff.py`.
-8. Run `python scripts/promote_gate_ee_batch_001_paper_eligibility.py`.
-9. Run `python scripts/validate_gate_ee_batch_001_paper_eligibility.py`.
+3. Record named reviewer identity, qualification, date and exact attestation.
+4. Mark each check PASS or FAIL and each decision PASS, REVISE or REJECT.
+5. Run the human-signoff validator and promotion command.
 
-Do not alter the canonical JSONL after signoff. The review and certificate are checksum-bound to `2c218be6055cfa977da0842a6bdbc1edb61fe1712bf88794dc461052ae050b9e`.
+The promotion script independently checks the current Formatter evidence and eligibility-candidate list. A human signoff cannot override unresolved Formatter reviews.

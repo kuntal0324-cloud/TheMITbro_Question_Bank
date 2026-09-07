@@ -1,0 +1,110 @@
+{
+  "contract_version": "1.0.0",
+  "exam_family": "GATE",
+  "exam_year": 2027,
+  "paper_code": "EE",
+  "title": "Electrical Engineering",
+  "authority": "IIT Madras, Organizing Institute for GATE 2027",
+  "verified_on": "2026-09-07",
+  "source_url": "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/EE_GATE2027_Syllabus.pdf",
+  "source_sha256": "ad63a3caab189ab599c04feb692569ac5884337caa435b0d67d6d2919b3c4ca4",
+  "sections": [
+    {
+      "number": 1,
+      "name": "Engineering Mathematics",
+      "topics": {
+        "Linear Algebra": ["Matrix algebra", "Systems of linear equations", "Eigenvalues", "Eigenvectors"],
+        "Calculus": ["Mean value theorems", "Theorems of integral calculus", "Definite and improper integrals", "Partial derivatives", "Maxima and minima", "Multiple integrals", "Fourier series", "Vector identities", "Directional derivatives", "Line, surface and volume integrals", "Stokes theorem", "Gauss theorem", "Divergence theorem", "Green theorem"],
+        "Differential Equations": ["First-order linear and nonlinear equations", "Higher-order linear equations with constant coefficients", "Variation of parameters", "Cauchy and Euler equations", "Initial and boundary value problems", "Partial differential equations", "Separation of variables"],
+        "Complex Variables": ["Analytic functions", "Cauchy integral theorem", "Cauchy integral formula", "Taylor series", "Laurent series", "Residue theorem", "Solution integrals"],
+        "Probability and Statistics": ["Sampling theorems", "Conditional probability", "Mean, median, mode and standard deviation", "Random variables", "Discrete and continuous distributions", "Poisson, normal and binomial distributions", "Correlation analysis", "Regression analysis"]
+      }
+    },
+    {
+      "number": 2,
+      "name": "Electric Circuits",
+      "topics": {
+        "Network Elements": ["Ideal voltage and current sources", "Dependent sources", "R, L, C and M elements"],
+        "Circuit Analysis": ["KCL", "KVL", "Node analysis", "Mesh analysis"],
+        "Network Theorems": ["Thevenin theorem", "Norton theorem", "Superposition", "Maximum power transfer"],
+        "Transient and AC Analysis": ["DC and AC network transients", "Sinusoidal steady state", "Resonance", "Two-port networks", "Balanced three-phase circuits", "Star-delta transformation", "Complex power", "Power factor"]
+      }
+    },
+    {
+      "number": 3,
+      "name": "Electromagnetic Fields",
+      "topics": {
+        "Electrostatics": ["Coulomb law", "Electric field intensity", "Electric flux density", "Gauss law", "Divergence", "Field and potential for point, line, plane and spherical charges", "Dielectric media", "Capacitance of simple configurations"],
+        "Magnetostatics and Induction": ["Biot-Savart law", "Ampere law", "Curl", "Faraday law", "Lorentz force", "Inductance", "Magnetomotive force", "Reluctance", "Magnetic circuits", "Self and mutual inductance of simple configurations"]
+      }
+    },
+    {
+      "number": 4,
+      "name": "Signals and Systems",
+      "topics": {
+        "Signals and LTI Systems": ["Continuous- and discrete-time signals", "Shifting and scaling", "Linear time-invariant systems", "Causal systems"],
+        "Transforms and Sampling": ["Fourier series for continuous- and discrete-time periodic signals", "Sampling theorem", "Fourier transform applications", "Laplace transform", "Z transform"],
+        "Waveform Measures": ["RMS value", "Average value of general periodic waveforms"]
+      }
+    },
+    {
+      "number": 5,
+      "name": "Electrical Machines",
+      "topics": {
+        "Transformers": ["Single-phase equivalent circuit and phasor diagram", "OC and SC tests", "Regulation and efficiency", "Three-phase connections and vector groups", "Parallel operation", "Autotransformer"],
+        "Energy Conversion and DC Machines": ["Electromechanical energy conversion", "Separately excited, series and shunt DC machines", "Motoring and generating characteristics", "DC motor speed control"],
+        "Induction Machines": ["Three-phase principle, types and performance", "Torque-speed characteristics", "No-load and blocked-rotor tests", "Equivalent circuit", "Starting and speed control", "Single-phase operating principle"],
+        "Synchronous Machines": ["Cylindrical and salient-pole machines", "Performance and characteristics", "Regulation", "Parallel generator operation", "Synchronous motor starting"],
+        "Losses and Efficiency": ["Machine losses", "Efficiency calculations"]
+      }
+    },
+    {
+      "number": 6,
+      "name": "Power Systems",
+      "topics": {
+        "Generation, Transmission and Distribution": ["Power generation basics", "AC and DC transmission", "Transmission lines and cables", "Series and shunt compensation", "Insulators and electric-field distribution", "Distribution systems"],
+        "Economic Operation and Load Flow": ["Economic load dispatch with and without transmission losses", "Per-unit quantities", "Bus admittance matrix", "Gauss-Seidel load flow", "Newton-Raphson load flow", "Voltage and frequency control", "Power-factor correction"],
+        "Faults, Protection and Stability": ["Symmetrical components", "Symmetrical and unsymmetrical faults", "Over-current, differential, directional and distance protection", "Circuit breakers", "System stability", "Equal-area criterion"]
+      }
+    },
+    {
+      "number": 7,
+      "name": "Control Systems",
+      "topics": {
+        "Modeling and Representation": ["Mathematical models", "Feedback", "Transfer functions", "Block diagrams", "Signal-flow graphs"],
+        "Response and Stability": ["Transient and steady-state analysis of LTI systems", "Routh-Hurwitz criterion", "Nyquist criterion", "Bode plots", "Root loci"],
+        "Compensation and State Space": ["Lag, lead and lead-lag compensators", "P, PI and PID controllers", "State-space models", "Solution of LTI state equations"]
+      }
+    },
+    {
+      "number": 8,
+      "name": "Electrical and Electronic Measurements",
+      "topics": {
+        "Measurement Methods": ["Bridges", "Potentiometers", "Voltage, current, power, energy and power-factor measurement"],
+        "Instruments and Errors": ["Instrument transformers", "Digital voltmeters and multimeters", "Phase, time and frequency measurement", "Oscilloscopes", "Error analysis"]
+      }
+    },
+    {
+      "number": 9,
+      "name": "Analog and Digital Electronics",
+      "topics": {
+        "Analog Electronics": ["Diode clipping, clamping and rectifiers", "Amplifier biasing, equivalent circuit and frequency response", "Oscillators", "Feedback amplifiers", "Operational-amplifier characteristics and applications", "Single-stage active filters", "Sallen-Key and Butterworth filters", "VCOs", "Timers", "Schmitt triggers", "Sample-and-hold circuits"],
+        "Digital Electronics": ["Combinational logic", "Sequential logic", "Multiplexers", "Demultiplexers", "A/D converters", "D/A converters"]
+      }
+    },
+    {
+      "number": 10,
+      "name": "Power Electronics",
+      "topics": {
+        "Power Devices": ["Static V-I characteristics", "Firing and gating circuits for thyristor, MOSFET and IGBT"],
+        "Converters": ["Buck, boost and buck-boost DC-DC converters", "Single- and three-phase uncontrolled rectifiers", "Voltage- and current-commutated thyristor converters", "Bidirectional AC-DC voltage-source converters"],
+        "Harmonics and Inverters": ["Line-current harmonic magnitude and phase", "Power factor and distortion factor of AC-DC converters", "Single- and three-phase voltage- and current-source inverters", "Sinusoidal PWM"]
+      }
+    }
+  ],
+  "explicit_scope_guards": {
+    "not_in_gate_ee_2027_engineering_mathematics": ["Numerical Methods"],
+    "separate_papers_not_valid_as_ee_scope": ["XE0 Engineering Mathematics", "XH0 Reasoning and Comprehension"]
+  }
+}
+

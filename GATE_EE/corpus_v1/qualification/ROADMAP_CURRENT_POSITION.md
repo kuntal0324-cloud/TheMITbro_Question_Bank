@@ -1,35 +1,30 @@
 # GATE EE Corpus V1 — Current Roadmap Position
 
-## Completed
-1. Formatter v2.0 frozen production baseline.
-2. GATE EE Corpus V1 foundation.
-3. Production Batch 001 authored: 20 Engineering Mathematics questions.
-4. Structural/content validation.
-5. Internal technical second-pass: 20/20.
-6. Formatter v2.0 qualification: 20/20 PASS.
-7. Independent AI final QA: 20/20 PASS.
-8. Paper-eligibility candidates: 20.
-
 ## Current position
-**Human Final QA → Paper-Eligibility Certification**
 
-The automated/AI technical pipeline is complete. A real human reviewer must now independently review and sign the 20-question batch.
+**Recovery gate: 20 Formatter reviews must be resolved**
 
-## After human signoff
-- Generate immutable paper-eligibility certificate.
-- Admit approved questions to GATE EE Corpus V1.
-- Send REVISE questions through correction + Formatter requalification.
-- Preserve REJECT decisions in the audit trail.
-- Begin Production Batch 002.
+The official GATE 2027 EE syllabus audit found that Numerical Methods belongs to XE, not EE. Batch 001 questions 014, 015 and 020 were therefore replaced with in-syllabus EE Engineering Mathematics questions. This changed the source checksum and invalidated every earlier automated or AI qualification result.
 
-## Remaining major roadmap
-1. Complete Batch 001 human signoff/certification.
-2. Produce Batch 002 onward until the master pool reaches 220 qualified questions.
-3. Corpus-wide duplicate, family, topic-distribution, difficulty and quality audit.
-4. Assemble GATE EE Set 01: 65 questions / 100 marks / 180 minutes.
-5. Final Set 01 human QA.
-6. Professional paper + solutions publication.
-7. Release manifest and deterministic bundle.
-8. Website product integration.
-9. Razorpay/payment/download/security launch qualification.
-10. Domain + controlled public launch.
+The strict Formatter re-run found 20/20 records require content review. All 20 syllabus routes and render-smoke checks passed, but those checks are not content qualification. No question in this batch is paper-eligible and the release gate remains blocked.
+
+## Completed
+
+1. Authoritative GATE 2027 EE exam-pattern contract added.
+2. Authoritative EE and GA syllabus maps added.
+3. Batch 001 Numerical Methods contamination removed.
+4. Batch manifest, handoff checksum and human-review template refreshed.
+5. Previous qualification evidence marked `STALE_SOURCE_CHANGED`.
+6. A 50-set, 3,575-candidate production allocation and eight-day draft-production program added.
+
+## Exact next gates
+
+1. Resolve every Formatter `REVIEW` result; do not reinterpret it as `PASS`.
+2. Re-run the corrected Formatter against the current Batch 001 checksum.
+3. Recompute answers and independently review solutions.
+4. Complete named human technical signoff.
+5. Promote only explicitly approved questions to `PAPER_ELIGIBLE`.
+
+## Scale reality
+
+Fifty unique papers require 3,250 paper slots (50 × 65). The program allocates 3,575 candidates, including a 10% reserve. Eight days can be a draft-generation sprint only; commercial release still depends on technical, originality, render and human-review gates.

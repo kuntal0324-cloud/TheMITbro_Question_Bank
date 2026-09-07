@@ -12,7 +12,15 @@ human=json.loads(HUMAN.read_text(encoding="utf-8")); candidate=json.loads(CANDID
 summary=json.loads(SUMMARY.read_text(encoding="utf-8")); errors=[]
 if human.get("source_sha256")!=sha or candidate.get("source_sha256")!=sha: errors.append("Source checksum mismatch.")
 stage=summary.get("current_stage")
-if stage=="READY_FOR_HUMAN_FINAL_QA":
+if stage in {"READY_FOR_FORMATTER_REQUALIFICATION", "FORMATTER_REVIEW_REQUIRED"}:
+    if candidate.get("paper_eligible_count")!=0: errors.append("Recovery stage paper eligibility must be zero.")
+    if candidate.get("paper_eligibility_candidate_count")!=0: errors.append("Recovery stage candidate count must be zero.")
+    if human.get("final_decision")!="PENDING": errors.append("Human decision must remain pending during recovery.")
+    if errors: print("\n".join(errors)); raise SystemExit(1)
+    print(f"BATCH 001 PAPER-ELIGIBILITY STATE: {stage}")
+    print("Certified paper-eligible: 0")
+    print("Release gate: BLOCKED")
+elif stage=="READY_FOR_HUMAN_FINAL_QA":
     if candidate.get("paper_eligible_count")!=0: errors.append("Pre-signoff paper eligibility must be zero.")
     if human.get("final_decision")!="PENDING": errors.append("Unexpected human decision before promotion.")
     if CERT.exists() or ADMISSION.exists(): errors.append("Certificate/admission must not exist before promotion.")

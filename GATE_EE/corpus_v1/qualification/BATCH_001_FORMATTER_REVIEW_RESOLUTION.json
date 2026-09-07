@@ -17,9 +17,33 @@
       "reason": "Conservative classifier did not detect a linear-algebra task from the original wording.",
       "change": "Added explicit coefficient-matrix/linear-system wording.",
       "answer_changed": false
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-014",
+      "from_revision": 1,
+      "to_revision": 2,
+      "reason": "Numerical Methods is not in the official GATE 2027 EE syllabus.",
+      "change": "Replaced with an in-syllabus Fourier-series Calculus item.",
+      "answer_changed": true
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-015",
+      "from_revision": 1,
+      "to_revision": 2,
+      "reason": "Numerical Methods is not in the official GATE 2027 EE syllabus.",
+      "change": "Replaced with an in-syllabus Complex Variables contour-integral item.",
+      "answer_changed": true
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-020",
+      "from_revision": 1,
+      "to_revision": 2,
+      "reason": "Numerical Methods is not in the official GATE 2027 EE syllabus.",
+      "change": "Replaced with an in-syllabus Differential Equations PDE item.",
+      "answer_changed": true
     }
   ],
-  "new_source_sha256": "2c218be6055cfa977da0842a6bdbc1edb61fe1712bf88794dc461052ae050b9e",
+  "new_source_sha256": "745b01ddfa9e14ed7bfd6582fa8d76d728eeeea84cc6b1fa804fe1321b791bd3",
   "paper_eligible_count": 0,
   "independent_human_review": "PENDING"
 }

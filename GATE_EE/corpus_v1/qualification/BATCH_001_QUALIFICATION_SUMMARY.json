@@ -1,7 +1,7 @@
 {
-  "qualification_version": "1.0.0",
+  "qualification_version": "1.1.0",
   "batch_id": "BATCH_001",
-  "current_stage": "READY_FOR_HUMAN_FINAL_QA",
+  "current_stage": "FORMATTER_REVIEW_REQUIRED",
   "questions_total": 20,
   "internal_technical_second_pass": {
     "passed": 20,
@@ -11,17 +11,22 @@
   "unique_families": true,
   "paper_eligible_count": 0,
   "remaining_gates": [
+    "resolve 20 strict Formatter review results",
+    "independent AI technical recheck",
     "independent human technical review",
     "independent human answer/solution review",
     "human final approval"
   ],
-  "next_action": "Complete BATCH_001_HUMAN_FINAL_QA.json, then run paper-eligibility promotion.",
+  "next_action": "Resolve the 20 strict Formatter REVIEW results, then re-run independent technical QA.",
   "formatter_v2_final_qualification": {
-    "passed": 20,
-    "review": 0
+    "status": "REVIEW_REQUIRED",
+    "passed": 0,
+    "review": 20
   },
   "independent_ai_qa": {
-    "passed": 20,
+    "status": "STALE_SOURCE_CHANGED",
+    "passed": 0,
     "human_review_substitute": false
-  }
+  },
+  "release_gate": "BLOCKED"
 }
