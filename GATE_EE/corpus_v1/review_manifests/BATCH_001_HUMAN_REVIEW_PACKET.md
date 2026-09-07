@@ -53,7 +53,7 @@ Final answer: C
 | Technical correctness | ☐ | ☐ | |
 | Answer correctness | ☐ | ☐ | |
 | Solution correctness | ☐ | ☐ | |
-| Clarity / ambiguity | ☐ | ☑ | | Matrix is exposed as raw LaTeX in the mobile review packet and is not rendered for human review.
+| Clarity / ambiguity | ☐ | ☑ | Matrix is exposed as raw LaTeX in the mobile review packet and is not rendered for human review.
 | Originality-conflict check | ☐ | ☐ | |
 
 Decision: ☐ PASS  ☑ REVISE  ☐ REJECT
