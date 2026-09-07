@@ -1,13 +1,14 @@
 # Batch 001 Human QA certification guide
 
-Human final QA is currently **blocked** because strict Formatter qualification is 0 PASS / 20 REVIEW.
+Batch 001 is now ready for named human final QA against canonical source `cf815b061af0d357df02796f34021b69c3e2465835a1ab1caab7d1ae16d61256`.
 
-When and only when the qualification summary reaches `READY_FOR_HUMAN_FINAL_QA` with current checksum-linked evidence showing 20 PASS / 0 REVIEW:
+The strict Formatter result is 20 PASS / 0 REVIEW / 0 invalid, and independent AI recomputation is 20/20 PASS. Neither result is a substitute for a qualified human reviewer.
 
-1. Generate a fresh detailed review packet from the canonical JSONL.
+1. Review every item in `../review_manifests/BATCH_001_HUMAN_REVIEW_PACKET.md`.
 2. Independently check each question, answer, solution, clarity and originality-conflict risk.
-3. Record named reviewer identity, qualification, date and exact attestation.
-4. Mark each check PASS or FAIL and each decision PASS, REVISE or REJECT.
-5. Run the human-signoff validator and promotion command.
+3. Record reviewer name, qualification, date and the exact required attestation in `BATCH_001_HUMAN_FINAL_QA.json`.
+4. Mark all five checks PASS or FAIL and each decision PASS, REVISE or REJECT.
+5. Run the human-signoff validator.
+6. Run the promotion command only after valid signoff; it promotes only question IDs explicitly marked PASS.
 
-The promotion script independently checks the current Formatter evidence and eligibility-candidate list. A human signoff cannot override unresolved Formatter reviews.
+The website release and commerce gates remain blocked throughout this stage.

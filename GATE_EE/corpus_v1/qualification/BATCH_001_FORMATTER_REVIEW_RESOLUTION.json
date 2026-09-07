@@ -1,49 +1,327 @@
 {
-  "resolution_version": "1.0.0",
+  "resolution_version": "2.0.0",
   "batch_id": "BATCH_001",
+  "source_sha256": "cf815b061af0d357df02796f34021b69c3e2465835a1ab1caab7d1ae16d61256",
+  "strict_report_sha256": "ea12ea1c9806ca46600b474f67981e8092d3239eef7d93ce790798102cbd8c39",
   "resolved_formatter_review_cases": [
     {
-      "question_id": "TMB-GATE-EE-EM-005",
+      "question_id": "TMB-GATE-EE-EM-001",
       "from_revision": 1,
       "to_revision": 2,
-      "reason": "Conservative classifier did not detect a calculus task from the original wording.",
-      "change": "Added explicit derivative wording while preserving the original mathematics and answer.",
-      "answer_changed": false
+      "review_causes": [
+        "solution_final_result_not_machine_detectable",
+        "task_instruction_not_explicit"
+      ],
+      "changes": [
+        "Added one plain-text Final answer marker that agrees with the structured answer key.",
+        "Recast the stem as an explicit calculate/determine/evaluate task."
+      ],
+      "answer_changed": false,
+      "independent_recomputation": "PASS",
+      "formatter_result": "PASS"
     },
     {
-      "question_id": "TMB-GATE-EE-EM-016",
+      "question_id": "TMB-GATE-EE-EM-002",
       "from_revision": 1,
       "to_revision": 2,
-      "reason": "Conservative classifier did not detect a linear-algebra task from the original wording.",
-      "change": "Added explicit coefficient-matrix/linear-system wording.",
-      "answer_changed": false
+      "review_causes": [
+        "solution_final_result_not_machine_detectable",
+        "task_instruction_not_explicit"
+      ],
+      "changes": [
+        "Added one plain-text Final answer marker that agrees with the structured answer key.",
+        "Recast the stem as an explicit calculate/determine/evaluate task."
+      ],
+      "answer_changed": false,
+      "independent_recomputation": "PASS",
+      "formatter_result": "PASS"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-003",
+      "from_revision": 1,
+      "to_revision": 2,
+      "review_causes": [
+        "solution_final_result_not_machine_detectable"
+      ],
+      "changes": [
+        "Added one plain-text Final answer marker that agrees with the structured answer key."
+      ],
+      "answer_changed": false,
+      "independent_recomputation": "PASS",
+      "formatter_result": "PASS"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-004",
+      "from_revision": 1,
+      "to_revision": 2,
+      "review_causes": [
+        "solution_final_result_not_machine_detectable",
+        "task_instruction_not_explicit"
+      ],
+      "changes": [
+        "Added one plain-text Final answer marker that agrees with the structured answer key.",
+        "Recast the stem as an explicit calculate/determine/evaluate task."
+      ],
+      "answer_changed": false,
+      "independent_recomputation": "PASS",
+      "formatter_result": "PASS"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-005",
+      "from_revision": 2,
+      "to_revision": 3,
+      "review_causes": [
+        "solution_final_result_not_machine_detectable"
+      ],
+      "changes": [
+        "Added one plain-text Final answer marker that agrees with the structured answer key."
+      ],
+      "answer_changed": false,
+      "independent_recomputation": "PASS",
+      "formatter_result": "PASS"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-006",
+      "from_revision": 1,
+      "to_revision": 2,
+      "review_causes": [
+        "solution_final_result_not_machine_detectable",
+        "task_instruction_not_explicit"
+      ],
+      "changes": [
+        "Added one plain-text Final answer marker that agrees with the structured answer key.",
+        "Recast the stem as an explicit calculate/determine/evaluate task."
+      ],
+      "answer_changed": false,
+      "independent_recomputation": "PASS",
+      "formatter_result": "PASS"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-007",
+      "from_revision": 1,
+      "to_revision": 2,
+      "review_causes": [
+        "solution_final_result_not_machine_detectable",
+        "task_instruction_not_explicit"
+      ],
+      "changes": [
+        "Added one plain-text Final answer marker that agrees with the structured answer key.",
+        "Recast the stem as an explicit calculate/determine/evaluate task."
+      ],
+      "answer_changed": false,
+      "independent_recomputation": "PASS",
+      "formatter_result": "PASS"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-008",
+      "from_revision": 1,
+      "to_revision": 2,
+      "review_causes": [
+        "solution_final_result_not_machine_detectable"
+      ],
+      "changes": [
+        "Added one plain-text Final answer marker that agrees with the structured answer key."
+      ],
+      "answer_changed": false,
+      "independent_recomputation": "PASS",
+      "formatter_result": "PASS"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-009",
+      "from_revision": 1,
+      "to_revision": 2,
+      "review_causes": [
+        "solution_final_result_not_machine_detectable",
+        "task_instruction_not_explicit"
+      ],
+      "changes": [
+        "Added one plain-text Final answer marker that agrees with the structured answer key.",
+        "Recast the stem as an explicit calculate/determine/evaluate task."
+      ],
+      "answer_changed": false,
+      "independent_recomputation": "PASS",
+      "formatter_result": "PASS"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-010",
+      "from_revision": 1,
+      "to_revision": 2,
+      "review_causes": [
+        "solution_final_result_not_machine_detectable",
+        "task_instruction_not_explicit"
+      ],
+      "changes": [
+        "Added one plain-text Final answer marker that agrees with the structured answer key.",
+        "Recast the stem as an explicit calculate/determine/evaluate task."
+      ],
+      "answer_changed": false,
+      "independent_recomputation": "PASS",
+      "formatter_result": "PASS"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-011",
+      "from_revision": 1,
+      "to_revision": 2,
+      "review_causes": [
+        "solution_final_result_not_machine_detectable",
+        "task_instruction_not_explicit"
+      ],
+      "changes": [
+        "Added one plain-text Final answer marker that agrees with the structured answer key.",
+        "Recast the stem as an explicit calculate/determine/evaluate task."
+      ],
+      "answer_changed": false,
+      "independent_recomputation": "PASS",
+      "formatter_result": "PASS"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-012",
+      "from_revision": 1,
+      "to_revision": 2,
+      "review_causes": [
+        "solution_final_result_not_machine_detectable",
+        "task_instruction_not_explicit"
+      ],
+      "changes": [
+        "Added one plain-text Final answer marker that agrees with the structured answer key.",
+        "Recast the stem as an explicit calculate/determine/evaluate task."
+      ],
+      "answer_changed": false,
+      "independent_recomputation": "PASS",
+      "formatter_result": "PASS"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-013",
+      "from_revision": 1,
+      "to_revision": 2,
+      "review_causes": [
+        "solution_final_result_not_machine_detectable"
+      ],
+      "changes": [
+        "Added one plain-text Final answer marker that agrees with the structured answer key."
+      ],
+      "answer_changed": false,
+      "independent_recomputation": "PASS",
+      "formatter_result": "PASS"
     },
     {
       "question_id": "TMB-GATE-EE-EM-014",
-      "from_revision": 1,
-      "to_revision": 2,
-      "reason": "Numerical Methods is not in the official GATE 2027 EE syllabus.",
-      "change": "Replaced with an in-syllabus Fourier-series Calculus item.",
-      "answer_changed": true
+      "from_revision": 2,
+      "to_revision": 3,
+      "review_causes": [
+        "solution_final_result_not_machine_detectable",
+        "task_instruction_not_explicit"
+      ],
+      "changes": [
+        "Added one plain-text Final answer marker that agrees with the structured answer key.",
+        "Recast the stem as an explicit calculate/determine/evaluate task."
+      ],
+      "answer_changed": false,
+      "independent_recomputation": "PASS",
+      "formatter_result": "PASS"
     },
     {
       "question_id": "TMB-GATE-EE-EM-015",
+      "from_revision": 2,
+      "to_revision": 3,
+      "review_causes": [
+        "solution_final_result_not_machine_detectable",
+        "task_instruction_not_explicit"
+      ],
+      "changes": [
+        "Added one plain-text Final answer marker that agrees with the structured answer key.",
+        "Recast the stem as an explicit calculate/determine/evaluate task.",
+        "Removed wording that falsely implied a required diagram while preserving the same mathematical object."
+      ],
+      "answer_changed": false,
+      "independent_recomputation": "PASS",
+      "formatter_result": "PASS"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-016",
+      "from_revision": 2,
+      "to_revision": 3,
+      "review_causes": [
+        "solution_final_result_not_machine_detectable",
+        "task_instruction_not_explicit"
+      ],
+      "changes": [
+        "Added one plain-text Final answer marker that agrees with the structured answer key.",
+        "Recast the stem as an explicit calculate/determine/evaluate task."
+      ],
+      "answer_changed": false,
+      "independent_recomputation": "PASS",
+      "formatter_result": "PASS"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-017",
       "from_revision": 1,
       "to_revision": 2,
-      "reason": "Numerical Methods is not in the official GATE 2027 EE syllabus.",
-      "change": "Replaced with an in-syllabus Complex Variables contour-integral item.",
-      "answer_changed": true
+      "review_causes": [
+        "solution_final_result_not_machine_detectable",
+        "task_instruction_not_explicit"
+      ],
+      "changes": [
+        "Added one plain-text Final answer marker that agrees with the structured answer key.",
+        "Recast the stem as an explicit calculate/determine/evaluate task."
+      ],
+      "answer_changed": false,
+      "independent_recomputation": "PASS",
+      "formatter_result": "PASS"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-018",
+      "from_revision": 1,
+      "to_revision": 2,
+      "review_causes": [
+        "solution_final_result_not_machine_detectable",
+        "task_instruction_not_explicit"
+      ],
+      "changes": [
+        "Added one plain-text Final answer marker that agrees with the structured answer key.",
+        "Removed wording that falsely implied a required diagram while preserving the same mathematical object."
+      ],
+      "answer_changed": false,
+      "independent_recomputation": "PASS",
+      "formatter_result": "PASS"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-019",
+      "from_revision": 1,
+      "to_revision": 2,
+      "review_causes": [
+        "solution_final_result_not_machine_detectable",
+        "task_instruction_not_explicit"
+      ],
+      "changes": [
+        "Added one plain-text Final answer marker that agrees with the structured answer key.",
+        "Recast the stem as an explicit calculate/determine/evaluate task."
+      ],
+      "answer_changed": false,
+      "independent_recomputation": "PASS",
+      "formatter_result": "PASS"
     },
     {
       "question_id": "TMB-GATE-EE-EM-020",
-      "from_revision": 1,
-      "to_revision": 2,
-      "reason": "Numerical Methods is not in the official GATE 2027 EE syllabus.",
-      "change": "Replaced with an in-syllabus Differential Equations PDE item.",
-      "answer_changed": true
+      "from_revision": 2,
+      "to_revision": 3,
+      "review_causes": [
+        "solution_final_result_not_machine_detectable",
+        "task_instruction_not_explicit"
+      ],
+      "changes": [
+        "Added one plain-text Final answer marker that agrees with the structured answer key.",
+        "Recast the stem as an explicit calculate/determine/evaluate task."
+      ],
+      "answer_changed": false,
+      "independent_recomputation": "PASS",
+      "formatter_result": "PASS"
     }
   ],
-  "new_source_sha256": "745b01ddfa9e14ed7bfd6582fa8d76d728eeeea84cc6b1fa804fe1321b791bd3",
+  "resolved_count": 20,
+  "formatter_pass_count": 20,
+  "formatter_review_count": 0,
+  "invalid_count": 0,
   "paper_eligible_count": 0,
   "independent_human_review": "PENDING"
 }

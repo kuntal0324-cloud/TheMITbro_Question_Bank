@@ -1,14 +1,16 @@
 {
-  "review_contract": "GATE_EE_BATCH001_TECHNICAL_REVIEW_R2",
+  "review_contract": "GATE_EE_BATCH001_TECHNICAL_REVIEW_R3",
   "batch_id": "BATCH_001",
-  "source_sha256": "745b01ddfa9e14ed7bfd6582fa8d76d728eeeea84cc6b1fa804fe1321b791bd3",
-  "stage": "FORMATTER_REVIEW_REQUIRED",
-  "technical_second_pass_passed": 0,
-  "technical_second_pass_pending": 20,
-  "formatter_passed": 0,
-  "formatter_review": 20,
+  "source_sha256": "cf815b061af0d357df02796f34021b69c3e2465835a1ab1caab7d1ae16d61256",
+  "stage": "READY_FOR_HUMAN_FINAL_QA",
+  "technical_second_pass_passed": 20,
+  "technical_second_pass_pending": 0,
+  "formatter_passed": 20,
+  "formatter_review": 0,
+  "invalid_count": 0,
   "paper_eligible_count": 0,
   "formatter_v2_validation_required": true,
   "independent_human_review_required": true,
-  "release_gate": "BLOCKED"
+  "human_technical_review_status": "PENDING",
+  "release_gate": "BLOCKED_PENDING_HUMAN_FINAL_QA"
 }

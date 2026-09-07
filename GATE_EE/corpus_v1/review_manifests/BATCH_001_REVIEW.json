@@ -1,9 +1,312 @@
 {
-  "review_contract": "GATE_EE_BATCH001_REVIEW_R2",
+  "review_contract": "GATE_EE_BATCH001_REVIEW_R3",
   "batch_id": "BATCH_001",
-  "source_sha256": "745b01ddfa9e14ed7bfd6582fa8d76d728eeeea84cc6b1fa804fe1321b791bd3",
-  "status": "BLOCKED_FORMATTER_REVIEW_REQUIRED",
-  "questions": [],
+  "source_sha256": "cf815b061af0d357df02796f34021b69c3e2465835a1ab1caab7d1ae16d61256",
+  "formatter_report_sha256": "ea12ea1c9806ca46600b474f67981e8092d3239eef7d93ce790798102cbd8c39",
+  "status": "READY_FOR_HUMAN_FINAL_QA",
+  "questions": [
+    {
+      "question_id": "TMB-GATE-EE-EM-001",
+      "revision": 2,
+      "formatter_qualification": "PASS",
+      "formatter_quality_grade": "A",
+      "independent_ai_recomputation": "PASS",
+      "human_checks": {
+        "technical_correctness": "PENDING",
+        "answer_correctness": "PENDING",
+        "solution_correctness": "PENDING",
+        "clarity_ambiguity": "PENDING",
+        "originality_conflict_check": "PENDING"
+      },
+      "human_decision": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-002",
+      "revision": 2,
+      "formatter_qualification": "PASS",
+      "formatter_quality_grade": "A",
+      "independent_ai_recomputation": "PASS",
+      "human_checks": {
+        "technical_correctness": "PENDING",
+        "answer_correctness": "PENDING",
+        "solution_correctness": "PENDING",
+        "clarity_ambiguity": "PENDING",
+        "originality_conflict_check": "PENDING"
+      },
+      "human_decision": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-003",
+      "revision": 2,
+      "formatter_qualification": "PASS",
+      "formatter_quality_grade": "A",
+      "independent_ai_recomputation": "PASS",
+      "human_checks": {
+        "technical_correctness": "PENDING",
+        "answer_correctness": "PENDING",
+        "solution_correctness": "PENDING",
+        "clarity_ambiguity": "PENDING",
+        "originality_conflict_check": "PENDING"
+      },
+      "human_decision": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-004",
+      "revision": 2,
+      "formatter_qualification": "PASS",
+      "formatter_quality_grade": "A",
+      "independent_ai_recomputation": "PASS",
+      "human_checks": {
+        "technical_correctness": "PENDING",
+        "answer_correctness": "PENDING",
+        "solution_correctness": "PENDING",
+        "clarity_ambiguity": "PENDING",
+        "originality_conflict_check": "PENDING"
+      },
+      "human_decision": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-005",
+      "revision": 3,
+      "formatter_qualification": "PASS",
+      "formatter_quality_grade": "A",
+      "independent_ai_recomputation": "PASS",
+      "human_checks": {
+        "technical_correctness": "PENDING",
+        "answer_correctness": "PENDING",
+        "solution_correctness": "PENDING",
+        "clarity_ambiguity": "PENDING",
+        "originality_conflict_check": "PENDING"
+      },
+      "human_decision": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-006",
+      "revision": 2,
+      "formatter_qualification": "PASS",
+      "formatter_quality_grade": "A",
+      "independent_ai_recomputation": "PASS",
+      "human_checks": {
+        "technical_correctness": "PENDING",
+        "answer_correctness": "PENDING",
+        "solution_correctness": "PENDING",
+        "clarity_ambiguity": "PENDING",
+        "originality_conflict_check": "PENDING"
+      },
+      "human_decision": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-007",
+      "revision": 2,
+      "formatter_qualification": "PASS",
+      "formatter_quality_grade": "A",
+      "independent_ai_recomputation": "PASS",
+      "human_checks": {
+        "technical_correctness": "PENDING",
+        "answer_correctness": "PENDING",
+        "solution_correctness": "PENDING",
+        "clarity_ambiguity": "PENDING",
+        "originality_conflict_check": "PENDING"
+      },
+      "human_decision": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-008",
+      "revision": 2,
+      "formatter_qualification": "PASS",
+      "formatter_quality_grade": "A",
+      "independent_ai_recomputation": "PASS",
+      "human_checks": {
+        "technical_correctness": "PENDING",
+        "answer_correctness": "PENDING",
+        "solution_correctness": "PENDING",
+        "clarity_ambiguity": "PENDING",
+        "originality_conflict_check": "PENDING"
+      },
+      "human_decision": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-009",
+      "revision": 2,
+      "formatter_qualification": "PASS",
+      "formatter_quality_grade": "A",
+      "independent_ai_recomputation": "PASS",
+      "human_checks": {
+        "technical_correctness": "PENDING",
+        "answer_correctness": "PENDING",
+        "solution_correctness": "PENDING",
+        "clarity_ambiguity": "PENDING",
+        "originality_conflict_check": "PENDING"
+      },
+      "human_decision": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-010",
+      "revision": 2,
+      "formatter_qualification": "PASS",
+      "formatter_quality_grade": "A",
+      "independent_ai_recomputation": "PASS",
+      "human_checks": {
+        "technical_correctness": "PENDING",
+        "answer_correctness": "PENDING",
+        "solution_correctness": "PENDING",
+        "clarity_ambiguity": "PENDING",
+        "originality_conflict_check": "PENDING"
+      },
+      "human_decision": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-011",
+      "revision": 2,
+      "formatter_qualification": "PASS",
+      "formatter_quality_grade": "A",
+      "independent_ai_recomputation": "PASS",
+      "human_checks": {
+        "technical_correctness": "PENDING",
+        "answer_correctness": "PENDING",
+        "solution_correctness": "PENDING",
+        "clarity_ambiguity": "PENDING",
+        "originality_conflict_check": "PENDING"
+      },
+      "human_decision": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-012",
+      "revision": 2,
+      "formatter_qualification": "PASS",
+      "formatter_quality_grade": "A",
+      "independent_ai_recomputation": "PASS",
+      "human_checks": {
+        "technical_correctness": "PENDING",
+        "answer_correctness": "PENDING",
+        "solution_correctness": "PENDING",
+        "clarity_ambiguity": "PENDING",
+        "originality_conflict_check": "PENDING"
+      },
+      "human_decision": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-013",
+      "revision": 2,
+      "formatter_qualification": "PASS",
+      "formatter_quality_grade": "A",
+      "independent_ai_recomputation": "PASS",
+      "human_checks": {
+        "technical_correctness": "PENDING",
+        "answer_correctness": "PENDING",
+        "solution_correctness": "PENDING",
+        "clarity_ambiguity": "PENDING",
+        "originality_conflict_check": "PENDING"
+      },
+      "human_decision": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-014",
+      "revision": 3,
+      "formatter_qualification": "PASS",
+      "formatter_quality_grade": "A",
+      "independent_ai_recomputation": "PASS",
+      "human_checks": {
+        "technical_correctness": "PENDING",
+        "answer_correctness": "PENDING",
+        "solution_correctness": "PENDING",
+        "clarity_ambiguity": "PENDING",
+        "originality_conflict_check": "PENDING"
+      },
+      "human_decision": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-015",
+      "revision": 3,
+      "formatter_qualification": "PASS",
+      "formatter_quality_grade": "A",
+      "independent_ai_recomputation": "PASS",
+      "human_checks": {
+        "technical_correctness": "PENDING",
+        "answer_correctness": "PENDING",
+        "solution_correctness": "PENDING",
+        "clarity_ambiguity": "PENDING",
+        "originality_conflict_check": "PENDING"
+      },
+      "human_decision": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-016",
+      "revision": 3,
+      "formatter_qualification": "PASS",
+      "formatter_quality_grade": "A",
+      "independent_ai_recomputation": "PASS",
+      "human_checks": {
+        "technical_correctness": "PENDING",
+        "answer_correctness": "PENDING",
+        "solution_correctness": "PENDING",
+        "clarity_ambiguity": "PENDING",
+        "originality_conflict_check": "PENDING"
+      },
+      "human_decision": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-017",
+      "revision": 2,
+      "formatter_qualification": "PASS",
+      "formatter_quality_grade": "A",
+      "independent_ai_recomputation": "PASS",
+      "human_checks": {
+        "technical_correctness": "PENDING",
+        "answer_correctness": "PENDING",
+        "solution_correctness": "PENDING",
+        "clarity_ambiguity": "PENDING",
+        "originality_conflict_check": "PENDING"
+      },
+      "human_decision": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-018",
+      "revision": 2,
+      "formatter_qualification": "PASS",
+      "formatter_quality_grade": "A",
+      "independent_ai_recomputation": "PASS",
+      "human_checks": {
+        "technical_correctness": "PENDING",
+        "answer_correctness": "PENDING",
+        "solution_correctness": "PENDING",
+        "clarity_ambiguity": "PENDING",
+        "originality_conflict_check": "PENDING"
+      },
+      "human_decision": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-019",
+      "revision": 2,
+      "formatter_qualification": "PASS",
+      "formatter_quality_grade": "A",
+      "independent_ai_recomputation": "PASS",
+      "human_checks": {
+        "technical_correctness": "PENDING",
+        "answer_correctness": "PENDING",
+        "solution_correctness": "PENDING",
+        "clarity_ambiguity": "PENDING",
+        "originality_conflict_check": "PENDING"
+      },
+      "human_decision": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-020",
+      "revision": 3,
+      "formatter_qualification": "PASS",
+      "formatter_quality_grade": "A",
+      "independent_ai_recomputation": "PASS",
+      "human_checks": {
+        "technical_correctness": "PENDING",
+        "answer_correctness": "PENDING",
+        "solution_correctness": "PENDING",
+        "clarity_ambiguity": "PENDING",
+        "originality_conflict_check": "PENDING"
+      },
+      "human_decision": "PENDING"
+    }
+  ],
+  "paper_eligibility_candidate_count": 20,
   "paper_eligible_count": 0,
-  "next_action": "Populate only after strict Formatter qualification reaches 20 PASS / 0 REVIEW."
+  "next_action": "Record a named human review in BATCH_001_HUMAN_FINAL_QA.json, validate it, then promote approved IDs only."
 }

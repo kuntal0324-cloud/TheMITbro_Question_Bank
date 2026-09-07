@@ -48,8 +48,44 @@ elif stage == "FORMATTER_REVIEW_REQUIRED":
 elif stage == "READY_FOR_HUMAN_FINAL_QA":
     if qa.get("source_sha256") != sha or fmt.get("source_sha256") != sha:
         errors.append("Current qualification evidence checksum mismatch.")
-    if qa.get("technical_pass_count") != 20 or fmt.get("formatter_pass_count") != 20:
+    if qa.get("status") != "PASS" or qa.get("evidence_valid_for_current_source") is not True:
+        errors.append("Independent AI recomputation evidence is not current and passing.")
+    if qa.get("human_review_substitute") is not False:
+        errors.append("AI evidence must explicitly state that it is not a human-review substitute.")
+    if any(qa.get(field) != 20 for field in (
+        "technical_pass_count", "answer_recomputed_pass_count",
+        "solution_consistency_pass_count", "machine_final_marker_pass_count",
+    )):
+        errors.append("Independent AI recomputation must pass all 20 questions and solutions.")
+    source_questions=[json.loads(x) for x in SOURCE.read_text(encoding="utf-8").splitlines() if x.strip()]
+    source_by_id={q["id"]:q for q in source_questions}
+    expected={(q["id"],q["revision"]) for q in source_questions}
+    qa_rows=qa.get("questions",[])
+    found={(row.get("question_id"),row.get("revision")) for row in qa_rows}
+    if len(qa_rows)!=20 or found!=expected:
+        errors.append("Independent AI evidence IDs/revisions do not match the canonical source.")
+    for row in qa_rows:
+        if any(row.get(field)!="PASS" for field in (
+            "technical_result","answer_result","solution_consistency_result","machine_final_marker_result"
+        )):
+            errors.append(f"{row.get('question_id','?')}: independent recomputation is incomplete.")
+        canonical=source_by_id.get(row.get("question_id"))
+        if canonical and (
+            row.get("declared_answer") != canonical.get("answer")
+            or row.get("recomputed_answer") != canonical.get("answer")
+            or not str(row.get("derivation_summary","")).strip()
+        ):
+            errors.append(f"{row.get('question_id','?')}: recomputed answer evidence disagrees with the canonical answer.")
+    if (
+        fmt.get("status") != "PASS"
+        or fmt.get("formatter_pass_count") != 20
+        or fmt.get("formatter_review_count") != 0
+        or fmt.get("invalid_count") != 0
+    ):
         errors.append("Human-QA stage requires 20 current technical and Formatter passes.")
+    expected_ids=[q["id"] for q in source_questions]
+    if elig.get("candidate_question_ids") != expected_ids or elig.get("paper_eligibility_candidate_count") != 20:
+        errors.append("Eligibility candidates do not match all current Batch 001 IDs.")
 elif stage == "PAPER_ELIGIBILITY_CERTIFIED":
     if human.get("final_decision") != "APPROVE_REVIEWED_RESULTS":
         errors.append("Certified stage requires recorded human approval.")
