@@ -53,10 +53,10 @@ Final answer: C
 | Technical correctness | ☐ | ☐ | |
 | Answer correctness | ☐ | ☐ | |
 | Solution correctness | ☐ | ☐ | |
-| Clarity / ambiguity | ☐ | ☐ | |
+| Clarity / ambiguity | ☐ | ☑ | | Matrix is exposed as raw LaTeX in the mobile review packet and is not rendered for human review.
 | Originality-conflict check | ☐ | ☐ | |
 
-Decision: ☐ PASS  ☐ REVISE  ☐ REJECT
+Decision: ☐ PASS  ☑ REVISE  ☐ REJECT
 
 ---
 
