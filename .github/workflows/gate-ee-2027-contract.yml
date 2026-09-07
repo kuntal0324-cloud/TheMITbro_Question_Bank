@@ -1,0 +1,23 @@
+name: GATE 2027 EE Official Contract
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-official-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Validate GATE 2027 EE syllabus, pattern and production math
+        run: python scripts/validate_gate_ee_2027_contract.py
+

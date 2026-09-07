@@ -22,7 +22,11 @@ if len(set(ids)) != len(ids):
     errors.append("Duplicate question IDs detected.")
 if len(set(families)) != len(families):
     errors.append("Duplicate family IDs detected inside Batch 001.")
-if review.get("technical_second_pass_passed") != 20:
+stage = summary.get("current_stage")
+if stage == "FORMATTER_REVIEW_REQUIRED":
+    if review.get("technical_second_pass_passed") != 0 or review.get("technical_second_pass_pending") != 20:
+        errors.append("Revised source technical-review state must be 0 passed / 20 pending.")
+elif review.get("technical_second_pass_passed") != 20:
     errors.append("Technical second-pass count mismatch.")
 if review.get("paper_eligible_count") != 0:
     errors.append("Questions must remain non-paper-eligible before Formatter + independent review.")
@@ -39,10 +43,11 @@ if handoff.get("release_gate") != "BLOCKED":
 allowed_stages = {
     "READY_FOR_FORMATTER_HANDOFF",
     "READY_FOR_FORMATTER_REQUALIFICATION",
+    "FORMATTER_REVIEW_REQUIRED",
     "READY_FOR_HUMAN_FINAL_QA",
     "PAPER_ELIGIBILITY_CERTIFIED",
 }
-if summary.get("current_stage") not in allowed_stages:
+if stage not in allowed_stages:
     errors.append("Qualification stage mismatch.")
 if summary.get("paper_eligible_count") != 0:
     errors.append("Qualification summary paper eligibility mismatch.")
@@ -53,8 +58,8 @@ if errors:
 
 print("GATE EE BATCH 001 REVIEW/HANDOFF: PASSED")
 print("Questions: 20")
-print("Internal technical second-pass: 20/20")
+print(f"Internal technical second-pass: {review.get('technical_second_pass_passed', 0)}/20")
 print("Unique IDs/families: PASSED")
 print("Formatter v2.0 handoff checksum: PASSED")
 print("Paper-eligible: 0")
-print("Next gate: Formatter v2.0 qualification + independent human review")
+print("Next gate: resolve strict Formatter reviews, then independent technical and human review")

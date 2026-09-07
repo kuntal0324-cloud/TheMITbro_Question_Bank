@@ -394,58 +394,58 @@ By definition $\mu=E[X]$, so $E[X-\mu]=0$. Also $\sigma^2=E[X^2]-\mu^2$, giving 
 ## TMB-GATE-EE-EM-014
 
 - **Subject:** Engineering Mathematics
-- **Topic:** Numerical Methods
-- **Subtopic:** Newton-Raphson method
-- **Concept:** One Newton iteration for a square root
+- **Topic:** Calculus
+- **Subtopic:** Fourier series
+- **Concept:** First sine coefficient of a half-wave function
 - **Difficulty:** Medium
 - **Type:** NAT
 - **Marks:** 2
-- **Estimated Time:** 120 s
-- **Family ID:** EM-NM-NEWTON-001
-- **Revision:** 1
+- **Estimated Time:** 150 s
+- **Family ID:** EM-CAL-FOURIER-001
+- **Revision:** 2
 - **Status:** DRAFT
 
 ### Question
-Newton-Raphson iteration is applied to $f(x)=x^2-2$ with $x_0=1.5$. The value of $x_1$, rounded to four decimal places, is ______.
+A $2\pi$-periodic function is defined over one period by $f(x)=0$ for $-\pi<x<0$ and $f(x)=\sin x$ for $0<x<\pi$. If $f(x)=a_0/2+\sum_{n=1}^{\infty}(a_n\cos nx+b_n\sin nx)$, the value of $b_1$ is ______.
 
 ### Answer
-1.4167
+0.5
 
-**Accepted tolerance:** 0.0001
+**Accepted tolerance:** 0.001
 
 ### Detailed Solution
-Newton-Raphson gives $x_{n+1}=x_n-f(x_n)/f'(x_n)=\frac12(x_n+2/x_n)$. Thus $x_1=\frac12(1.5+2/1.5)=1.416666\ldots$, which rounds to $1.4167$.
+By the Fourier coefficient formula, $b_1=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin x\,dx=\frac{1}{\pi}\int_0^{\pi}\sin^2x\,dx$. Since $\int_0^{\pi}\sin^2x\,dx=\pi/2$, we obtain $b_1=1/2=0.5$.
 
 ---
 
 ## TMB-GATE-EE-EM-015
 
 - **Subject:** Engineering Mathematics
-- **Topic:** Numerical Methods
-- **Subtopic:** Interpolation
-- **Concept:** Linear interpolation
-- **Difficulty:** Easy
+- **Topic:** Complex Variables
+- **Subtopic:** Residue theorem
+- **Concept:** Contour integral containing two simple poles
+- **Difficulty:** Hard
 - **Type:** MCQ
-- **Marks:** 1
-- **Estimated Time:** 75 s
-- **Family ID:** EM-NM-INTERP-001
-- **Revision:** 1
+- **Marks:** 2
+- **Estimated Time:** 180 s
+- **Family ID:** EM-CV-RESIDUE-001
+- **Revision:** 2
 - **Status:** DRAFT
 
 ### Question
-The straight line interpolating the data points $(0,1)$ and $(2,5)$ has value at $x=1.5$ equal to
+Let $C$ be the positively oriented circle $|z|=2$. The value of $\displaystyle\oint_C\frac{z^2+1}{z(z-1)}\,dz$ is
 
 ### Options
-A. 3
-B. 3.5
-C. 4
-D. 4.5
+A. $0$
+B. $2\pi i$
+C. $4\pi i$
+D. $-2\pi i$
 
 ### Answer
-C
+B
 
 ### Detailed Solution
-The slope is $(5-1)/(2-0)=2$, so the interpolating line is $y=1+2x$. At $x=1.5$, $y=1+3=4$.
+The poles $z=0$ and $z=1$ both lie inside $C$. Their residues are $\operatorname{Res}(f,0)=-1$ and $\operatorname{Res}(f,1)=2$, so their sum is $1$. By the residue theorem, the contour integral is $2\pi i$.
 
 ---
 
@@ -568,30 +568,26 @@ For a Bernoulli random variable with parameter $p$, $\operatorname{Var}(X)=p(1-p
 ## TMB-GATE-EE-EM-020
 
 - **Subject:** Engineering Mathematics
-- **Topic:** Numerical Methods
-- **Subtopic:** Numerical integration
-- **Concept:** Simpson one-third rule
-- **Difficulty:** Medium
-- **Type:** MCQ
+- **Topic:** Differential Equations
+- **Subtopic:** Partial differential equations
+- **Concept:** Separated heat-equation mode with boundary conditions
+- **Difficulty:** Hard
+- **Type:** NAT
 - **Marks:** 2
-- **Estimated Time:** 120 s
-- **Family ID:** EM-NM-SIMPSON-001
-- **Revision:** 1
+- **Estimated Time:** 180 s
+- **Family ID:** EM-DE-PDE-HEAT-001
+- **Revision:** 2
 - **Status:** DRAFT
 
 ### Question
-Using Simpson's $1/3$ rule with two equal subintervals, the approximation to $\displaystyle\int_0^2 x^2\,dx$ is
-
-### Options
-A. $2$
-B. $\frac{7}{3}$
-C. $\frac{8}{3}$
-D. $3$
+The function $u(x,t)$ satisfies $\partial u/\partial t=\partial^2u/\partial x^2$ for $0<x<\pi$, with $u(0,t)=u(\pi,t)=0$ and $u(x,0)=3\sin 2x$. The value of $u(\pi/4,(\ln 2)/4)$ is ______.
 
 ### Answer
-C
+1.5
+
+**Accepted tolerance:** 0.001
 
 ### Detailed Solution
-With $h=1$, Simpson's rule gives $\frac{h}{3}[f(0)+4f(1)+f(2)]=\frac13[0+4(1)+4]=\frac83$. Since the integrand is a polynomial of degree two, Simpson's rule is exact here.
+The initial condition is a single eigenmode, so $u(x,t)=3e^{-4t}\sin 2x$. At $x=\pi/4$, $\sin(2x)=1$. At $t=(\ln2)/4$, $e^{-4t}=e^{-\ln2}=1/2$. Hence $u=3/2=1.5$.
 
 ---

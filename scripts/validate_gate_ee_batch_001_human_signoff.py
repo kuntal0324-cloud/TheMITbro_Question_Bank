@@ -6,10 +6,14 @@ ROOT=Path(__file__).resolve().parents[1]
 SOURCE=ROOT/"GATE_EE/corpus_v1/source_batches/BATCH_001_ENGINEERING_MATHEMATICS.jsonl"
 HUMAN=ROOT/"GATE_EE/corpus_v1/review_manifests/BATCH_001_HUMAN_FINAL_QA.json"
 CANDIDATE=ROOT/"GATE_EE/corpus_v1/qualification/BATCH_001_PAPER_ELIGIBILITY_CANDIDATE.json"
+SUMMARY=ROOT/"GATE_EE/corpus_v1/qualification/BATCH_001_QUALIFICATION_SUMMARY.json"
+FORMATTER=ROOT/"GATE_EE/corpus_v1/qualification/BATCH_001_FORMATTER_FINAL_EVIDENCE.json"
 
 def validate():
     human=json.loads(HUMAN.read_text(encoding="utf-8"))
     candidate=json.loads(CANDIDATE.read_text(encoding="utf-8"))
+    summary=json.loads(SUMMARY.read_text(encoding="utf-8"))
+    formatter=json.loads(FORMATTER.read_text(encoding="utf-8"))
     source_sha=hashlib.sha256(SOURCE.read_bytes()).hexdigest()
     questions=[json.loads(x) for x in SOURCE.read_text(encoding="utf-8").splitlines() if x.strip()]
     expected={(q["id"],q["revision"]) for q in questions}
@@ -17,6 +21,15 @@ def validate():
 
     if human.get("source_sha256")!=source_sha: errors.append("Human QA source checksum mismatch.")
     if candidate.get("source_sha256")!=source_sha: errors.append("Eligibility candidate source checksum mismatch.")
+    if summary.get("current_stage") != "READY_FOR_HUMAN_FINAL_QA":
+        errors.append("Human signoff is blocked until current_stage is READY_FOR_HUMAN_FINAL_QA.")
+    if formatter.get("source_sha256") != source_sha:
+        errors.append("Formatter evidence checksum mismatch.")
+    if formatter.get("status") != "PASS" or formatter.get("formatter_pass_count") != len(questions) or formatter.get("formatter_review_count") != 0:
+        errors.append("Human signoff requires strict Formatter PASS for every question and zero REVIEW items.")
+    expected_ids = [q["id"] for q in questions]
+    if candidate.get("candidate_question_ids") != expected_ids or candidate.get("paper_eligibility_candidate_count") != len(questions):
+        errors.append("Paper-eligibility candidate list is not current and complete.")
 
     reviewer=human.get("reviewer",{})
     for field in ("name","role_or_qualification","review_date","attestation"):

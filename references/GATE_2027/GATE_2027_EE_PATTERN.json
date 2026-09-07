@@ -1,0 +1,61 @@
+{
+  "contract_version": "1.0.0",
+  "exam_family": "GATE",
+  "exam_year": 2027,
+  "paper_code": "EE",
+  "title": "Electrical Engineering",
+  "authority": "IIT Madras, Organizing Institute for GATE 2027",
+  "verified_on": "2026-09-07",
+  "sources": {
+    "question_pattern_url": "https://gate2027.iitm.ac.in/question_paper_pattern",
+    "question_pattern_snapshot_sha256": "d96a8cefe0eba9bcec446f873cd8c748f8c3229918bbf55ffae9c2895c2d9cf9",
+    "ee_syllabus_url": "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/EE_GATE2027_Syllabus.pdf",
+    "ee_syllabus_sha256": "ad63a3caab189ab599c04feb692569ac5884337caa435b0d67d6d2919b3c4ca4",
+    "ga_syllabus_url": "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf"
+  },
+  "mode": "CBT",
+  "language": "English",
+  "duration_minutes": 180,
+  "total_questions": 65,
+  "total_marks": 100,
+  "question_types": ["MCQ", "MSQ", "NAT"],
+  "allowed_question_marks": [1, 2],
+  "section_contract": {
+    "General Aptitude": {
+      "questions": 10,
+      "marks": 15,
+      "one_mark_questions": 5,
+      "two_mark_questions": 5
+    },
+    "Selected Subject": {
+      "questions": 55,
+      "marks": 85,
+      "one_mark_questions": 25,
+      "two_mark_questions": 30,
+      "includes": {
+        "Engineering Mathematics": 13,
+        "Electrical Engineering": 72
+      }
+    }
+  },
+  "derived_whole_paper_mark_counts": {
+    "one_mark_questions": 30,
+    "two_mark_questions": 35,
+    "derivation": "With 65 questions carrying only 1 or 2 marks and totaling 100 marks, the exact counts are 30 one-mark and 35 two-mark questions."
+  },
+  "negative_marking": {
+    "MCQ": {
+      "one_mark_wrong": -0.3333333333333333,
+      "two_mark_wrong": -0.6666666666666666
+    },
+    "MSQ": {
+      "wrong": 0,
+      "partial_marking": false
+    },
+    "NAT": {
+      "wrong": 0
+    }
+  },
+  "abilities_tested": ["Recall", "Comprehension", "Application", "Analysis and Synthesis"]
+}
+

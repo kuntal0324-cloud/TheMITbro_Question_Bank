@@ -1,0 +1,54 @@
+{
+  "contract_version": "1.0.0",
+  "exam_family": "GATE",
+  "exam_year": 2027,
+  "paper_code": "GA",
+  "title": "General Aptitude",
+  "authority": "IIT Madras, Organizing Institute for GATE 2027",
+  "verified_on": "2026-09-07",
+  "source_url": "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf",
+  "sections": [
+    {
+      "number": 1,
+      "name": "Verbal Aptitude",
+      "scope": [
+        "Basic English grammar: tenses, articles, adjectives, prepositions, conjunctions, verb-noun agreement and other parts of speech",
+        "Basic vocabulary: words, idioms and phrases in context",
+        "Reading and comprehension",
+        "Narrative sequencing"
+      ]
+    },
+    {
+      "number": 2,
+      "name": "Quantitative Aptitude",
+      "scope": [
+        "Data interpretation using graphs, 2D and 3D plots, maps and tables",
+        "Numerical computation and estimation",
+        "Ratios, percentages, powers, exponents and logarithms",
+        "Permutations and combinations, and series",
+        "Mensuration and geometry",
+        "Elementary statistics and probability"
+      ]
+    },
+    {
+      "number": 3,
+      "name": "Analytical Aptitude",
+      "scope": [
+        "Logic: deduction and induction",
+        "Analogy",
+        "Numerical relations and reasoning"
+      ]
+    },
+    {
+      "number": 4,
+      "name": "Spatial Aptitude",
+      "scope": [
+        "Translation, rotation, scaling and mirroring of shapes",
+        "Assembling and grouping",
+        "Paper folding and cutting",
+        "Patterns in two and three dimensions"
+      ]
+    }
+  ]
+}
+

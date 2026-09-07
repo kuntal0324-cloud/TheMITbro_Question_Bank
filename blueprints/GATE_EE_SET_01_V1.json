@@ -3,7 +3,7 @@
   "id": "GATE_EE_SET_01_V1",
   "exam": "GATE_EE",
   "source_corpus": "GATE_EE_CORPUS_V1",
-  "reference": "blueprints/GATE_EE_2026_REFERENCE.json",
+  "reference": "blueprints/GATE_EE_2027_REFERENCE.json",
   "paper": {
     "questions": 65,
     "marks": 100,
@@ -12,7 +12,15 @@
   "section_contract": {
     "General Aptitude": {
       "questions": 10,
-      "marks": 15
+      "marks": 15,
+      "one_mark_questions": 5,
+      "two_mark_questions": 5
+    },
+    "Selected Subject": {
+      "questions": 55,
+      "marks": 85,
+      "one_mark_questions": 25,
+      "two_mark_questions": 30
     },
     "Engineering Mathematics": {
       "marks": 13

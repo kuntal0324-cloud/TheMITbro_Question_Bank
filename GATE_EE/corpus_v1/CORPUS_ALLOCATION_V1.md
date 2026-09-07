@@ -1,20 +1,19 @@
 # GATE EE Corpus V1 — Allocation Plan
 
-**Master-pool target: 220 original questions.** This is an internal production target, not an assertion of official subject weightage.
+**Pilot master-pool target: 220 original questions.** This supports Set 01 qualification and pipeline proving; it is not enough for 50 non-repeating papers and is not an assertion of official subject weightage. The 50-set production target is defined in `blueprints/GATE_EE_50_SET_PROGRAM_V1.json`.
 
 | Domain | Target |
 |---|---:|
 | General Aptitude | 30 |
 | Engineering Mathematics | 35 |
-| Network Theory | 20 |
+| Electric Circuits | 20 |
 | Signals and Systems | 15 |
 | Electromagnetic Fields | 12 |
 | Electrical Machines | 24 |
 | Power Systems | 24 |
 | Control Systems | 16 |
-| Measurements | 12 |
-| Analog Electronics | 12 |
-| Digital Electronics | 10 |
+| Electrical and Electronic Measurements | 12 |
+| Analog and Digital Electronics | 22 |
 | Power Electronics | 10 |
 | **Total** | **220** |
 

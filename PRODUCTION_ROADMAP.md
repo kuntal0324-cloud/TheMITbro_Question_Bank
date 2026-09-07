@@ -1,22 +1,28 @@
-# Production Roadmap
+# Production Roadmap - GATE 2027 EE First
 
-## Stage 1 — Integration hardening (this build)
-- Establish Question Bank as content source of truth.
-- Establish Formatter v2.0 as frozen processing engine.
-- Establish website as commerce/delivery layer only.
-- Add original cross-exam pilot content and production review contracts.
-- Secure paid-PDF delivery on the website.
+## Stage 1 - Recovery and authoritative contracts
+- Freeze the supplied GATE 2027 EE and GA scope as machine-readable references.
+- Reject XE0/XH0 contamination and stale exam-year blueprints.
+- Quarantine every legacy PDF that has the wrong question count, repeated questions, raw math markup or no release manifest.
+- Make Formatter results fail closed: REVIEW is not PASS and automated approval is not human approval.
 
-## Stage 2 — GATE EE Set 01
-Author enough original, independently reviewed questions to satisfy a verified exam-year blueprint, including General Aptitude, Engineering Mathematics and Electrical Engineering. Run every source through Formatter v2.0, resolve all review flags, generate the paper, manually audit the PDF and create an immutable release manifest.
+## Stage 2 - Production ingestion and qualified corpus
+- Accept TXT, MD, JPG, JPEG and PNG inputs.
+- Split multi-question sources, preserve the original, extract a structured question, and route each question independently.
+- Require syllabus, answer, solution, originality, duplicate-family, diagram and render checks.
+- Build General Aptitude, Engineering Mathematics and all nine core-EE section pools in parallel.
 
-## Stage 3 — JEE content
-Build JEE Mathematics and Physics banks by official release-year syllabus. Maintain separate JEE Main and JEE Advanced blueprints because their paper structures/marking rules are not interchangeable.
+## Stage 3 - Fifty-set assembly
+- Minimum: 3,250 unique PAPER_ELIGIBLE questions for 50 non-repeating papers.
+- Recommended: 3,575 qualified questions including a 10% reserve.
+- Every set: 65 questions, 100 marks, 180 minutes; 10 GA questions and 55 selected-subject questions; 15 GA, 13 Engineering Mathematics and 72 core-EE marks.
+- Produce deterministic manifests and reject any set with repeated IDs/families, wrong marks, wrong section totals or unresolved review flags.
 
-## Stage 4 — Store publication
-Copy only approved release artifacts to the website private product store, update the server-side catalog, run payment/download tests, then publish the product.
+## Stage 4 - Publication and storefront
+- Render question paper and separate answer/solution PDF without visible markup.
+- Perform page-by-page human visual QA.
+- Create an immutable release manifest and checksum.
+- Publish only manifest-backed artifacts, then test catalog, payment, download, expiry and recovery paths.
 
-
-## GATE EE Corpus V1 Foundation
-
-Foundation established for a 220-question original master pool and blueprint-driven Set 01 production. See `GATE_EE/corpus_v1/README.md`.
+## Eight-day boundary
+The 3,575-question quota equals about 447 candidates per day. That is a draft-generation target, not a truthful solo-review target. For a fast public launch, release the first few fully reviewed sets while the remaining draft pool continues through QA. Claiming 50 commercial-grade sets after automated generation alone would be dishonest and risky.

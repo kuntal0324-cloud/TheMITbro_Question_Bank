@@ -1,0 +1,45 @@
+{
+  "program_version": "1.0.0",
+  "program_id": "GATE_2027_EE_50_SET_PROGRAM",
+  "exam": "GATE_EE",
+  "exam_year": 2027,
+  "paper_contract": "blueprints/GATE_EE_2027_REFERENCE.json",
+  "set_count": 50,
+  "questions_per_set": 65,
+  "question_slots": 3250,
+  "cross_set_policy": {
+    "unique_question_ids": true,
+    "unique_family_ids": true,
+    "maximum_question_reuse_across_released_sets": 0
+  },
+  "minimum_unique_paper_eligible_questions": 3250,
+  "recommended_reserve_percent": 10,
+  "recommended_qualified_pool": 3575,
+  "qualified_pool_allocation": {
+    "General Aptitude": 550,
+    "Engineering Mathematics": 495,
+    "Electric Circuits": 320,
+    "Electromagnetic Fields": 220,
+    "Signals and Systems": 260,
+    "Electrical Machines": 380,
+    "Power Systems": 450,
+    "Control Systems": 300,
+    "Electrical and Electronic Measurements": 180,
+    "Analog and Digital Electronics": 240,
+    "Power Electronics": 180
+  },
+  "per_set_planning_profile": {
+    "General Aptitude": {"questions": 10, "marks": 15, "one_mark_questions": 5, "two_mark_questions": 5},
+    "Engineering Mathematics": {"planning_questions": 9, "marks": 13, "one_mark_questions": 5, "two_mark_questions": 4},
+    "Electrical Engineering Core": {"planning_questions": 46, "marks": 72, "one_mark_questions": 20, "two_mark_questions": 26},
+    "note": "The official pattern fixes Engineering Mathematics and core-EE marks, not their separate question counts. The 9/46 split is an internal planning profile and may vary while marks remain exact."
+  },
+  "eight_day_draft_throughput": [447, 447, 447, 447, 447, 447, 447, 446],
+  "release_gate": {
+    "automation_only_can_release": false,
+    "required_status": "PAPER_ELIGIBLE",
+    "requirements": ["Syllabus scope pass", "Independent answer verification", "Independent solution verification", "Originality review", "Diagram review when applicable", "Formatter render QA", "Human final QA"]
+  },
+  "capacity_warning": "The eight-day quota can produce draft candidates only unless multiple qualified reviewers work in parallel. It is not a credible solo human-QA schedule for 3575 commercial questions."
+}
+
