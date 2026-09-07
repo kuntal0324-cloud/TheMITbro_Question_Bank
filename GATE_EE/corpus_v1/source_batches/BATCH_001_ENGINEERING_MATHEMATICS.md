@@ -1,9 +1,9 @@
 # GATE EE Corpus V1 — Production Batch 001
 
-**Domain:** Engineering Mathematics  
-**Questions:** 20  
-**Commercial status:** NOT YET PAPER-ELIGIBLE  
-**Qualification state:** FORMATTER RESOLUTION CANDIDATE — independent human review remains mandatory.  
+**Domain:** Engineering Mathematics
+**Questions:** 20
+**Commercial status:** NOT YET PAPER-ELIGIBLE
+**Qualification state:** FORMATTER REQUALIFICATION CANDIDATE — independent human review remains mandatory.
 **Originality:** ORIGINAL_THEMITBRO
 
 ---
@@ -19,11 +19,11 @@
 - **Marks:** 1
 - **Estimated Time:** 75 s
 - **Family ID:** EM-LA-EIG-001
-- **Revision:** 1
+- **Revision:** 2
 - **Status:** DRAFT
 
 ### Question
-For the matrix $A=\begin{bmatrix}2&1\\1&2\end{bmatrix}$, the largest eigenvalue is
+Determine the largest eigenvalue of the matrix $A=\begin{bmatrix}2&1\\1&2\end{bmatrix}$.
 
 ### Options
 A. 1
@@ -35,7 +35,8 @@ D. 4
 C
 
 ### Detailed Solution
-The characteristic polynomial is $\det(A-\lambda I)=(2-\lambda)^2-1=\lambda^2-4\lambda+3$. Hence the eigenvalues are $1$ and $3$. The largest eigenvalue is $3$.
+The characteristic equation is $\det(A-\lambda I)=0$, so $(2-\lambda)^2-1=0$, or $\lambda^2-4\lambda+3=0$. Thus the eigenvalues are $1$ and $3$, and the largest is $3$.
+Final answer: C
 
 ---
 
@@ -50,11 +51,11 @@ The characteristic polynomial is $\det(A-\lambda I)=(2-\lambda)^2-1=\lambda^2-4\
 - **Marks:** 2
 - **Estimated Time:** 120 s
 - **Family ID:** EM-LA-INVTRACE-001
-- **Revision:** 1
+- **Revision:** 2
 - **Status:** DRAFT
 
 ### Question
-Let $A=\begin{bmatrix}1&2\\3&5\end{bmatrix}$. The value of $\operatorname{tr}(A^{-1})$ is ______.
+For the matrix $A=\begin{bmatrix}1&2\\3&5\end{bmatrix}$, calculate $\operatorname{tr}(A^{-1})$. Enter the numerical value.
 
 ### Answer
 -6
@@ -63,6 +64,7 @@ Let $A=\begin{bmatrix}1&2\\3&5\end{bmatrix}$. The value of $\operatorname{tr}(A^
 
 ### Detailed Solution
 Here $\det A=1\cdot5-2\cdot3=-1$. Therefore $A^{-1}=\frac{1}{-1}\begin{bmatrix}5&-2\\-3&1\end{bmatrix}=\begin{bmatrix}-5&2\\3&-1\end{bmatrix}$. Thus $\operatorname{tr}(A^{-1})=-5-1=-6$.
+Final answer: -6
 
 ---
 
@@ -77,7 +79,7 @@ Here $\det A=1\cdot5-2\cdot3=-1$. Therefore $A^{-1}=\frac{1}{-1}\begin{bmatrix}5
 - **Marks:** 2
 - **Estimated Time:** 150 s
 - **Family ID:** EM-LA-IDEMP-001
-- **Revision:** 1
+- **Revision:** 2
 - **Status:** DRAFT
 
 ### Question
@@ -94,6 +96,7 @@ A, B, C
 
 ### Detailed Solution
 If $Pv=\lambda v$, then $P^2v=\lambda^2v$, but $P^2=P$, so $\lambda^2=\lambda$ and $\lambda\in\{0,1\}$. Since $P$ is symmetric, it is orthogonally diagonalizable with nonnegative eigenvalues, hence positive semidefinite. The trace is the sum of eigenvalues and therefore equals the number of unit eigenvalues, which is the rank. The determinant need not be $1$; it is $0$ whenever $P$ has a zero eigenvalue.
+Final answer: A, B, C
 
 ---
 
@@ -108,11 +111,11 @@ If $Pv=\lambda v$, then $P^2v=\lambda^2v$, but $P^2=P$, so $\lambda^2=\lambda$ a
 - **Marks:** 1
 - **Estimated Time:** 75 s
 - **Family ID:** EM-CAL-LIMIT-001
-- **Revision:** 1
+- **Revision:** 2
 - **Status:** DRAFT
 
 ### Question
-The value of $\displaystyle\lim_{x\to0}\frac{e^{2x}-1-2x}{x^2}$ is
+Evaluate the exponential limit $\displaystyle\lim_{x\to0}\frac{e^{2x}-1-2x}{x^2}$.
 
 ### Options
 A. 1
@@ -125,6 +128,7 @@ B
 
 ### Detailed Solution
 Using $e^{2x}=1+2x+\frac{(2x)^2}{2}+O(x^3)=1+2x+2x^2+O(x^3)$, the numerator is $2x^2+O(x^3)$. Dividing by $x^2$ and taking the limit gives $2$.
+Final answer: B
 
 ---
 
@@ -139,7 +143,7 @@ Using $e^{2x}=1+2x+\frac{(2x)^2}{2}+O(x^3)=1+2x+2x^2+O(x^3)$, the numerator is $
 - **Marks:** 2
 - **Estimated Time:** 120 s
 - **Family ID:** EM-CAL-OPT-001
-- **Revision:** 2
+- **Revision:** 3
 - **Status:** DRAFT
 
 ### Question
@@ -152,6 +156,7 @@ Using the derivative of $f(x)=x^3-3x^2+2$, determine its absolute minimum value 
 
 ### Detailed Solution
 $f'(x)=3x(x-2)$, so the interior critical point is $x=2$. Evaluate the candidates: $f(0)=2$, $f(2)=8-12+2=-2$, and $f(3)=27-27+2=2$. Hence the minimum value is $-2$.
+Final answer: -2
 
 ---
 
@@ -166,11 +171,11 @@ $f'(x)=3x(x-2)$, so the interior critical point is $x=2$. Evaluate the candidate
 - **Marks:** 2
 - **Estimated Time:** 105 s
 - **Family ID:** EM-CAL-INT-001
-- **Revision:** 1
+- **Revision:** 2
 - **Status:** DRAFT
 
 ### Question
-The value of $\displaystyle\int_0^1\frac{x}{1+x^2}\,dx$ is
+Evaluate $\displaystyle\int_0^1\frac{x}{1+x^2}\,dx$.
 
 ### Options
 A. $\ln 2$
@@ -183,6 +188,7 @@ B
 
 ### Detailed Solution
 Put $u=1+x^2$, so $du=2x\,dx$. Then $\int_0^1\frac{x}{1+x^2}dx=\frac12\int_1^2\frac{du}{u}=\frac12\ln2$.
+Final answer: B
 
 ---
 
@@ -197,11 +203,11 @@ Put $u=1+x^2$, so $du=2x\,dx$. Then $\int_0^1\frac{x}{1+x^2}dx=\frac12\int_1^2\f
 - **Marks:** 2
 - **Estimated Time:** 120 s
 - **Family ID:** EM-DE-FIRSTORDER-001
-- **Revision:** 1
+- **Revision:** 2
 - **Status:** DRAFT
 
 ### Question
-The solution of $y'+2y=4$ satisfies $y(0)=1$. The value of $y(\ln2)$ is ______.
+Solve the initial-value problem $y'+2y=4$, $y(0)=1$, and determine $y(\ln 2)$. Enter the numerical value.
 
 ### Answer
 1.75
@@ -210,6 +216,7 @@ The solution of $y'+2y=4$ satisfies $y(0)=1$. The value of $y(\ln2)$ is ______.
 
 ### Detailed Solution
 The solution is $y=2+Ce^{-2x}$. From $y(0)=1$, $C=-1$, hence $y=2-e^{-2x}$. At $x=\ln2$, $e^{-2\ln2}=1/4$, so $y=2-1/4=7/4=1.75$.
+Final answer: 1.75
 
 ---
 
@@ -224,11 +231,11 @@ The solution is $y=2+Ce^{-2x}$. From $y(0)=1$, $C=-1$, hence $y=2-e^{-2x}$. At $
 - **Marks:** 2
 - **Estimated Time:** 135 s
 - **Family ID:** EM-DE-SECONDORDER-001
-- **Revision:** 1
+- **Revision:** 2
 - **Status:** DRAFT
 
 ### Question
-Consider $y''+4y'+3y=0$. Which of the following are solutions?
+Consider the second-order linear ordinary differential equation $y''+4y'+3y=0$. Which of the following functions are solutions?
 
 ### Options
 A. $e^{-x}$
@@ -241,6 +248,7 @@ A, B, D
 
 ### Detailed Solution
 The characteristic equation is $r^2+4r+3=(r+1)(r+3)=0$, giving roots $-1$ and $-3$. Hence every solution has the form $C_1e^{-x}+C_2e^{-3x}$. Therefore A, B and D are solutions, while $e^{-2x}$ is not.
+Final answer: A, B, D
 
 ---
 
@@ -255,11 +263,11 @@ The characteristic equation is $r^2+4r+3=(r+1)(r+3)=0$, giving roots $-1$ and $-
 - **Marks:** 1
 - **Estimated Time:** 60 s
 - **Family ID:** EM-CV-POWER-001
-- **Revision:** 1
+- **Revision:** 2
 - **Status:** DRAFT
 
 ### Question
-The value of $(1+i)^4$ is
+Evaluate $(1+i)^4$.
 
 ### Options
 A. $4$
@@ -272,6 +280,7 @@ B
 
 ### Detailed Solution
 $(1+i)^2=1+2i+i^2=2i$. Therefore $(1+i)^4=(2i)^2=-4$.
+Final answer: B
 
 ---
 
@@ -286,11 +295,11 @@ $(1+i)^2=1+2i+i^2=2i$. Therefore $(1+i)^4=(2i)^2=-4$.
 - **Marks:** 2
 - **Estimated Time:** 105 s
 - **Family ID:** EM-CV-ROOTDIST-001
-- **Revision:** 1
+- **Revision:** 2
 - **Status:** DRAFT
 
 ### Question
-If $z_1$ and $z_2$ are the roots of $z^2-2z+5=0$, then $|z_1-z_2|$ is ______.
+If $z_1$ and $z_2$ are the complex roots of $z^2-2z+5=0$, determine $|z_1-z_2|$. Enter the numerical value.
 
 ### Answer
 4
@@ -299,6 +308,7 @@ If $z_1$ and $z_2$ are the roots of $z^2-2z+5=0$, then $|z_1-z_2|$ is ______.
 
 ### Detailed Solution
 The roots are $z=\frac{2\pm\sqrt{4-20}}{2}=1\pm2i$. Thus $z_1-z_2=4i$ up to sign, and therefore $|z_1-z_2|=4$.
+Final answer: 4
 
 ---
 
@@ -313,11 +323,11 @@ The roots are $z=\frac{2\pm\sqrt{4-20}}{2}=1\pm2i$. Thus $z_1-z_2=4i$ up to sign
 - **Marks:** 1
 - **Estimated Time:** 75 s
 - **Family ID:** EM-PS-INDEP-001
-- **Revision:** 1
+- **Revision:** 2
 - **Status:** DRAFT
 
 ### Question
-Events $A$ and $B$ are independent with $P(A)=0.6$ and $P(B)=0.5$. Then $P(A\cup B)$ equals
+Events $A$ and $B$ are independent with $P(A)=0.6$ and $P(B)=0.5$. Calculate $P(A\cup B)$.
 
 ### Options
 A. 0.30
@@ -330,6 +340,7 @@ C
 
 ### Detailed Solution
 Independence gives $P(A\cap B)=0.6\times0.5=0.3$. Therefore $P(A\cup B)=P(A)+P(B)-P(A\cap B)=0.6+0.5-0.3=0.8$.
+Final answer: C
 
 ---
 
@@ -344,11 +355,11 @@ Independence gives $P(A\cap B)=0.6\times0.5=0.3$. Therefore $P(A\cup B)=P(A)+P(B
 - **Marks:** 2
 - **Estimated Time:** 105 s
 - **Family ID:** EM-PS-MOMENT-001
-- **Revision:** 1
+- **Revision:** 2
 - **Status:** DRAFT
 
 ### Question
-A random variable $X$ takes values $0,1,2$ with probabilities $0.2,0.5,0.3$, respectively. The value of $E[X^2]$ is ______.
+A random variable $X$ takes values $0,1,2$ with probabilities $0.2,0.5,0.3$, respectively. Calculate $E[X^2]$.
 
 ### Answer
 1.7
@@ -357,6 +368,7 @@ A random variable $X$ takes values $0,1,2$ with probabilities $0.2,0.5,0.3$, res
 
 ### Detailed Solution
 $E[X^2]=0^2(0.2)+1^2(0.5)+2^2(0.3)=0+0.5+1.2=1.7$.
+Final answer: 1.7
 
 ---
 
@@ -371,7 +383,7 @@ $E[X^2]=0^2(0.2)+1^2(0.5)+2^2(0.3)=0+0.5+1.2=1.7$.
 - **Marks:** 2
 - **Estimated Time:** 135 s
 - **Family ID:** EM-PS-VARIDENT-001
-- **Revision:** 1
+- **Revision:** 2
 - **Status:** DRAFT
 
 ### Question
@@ -388,6 +400,7 @@ A, B, C, D
 
 ### Detailed Solution
 By definition $\mu=E[X]$, so $E[X-\mu]=0$. Also $\sigma^2=E[X^2]-\mu^2$, giving $E[X^2]=\sigma^2+\mu^2$. Adding a constant does not change variance and scaling by $a$ scales variance by $a^2$. Finally, variance is defined as $E[(X-\mu)^2]$. Hence all four statements are true.
+Final answer: A, B, C, D
 
 ---
 
@@ -402,11 +415,11 @@ By definition $\mu=E[X]$, so $E[X-\mu]=0$. Also $\sigma^2=E[X^2]-\mu^2$, giving 
 - **Marks:** 2
 - **Estimated Time:** 150 s
 - **Family ID:** EM-CAL-FOURIER-001
-- **Revision:** 2
+- **Revision:** 3
 - **Status:** DRAFT
 
 ### Question
-A $2\pi$-periodic function is defined over one period by $f(x)=0$ for $-\pi<x<0$ and $f(x)=\sin x$ for $0<x<\pi$. If $f(x)=a_0/2+\sum_{n=1}^{\infty}(a_n\cos nx+b_n\sin nx)$, the value of $b_1$ is ______.
+A $2\pi$-periodic function is defined over one period by $f(x)=0$ for $-\pi<x<0$ and $f(x)=\sin x$ for $0<x<\pi$. If $f(x)=a_0/2+\sum_{n=1}^{\infty}(a_n\cos nx+b_n\sin nx)$, calculate $b_1$.
 
 ### Answer
 0.5
@@ -415,6 +428,7 @@ A $2\pi$-periodic function is defined over one period by $f(x)=0$ for $-\pi<x<0$
 
 ### Detailed Solution
 By the Fourier coefficient formula, $b_1=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin x\,dx=\frac{1}{\pi}\int_0^{\pi}\sin^2x\,dx$. Since $\int_0^{\pi}\sin^2x\,dx=\pi/2$, we obtain $b_1=1/2=0.5$.
+Final answer: 0.5
 
 ---
 
@@ -429,11 +443,11 @@ By the Fourier coefficient formula, $b_1=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin 
 - **Marks:** 2
 - **Estimated Time:** 180 s
 - **Family ID:** EM-CV-RESIDUE-001
-- **Revision:** 2
+- **Revision:** 3
 - **Status:** DRAFT
 
 ### Question
-Let $C$ be the positively oriented circle $|z|=2$. The value of $\displaystyle\oint_C\frac{z^2+1}{z(z-1)}\,dz$ is
+Let $C$ be the positively oriented contour $|z|=2$. Evaluate $\displaystyle\oint_C\frac{z^2+1}{z(z-1)}\,dz$.
 
 ### Options
 A. $0$
@@ -446,6 +460,7 @@ B
 
 ### Detailed Solution
 The poles $z=0$ and $z=1$ both lie inside $C$. Their residues are $\operatorname{Res}(f,0)=-1$ and $\operatorname{Res}(f,1)=2$, so their sum is $1$. By the residue theorem, the contour integral is $2\pi i$.
+Final answer: B
 
 ---
 
@@ -460,11 +475,11 @@ The poles $z=0$ and $z=1$ both lie inside $C$. Their residues are $\operatorname
 - **Marks:** 2
 - **Estimated Time:** 90 s
 - **Family ID:** EM-LA-SYSTEM-001
-- **Revision:** 2
+- **Revision:** 3
 - **Status:** DRAFT
 
 ### Question
-Consider the linear system whose coefficient matrix has proportional rows: $x+y=2$ and $2x+2y=k$. The system has infinitely many solutions for $k=$ ______.
+Consider the linear system whose coefficient matrix has proportional rows: $x+y=2$ and $2x+2y=k$. Determine the value of $k$ for which the system has infinitely many solutions.
 
 ### Answer
 4
@@ -473,6 +488,7 @@ Consider the linear system whose coefficient matrix has proportional rows: $x+y=
 
 ### Detailed Solution
 For infinitely many solutions, the second equation must be exactly twice the first. Twice $x+y=2$ gives $2x+2y=4$. Hence $k=4$.
+Final answer: 4
 
 ---
 
@@ -487,11 +503,11 @@ For infinitely many solutions, the second equation must be exactly twice the fir
 - **Marks:** 2
 - **Estimated Time:** 150 s
 - **Family ID:** EM-CAL-DIRDER-001
-- **Revision:** 1
+- **Revision:** 2
 - **Status:** DRAFT
 
 ### Question
-For $f(x,y)=x^2y+y^2$, the directional derivative at $(1,2)$ in the direction of the vector $3\mathbf{i}+4\mathbf{j}$ is
+For $f(x,y)=x^2y+y^2$, calculate the directional derivative at $(1,2)$ in the direction $3\mathbf{i}+4\mathbf{j}$.
 
 ### Options
 A. $5$
@@ -504,6 +520,7 @@ B
 
 ### Detailed Solution
 $\nabla f=(2xy,x^2+2y)$. At $(1,2)$, $\nabla f=(4,5)$. The unit vector in the direction $(3,4)$ is $(3/5,4/5)$. Hence the directional derivative is $(4,5)\cdot(3/5,4/5)=12/5+20/5=32/5$.
+Final answer: B
 
 ---
 
@@ -518,7 +535,7 @@ $\nabla f=(2xy,x^2+2y)$. At $(1,2)$, $\nabla f=(4,5)$. The unit vector in the di
 - **Marks:** 2
 - **Estimated Time:** 180 s
 - **Family ID:** EM-CAL-VECCALC-001
-- **Revision:** 1
+- **Revision:** 2
 - **Status:** DRAFT
 
 ### Question
@@ -528,13 +545,14 @@ For the planar vector field $\mathbf{F}=y\mathbf{i}-x\mathbf{j}$, which statemen
 A. $\nabla\cdot\mathbf{F}=0$
 B. $\nabla\times\mathbf{F}=-2\mathbf{k}$
 C. $\mathbf{F}$ is conservative on $\mathbb{R}^2$
-D. The counter-clockwise circulation around the unit circle is $-2\pi$
+D. The counter-clockwise circulation along $x^2+y^2=1$ is $-2\pi$.
 
 ### Answer
 A, B, D
 
 ### Detailed Solution
 With $P=y$ and $Q=-x$, divergence is $\partial P/\partial x+\partial Q/\partial y=0+0=0$. The scalar curl is $\partial Q/\partial x-\partial P/\partial y=-1-1=-2$, i.e. $-2\mathbf{k}$. Since the curl is nonzero, the field is not conservative. Green's theorem gives the counter-clockwise circulation as $\iint_D(-2)\,dA=-2\pi$ for the unit disk.
+Final answer: A, B, D
 
 ---
 
@@ -549,11 +567,11 @@ With $P=y$ and $Q=-x$, divergence is $\partial P/\partial x+\partial Q/\partial 
 - **Marks:** 2
 - **Estimated Time:** 75 s
 - **Family ID:** EM-PS-BERNOULLI-001
-- **Revision:** 1
+- **Revision:** 2
 - **Status:** DRAFT
 
 ### Question
-If $X$ is a Bernoulli random variable with $P(X=1)=0.4$, then $\operatorname{Var}(X)$ is ______.
+If $X$ is a Bernoulli random variable with $P(X=1)=0.4$, calculate $\operatorname{Var}(X)$.
 
 ### Answer
 0.24
@@ -562,6 +580,7 @@ If $X$ is a Bernoulli random variable with $P(X=1)=0.4$, then $\operatorname{Var
 
 ### Detailed Solution
 For a Bernoulli random variable with parameter $p$, $\operatorname{Var}(X)=p(1-p)$. Thus the variance is $0.4\times0.6=0.24$.
+Final answer: 0.24
 
 ---
 
@@ -576,11 +595,11 @@ For a Bernoulli random variable with parameter $p$, $\operatorname{Var}(X)=p(1-p
 - **Marks:** 2
 - **Estimated Time:** 180 s
 - **Family ID:** EM-DE-PDE-HEAT-001
-- **Revision:** 2
+- **Revision:** 3
 - **Status:** DRAFT
 
 ### Question
-The function $u(x,t)$ satisfies $\partial u/\partial t=\partial^2u/\partial x^2$ for $0<x<\pi$, with $u(0,t)=u(\pi,t)=0$ and $u(x,0)=3\sin 2x$. The value of $u(\pi/4,(\ln 2)/4)$ is ______.
+The function $u(x,t)$ satisfies the heat equation, a partial differential equation given by $\partial u/\partial t=\partial^2u/\partial x^2$, for $0<x<\pi$, with $u(0,t)=u(\pi,t)=0$ and $u(x,0)=3\sin 2x$. Determine $u(\pi/4,(\ln 2)/4)$.
 
 ### Answer
 1.5
@@ -589,5 +608,6 @@ The function $u(x,t)$ satisfies $\partial u/\partial t=\partial^2u/\partial x^2$
 
 ### Detailed Solution
 The initial condition is a single eigenmode, so $u(x,t)=3e^{-4t}\sin 2x$. At $x=\pi/4$, $\sin(2x)=1$. At $t=(\ln2)/4$, $e^{-4t}=e^{-\ln2}=1/2$. Hence $u=3/2=1.5$.
+Final answer: 1.5
 
 ---

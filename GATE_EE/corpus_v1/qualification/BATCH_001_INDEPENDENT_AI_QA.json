@@ -1,17 +1,299 @@
 {
-  "qa_contract": "GATE_EE_BATCH001_INDEPENDENT_AI_QA_V1",
+  "qa_contract": "GATE_EE_BATCH001_INDEPENDENT_AI_QA_V2",
   "batch_id": "BATCH_001",
-  "status": "STALE_SOURCE_CHANGED",
-  "source_sha256": "2c218be6055cfa977da0842a6bdbc1edb61fe1712bf88794dc461052ae050b9e",
-  "superseded_by_source_sha256": "745b01ddfa9e14ed7bfd6582fa8d76d728eeeea84cc6b1fa804fe1321b791bd3",
-  "evidence_valid_for_current_source": false,
-  "technical_pass_count": 0,
-  "answer_recomputed_pass_count": 0,
-  "solution_consistency_pass_count": 0,
-  "formatter_pass_count": 0,
-  "paper_eligibility_candidate_count": 0,
+  "status": "PASS",
+  "qa_date": "2026-09-07",
+  "performed_by": "OpenAI Codex",
+  "reviewer_kind": "AI_ASSISTED_INDEPENDENT_RECOMPUTATION",
+  "source_sha256": "cf815b061af0d357df02796f34021b69c3e2465835a1ab1caab7d1ae16d61256",
+  "evidence_valid_for_current_source": true,
+  "technical_pass_count": 20,
+  "answer_recomputed_pass_count": 20,
+  "solution_consistency_pass_count": 20,
+  "machine_final_marker_pass_count": 20,
+  "formatter_pass_count": 20,
+  "formatter_review_count": 0,
+  "invalid_count": 0,
+  "paper_eligibility_candidate_count": 20,
   "paper_eligible_count": 0,
   "human_final_qa_required": true,
-  "release_gate": "BLOCKED_PENDING_REVIEW_RESOLUTION",
-  "archived_detail": "../archive/pre_g27_recovery/qualification/BATCH_001_INDEPENDENT_AI_QA.json"
+  "human_review_substitute": false,
+  "automated_oracle": "tests/test_gate_ee_batch001_answer_oracle.py",
+  "release_gate": "BLOCKED_PENDING_HUMAN_FINAL_QA",
+  "questions": [
+    {
+      "question_id": "TMB-GATE-EE-EM-001",
+      "revision": 2,
+      "declared_answer": "C",
+      "recomputed_answer": "C",
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "det(A−λI)=(2−λ)²−1=(λ−1)(λ−3); the largest eigenvalue is 3, which is option C.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-002",
+      "revision": 2,
+      "declared_answer": -6,
+      "recomputed_answer": -6,
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "det(A)=−1 and A⁻¹=[−5  2; 3  −1], so tr(A⁻¹)=−6.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-003",
+      "revision": 2,
+      "declared_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "recomputed_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "P²=P implies λ²=λ, hence λ∈{0,1}; symmetry gives orthogonal diagonalization and positive semidefiniteness; trace equals rank. A, B and C follow, while D need not.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-004",
+      "revision": 2,
+      "declared_answer": "B",
+      "recomputed_answer": "B",
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "e²ˣ=1+2x+2x²+O(x³); division by x² gives the limit 2, option B.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-005",
+      "revision": 3,
+      "declared_answer": -2,
+      "recomputed_answer": -2,
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "f′(x)=3x(x−2); checking x=0,2,3 gives 2,−2,2, so the absolute minimum is −2.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-006",
+      "revision": 2,
+      "declared_answer": "B",
+      "recomputed_answer": "B",
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "With u=1+x², the integral becomes (1/2)∫₁² du/u=(1/2)ln 2, option B.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-007",
+      "revision": 2,
+      "declared_answer": 1.75,
+      "recomputed_answer": 1.75,
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "The IVP gives y=2−e⁻²ˣ; at x=ln 2, y=2−1/4=7/4=1.75.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-008",
+      "revision": 2,
+      "declared_answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "recomputed_answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "The characteristic roots are −1 and −3; e⁻ˣ, e⁻³ˣ and every linear combination of them solve the ODE. Thus A, B and D.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-009",
+      "revision": 2,
+      "declared_answer": "B",
+      "recomputed_answer": "B",
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "(1+i)²=2i and (2i)²=−4, option B.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-010",
+      "revision": 2,
+      "declared_answer": 4,
+      "recomputed_answer": 4,
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "The roots are 1±2i, whose separation has modulus |4i|=4.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-011",
+      "revision": 2,
+      "declared_answer": "C",
+      "recomputed_answer": "C",
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "Independence gives P(A∩B)=0.3; inclusion–exclusion gives 0.6+0.5−0.3=0.8, option C.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-012",
+      "revision": 2,
+      "declared_answer": 1.7,
+      "recomputed_answer": 1.7,
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "E[X²]=0²(0.2)+1²(0.5)+2²(0.3)=1.7.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-013",
+      "revision": 2,
+      "declared_answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "recomputed_answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "Linearity of expectation and the definitions of variance verify all four identities; A, B, C and D.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-014",
+      "revision": 3,
+      "declared_answer": 0.5,
+      "recomputed_answer": 0.5,
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "b₁=(1/π)∫₀^π sin²x dx=(1/π)(π/2)=0.5.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-015",
+      "revision": 3,
+      "declared_answer": "B",
+      "recomputed_answer": "B",
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "The residues at 0 and 1 are −1 and 2; their sum is 1, so the contour integral is 2πi, option B.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-016",
+      "revision": 3,
+      "declared_answer": 4,
+      "recomputed_answer": 4,
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "The second equation must be twice the first; twice the right-hand side 2 is 4, so k=4.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-017",
+      "revision": 2,
+      "declared_answer": "B",
+      "recomputed_answer": "B",
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "∇f(1,2)=(4,5) and the unit direction is (3/5,4/5); their dot product is 32/5, option B.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-018",
+      "revision": 2,
+      "declared_answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "recomputed_answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "The divergence is 0, the planar curl is −2, and Green’s theorem gives circulation −2 times the unit-disk area, or −2π. Thus A, B and D.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-019",
+      "revision": 2,
+      "declared_answer": 0.24,
+      "recomputed_answer": 0.24,
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "For Bernoulli p=0.4, Var(X)=p(1−p)=0.4(0.6)=0.24.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EM-020",
+      "revision": 3,
+      "declared_answer": 1.5,
+      "recomputed_answer": 1.5,
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "The single heat mode is u=3e⁻⁴ᵗ sin(2x); substitution gives 3(1/2)(1)=1.5.",
+      "human_originality_check": "PENDING"
+    }
+  ]
 }

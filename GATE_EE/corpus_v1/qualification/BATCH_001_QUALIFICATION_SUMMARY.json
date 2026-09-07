@@ -1,7 +1,8 @@
 {
-  "qualification_version": "1.1.0",
+  "qualification_version": "2.0.0",
   "batch_id": "BATCH_001",
-  "current_stage": "FORMATTER_REVIEW_REQUIRED",
+  "current_stage": "READY_FOR_HUMAN_FINAL_QA",
+  "source_sha256": "cf815b061af0d357df02796f34021b69c3e2465835a1ab1caab7d1ae16d61256",
   "questions_total": 20,
   "internal_technical_second_pass": {
     "passed": 20,
@@ -11,22 +12,26 @@
   "unique_families": true,
   "paper_eligible_count": 0,
   "remaining_gates": [
-    "resolve 20 strict Formatter review results",
-    "independent AI technical recheck",
-    "independent human technical review",
-    "independent human answer/solution review",
-    "human final approval"
+    "named independent human technical review",
+    "named independent human answer/solution review",
+    "human final approval",
+    "promotion of approved IDs only"
   ],
-  "next_action": "Resolve the 20 strict Formatter REVIEW results, then re-run independent technical QA.",
+  "next_action": "Complete the checksum-bound named human review packet; promote only IDs explicitly marked PASS.",
   "formatter_v2_final_qualification": {
-    "status": "REVIEW_REQUIRED",
-    "passed": 0,
-    "review": 20
+    "status": "PASS",
+    "passed": 20,
+    "review": 0,
+    "invalid": 0
   },
   "independent_ai_qa": {
-    "status": "STALE_SOURCE_CHANGED",
-    "passed": 0,
+    "status": "PASS",
+    "passed": 20,
     "human_review_substitute": false
+  },
+  "human_final_qa": {
+    "status": "PENDING",
+    "reviewer": ""
   },
   "release_gate": "BLOCKED"
 }

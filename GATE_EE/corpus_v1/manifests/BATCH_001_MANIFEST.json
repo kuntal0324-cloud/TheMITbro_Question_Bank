@@ -1,14 +1,14 @@
 {
-  "manifest_version": "1.1.0",
+  "manifest_version": "1.3.0",
   "batch_id": "BATCH_001",
   "corpus": "GATE_EE_CORPUS_V1",
   "domain": "Engineering Mathematics",
   "question_count": 20,
-  "status": "DRAFT_REQUALIFICATION_REQUIRED",
+  "status": "DRAFT_READY_FOR_HUMAN_FINAL_QA",
   "paper_eligible_count": 0,
   "type_counts": {
-    "MCQ": 8,
-    "NAT": 8,
+    "MCQ": 7,
+    "NAT": 9,
     "MSQ": 4
   },
   "marks_counts": {
@@ -16,9 +16,9 @@
     "2": 16
   },
   "difficulty_counts": {
-    "Easy": 6,
-    "Medium": 11,
-    "Hard": 3
+    "Easy": 5,
+    "Medium": 10,
+    "Hard": 5
   },
   "topics": {
     "Linear Algebra": 4,
@@ -31,6 +31,6 @@
     "GATE_EE/corpus_v1/source_batches/BATCH_001_ENGINEERING_MATHEMATICS.md",
     "GATE_EE/corpus_v1/source_batches/BATCH_001_ENGINEERING_MATHEMATICS.jsonl"
   ],
-  "jsonl_sha256": "745b01ddfa9e14ed7bfd6582fa8d76d728eeeea84cc6b1fa804fe1321b791bd3",
-  "qualification_note": "Questions 014, 015 and 020 were replaced after the GATE 2027 EE syllabus audit; all earlier qualification evidence is stale until re-run."
+  "jsonl_sha256": "cf815b061af0d357df02796f34021b69c3e2465835a1ab1caab7d1ae16d61256",
+  "qualification_note": "Strict Formatter: 20 PASS / 0 REVIEW / 0 invalid. Named human final QA remains pending; no ID is paper-eligible."
 }
