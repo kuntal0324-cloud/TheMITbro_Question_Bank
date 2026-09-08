@@ -34,3 +34,16 @@ Record candidate count, in-syllabus count, AUTO/REVIEW/FAIL routing, validation 
 ## Capacity requirement
 
 At 447 candidates per day, the human-review load is substantial. A credible eight-day commercial release would require multiple qualified EE reviewers plus a separate final visual-QA role. With one reviewer, use this sprint to build the draft pool and release fully reviewed sets incrementally after day eight.
+
+## Live contract position
+
+The execution clock starts on **2026-09-08** and ends on **2026-09-15** (eight inclusive calendar days). Day 1 is in progress.
+
+- New sprint drafts: **20 / 3,575** (Batch 002 Electric Circuits).
+- Day-1 progress: **20 / 447**; 427 remain.
+- Opening inventory, excluded from Day-1 output: **20** Batch 001 Engineering Mathematics records.
+- Current program inventory: **40** unique candidates, of which **20** are human-certified, paper-eligible and admitted.
+- Formatter-passed inventory: **40**; Batch 002 also has 20/20 independent AI recomputation passes, but still requires named human review.
+- Complete/released papers: **0 / 50**.
+
+`GATE_EE/corpus_v1/production/EIGHT_DAY_PROGRESS.json` is the validated source of truth. It must be updated in the same change as every new source batch or certification event.

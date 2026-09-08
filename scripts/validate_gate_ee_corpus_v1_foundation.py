@@ -15,6 +15,8 @@ topic=load("GATE_EE/corpus_v1/TOPIC_MAP_V1.json")
 bp=load("blueprints/GATE_EE_SET_01_V1.json")
 schema=load("schemas/GATE_EE_CORPUS_V1.schema.json")
 family=load("GATE_EE/corpus_v1/families/FAMILY_REGISTRY.json")
+batch1_families=load("GATE_EE/corpus_v1/families/BATCH_001_FAMILIES.json")
+batch1_admission=load("GATE_EE/corpus_v1/manifests/BATCH_001_CORPUS_ADMISSION.json")
 review=load("GATE_EE/corpus_v1/review_manifests/REVIEW_TEMPLATE.json")
 
 if topic and sum(x["target"] for x in topic["domains"]) != topic["target_questions"]:
@@ -31,6 +33,19 @@ if review and "originality_checked" not in review.get("checks",{}):
     errors.append("Originality review gate missing.")
 if family and family.get("corpus") != "GATE_EE_CORPUS_V1":
     errors.append("Family registry corpus mismatch.")
+if family and batch1_families and batch1_admission:
+    global_rows=family.get("families",[])
+    batch_rows=batch1_families.get("families",[])
+    global_map={row.get("family_id"):row.get("question_ids") for row in global_rows}
+    batch_map={row.get("family_id"):row.get("question_ids") for row in batch_rows}
+    admitted=set(batch1_admission.get("admitted_question_ids",[]))
+    registered={qid for ids in global_map.values() for qid in (ids or [])}
+    if len(global_map)!=len(global_rows):
+        errors.append("Duplicate family IDs in the global family registry.")
+    if global_map!=batch_map:
+        errors.append("Global family registry does not match admitted Batch 001 families.")
+    if admitted!=registered or family.get("admitted_question_count")!=len(admitted):
+        errors.append("Global family registry does not cover every admitted Batch 001 ID.")
 
 if errors:
     print("\n".join(errors))

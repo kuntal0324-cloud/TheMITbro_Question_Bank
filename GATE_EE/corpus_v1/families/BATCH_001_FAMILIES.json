@@ -82,13 +82,13 @@
       ]
     },
     {
-      "family_id": "EM-NM-NEWTON-001",
+      "family_id": "EM-CAL-FOURIER-001",
       "question_ids": [
         "TMB-GATE-EE-EM-014"
       ]
     },
     {
-      "family_id": "EM-NM-INTERP-001",
+      "family_id": "EM-CV-RESIDUE-001",
       "question_ids": [
         "TMB-GATE-EE-EM-015"
       ]
@@ -118,7 +118,7 @@
       ]
     },
     {
-      "family_id": "EM-NM-SIMPSON-001",
+      "family_id": "EM-DE-PDE-HEAT-001",
       "question_ids": [
         "TMB-GATE-EE-EM-020"
       ]

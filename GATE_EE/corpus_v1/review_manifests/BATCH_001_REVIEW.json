@@ -307,6 +307,6 @@
     }
   ],
   "paper_eligibility_candidate_count": 20,
-  "paper_eligible_count": 0,
-  "next_action": "Record a named human review in BATCH_001_HUMAN_FINAL_QA.json, validate it, then promote approved IDs only."
+  "paper_eligible_count": 20,
+  "next_action": "Use the admitted questions in controlled blueprint planning while Batch 002 proceeds through Formatter and independent review."
 }

@@ -1,16 +1,18 @@
 # GATE EE Batch 001 — Human Final QA Packet
 
 Canonical source SHA-256: `cf815b061af0d357df02796f34021b69c3e2465835a1ab1caab7d1ae16d61256`
-Strict Formatter report SHA-256: `ea12ea1c9806ca46600b474f67981e8092d3239eef7d93ce790798102cbd8c39`
+Strict Formatter report SHA-256: `25882a361771f9275bf21e5fc74fdddff1279f64bc0d4eb8d1a1051c9c7fdcf2`
 Strict result: **20 PASS / 0 REVIEW / 0 invalid**
 Independent AI recomputation: **20/20 PASS (not a human-review substitute)**
-Paper eligible: **0 — promotion remains blocked pending named human signoff**
+Human signoff has been recorded; rely on the certification validator for eligibility state.
+
+> **Editing note:** the `☐` and `☑` symbols in this Markdown packet are display-only and are not clickable controls. Record decisions in the companion JSON signoff or a fillable review form.
 
 ## Reviewer identity and attestation
 
-- Name: ______________________________
-- Role or qualification: ______________________________
-- Review date (YYYY-MM-DD): ______________________________
+- Name: KUNTAL DAS
+- Role or qualification: Masters in Electrical Engineering
+- Review date (YYYY-MM-DD): 2026-09-08
 - Required attestation: “I independently reviewed the Batch 001 questions, answers and solutions and approve only the question IDs marked PASS below.”
 
 For every question, independently check the mathematics, declared answer, complete solution, clarity, and originality-conflict risk. Do not copy the AI result as the human decision.
@@ -48,15 +50,16 @@ Final answer: C
 
 ### Human decision fields
 
-| Check | PASS | FAIL | Notes |
-|---|:---:|:---:|---|
-| Technical correctness | ☐ | ☐ | |
-| Answer correctness | ☐ | ☐ | |
-| Solution correctness | ☐ | ☐ | |
-| Clarity / ambiguity | ☐ | ☑ | Matrix is exposed as raw LaTeX in the mobile review packet and is not rendered for human review.
-| Originality-conflict check | ☐ | ☐ | |
+| Check | PASS | FAIL |
+|---|:---:|:---:|
+| Technical correctness | ☑ | ☐ |
+| Answer correctness | ☑ | ☐ |
+| Solution correctness | ☑ | ☐ |
+| Clarity / ambiguity | ☑ | ☐ |
+| Originality-conflict check | ☑ | ☐ |
 
-Decision: ☐ PASS  ☑ REVISE  ☐ REJECT
+Decision: ☑ PASS  ☐ REVISE  ☐ REJECT
+Notes: The largest eigenvalue of the matrix is 3, calculated by finding the roots of its characteristic equation. You can verify this instantly using the symmetric matrix shortcut a ± b, yielding eigenvalues 3 and 1.
 
 ---
 
@@ -84,15 +87,16 @@ Final answer: -6
 
 ### Human decision fields
 
-| Check | PASS | FAIL | Notes |
-|---|:---:|:---:|---|
-| Technical correctness | ☐ | ☐ | |
-| Answer correctness | ☐ | ☐ | |
-| Solution correctness | ☐ | ☐ | |
-| Clarity / ambiguity | ☐ | ☐ | |
-| Originality-conflict check | ☐ | ☐ | |
+| Check | PASS | FAIL |
+|---|:---:|:---:|
+| Technical correctness | ☑ | ☐ |
+| Answer correctness | ☑ | ☐ |
+| Solution correctness | ☑ | ☐ |
+| Clarity / ambiguity | ☑ | ☐ |
+| Originality-conflict check | ☑ | ☐ |
 
-Decision: ☐ PASS  ☐ REVISE  ☐ REJECT
+Decision: ☑ PASS  ☐ REVISE  ☐ REJECT
+Notes: The inverse matrix is calculated as A^(-1) by dividing the adjugate matrix by the determinant, -1. Summing the main diagonal elements of this inverse matrix gives the final trace value of -6.
 
 ---
 
@@ -127,15 +131,16 @@ Final answer: A, B, C
 
 ### Human decision fields
 
-| Check | PASS | FAIL | Notes |
-|---|:---:|:---:|---|
-| Technical correctness | ☐ | ☐ | |
-| Answer correctness | ☐ | ☐ | |
-| Solution correctness | ☐ | ☐ | |
-| Clarity / ambiguity | ☐ | ☐ | |
-| Originality-conflict check | ☐ | ☐ | |
+| Check | PASS | FAIL |
+|---|:---:|:---:|
+| Technical correctness | ☑ | ☐ |
+| Answer correctness | ☑ | ☐ |
+| Solution correctness | ☑ | ☐ |
+| Clarity / ambiguity | ☑ | ☐ |
+| Originality-conflict check | ☑ | ☐ |
 
-Decision: ☐ PASS  ☐ REVISE  ☐ REJECT
+Decision: ☑ PASS  ☐ REVISE  ☐ REJECT
+Notes: Statements A, B, and C are necessarily true because an idempotent symmetric matrix has eigenvalues of only 0 or 1, making it positive semidefinite with its trace equal to its rank. Statement D is false because the matrix can have a zero eigenvalue, which results in a determinant of 0 instead of 1.
 
 ---
 
@@ -170,15 +175,16 @@ Final answer: B
 
 ### Human decision fields
 
-| Check | PASS | FAIL | Notes |
-|---|:---:|:---:|---|
-| Technical correctness | ☐ | ☐ | |
-| Answer correctness | ☐ | ☐ | |
-| Solution correctness | ☐ | ☐ | |
-| Clarity / ambiguity | ☐ | ☐ | |
-| Originality-conflict check | ☐ | ☐ | |
+| Check | PASS | FAIL |
+|---|:---:|:---:|
+| Technical correctness | ☑ | ☐ |
+| Answer correctness | ☑ | ☐ |
+| Solution correctness | ☑ | ☐ |
+| Clarity / ambiguity | ☑ | ☐ |
+| Originality-conflict check | ☑ | ☐ |
 
-Decision: ☐ PASS  ☐ REVISE  ☐ REJECT
+Decision: ☑ PASS  ☐ REVISE  ☐ REJECT
+Notes: The given limit is initially in the indeterminate 0/0 form. Applying L'Hôpital's Rule twice or using the Maclaurin series expansion simplifies the expression to reveal a final evaluation of 2.
 
 ---
 
@@ -206,15 +212,16 @@ Final answer: -2
 
 ### Human decision fields
 
-| Check | PASS | FAIL | Notes |
-|---|:---:|:---:|---|
-| Technical correctness | ☐ | ☐ | |
-| Answer correctness | ☐ | ☐ | |
-| Solution correctness | ☐ | ☐ | |
-| Clarity / ambiguity | ☐ | ☐ | |
-| Originality-conflict check | ☐ | ☐ | |
+| Check | PASS | FAIL |
+|---|:---:|:---:|
+| Technical correctness | ☑ | ☐ |
+| Answer correctness | ☑ | ☐ |
+| Solution correctness | ☑ | ☐ |
+| Clarity / ambiguity | ☑ | ☐ |
+| Originality-conflict check | ☑ | ☐ |
 
-Decision: ☐ PASS  ☐ REVISE  ☐ REJECT
+Decision: ☑ PASS  ☐ REVISE  ☐ REJECT
+Notes: To find the absolute minimum, we set the derivative f'(x) = 3x^2 - 6x = 0 to find the critical point at x = 2.Evaluating the function at this critical point and the endpoints shows that the absolute minimum value is -2.
 
 ---
 
@@ -249,15 +256,16 @@ Final answer: B
 
 ### Human decision fields
 
-| Check | PASS | FAIL | Notes |
-|---|:---:|:---:|---|
-| Technical correctness | ☐ | ☐ | |
-| Answer correctness | ☐ | ☐ | |
-| Solution correctness | ☐ | ☐ | |
-| Clarity / ambiguity | ☐ | ☐ | |
-| Originality-conflict check | ☐ | ☐ | |
+| Check | PASS | FAIL |
+|---|:---:|:---:|
+| Technical correctness | ☑ | ☐ |
+| Answer correctness | ☑ | ☐ |
+| Solution correctness | ☑ | ☐ |
+| Clarity / ambiguity | ☑ | ☐ |
+| Originality-conflict check | ☑ | ☐ |
 
-Decision: ☐ PASS  ☐ REVISE  ☐ REJECT
+Decision: ☑ PASS  ☐ REVISE  ☐ REJECT
+Notes: The definite integral evaluates to (1/2)ln 2 using the u-substitution method with u = 1 + x^2.This substitution shifts the integration limits to 1 and 2, simplifying the expression into a standard natural logarithm form.
 
 ---
 
@@ -285,15 +293,16 @@ Final answer: 1.75
 
 ### Human decision fields
 
-| Check | PASS | FAIL | Notes |
-|---|:---:|:---:|---|
-| Technical correctness | ☐ | ☐ | |
-| Answer correctness | ☐ | ☐ | |
-| Solution correctness | ☐ | ☐ | |
-| Clarity / ambiguity | ☐ | ☐ | |
-| Originality-conflict check | ☐ | ☐ | |
+| Check | PASS | FAIL |
+|---|:---:|:---:|
+| Technical correctness | ☑ | ☐ |
+| Answer correctness | ☑ | ☐ |
+| Solution correctness | ☑ | ☐ |
+| Clarity / ambiguity | ☑ | ☐ |
+| Originality-conflict check | ☑ | ☐ |
 
-Decision: ☐ PASS  ☐ REVISE  ☐ REJECT
+Decision: ☑ PASS  ☐ REVISE  ☐ REJECT
+Notes: The solution to the differential equation is y(x) = 2 - e^(-2x).Evaluating at x = ln 2 yields the final numerical value of 1.75
 
 ---
 
@@ -328,15 +337,16 @@ Final answer: A, B, D
 
 ### Human decision fields
 
-| Check | PASS | FAIL | Notes |
-|---|:---:|:---:|---|
-| Technical correctness | ☐ | ☐ | |
-| Answer correctness | ☐ | ☐ | |
-| Solution correctness | ☐ | ☐ | |
-| Clarity / ambiguity | ☐ | ☐ | |
-| Originality-conflict check | ☐ | ☐ | |
+| Check | PASS | FAIL |
+|---|:---:|:---:|
+| Technical correctness | ☑ | ☐ |
+| Answer correctness | ☑ | ☐ |
+| Solution correctness | ☑ | ☐ |
+| Clarity / ambiguity | ☑ | ☐ |
+| Originality-conflict check | ☑ | ☐ |
 
-Decision: ☐ PASS  ☐ REVISE  ☐ REJECT
+Decision: ☑ PASS  ☐ REVISE  ☐ REJECT
+Notes: The characteristic equation r^2 + 4r + 3 = 0 yields roots r = -1 and r = -3, giving the general solution y = C_1e^(-x) + C_2e^(-3x).Therefore, options A, B, and D are all correct solutions because they fit this general form.
 
 ---
 
@@ -371,15 +381,16 @@ Final answer: B
 
 ### Human decision fields
 
-| Check | PASS | FAIL | Notes |
-|---|:---:|:---:|---|
-| Technical correctness | ☐ | ☐ | |
-| Answer correctness | ☐ | ☐ | |
-| Solution correctness | ☐ | ☐ | |
-| Clarity / ambiguity | ☐ | ☐ | |
-| Originality-conflict check | ☐ | ☐ | |
+| Check | PASS | FAIL |
+|---|:---:|:---:|
+| Technical correctness | ☑ | ☐ |
+| Answer correctness | ☑ | ☐ |
+| Solution correctness | ☑ | ☐ |
+| Clarity / ambiguity | ☑ | ☐ |
+| Originality-conflict check | ☑ | ☐ |
 
-Decision: ☐ PASS  ☐ REVISE  ☐ REJECT
+Decision: ☑ PASS  ☐ REVISE  ☐ REJECT
+Notes: The expression (1 + i)^4 simplifies by first squaring the inside term to get (1 + i)^2 = 2i. Squaring that result gives (2i)^2 = 4i^2 = -4, making Option B the correct choice.
 
 ---
 
@@ -407,15 +418,16 @@ Final answer: 4
 
 ### Human decision fields
 
-| Check | PASS | FAIL | Notes |
-|---|:---:|:---:|---|
-| Technical correctness | ☐ | ☐ | |
-| Answer correctness | ☐ | ☐ | |
-| Solution correctness | ☐ | ☐ | |
-| Clarity / ambiguity | ☐ | ☐ | |
-| Originality-conflict check | ☐ | ☐ | |
+| Check | PASS | FAIL |
+|---|:---:|:---:|
+| Technical correctness | ☑ | ☐ |
+| Answer correctness | ☑ | ☐ |
+| Solution correctness | ☑ | ☐ |
+| Clarity / ambiguity | ☑ | ☐ |
+| Originality-conflict check | ☑ | ☐ |
 
-Decision: ☐ PASS  ☐ REVISE  ☐ REJECT
+Decision: ☑ PASS  ☐ REVISE  ☐ REJECT
+Notes: The roots of the equation z^2 - 2z + 5 = 0 are the complex conjugates z_1 = 1 + 2i and z_2 = 1 - 2i. Subtracting them gives a distance of \|4i\| , resulting in a final numerical value of 4.
 
 ---
 
@@ -450,15 +462,16 @@ Final answer: C
 
 ### Human decision fields
 
-| Check | PASS | FAIL | Notes |
-|---|:---:|:---:|---|
-| Technical correctness | ☐ | ☐ | |
-| Answer correctness | ☐ | ☐ | |
-| Solution correctness | ☐ | ☐ | |
-| Clarity / ambiguity | ☐ | ☐ | |
-| Originality-conflict check | ☐ | ☐ | |
+| Check | PASS | FAIL |
+|---|:---:|:---:|
+| Technical correctness | ☑ | ☐ |
+| Answer correctness | ☑ | ☐ |
+| Solution correctness | ☑ | ☐ |
+| Clarity / ambiguity | ☑ | ☐ |
+| Originality-conflict check | ☑ | ☐ |
 
-Decision: ☐ PASS  ☐ REVISE  ☐ REJECT
+Decision: ☑ PASS  ☐ REVISE  ☐ REJECT
+Notes: For independent events, the intersection is P(A cap B) = 0.6 × 0.5 = 0.30.Using the addition rule, the union is P(A cup B) = 0.6 + 0.5 - 0.30 = 0.80 (Option C).
 
 ---
 
@@ -486,15 +499,16 @@ Final answer: 1.7
 
 ### Human decision fields
 
-| Check | PASS | FAIL | Notes |
-|---|:---:|:---:|---|
-| Technical correctness | ☐ | ☐ | |
-| Answer correctness | ☐ | ☐ | |
-| Solution correctness | ☐ | ☐ | |
-| Clarity / ambiguity | ☐ | ☐ | |
-| Originality-conflict check | ☐ | ☐ | |
+| Check | PASS | FAIL |
+|---|:---:|:---:|
+| Technical correctness | ☑ | ☐ |
+| Answer correctness | ☑ | ☐ |
+| Solution correctness | ☑ | ☐ |
+| Clarity / ambiguity | ☑ | ☐ |
+| Originality-conflict check | ☑ | ☐ |
 
-Decision: ☐ PASS  ☐ REVISE  ☐ REJECT
+Decision: ☑ PASS  ☐ REVISE  ☐ REJECT
+Notes: To find E[X^2] = 1.7, each value of X is squared and multiplied by its corresponding probability.The calculation is: (0^2 × 0.2) + (1^2 × 0.5) + (2^2 × 0.3) = 0 + 0.5 + 1.2 = 1.7
 
 ---
 
@@ -529,15 +543,16 @@ Final answer: A, B, C, D
 
 ### Human decision fields
 
-| Check | PASS | FAIL | Notes |
-|---|:---:|:---:|---|
-| Technical correctness | ☐ | ☐ | |
-| Answer correctness | ☐ | ☐ | |
-| Solution correctness | ☐ | ☐ | |
-| Clarity / ambiguity | ☐ | ☐ | |
-| Originality-conflict check | ☐ | ☐ | |
+| Check | PASS | FAIL |
+|---|:---:|:---:|
+| Technical correctness | ☑ | ☐ |
+| Answer correctness | ☑ | ☐ |
+| Solution correctness | ☑ | ☐ |
+| Clarity / ambiguity | ☑ | ☐ |
+| Originality-conflict check | ☑ | ☐ |
 
-Decision: ☐ PASS  ☐ REVISE  ☐ REJECT
+Decision: ☑ PASS  ☐ REVISE  ☐ REJECT
+Notes: All four options (A, B, C, and D) are mathematically correct and true. They directly reflect the standard foundational definitions, linear properties, and transformation rules of mathematical expectation and variance for any random variable.
 
 ---
 
@@ -565,15 +580,16 @@ Final answer: 0.5
 
 ### Human decision fields
 
-| Check | PASS | FAIL | Notes |
-|---|:---:|:---:|---|
-| Technical correctness | ☐ | ☐ | |
-| Answer correctness | ☐ | ☐ | |
-| Solution correctness | ☐ | ☐ | |
-| Clarity / ambiguity | ☐ | ☐ | |
-| Originality-conflict check | ☐ | ☐ | |
+| Check | PASS | FAIL |
+|---|:---:|:---:|
+| Technical correctness | ☑ | ☐ |
+| Answer correctness | ☑ | ☐ |
+| Solution correctness | ☑ | ☐ |
+| Clarity / ambiguity | ☑ | ☐ |
+| Originality-conflict check | ☑ | ☐ |
 
-Decision: ☐ PASS  ☐ REVISE  ☐ REJECT
+Decision: ☑ PASS  ☐ REVISE  ☐ REJECT
+Notes: To find b_1, evaluate the given integral. Applying trigonometric identities yields the final answer b_1 = 1/2
 
 ---
 
@@ -608,15 +624,16 @@ Final answer: B
 
 ### Human decision fields
 
-| Check | PASS | FAIL | Notes |
-|---|:---:|:---:|---|
-| Technical correctness | ☐ | ☐ | |
-| Answer correctness | ☐ | ☐ | |
-| Solution correctness | ☐ | ☐ | |
-| Clarity / ambiguity | ☐ | ☐ | |
-| Originality-conflict check | ☐ | ☐ | |
+| Check | PASS | FAIL |
+|---|:---:|:---:|
+| Technical correctness | ☑ | ☐ |
+| Answer correctness | ☑ | ☐ |
+| Solution correctness | ☑ | ☐ |
+| Clarity / ambiguity | ☑ | ☐ |
+| Originality-conflict check | ☑ | ☐ |
 
-Decision: ☐ PASS  ☐ REVISE  ☐ REJECT
+Decision: ☑ PASS  ☐ REVISE  ☐ REJECT
+Notes: The contour \|z\| =2 encloses both simple poles at z=0 and z=1, which have residues of -1 and 2 respectively. By the Cauchy Residue Theorem, the integral evaluates to 2πi × (-1 + 2) = 2πi (Option B).
 
 ---
 
@@ -644,15 +661,16 @@ Final answer: 4
 
 ### Human decision fields
 
-| Check | PASS | FAIL | Notes |
-|---|:---:|:---:|---|
-| Technical correctness | ☐ | ☐ | |
-| Answer correctness | ☐ | ☐ | |
-| Solution correctness | ☐ | ☐ | |
-| Clarity / ambiguity | ☐ | ☐ | |
-| Originality-conflict check | ☐ | ☐ | |
+| Check | PASS | FAIL |
+|---|:---:|:---:|
+| Technical correctness | ☑ | ☐ |
+| Answer correctness | ☑ | ☐ |
+| Solution correctness | ☑ | ☐ |
+| Clarity / ambiguity | ☑ | ☐ |
+| Originality-conflict check | ☑ | ☐ |
 
-Decision: ☐ PASS  ☐ REVISE  ☐ REJECT
+Decision: ☑ PASS  ☐ REVISE  ☐ REJECT
+Notes: For the system to have infinitely many solutions, both equations must represent the same line.Multiplying the first equation by 2 shows that k = 4.
 
 ---
 
@@ -687,15 +705,16 @@ Final answer: B
 
 ### Human decision fields
 
-| Check | PASS | FAIL | Notes |
-|---|:---:|:---:|---|
-| Technical correctness | ☐ | ☐ | |
-| Answer correctness | ☐ | ☐ | |
-| Solution correctness | ☐ | ☐ | |
-| Clarity / ambiguity | ☐ | ☐ | |
-| Originality-conflict check | ☐ | ☐ | |
+| Check | PASS | FAIL |
+|---|:---:|:---:|
+| Technical correctness | ☑ | ☐ |
+| Answer correctness | ☑ | ☐ |
+| Solution correctness | ☑ | ☐ |
+| Clarity / ambiguity | ☑ | ☐ |
+| Originality-conflict check | ☑ | ☐ |
 
-Decision: ☐ PASS  ☐ REVISE  ☐ REJECT
+Decision: ☑ PASS  ☐ REVISE  ☐ REJECT
+Notes: The directional derivative is calculated by taking the dot product of the function's gradient vector and the unit direction vector. At the point (1,2) in the direction of 3i + 4j, this yields a final value of 6.4
 
 ---
 
@@ -730,15 +749,16 @@ Final answer: A, B, D
 
 ### Human decision fields
 
-| Check | PASS | FAIL | Notes |
-|---|:---:|:---:|---|
-| Technical correctness | ☐ | ☐ | |
-| Answer correctness | ☐ | ☐ | |
-| Solution correctness | ☐ | ☐ | |
-| Clarity / ambiguity | ☐ | ☐ | |
-| Originality-conflict check | ☐ | ☐ | |
+| Check | PASS | FAIL |
+|---|:---:|:---:|
+| Technical correctness | ☑ | ☐ |
+| Answer correctness | ☑ | ☐ |
+| Solution correctness | ☑ | ☐ |
+| Clarity / ambiguity | ☑ | ☐ |
+| Originality-conflict check | ☑ | ☐ |
 
-Decision: ☐ PASS  ☐ REVISE  ☐ REJECT
+Decision: ☑ PASS  ☐ REVISE  ☐ REJECT
+Notes: Statements A, B, and D are true for the planar vector field F = yi - xj. The field has a divergence of 0, a curl of -2k (making it non-conservative), and a circulation of -2π around the unit circle.
 
 ---
 
@@ -766,15 +786,16 @@ Final answer: 0.24
 
 ### Human decision fields
 
-| Check | PASS | FAIL | Notes |
-|---|:---:|:---:|---|
-| Technical correctness | ☐ | ☐ | |
-| Answer correctness | ☐ | ☐ | |
-| Solution correctness | ☐ | ☐ | |
-| Clarity / ambiguity | ☐ | ☐ | |
-| Originality-conflict check | ☐ | ☐ | |
+| Check | PASS | FAIL |
+|---|:---:|:---:|
+| Technical correctness | ☑ | ☐ |
+| Answer correctness | ☑ | ☐ |
+| Solution correctness | ☑ | ☐ |
+| Clarity / ambiguity | ☑ | ☐ |
+| Originality-conflict check | ☑ | ☐ |
 
-Decision: ☐ PASS  ☐ REVISE  ☐ REJECT
+Decision: ☑ PASS  ☐ REVISE  ☐ REJECT
+Notes: The variance of the Bernoulli random variable is 0.24. It is calculated using the formula Var(X) = p(1-p), where 0.4 × 0.6 = 0.24
 
 ---
 
@@ -802,21 +823,22 @@ Final answer: 1.5
 
 ### Human decision fields
 
-| Check | PASS | FAIL | Notes |
-|---|:---:|:---:|---|
-| Technical correctness | ☐ | ☐ | |
-| Answer correctness | ☐ | ☐ | |
-| Solution correctness | ☐ | ☐ | |
-| Clarity / ambiguity | ☐ | ☐ | |
-| Originality-conflict check | ☐ | ☐ | |
+| Check | PASS | FAIL |
+|---|:---:|:---:|
+| Technical correctness | ☑ | ☐ |
+| Answer correctness | ☑ | ☐ |
+| Solution correctness | ☑ | ☐ |
+| Clarity / ambiguity | ☑ | ☐ |
+| Originality-conflict check | ☑ | ☐ |
 
-Decision: ☐ PASS  ☐ REVISE  ☐ REJECT
+Decision: ☑ PASS  ☐ REVISE  ☐ REJECT
+Notes: The general heat equation solution simplifies to u(x, t) = 3sin(2x)e^(-4t) by directly matching coefficients with the given initial condition. Evaluating this specific solution at the points x = π/4 and t = (ln 2)/4 yields the final value of 3/2 = 1.5
 
 ---
 
 ## Final certification procedure
 
-1. Copy the reviewer identity, exact attestation, per-question checks, decisions and notes into `BATCH_001_HUMAN_FINAL_QA.json`.
-2. Run `python scripts/validate_gate_ee_batch_001_human_signoff.py`.
-3. Only after that validator passes, run `python scripts/promote_gate_ee_batch_001_paper_eligibility.py`.
-4. Re-run every repository validator and inspect the generated certificate/admission manifest before publication.
+1. Enter reviewer identity, the exact attestation, all five checks, one decision and notes for every question in the companion human-final-QA JSON.
+2. Run the batch human-signoff validator.
+3. Promote only explicit PASS decisions after that validator succeeds.
+4. Re-run every repository validator before corpus admission or paper assembly.
