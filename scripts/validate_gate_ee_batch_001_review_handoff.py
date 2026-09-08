@@ -55,7 +55,7 @@ allowed_stages = {
 }
 if stage not in allowed_stages:
     errors.append("Qualification stage mismatch.")
-if summary.get("paper_eligible_count") != 0:
+if stage != "PAPER_ELIGIBILITY_CERTIFIED" and summary.get("paper_eligible_count") != 0:
     errors.append("Qualification summary paper eligibility mismatch.")
 if stage == "READY_FOR_HUMAN_FINAL_QA":
     if formatter.get("source_sha256") != hashlib.sha256(batch_path.read_bytes()).hexdigest():
@@ -64,6 +64,36 @@ if stage == "READY_FOR_HUMAN_FINAL_QA":
         errors.append("Human-QA handoff requires Formatter 20 PASS / 0 REVIEW / 0 invalid.")
     if review_manifest.get("status") != "READY_FOR_HUMAN_FINAL_QA" or len(review_manifest.get("questions", [])) != 20:
         errors.append("Fresh human review manifest is missing or incomplete.")
+elif stage == "PAPER_ELIGIBILITY_CERTIFIED":
+    rows = review_manifest.get("questions", [])
+    if review_manifest.get("status") != "HUMAN_FINAL_QA_COMPLETE" or len(rows) != 20:
+        errors.append("Certified human review manifest is missing or incomplete.")
+    else:
+        approved = 0
+        for row in rows:
+            decision = row.get("human_decision")
+            checks = row.get("human_checks", {})
+            if decision not in {"PASS", "REVISE", "REJECT"}:
+                errors.append(f"{row.get('question_id', '?')}: invalid human decision.")
+            if any(
+                checks.get(field) not in {"PASS", "FAIL"}
+                for field in (
+                    "technical_correctness",
+                    "answer_correctness",
+                    "solution_correctness",
+                    "clarity_ambiguity",
+                    "originality_conflict_check",
+                )
+            ):
+                errors.append(f"{row.get('question_id', '?')}: incomplete human checks.")
+            if decision == "PASS":
+                approved += 1
+                if any(value != "PASS" for value in checks.values()):
+                    errors.append(
+                        f"{row.get('question_id', '?')}: PASS requires all human checks PASS."
+                    )
+        if summary.get("paper_eligible_count") != approved:
+            errors.append("Certified summary count does not match human PASS decisions.")
 
 if errors:
     print("\n".join(errors))
@@ -74,5 +104,8 @@ print("Questions: 20")
 print(f"Internal technical second-pass: {review.get('technical_second_pass_passed', 0)}/20")
 print("Unique IDs/families: PASSED")
 print("Formatter v2.0 handoff checksum: PASSED")
-print("Paper-eligible: 0")
-print("Next gate: named human technical and final review")
+print(f"Paper-eligible: {summary.get('paper_eligible_count', 0)}")
+if stage == "PAPER_ELIGIBILITY_CERTIFIED":
+    print("Next gate: Corpus V1 admission and production planning")
+else:
+    print("Next gate: named human technical and final review")

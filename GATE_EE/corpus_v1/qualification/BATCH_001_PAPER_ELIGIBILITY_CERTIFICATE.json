@@ -1,0 +1,37 @@
+{
+  "certificate_contract": "GATE_EE_BATCH001_PAPER_ELIGIBILITY_CERTIFICATE_V1",
+  "batch_id": "BATCH_001",
+  "source_sha256": "cf815b061af0d357df02796f34021b69c3e2465835a1ab1caab7d1ae16d61256",
+  "human_signoff_sha256": "96df73a72fa20339d465a25dbfd66366738aa7556b88ae0403047c2f4284a006",
+  "reviewer": {
+    "name": "KUNTAL DAS",
+    "role_or_qualification": "Masters in Electrical Engineering",
+    "review_date": "2026-09-08"
+  },
+  "approved_question_ids": [
+    "TMB-GATE-EE-EM-001",
+    "TMB-GATE-EE-EM-002",
+    "TMB-GATE-EE-EM-003",
+    "TMB-GATE-EE-EM-004",
+    "TMB-GATE-EE-EM-005",
+    "TMB-GATE-EE-EM-006",
+    "TMB-GATE-EE-EM-007",
+    "TMB-GATE-EE-EM-008",
+    "TMB-GATE-EE-EM-009",
+    "TMB-GATE-EE-EM-010",
+    "TMB-GATE-EE-EM-011",
+    "TMB-GATE-EE-EM-012",
+    "TMB-GATE-EE-EM-013",
+    "TMB-GATE-EE-EM-014",
+    "TMB-GATE-EE-EM-015",
+    "TMB-GATE-EE-EM-016",
+    "TMB-GATE-EE-EM-017",
+    "TMB-GATE-EE-EM-018",
+    "TMB-GATE-EE-EM-019",
+    "TMB-GATE-EE-EM-020"
+  ],
+  "revise_question_ids": [],
+  "rejected_question_ids": [],
+  "paper_eligible_count": 20,
+  "decision": "CERTIFIED"
+}

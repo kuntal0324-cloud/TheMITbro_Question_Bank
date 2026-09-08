@@ -24,10 +24,13 @@ if elig.get("source_sha256") != sha:
     errors.append("Eligibility artifact checksum does not match the current source.")
 if human.get("source_sha256") != sha:
     errors.append("Human-QA template checksum does not match the current source.")
-if elig.get("paper_eligible_count") != 0:
+if stage != "PAPER_ELIGIBILITY_CERTIFIED" and elig.get("paper_eligible_count") != 0:
     errors.append("No item may be paper-eligible before requalification and human signoff.")
-if human.get("final_decision") != "PENDING" and stage != "PAPER_ELIGIBILITY_CERTIFIED":
-    errors.append("Human final QA must remain pending before certification.")
+if stage == "READY_FOR_HUMAN_FINAL_QA" and human.get("final_decision") not in {
+    "PENDING",
+    "APPROVE_REVIEWED_RESULTS",
+}:
+    errors.append("Human final QA has an unsupported pre-promotion decision.")
 
 if stage == "READY_FOR_FORMATTER_REQUALIFICATION":
     if qa.get("status") != "STALE_SOURCE_CHANGED" or qa.get("evidence_valid_for_current_source") is not False:
@@ -89,6 +92,9 @@ elif stage == "READY_FOR_HUMAN_FINAL_QA":
 elif stage == "PAPER_ELIGIBILITY_CERTIFIED":
     if human.get("final_decision") != "APPROVE_REVIEWED_RESULTS":
         errors.append("Certified stage requires recorded human approval.")
+    certified_ids = elig.get("certified_paper_eligible_question_ids", [])
+    if elig.get("paper_eligible_count") != len(certified_ids):
+        errors.append("Certified paper-eligible count does not match the certified ID list.")
 else:
     errors.append(f"Unsupported qualification stage: {stage!r}")
 

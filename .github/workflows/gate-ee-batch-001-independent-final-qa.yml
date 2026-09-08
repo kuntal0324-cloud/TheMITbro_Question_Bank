@@ -26,10 +26,5 @@ jobs:
         run: python scripts/validate_gate_ee_batch_001_review_handoff.py
       - name: Validate independent final QA candidate stage
         run: python scripts/validate_gate_ee_batch_001_independent_final_qa.py
-      - name: Confirm promotion remains blocked before human signoff
-        run: |
-          if python scripts/promote_gate_ee_batch_001_paper_eligibility.py; then
-            echo "ERROR: promotion unexpectedly succeeded without human signoff"
-            exit 1
-          fi
-          echo "Human-signoff protection: PASSED"
+      - name: Validate human-signoff and paper-eligibility state
+        run: python scripts/validate_gate_ee_batch_001_paper_eligibility.py

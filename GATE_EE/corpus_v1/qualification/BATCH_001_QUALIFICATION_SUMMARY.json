@@ -1,7 +1,7 @@
 {
   "qualification_version": "2.0.0",
   "batch_id": "BATCH_001",
-  "current_stage": "READY_FOR_HUMAN_FINAL_QA",
+  "current_stage": "PAPER_ELIGIBILITY_CERTIFIED",
   "source_sha256": "cf815b061af0d357df02796f34021b69c3e2465835a1ab1caab7d1ae16d61256",
   "questions_total": 20,
   "internal_technical_second_pass": {
@@ -10,14 +10,9 @@
   },
   "unique_ids": true,
   "unique_families": true,
-  "paper_eligible_count": 0,
-  "remaining_gates": [
-    "named independent human technical review",
-    "named independent human answer/solution review",
-    "human final approval",
-    "promotion of approved IDs only"
-  ],
-  "next_action": "Complete the checksum-bound named human review packet; promote only IDs explicitly marked PASS.",
+  "paper_eligible_count": 20,
+  "remaining_gates": [],
+  "next_action": "Admit certified questions to Corpus V1 master pool and begin Production Batch 002.",
   "formatter_v2_final_qualification": {
     "status": "PASS",
     "passed": 20,
@@ -30,8 +25,11 @@
     "human_review_substitute": false
   },
   "human_final_qa": {
-    "status": "PENDING",
-    "reviewer": ""
+    "status": "COMPLETE",
+    "review_date": "2026-09-08",
+    "paper_eligible": 20,
+    "revise": 0,
+    "reject": 0
   },
   "release_gate": "BLOCKED"
 }

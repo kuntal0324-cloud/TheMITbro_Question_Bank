@@ -21,8 +21,14 @@ def validate():
 
     if human.get("source_sha256")!=source_sha: errors.append("Human QA source checksum mismatch.")
     if candidate.get("source_sha256")!=source_sha: errors.append("Eligibility candidate source checksum mismatch.")
-    if summary.get("current_stage") != "READY_FOR_HUMAN_FINAL_QA":
-        errors.append("Human signoff is blocked until current_stage is READY_FOR_HUMAN_FINAL_QA.")
+    if summary.get("current_stage") not in {
+        "READY_FOR_HUMAN_FINAL_QA",
+        "PAPER_ELIGIBILITY_CERTIFIED",
+    }:
+        errors.append(
+            "Human signoff is valid only at READY_FOR_HUMAN_FINAL_QA or "
+            "PAPER_ELIGIBILITY_CERTIFIED."
+        )
     if formatter.get("source_sha256") != source_sha:
         errors.append("Formatter evidence checksum mismatch.")
     if formatter.get("status") != "PASS" or formatter.get("formatter_pass_count") != len(questions) or formatter.get("formatter_review_count") != 0:
