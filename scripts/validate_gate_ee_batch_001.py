@@ -30,7 +30,7 @@ for q in qs:
     if q.get("type") not in {"MCQ","MSQ","NAT"}: errors.append(f"{qid}: bad type")
     if q.get("marks") not in {1,2}: errors.append(f"{qid}: bad marks")
     if q.get("difficulty") not in {"Easy","Medium","Hard"}: errors.append(f"{qid}: bad difficulty")
-    if q.get("status")!="DRAFT": errors.append(f"{qid}: Batch 001 must remain DRAFT until independent review")
+    if q.get("status")!="DRAFT": errors.append(f"{qid}: canonical source records must remain immutable DRAFT revisions; eligibility is certificate-bound")
     if q.get("provenance",{}).get("originality")!="ORIGINAL_THEMITBRO": errors.append(f"{qid}: originality provenance missing")
     if q.get("type") in {"MCQ","MSQ"} and len(q.get("options",[]))!=4: errors.append(f"{qid}: requires four options")
     if q.get("type")=="NAT" and "options" in q: errors.append(f"{qid}: NAT must not contain options")
@@ -47,9 +47,30 @@ expected_ids={f"TMB-GATE-EE-EM-{i:03d}" for i in range(1,21)}
 if ids != expected_ids: errors.append("question ID sequence mismatch")
 
 manifest=json.loads((ROOT/"GATE_EE/corpus_v1/manifests/BATCH_001_MANIFEST.json").read_text())
+certificate_path=ROOT/"GATE_EE/corpus_v1/qualification/BATCH_001_PAPER_ELIGIBILITY_CERTIFICATE.json"
+admission_path=ROOT/"GATE_EE/corpus_v1/manifests/BATCH_001_CORPUS_ADMISSION.json"
 if manifest.get("question_count")!=20: errors.append("manifest count mismatch")
-if manifest.get("paper_eligible_count")!=0: errors.append("unreviewed batch cannot be paper eligible")
 if manifest.get("jsonl_sha256")!=hashlib.sha256(batch.read_bytes()).hexdigest(): errors.append("manifest source checksum mismatch")
+
+eligible_count=0
+if certificate_path.exists() or admission_path.exists():
+    if not certificate_path.exists() or not admission_path.exists():
+        errors.append("certificate and admission manifest must exist together")
+    else:
+        certificate=json.loads(certificate_path.read_text(encoding="utf-8"))
+        admission=json.loads(admission_path.read_text(encoding="utf-8"))
+        eligible_count=certificate.get("paper_eligible_count",0)
+        if certificate.get("source_sha256")!=hashlib.sha256(batch.read_bytes()).hexdigest():
+            errors.append("certificate source checksum mismatch")
+        if certificate.get("decision")!="CERTIFIED": errors.append("paper-eligibility certificate is not certified")
+        if admission.get("admitted_question_ids")!=certificate.get("approved_question_ids"):
+            errors.append("admission IDs do not match the paper-eligibility certificate")
+        if admission.get("admitted_count")!=eligible_count:
+            errors.append("admission count does not match the paper-eligibility certificate")
+        if manifest.get("status")!="PAPER_ELIGIBILITY_CERTIFIED_AND_ADMITTED":
+            errors.append("certified Batch 001 manifest status is stale")
+if manifest.get("paper_eligible_count")!=eligible_count:
+    errors.append("manifest paper-eligible count does not match certification state")
 expected_counts={
     "type_counts":dict(Counter(str(q["type"]) for q in qs)),
     "marks_counts":dict(Counter(str(q["marks"]) for q in qs)),
@@ -66,5 +87,5 @@ print("GATE EE PRODUCTION BATCH 001: PASSED")
 print("Questions: 20")
 print("Domain: Engineering Mathematics")
 print("IDs: TMB-GATE-EE-EM-001..020")
-print("Paper-eligible: 0 (independent review required)")
+print(f"Paper-eligible: {eligible_count}")
 print("Machine-final markers and manifest consistency: PASSED")

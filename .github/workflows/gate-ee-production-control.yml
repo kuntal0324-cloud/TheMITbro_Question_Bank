@@ -1,0 +1,37 @@
+name: GATE EE Production Control
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-production-state:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Validate corpus foundation and Batch 001 certification
+        run: |
+          python scripts/validate_gate_ee_corpus_v1_foundation.py
+          python scripts/validate_gate_ee_batch_001.py
+          python scripts/validate_gate_ee_batch_001_review_handoff.py
+          python scripts/validate_gate_ee_batch_001_independent_final_qa.py
+          python scripts/validate_gate_ee_batch_001_paper_eligibility.py
+      - name: Validate Batch 002 production intake
+        run: |
+          python scripts/validate_gate_ee_batch_002.py
+          python scripts/recompute_gate_ee_batch_002.py --check
+          python scripts/validate_gate_ee_batch_002_independent_final_qa.py
+          python scripts/validate_gate_ee_batch_002_human_signoff.py
+      - name: Validate eight-day progress ledger
+        run: python scripts/validate_gate_ee_eight_day_progress.py
+      - name: Reject whitespace errors
+        run: git diff --check

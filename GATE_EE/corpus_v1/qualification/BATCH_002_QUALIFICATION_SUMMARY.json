@@ -1,0 +1,31 @@
+{
+  "qualification_version": "1.0.0",
+  "batch_id": "BATCH_002",
+  "domain": "Electric Circuits",
+  "current_stage": "READY_FOR_HUMAN_FINAL_QA",
+  "source_sha256": "23b749225f9128864b1e1545c865ba1d08b8ee706b3faf69e6202099b913db36",
+  "formatter_evidence_sha256": "78bab267e0abc034fc0927952b39b0a6328bda0a82d32e1ce877e92c56eaa342",
+  "questions_total": 20,
+  "formatter_v2_qualification": {
+    "status": "PASS",
+    "passed": 20,
+    "review": 0,
+    "invalid": 0,
+    "render_passed": 20
+  },
+  "independent_ai_technical_recomputation": {
+    "status": "PASS",
+    "passed": 20,
+    "evidence_sha256": "46353081807c711515a46655d95dbeb5cf23d008c81d7dfdd7ab62eb79e63e2d",
+    "human_review_substitute": false
+  },
+  "human_final_qa": {
+    "status": "PENDING",
+    "passed": 0,
+    "revise": 0,
+    "reject": 0
+  },
+  "paper_eligible_count": 0,
+  "release_gate": "BLOCKED_PENDING_HUMAN_FINAL_QA",
+  "next_action": "Complete the checksum-bound named human final QA; promote only explicit PASS decisions."
+}

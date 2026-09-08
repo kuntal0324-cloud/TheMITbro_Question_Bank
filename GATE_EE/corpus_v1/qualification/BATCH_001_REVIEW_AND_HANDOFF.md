@@ -9,7 +9,8 @@ Phase 4 resolved all 20 strict Formatter review cases through content clarificat
 - Quality grade A: 20/20
 - Render without exposed source markup: 20/20
 - Independent AI recomputation: 20/20 PASS
-- Named human review: PENDING
-- Paper eligible: 0
+- Named human final QA: 20 PASS / 0 REVISE / 0 REJECT
+- Paper eligible: 20
+- Corpus V1 admission: 20
 
-The fresh human review packet is under `review_manifests/`. Do not promote any ID until the named human signoff validator passes.
+The checksum-bound human signoff, paper-eligibility certificate and Corpus V1 admission manifest now pass together. Batch 001 may supply eligible Engineering Mathematics records to a future blueprint, but it does not constitute a complete paper and nothing is released. The next content gate is Batch 002 Electric Circuits Formatter qualification and independent review.

@@ -2,5 +2,27 @@
   "registry_version": "1.0.0",
   "corpus": "GATE_EE_CORPUS_V1",
   "rule": "One family per materially shared construction/reasoning skeleton. Set 01 permits at most one question from each family.",
-  "families": []
+  "admitted_question_count": 20,
+  "families": [
+    {"family_id": "EM-LA-EIG-001", "question_ids": ["TMB-GATE-EE-EM-001"], "admission_batch": "BATCH_001"},
+    {"family_id": "EM-LA-INVTRACE-001", "question_ids": ["TMB-GATE-EE-EM-002"], "admission_batch": "BATCH_001"},
+    {"family_id": "EM-LA-IDEMP-001", "question_ids": ["TMB-GATE-EE-EM-003"], "admission_batch": "BATCH_001"},
+    {"family_id": "EM-CAL-LIMIT-001", "question_ids": ["TMB-GATE-EE-EM-004"], "admission_batch": "BATCH_001"},
+    {"family_id": "EM-CAL-OPT-001", "question_ids": ["TMB-GATE-EE-EM-005"], "admission_batch": "BATCH_001"},
+    {"family_id": "EM-CAL-INT-001", "question_ids": ["TMB-GATE-EE-EM-006"], "admission_batch": "BATCH_001"},
+    {"family_id": "EM-DE-FIRSTORDER-001", "question_ids": ["TMB-GATE-EE-EM-007"], "admission_batch": "BATCH_001"},
+    {"family_id": "EM-DE-SECONDORDER-001", "question_ids": ["TMB-GATE-EE-EM-008"], "admission_batch": "BATCH_001"},
+    {"family_id": "EM-CV-POWER-001", "question_ids": ["TMB-GATE-EE-EM-009"], "admission_batch": "BATCH_001"},
+    {"family_id": "EM-CV-ROOTDIST-001", "question_ids": ["TMB-GATE-EE-EM-010"], "admission_batch": "BATCH_001"},
+    {"family_id": "EM-PS-INDEP-001", "question_ids": ["TMB-GATE-EE-EM-011"], "admission_batch": "BATCH_001"},
+    {"family_id": "EM-PS-MOMENT-001", "question_ids": ["TMB-GATE-EE-EM-012"], "admission_batch": "BATCH_001"},
+    {"family_id": "EM-PS-VARIDENT-001", "question_ids": ["TMB-GATE-EE-EM-013"], "admission_batch": "BATCH_001"},
+    {"family_id": "EM-CAL-FOURIER-001", "question_ids": ["TMB-GATE-EE-EM-014"], "admission_batch": "BATCH_001"},
+    {"family_id": "EM-CV-RESIDUE-001", "question_ids": ["TMB-GATE-EE-EM-015"], "admission_batch": "BATCH_001"},
+    {"family_id": "EM-LA-SYSTEM-001", "question_ids": ["TMB-GATE-EE-EM-016"], "admission_batch": "BATCH_001"},
+    {"family_id": "EM-CAL-DIRDER-001", "question_ids": ["TMB-GATE-EE-EM-017"], "admission_batch": "BATCH_001"},
+    {"family_id": "EM-CAL-VECCALC-001", "question_ids": ["TMB-GATE-EE-EM-018"], "admission_batch": "BATCH_001"},
+    {"family_id": "EM-PS-BERNOULLI-001", "question_ids": ["TMB-GATE-EE-EM-019"], "admission_batch": "BATCH_001"},
+    {"family_id": "EM-DE-PDE-HEAT-001", "question_ids": ["TMB-GATE-EE-EM-020"], "admission_batch": "BATCH_001"}
+  ]
 }

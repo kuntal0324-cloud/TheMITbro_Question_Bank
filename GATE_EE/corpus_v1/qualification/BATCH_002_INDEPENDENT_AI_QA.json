@@ -1,0 +1,300 @@
+{
+  "qa_contract": "GATE_EE_BATCH002_INDEPENDENT_AI_QA_V1",
+  "batch_id": "BATCH_002",
+  "status": "PASS",
+  "qa_date": "2026-09-08",
+  "performed_by": "OpenAI Codex",
+  "reviewer_kind": "AI_ASSISTED_INDEPENDENT_RECOMPUTATION",
+  "source_sha256": "23b749225f9128864b1e1545c865ba1d08b8ee706b3faf69e6202099b913db36",
+  "formatter_report_sha256": "78bab267e0abc034fc0927952b39b0a6328bda0a82d32e1ce877e92c56eaa342",
+  "evidence_valid_for_current_source": true,
+  "technical_pass_count": 20,
+  "answer_recomputed_pass_count": 20,
+  "solution_consistency_pass_count": 20,
+  "machine_final_marker_pass_count": 20,
+  "formatter_pass_count": 20,
+  "formatter_review_count": 0,
+  "invalid_count": 0,
+  "paper_eligibility_candidate_count": 20,
+  "paper_eligible_count": 0,
+  "human_final_qa_required": true,
+  "human_review_substitute": false,
+  "automated_oracle": "scripts/recompute_gate_ee_batch_002.py",
+  "release_gate": "BLOCKED_PENDING_HUMAN_FINAL_QA",
+  "questions": [
+    {
+      "question_id": "TMB-GATE-EE-NT-001",
+      "revision": 1,
+      "declared_answer": 0.324,
+      "recomputed_answer": 0.324,
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "Ceq=2 microfarads; (1/2)Ceq(18)^2=0.324 mJ.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-NT-002",
+      "revision": 1,
+      "declared_answer": "C",
+      "recomputed_answer": "C",
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "M=0.5 sqrt(4x9)=3 H; series-aiding Leq=4+9+2M=19 H, option C.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-NT-003",
+      "revision": 1,
+      "declared_answer": "B",
+      "recomputed_answer": "B",
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "A test voltage v draws v/4+0.5(v/4)=3v/8; v/i=8/3 ohm, option B.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-NT-004",
+      "revision": 1,
+      "declared_answer": [
+        "A",
+        "C",
+        "D"
+      ],
+      "recomputed_answer": [
+        "A",
+        "C",
+        "D"
+      ],
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "Ideal stored energies are Cv^2/2 and Li^2/2; capacitor voltage and inductor current cannot jump under finite impulse-free excitation.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-NT-005",
+      "revision": 1,
+      "declared_answer": 4,
+      "recomputed_answer": 4,
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "KCL gives v1=1.5v2 and 6v1-3v2=24; hence v2=4 V.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-NT-006",
+      "revision": 1,
+      "declared_answer": 6.8,
+      "recomputed_answer": 6.8,
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "v1/2+v2/3=4 with v1-v2=5 gives v2=1.8 V and v1=6.8 V.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-NT-007",
+      "revision": 1,
+      "declared_answer": "A",
+      "recomputed_answer": "A",
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "The two equations give I1=2.25 A and I2=1.625 A; I1-I2=0.625 A, option A.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-NT-008",
+      "revision": 1,
+      "declared_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "recomputed_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "A reference node, a supernode for an inter-node ideal voltage source, and at most n-1 independent KCL equations are valid; dependent sources do not prohibit nodal analysis.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-NT-009",
+      "revision": 1,
+      "declared_answer": "B",
+      "recomputed_answer": "B",
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "Vth=18(6/9)=12 V and Rth=3||6=2 ohm; IL=12/(2+4)=2 A, option B.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-NT-010",
+      "revision": 1,
+      "declared_answer": "C",
+      "recomputed_answer": "C",
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "Current division gives IL=3[6/(6+3)]=2 A, option C.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-NT-011",
+      "revision": 1,
+      "declared_answer": 8.333,
+      "recomputed_answer": 8.333,
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "Conjugate matching gives Pmax=|Vth|^2/(4Rth)=100/12=8.333 W.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-NT-012",
+      "revision": 1,
+      "declared_answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "recomputed_answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "Independent voltage/current sources become shorts/opens, dependent sources remain, and nonlinear power does not superpose.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-NT-013",
+      "revision": 1,
+      "declared_answer": 7.057,
+      "recomputed_answer": 7.057,
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "tau=RC=0.2 s; vC(tau)=10+(2-10)e^-1=7.057 V.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-NT-014",
+      "revision": 1,
+      "declared_answer": 1.5,
+      "recomputed_answer": 1.5,
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "Iinfinity=3 A, tau=L/R=0.5 s and t/tau=ln2; i=3(1-1/2)=1.5 A.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-NT-015",
+      "revision": 1,
+      "declared_answer": "C",
+      "recomputed_answer": "C",
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "LC=10^-6 and omega0=1/sqrt(LC)=1000 rad/s, option C.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-NT-016",
+      "revision": 1,
+      "declared_answer": "B",
+      "recomputed_answer": "B",
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "Series-RLC angular bandwidth is R/L=20/0.1=200 rad/s, option B.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-NT-017",
+      "revision": 1,
+      "declared_answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "recomputed_answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "tan(arccos 0.8)=0.75 gives Q=6 kvar and |S|=10 kVA; the current lags and 6 kvar capacitive compensation reaches unity power factor.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-NT-018",
+      "revision": 1,
+      "declared_answer": 12.8,
+      "recomputed_answer": 12.8,
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "|Z|=10 ohm and cos(phi)=0.8; three-phase real power evaluates to 12.8 kW.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-NT-019",
+      "revision": 1,
+      "declared_answer": 3.5,
+      "recomputed_answer": 3.5,
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "Zin=z11-z12z21/(z22+ZL)=4-4/8=3.5 ohm.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-NT-020",
+      "revision": 1,
+      "declared_answer": "B",
+      "recomputed_answer": "B",
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "Delta phase current is 240/12=20 A; 3(240)(20)cos30=12.47 kW, option B.",
+      "human_originality_check": "PENDING"
+    }
+  ]
+}
