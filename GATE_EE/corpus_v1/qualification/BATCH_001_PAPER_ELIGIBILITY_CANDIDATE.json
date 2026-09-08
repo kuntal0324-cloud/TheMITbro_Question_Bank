@@ -7,7 +7,7 @@
   "formatter_review_count": 0,
   "invalid_count": 0,
   "independent_ai_qa_pass": "20/20",
-  "human_final_qa": "PENDING",
+  "human_final_qa": "COMPLETE",
   "candidate_question_ids": [
     "TMB-GATE-EE-EM-001",
     "TMB-GATE-EE-EM-002",
@@ -30,9 +30,31 @@
     "TMB-GATE-EE-EM-019",
     "TMB-GATE-EE-EM-020"
   ],
-  "certified_paper_eligible_question_ids": [],
+  "certified_paper_eligible_question_ids": [
+    "TMB-GATE-EE-EM-001",
+    "TMB-GATE-EE-EM-002",
+    "TMB-GATE-EE-EM-003",
+    "TMB-GATE-EE-EM-004",
+    "TMB-GATE-EE-EM-005",
+    "TMB-GATE-EE-EM-006",
+    "TMB-GATE-EE-EM-007",
+    "TMB-GATE-EE-EM-008",
+    "TMB-GATE-EE-EM-009",
+    "TMB-GATE-EE-EM-010",
+    "TMB-GATE-EE-EM-011",
+    "TMB-GATE-EE-EM-012",
+    "TMB-GATE-EE-EM-013",
+    "TMB-GATE-EE-EM-014",
+    "TMB-GATE-EE-EM-015",
+    "TMB-GATE-EE-EM-016",
+    "TMB-GATE-EE-EM-017",
+    "TMB-GATE-EE-EM-018",
+    "TMB-GATE-EE-EM-019",
+    "TMB-GATE-EE-EM-020"
+  ],
   "paper_eligibility_candidate_count": 20,
-  "paper_eligible_count": 0,
-  "release_gate": "BLOCKED_PENDING_HUMAN_FINAL_QA",
-  "next_state_on_valid_human_signoff": "PAPER_ELIGIBLE"
+  "paper_eligible_count": 20,
+  "release_gate": "PAPER_ELIGIBILITY_CERTIFIED",
+  "next_state_on_valid_human_signoff": "PAPER_ELIGIBLE",
+  "human_signoff_sha256": "96df73a72fa20339d465a25dbfd66366738aa7556b88ae0403047c2f4284a006"
 }
