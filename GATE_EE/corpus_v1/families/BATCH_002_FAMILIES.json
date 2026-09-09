@@ -1,28 +1,128 @@
 {
-  "registry_version": "1.0.0",
+  "registry_version": "1.1.0",
   "batch": "BATCH_002",
   "corpus": "GATE_EE_CORPUS_V1",
-  "admission_status": "DRAFT_NOT_ADMITTED",
+  "admission_status": "ADMITTED_TO_CORPUS_V1",
   "families": [
-    {"family_id": "NT-NE-CAPENERGY-001", "question_ids": ["TMB-GATE-EE-NT-001"]},
-    {"family_id": "NT-NE-COUPLED-001", "question_ids": ["TMB-GATE-EE-NT-002"]},
-    {"family_id": "NT-CA-DEPPORT-001", "question_ids": ["TMB-GATE-EE-NT-003"]},
-    {"family_id": "NT-NE-CONTINUITY-001", "question_ids": ["TMB-GATE-EE-NT-004"]},
-    {"family_id": "NT-CA-NODAL2-001", "question_ids": ["TMB-GATE-EE-NT-005"]},
-    {"family_id": "NT-CA-SUPERNODE-001", "question_ids": ["TMB-GATE-EE-NT-006"]},
-    {"family_id": "NT-CA-MESH2-001", "question_ids": ["TMB-GATE-EE-NT-007"]},
-    {"family_id": "NT-CA-NODALRULES-001", "question_ids": ["TMB-GATE-EE-NT-008"]},
-    {"family_id": "NT-TH-THEVENINLOAD-001", "question_ids": ["TMB-GATE-EE-NT-009"]},
-    {"family_id": "NT-TH-NORTONDIV-001", "question_ids": ["TMB-GATE-EE-NT-010"]},
-    {"family_id": "NT-TH-ACMAXPOWER-001", "question_ids": ["TMB-GATE-EE-NT-011"]},
-    {"family_id": "NT-TH-SUPERPOSITION-001", "question_ids": ["TMB-GATE-EE-NT-012"]},
-    {"family_id": "NT-TR-RCONE-001", "question_ids": ["TMB-GATE-EE-NT-013"]},
-    {"family_id": "NT-TR-RLSTEP-001", "question_ids": ["TMB-GATE-EE-NT-014"]},
-    {"family_id": "NT-AC-RESONANCE-001", "question_ids": ["TMB-GATE-EE-NT-015"]},
-    {"family_id": "NT-AC-BANDWIDTH-001", "question_ids": ["TMB-GATE-EE-NT-016"]},
-    {"family_id": "NT-AC-PFCORRECTION-001", "question_ids": ["TMB-GATE-EE-NT-017"]},
-    {"family_id": "NT-3P-STARPOWER-001", "question_ids": ["TMB-GATE-EE-NT-018"]},
-    {"family_id": "NT-2P-ZINPUT-001", "question_ids": ["TMB-GATE-EE-NT-019"]},
-    {"family_id": "NT-3P-DELTAPOWER-001", "question_ids": ["TMB-GATE-EE-NT-020"]}
+    {
+      "family_id": "NT-NE-CAPENERGY-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-001"
+      ]
+    },
+    {
+      "family_id": "NT-NE-COUPLED-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-002"
+      ]
+    },
+    {
+      "family_id": "NT-CA-DEPPORT-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-003"
+      ]
+    },
+    {
+      "family_id": "NT-NE-CONTINUITY-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-004"
+      ]
+    },
+    {
+      "family_id": "NT-CA-NODAL2-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-005"
+      ]
+    },
+    {
+      "family_id": "NT-CA-SUPERNODE-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-006"
+      ]
+    },
+    {
+      "family_id": "NT-CA-MESH2-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-007"
+      ]
+    },
+    {
+      "family_id": "NT-CA-NODALRULES-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-008"
+      ]
+    },
+    {
+      "family_id": "NT-TH-THEVENINLOAD-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-009"
+      ]
+    },
+    {
+      "family_id": "NT-TH-NORTONDIV-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-010"
+      ]
+    },
+    {
+      "family_id": "NT-TH-ACMAXPOWER-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-011"
+      ]
+    },
+    {
+      "family_id": "NT-TH-SUPERPOSITION-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-012"
+      ]
+    },
+    {
+      "family_id": "NT-TR-RCONE-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-013"
+      ]
+    },
+    {
+      "family_id": "NT-TR-RLSTEP-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-014"
+      ]
+    },
+    {
+      "family_id": "NT-AC-RESONANCE-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-015"
+      ]
+    },
+    {
+      "family_id": "NT-AC-BANDWIDTH-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-016"
+      ]
+    },
+    {
+      "family_id": "NT-AC-PFCORRECTION-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-017"
+      ]
+    },
+    {
+      "family_id": "NT-3P-STARPOWER-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-018"
+      ]
+    },
+    {
+      "family_id": "NT-2P-ZINPUT-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-019"
+      ]
+    },
+    {
+      "family_id": "NT-3P-DELTAPOWER-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-020"
+      ]
+    }
   ]
 }

@@ -26,6 +26,6 @@ Fifty non-repeating papers require 3,250 unique paper-eligible questions. The pr
 
 ## Current production position
 
-As of 2026-09-08, Batch 001 contributes 20 human-certified, paper-eligible Engineering Mathematics records to Corpus V1. Batch 002 adds 20 Electric Circuits drafts as Day-1 sprint output, has cleared strict Formatter v2.0 at 20 PASS / 0 REVIEW / 0 invalid, and has 20/20 independent AI recomputation evidence; named human final QA remains pending. The validated live counters are in `GATE_EE/corpus_v1/production/EIGHT_DAY_PROGRESS.json`; no 65-question paper is complete or released.
+As of 2026-09-09, Batches 001 and 002 contribute 40 human-certified, paper-eligible and Corpus V1-admitted records: 20 Engineering Mathematics plus 20 Electric Circuits. Batch 002 revision 2 is bound to 20/20 strict Formatter passes, 20/20 independent-AI recomputation passes and 20/20 named human PASS decisions. The validated live counters are in `GATE_EE/corpus_v1/production/EIGHT_DAY_PROGRESS.json`; no 65-question paper is complete or released.
 
-The Batch 002 human gate is operational on mobile: review `output/pdf/GATE_EE_BATCH002_HUMAN_FINAL_QA_MOBILE_FILLABLE.pdf`, save the completed AcroForm, and use `scripts/import_gate_ee_batch_002_human_qa_pdf.py` to generate the checksum-bound signoff JSON. Full instructions are in `GATE_EE/corpus_v1/qualification/BATCH_002_HUMAN_QA_CERTIFICATION_GUIDE.md`.
+Batch 002 promotion is reproducible with `scripts/promote_gate_ee_batch_002_paper_eligibility.py` and enforced by `scripts/validate_gate_ee_batch_002_paper_eligibility.py`. The completed signoff remains checksum-bound in `GATE_EE/corpus_v1/review_manifests/BATCH_002_HUMAN_FINAL_QA.json`.

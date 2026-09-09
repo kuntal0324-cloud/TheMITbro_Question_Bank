@@ -1,0 +1,32 @@
+{
+  "manifest_contract": "GATE_EE_CORPUS_V1_BATCH002_ADMISSION_V1",
+  "batch_id": "BATCH_002",
+  "source_sha256": "2a2344b2ed353d0fb309ea98dada882b7371aaa7016e95ff6547d0dba6fb96e5",
+  "paper_eligibility_certificate_sha256": "44dd7bb850e05596d75512909dbafafc226b79cbf7a6ef231a1e5dca376b5900",
+  "admitted_question_ids": [
+    "TMB-GATE-EE-NT-001",
+    "TMB-GATE-EE-NT-002",
+    "TMB-GATE-EE-NT-003",
+    "TMB-GATE-EE-NT-004",
+    "TMB-GATE-EE-NT-005",
+    "TMB-GATE-EE-NT-006",
+    "TMB-GATE-EE-NT-007",
+    "TMB-GATE-EE-NT-008",
+    "TMB-GATE-EE-NT-009",
+    "TMB-GATE-EE-NT-010",
+    "TMB-GATE-EE-NT-011",
+    "TMB-GATE-EE-NT-012",
+    "TMB-GATE-EE-NT-013",
+    "TMB-GATE-EE-NT-014",
+    "TMB-GATE-EE-NT-015",
+    "TMB-GATE-EE-NT-016",
+    "TMB-GATE-EE-NT-017",
+    "TMB-GATE-EE-NT-018",
+    "TMB-GATE-EE-NT-019",
+    "TMB-GATE-EE-NT-020"
+  ],
+  "held_for_revision_question_ids": [],
+  "rejected_question_ids": [],
+  "admitted_count": 20,
+  "status": "ADMITTED_TO_CORPUS_V1"
+}

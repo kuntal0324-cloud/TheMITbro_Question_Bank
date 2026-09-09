@@ -1,12 +1,12 @@
 # TheMITbro Day 01 / Batch 002 Revision 2 Handoff
 
-Date: 2026-09-08
+Date: 2026-09-09
 
-Stage: `BATCH_002_READY_FOR_HUMAN_FINAL_QA`
+Stage: `BATCH_002_PAPER_ELIGIBILITY_CERTIFIED_AND_ADMITTED`
 
 ## Outcome
 
-The three supplied project snapshots were audited and advanced from Batch 001 certification into controlled Day-1 production. Batch 001 is consistently represented as human-certified, paper-eligible and admitted. Batch 002 contributes 20 new Electric Circuits candidates. Its first review rendering was rejected because it exposed ASCII-style formulas; all 20 records are now revision 2 with canonical LaTeX, refreshed evidence and a XeLaTeX review PDF. Batch 002 again passes the strict Formatter and independent-AI recomputation gates and remains correctly blocked for a fresh named human final QA.
+The three supplied project snapshots were audited and advanced from Batch 001 certification into controlled Day-1 production. Batch 001 is consistently represented as human-certified, paper-eligible and admitted. Batch 002 contributes 20 new Electric Circuits candidates. Its first review rendering was rejected because it exposed ASCII-style formulas; all 20 records were reissued as revision 2 with canonical LaTeX, refreshed evidence and a XeLaTeX review PDF. Batch 002 then passed strict Formatter and independent-AI recomputation gates, completed named human final QA at 20 PASS / 0 REVISE / 0 REJECT, and was certificate-bound and admitted to Corpus V1.
 
 No complete paper or commercial release is claimed.
 
@@ -21,8 +21,8 @@ The live ledger is `GATE_EE/corpus_v1/production/EIGHT_DAY_PROGRESS.json`. The c
 | Opening inventory | 20 | Separate from sprint | Batch 001 |
 | Total unique candidates | 40 | 3,575 draft pool | Batches 001 + 002 |
 | Strict Formatter PASS | 40 | — | 20 + 20 |
-| Human-final-QA PASS | 20 | — | Batch 001 only |
-| Paper-eligible / admitted | 20 / 20 | 3,250 usable slots | Batch 001 only |
+| Human-final-QA PASS | 40 | — | Batches 001 + 002 |
+| Paper-eligible / admitted | 40 / 40 | 3,250 usable slots | Certificate-bound inventory |
 | Complete / released papers | 0 / 0 | 50 / 50 | Release blocked |
 
 Day-1 allocation remains GA 150, Engineering Mathematics 150 and Electric Circuits 147. Batch 002 supplies the first 20 Electric Circuits drafts; 127 Electric Circuits, 150 GA and 150 Engineering Mathematics drafts remain in Day 1.
@@ -35,10 +35,13 @@ Day-1 allocation remains GA 150, Engineering Mathematics 150 and Electric Circui
 | Formatter qualification | `223878974b5e5999113b8a9a0a87a28d77306cdc2cc1f880108b9cbbfddd4883` |
 | Independent-AI QA | `5df1cddd1653fb2bcfc764a89293fe2991fa116ab03138e3a5ae5bcbc515c8ed` |
 | XeLaTeX human-QA PDF | `a206f7cb67af8755cbf07901586277b380a2b8be2867904b6aebb3584ed4773d` |
+| Completed human-QA PDF | `5f46e0900e719bc7726722f7775ade11bac0044005a5716a6aeaabea5ea6cc9e` |
+| Human-signoff JSON | `7f164c34f909b899a834509de61f1807860c1da0ed4fd12534bed383a8a1f2f2` |
+| Paper-eligibility certificate | `44dd7bb850e05596d75512909dbafafc226b79cbf7a6ef231a1e5dca376b5900` |
 | Formatter result | 20 PASS / 0 REVIEW / 0 invalid |
 | Independent recomputation | 20 / 20 PASS; not a human substitute |
-| Human final QA | PENDING |
-| Paper eligible | 0 |
+| Human final QA | 20 PASS / 0 REVISE / 0 REJECT |
+| Paper eligible / admitted | 20 / 20 |
 
 ## Delivered project changes
 
@@ -76,21 +79,10 @@ Day-1 allocation remains GA 150, Engineering Mathematics 150 and Electric Circui
 - PDF: 22/22 pages rendered; 288 fields/widgets, zero missing appearance streams, embedded Latin Modern Math and zero learner-facing ASCII formula fallbacks.
 - PDF importer: synthetic complete 20-PASS form round-trip passed.
 
-## Human-review procedure
+## Certification and promotion record
 
-1. Open only the revision-2 `output/pdf/GATE_EE_BATCH002_HUMAN_FINAL_QA_MOBILE_FILLABLE.pdf` in Adobe Acrobat Reader or another viewer that saves AcroForm fields. Do not fill it inside GitHub preview.
-2. Complete reviewer identity, exact attestation, five checks and one decision for every question. Add notes for every failed check, REVISE or REJECT decision.
-3. Save the completed PDF under a new filename.
-4. Import and validate it:
-
-```bash
-python -m pip install -r requirements-pdf.txt
-python scripts/import_gate_ee_batch_002_human_qa_pdf.py "/path/to/completed-review.pdf"
-python scripts/validate_gate_ee_batch_002_human_signoff.py
-```
-
-The importer will not write a signoff JSON unless all 20 reviews are complete and logically consistent. Paper-eligibility promotion must remain a separate change after this validator passes.
+The completed revision-2 AcroForm was imported into `BATCH_002_HUMAN_FINAL_QA.json` and merged separately before promotion. `scripts/promote_gate_ee_batch_002_paper_eligibility.py` then created the certificate and admission manifest, updated only derived state and counters, and registered the admitted Batch 002 families. `scripts/validate_gate_ee_batch_002_paper_eligibility.py` verifies the source, Formatter, independent-AI, human-signoff, completed-PDF, certificate, admission and family bindings.
 
 ## Exact next development lane
 
-While Batch 002 waits for the named human reviewer, continue the remaining Day-1 draft allocation. Do not begin Set 01 assembly until 65 selected records are paper-eligible and satisfy the official 65-question, 100-mark, 180-minute blueprint.
+Continue the remaining Day-1 draft allocation. Do not begin Set 01 assembly until 65 selected records are paper-eligible and satisfy the official 65-question, 100-mark, 180-minute blueprint, including exact GA and subject-section constraints.

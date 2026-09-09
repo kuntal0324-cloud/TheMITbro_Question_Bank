@@ -1,28 +1,288 @@
 {
-  "registry_version": "1.0.0",
+  "registry_version": "1.1.0",
   "corpus": "GATE_EE_CORPUS_V1",
   "rule": "One family per materially shared construction/reasoning skeleton. Set 01 permits at most one question from each family.",
-  "admitted_question_count": 20,
+  "admitted_question_count": 40,
   "families": [
-    {"family_id": "EM-LA-EIG-001", "question_ids": ["TMB-GATE-EE-EM-001"], "admission_batch": "BATCH_001"},
-    {"family_id": "EM-LA-INVTRACE-001", "question_ids": ["TMB-GATE-EE-EM-002"], "admission_batch": "BATCH_001"},
-    {"family_id": "EM-LA-IDEMP-001", "question_ids": ["TMB-GATE-EE-EM-003"], "admission_batch": "BATCH_001"},
-    {"family_id": "EM-CAL-LIMIT-001", "question_ids": ["TMB-GATE-EE-EM-004"], "admission_batch": "BATCH_001"},
-    {"family_id": "EM-CAL-OPT-001", "question_ids": ["TMB-GATE-EE-EM-005"], "admission_batch": "BATCH_001"},
-    {"family_id": "EM-CAL-INT-001", "question_ids": ["TMB-GATE-EE-EM-006"], "admission_batch": "BATCH_001"},
-    {"family_id": "EM-DE-FIRSTORDER-001", "question_ids": ["TMB-GATE-EE-EM-007"], "admission_batch": "BATCH_001"},
-    {"family_id": "EM-DE-SECONDORDER-001", "question_ids": ["TMB-GATE-EE-EM-008"], "admission_batch": "BATCH_001"},
-    {"family_id": "EM-CV-POWER-001", "question_ids": ["TMB-GATE-EE-EM-009"], "admission_batch": "BATCH_001"},
-    {"family_id": "EM-CV-ROOTDIST-001", "question_ids": ["TMB-GATE-EE-EM-010"], "admission_batch": "BATCH_001"},
-    {"family_id": "EM-PS-INDEP-001", "question_ids": ["TMB-GATE-EE-EM-011"], "admission_batch": "BATCH_001"},
-    {"family_id": "EM-PS-MOMENT-001", "question_ids": ["TMB-GATE-EE-EM-012"], "admission_batch": "BATCH_001"},
-    {"family_id": "EM-PS-VARIDENT-001", "question_ids": ["TMB-GATE-EE-EM-013"], "admission_batch": "BATCH_001"},
-    {"family_id": "EM-CAL-FOURIER-001", "question_ids": ["TMB-GATE-EE-EM-014"], "admission_batch": "BATCH_001"},
-    {"family_id": "EM-CV-RESIDUE-001", "question_ids": ["TMB-GATE-EE-EM-015"], "admission_batch": "BATCH_001"},
-    {"family_id": "EM-LA-SYSTEM-001", "question_ids": ["TMB-GATE-EE-EM-016"], "admission_batch": "BATCH_001"},
-    {"family_id": "EM-CAL-DIRDER-001", "question_ids": ["TMB-GATE-EE-EM-017"], "admission_batch": "BATCH_001"},
-    {"family_id": "EM-CAL-VECCALC-001", "question_ids": ["TMB-GATE-EE-EM-018"], "admission_batch": "BATCH_001"},
-    {"family_id": "EM-PS-BERNOULLI-001", "question_ids": ["TMB-GATE-EE-EM-019"], "admission_batch": "BATCH_001"},
-    {"family_id": "EM-DE-PDE-HEAT-001", "question_ids": ["TMB-GATE-EE-EM-020"], "admission_batch": "BATCH_001"}
+    {
+      "family_id": "EM-LA-EIG-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-001"
+      ],
+      "admission_batch": "BATCH_001"
+    },
+    {
+      "family_id": "EM-LA-INVTRACE-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-002"
+      ],
+      "admission_batch": "BATCH_001"
+    },
+    {
+      "family_id": "EM-LA-IDEMP-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-003"
+      ],
+      "admission_batch": "BATCH_001"
+    },
+    {
+      "family_id": "EM-CAL-LIMIT-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-004"
+      ],
+      "admission_batch": "BATCH_001"
+    },
+    {
+      "family_id": "EM-CAL-OPT-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-005"
+      ],
+      "admission_batch": "BATCH_001"
+    },
+    {
+      "family_id": "EM-CAL-INT-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-006"
+      ],
+      "admission_batch": "BATCH_001"
+    },
+    {
+      "family_id": "EM-DE-FIRSTORDER-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-007"
+      ],
+      "admission_batch": "BATCH_001"
+    },
+    {
+      "family_id": "EM-DE-SECONDORDER-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-008"
+      ],
+      "admission_batch": "BATCH_001"
+    },
+    {
+      "family_id": "EM-CV-POWER-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-009"
+      ],
+      "admission_batch": "BATCH_001"
+    },
+    {
+      "family_id": "EM-CV-ROOTDIST-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-010"
+      ],
+      "admission_batch": "BATCH_001"
+    },
+    {
+      "family_id": "EM-PS-INDEP-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-011"
+      ],
+      "admission_batch": "BATCH_001"
+    },
+    {
+      "family_id": "EM-PS-MOMENT-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-012"
+      ],
+      "admission_batch": "BATCH_001"
+    },
+    {
+      "family_id": "EM-PS-VARIDENT-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-013"
+      ],
+      "admission_batch": "BATCH_001"
+    },
+    {
+      "family_id": "EM-CAL-FOURIER-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-014"
+      ],
+      "admission_batch": "BATCH_001"
+    },
+    {
+      "family_id": "EM-CV-RESIDUE-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-015"
+      ],
+      "admission_batch": "BATCH_001"
+    },
+    {
+      "family_id": "EM-LA-SYSTEM-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-016"
+      ],
+      "admission_batch": "BATCH_001"
+    },
+    {
+      "family_id": "EM-CAL-DIRDER-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-017"
+      ],
+      "admission_batch": "BATCH_001"
+    },
+    {
+      "family_id": "EM-CAL-VECCALC-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-018"
+      ],
+      "admission_batch": "BATCH_001"
+    },
+    {
+      "family_id": "EM-PS-BERNOULLI-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-019"
+      ],
+      "admission_batch": "BATCH_001"
+    },
+    {
+      "family_id": "EM-DE-PDE-HEAT-001",
+      "question_ids": [
+        "TMB-GATE-EE-EM-020"
+      ],
+      "admission_batch": "BATCH_001"
+    },
+    {
+      "family_id": "NT-NE-CAPENERGY-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-001"
+      ],
+      "admission_batch": "BATCH_002"
+    },
+    {
+      "family_id": "NT-NE-COUPLED-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-002"
+      ],
+      "admission_batch": "BATCH_002"
+    },
+    {
+      "family_id": "NT-CA-DEPPORT-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-003"
+      ],
+      "admission_batch": "BATCH_002"
+    },
+    {
+      "family_id": "NT-NE-CONTINUITY-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-004"
+      ],
+      "admission_batch": "BATCH_002"
+    },
+    {
+      "family_id": "NT-CA-NODAL2-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-005"
+      ],
+      "admission_batch": "BATCH_002"
+    },
+    {
+      "family_id": "NT-CA-SUPERNODE-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-006"
+      ],
+      "admission_batch": "BATCH_002"
+    },
+    {
+      "family_id": "NT-CA-MESH2-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-007"
+      ],
+      "admission_batch": "BATCH_002"
+    },
+    {
+      "family_id": "NT-CA-NODALRULES-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-008"
+      ],
+      "admission_batch": "BATCH_002"
+    },
+    {
+      "family_id": "NT-TH-THEVENINLOAD-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-009"
+      ],
+      "admission_batch": "BATCH_002"
+    },
+    {
+      "family_id": "NT-TH-NORTONDIV-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-010"
+      ],
+      "admission_batch": "BATCH_002"
+    },
+    {
+      "family_id": "NT-TH-ACMAXPOWER-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-011"
+      ],
+      "admission_batch": "BATCH_002"
+    },
+    {
+      "family_id": "NT-TH-SUPERPOSITION-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-012"
+      ],
+      "admission_batch": "BATCH_002"
+    },
+    {
+      "family_id": "NT-TR-RCONE-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-013"
+      ],
+      "admission_batch": "BATCH_002"
+    },
+    {
+      "family_id": "NT-TR-RLSTEP-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-014"
+      ],
+      "admission_batch": "BATCH_002"
+    },
+    {
+      "family_id": "NT-AC-RESONANCE-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-015"
+      ],
+      "admission_batch": "BATCH_002"
+    },
+    {
+      "family_id": "NT-AC-BANDWIDTH-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-016"
+      ],
+      "admission_batch": "BATCH_002"
+    },
+    {
+      "family_id": "NT-AC-PFCORRECTION-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-017"
+      ],
+      "admission_batch": "BATCH_002"
+    },
+    {
+      "family_id": "NT-3P-STARPOWER-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-018"
+      ],
+      "admission_batch": "BATCH_002"
+    },
+    {
+      "family_id": "NT-2P-ZINPUT-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-019"
+      ],
+      "admission_batch": "BATCH_002"
+    },
+    {
+      "family_id": "NT-3P-DELTAPOWER-001",
+      "question_ids": [
+        "TMB-GATE-EE-NT-020"
+      ],
+      "admission_batch": "BATCH_002"
+    }
   ]
 }

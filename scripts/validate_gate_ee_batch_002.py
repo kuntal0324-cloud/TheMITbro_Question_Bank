@@ -17,6 +17,8 @@ GLOBAL_FAMILIES = ROOT / "GATE_EE/corpus_v1/families/FAMILY_REGISTRY.json"
 TOPIC_MAP = ROOT / "GATE_EE/corpus_v1/TOPIC_MAP_V1.json"
 FORMATTER_EVIDENCE = ROOT / "GATE_EE/corpus_v1/qualification/BATCH_002_FORMATTER_FINAL_EVIDENCE.json"
 INDEPENDENT_QA = ROOT / "GATE_EE/corpus_v1/qualification/BATCH_002_INDEPENDENT_AI_QA.json"
+CERTIFICATE = ROOT / "GATE_EE/corpus_v1/qualification/BATCH_002_PAPER_ELIGIBILITY_CERTIFICATE.json"
+ADMISSION = ROOT / "GATE_EE/corpus_v1/manifests/BATCH_002_CORPUS_ADMISSION.json"
 
 
 def load(path: Path) -> dict:
@@ -132,7 +134,30 @@ global_family = load(GLOBAL_FAMILIES)
 
 if manifest.get("question_count") != len(questions): errors.append("manifest question count mismatch")
 if manifest.get("jsonl_sha256") != source_sha: errors.append("manifest checksum mismatch")
-if manifest.get("paper_eligible_count") != 0: errors.append("unreviewed Batch 002 cannot be paper-eligible")
+certificate_exists = CERTIFICATE.exists()
+admission_exists = ADMISSION.exists()
+if certificate_exists != admission_exists:
+    errors.append("Batch 002 certificate and admission manifest must exist together")
+eligible_count = 0
+admitted_ids: list[str] = []
+if certificate_exists and admission_exists:
+    certificate = load(CERTIFICATE)
+    admission = load(ADMISSION)
+    eligible_count = certificate.get("paper_eligible_count", 0)
+    admitted_ids = admission.get("admitted_question_ids", [])
+    if certificate.get("source_sha256") != source_sha: errors.append("certificate source checksum mismatch")
+    if admission.get("source_sha256") != source_sha: errors.append("admission source checksum mismatch")
+    if admitted_ids != certificate.get("approved_question_ids"):
+        errors.append("admission IDs do not match the paper-eligibility certificate")
+    if admission.get("admitted_count") != eligible_count:
+        errors.append("admission count does not match the paper-eligibility certificate")
+    if manifest.get("status") != "PAPER_ELIGIBILITY_CERTIFIED_AND_ADMITTED":
+        errors.append("certified Batch 002 manifest status is stale")
+else:
+    if manifest.get("status") != "READY_FOR_HUMAN_FINAL_QA":
+        errors.append("pre-promotion Batch 002 manifest status mismatch")
+if manifest.get("paper_eligible_count") != eligible_count:
+    errors.append("manifest paper-eligible count does not match certification state")
 if handoff.get("source_sha256") != source_sha: errors.append("Formatter handoff checksum mismatch")
 if handoff.get("question_count") != len(questions): errors.append("Formatter handoff count mismatch")
 if handoff.get("formatter_required_version") != "2.0.0": errors.append("Formatter version contract mismatch")
@@ -156,7 +181,22 @@ for question in questions:
         errors.append(f"{question['id']}: family mapping mismatch")
 admitted_families = {row.get("family_id") for row in global_family.get("families", [])}
 collision = admitted_families.intersection(families)
-if collision: errors.append(f"Batch 002 collides with admitted families: {sorted(collision)}")
+if certificate_exists and admission_exists:
+    approved_set = set(admitted_ids)
+    expected_admitted_family_map = {
+        row.get("family_id"): [qid for qid in row.get("question_ids", []) if qid in approved_set]
+        for row in batch_family.get("families", [])
+        if any(qid in approved_set for qid in row.get("question_ids", []))
+    }
+    found_admitted_family_map = {
+        row.get("family_id"): row.get("question_ids")
+        for row in global_family.get("families", [])
+        if row.get("admission_batch") == "BATCH_002"
+    }
+    if found_admitted_family_map != expected_admitted_family_map:
+        errors.append("admitted Batch 002 families do not match the global family registry")
+else:
+    if collision: errors.append(f"Batch 002 collides with admitted families: {sorted(collision)}")
 
 markdown = MARKDOWN.read_text(encoding="utf-8")
 if any(markdown.count(qid) != 1 for qid in expected_ids):
@@ -173,8 +213,11 @@ if INDEPENDENT_QA.exists():
     if independent.get("source_sha256") != source_sha: errors.append("independent-QA checksum mismatch")
     if manifest.get("independent_ai_qa_sha256") != hashlib.sha256(INDEPENDENT_QA.read_bytes()).hexdigest():
         errors.append("manifest independent-QA evidence checksum mismatch")
-    if manifest.get("status") != "READY_FOR_HUMAN_FINAL_QA":
-        errors.append("manifest status does not reflect independent-QA completion")
+    if manifest.get("status") not in {
+        "READY_FOR_HUMAN_FINAL_QA",
+        "PAPER_ELIGIBILITY_CERTIFIED_AND_ADMITTED",
+    }:
+        errors.append("manifest status does not reflect the supported qualification lifecycle")
 
 if errors:
     print("\n".join(errors))
@@ -185,5 +228,5 @@ print("Questions: 20")
 print("Domain: Electric Circuits")
 print("IDs: TMB-GATE-EE-NT-001..020")
 print(f"Source SHA-256: {source_sha}")
-print("Paper-eligible: 0 (named human final QA required)")
+print(f"Paper-eligible: {eligible_count}")
 print("Manifest, family and Formatter handoff consistency: PASSED")
