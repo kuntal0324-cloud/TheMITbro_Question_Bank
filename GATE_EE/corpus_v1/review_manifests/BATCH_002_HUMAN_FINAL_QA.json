@@ -1,8 +1,8 @@
 {
   "signoff_contract": "GATE_EE_BATCH_002_HUMAN_FINAL_QA_V1",
   "batch_id": "BATCH_002",
-  "source_sha256": "23b749225f9128864b1e1545c865ba1d08b8ee706b3faf69e6202099b913db36",
-  "formatter_report_sha256": "78bab267e0abc034fc0927952b39b0a6328bda0a82d32e1ce877e92c56eaa342",
+  "source_sha256": "2a2344b2ed353d0fb309ea98dada882b7371aaa7016e95ff6547d0dba6fb96e5",
+  "formatter_report_sha256": "223878974b5e5999113b8a9a0a87a28d77306cdc2cc1f880108b9cbbfddd4883",
   "prerequisites": {
     "formatter": "20_PASS_0_REVIEW_0_INVALID",
     "independent_ai_recomputation": "20_PASS"
@@ -18,7 +18,7 @@
   "questions": [
     {
       "question_id": "TMB-GATE-EE-NT-001",
-      "revision": 1,
+      "revision": 2,
       "technical_correctness": "PENDING",
       "answer_correctness": "PENDING",
       "solution_correctness": "PENDING",
@@ -29,7 +29,7 @@
     },
     {
       "question_id": "TMB-GATE-EE-NT-002",
-      "revision": 1,
+      "revision": 2,
       "technical_correctness": "PENDING",
       "answer_correctness": "PENDING",
       "solution_correctness": "PENDING",
@@ -40,7 +40,7 @@
     },
     {
       "question_id": "TMB-GATE-EE-NT-003",
-      "revision": 1,
+      "revision": 2,
       "technical_correctness": "PENDING",
       "answer_correctness": "PENDING",
       "solution_correctness": "PENDING",
@@ -51,7 +51,7 @@
     },
     {
       "question_id": "TMB-GATE-EE-NT-004",
-      "revision": 1,
+      "revision": 2,
       "technical_correctness": "PENDING",
       "answer_correctness": "PENDING",
       "solution_correctness": "PENDING",
@@ -62,7 +62,7 @@
     },
     {
       "question_id": "TMB-GATE-EE-NT-005",
-      "revision": 1,
+      "revision": 2,
       "technical_correctness": "PENDING",
       "answer_correctness": "PENDING",
       "solution_correctness": "PENDING",
@@ -73,7 +73,7 @@
     },
     {
       "question_id": "TMB-GATE-EE-NT-006",
-      "revision": 1,
+      "revision": 2,
       "technical_correctness": "PENDING",
       "answer_correctness": "PENDING",
       "solution_correctness": "PENDING",
@@ -84,7 +84,7 @@
     },
     {
       "question_id": "TMB-GATE-EE-NT-007",
-      "revision": 1,
+      "revision": 2,
       "technical_correctness": "PENDING",
       "answer_correctness": "PENDING",
       "solution_correctness": "PENDING",
@@ -95,7 +95,7 @@
     },
     {
       "question_id": "TMB-GATE-EE-NT-008",
-      "revision": 1,
+      "revision": 2,
       "technical_correctness": "PENDING",
       "answer_correctness": "PENDING",
       "solution_correctness": "PENDING",
@@ -106,7 +106,7 @@
     },
     {
       "question_id": "TMB-GATE-EE-NT-009",
-      "revision": 1,
+      "revision": 2,
       "technical_correctness": "PENDING",
       "answer_correctness": "PENDING",
       "solution_correctness": "PENDING",
@@ -117,7 +117,7 @@
     },
     {
       "question_id": "TMB-GATE-EE-NT-010",
-      "revision": 1,
+      "revision": 2,
       "technical_correctness": "PENDING",
       "answer_correctness": "PENDING",
       "solution_correctness": "PENDING",
@@ -128,7 +128,7 @@
     },
     {
       "question_id": "TMB-GATE-EE-NT-011",
-      "revision": 1,
+      "revision": 2,
       "technical_correctness": "PENDING",
       "answer_correctness": "PENDING",
       "solution_correctness": "PENDING",
@@ -139,7 +139,7 @@
     },
     {
       "question_id": "TMB-GATE-EE-NT-012",
-      "revision": 1,
+      "revision": 2,
       "technical_correctness": "PENDING",
       "answer_correctness": "PENDING",
       "solution_correctness": "PENDING",
@@ -150,7 +150,7 @@
     },
     {
       "question_id": "TMB-GATE-EE-NT-013",
-      "revision": 1,
+      "revision": 2,
       "technical_correctness": "PENDING",
       "answer_correctness": "PENDING",
       "solution_correctness": "PENDING",
@@ -161,7 +161,7 @@
     },
     {
       "question_id": "TMB-GATE-EE-NT-014",
-      "revision": 1,
+      "revision": 2,
       "technical_correctness": "PENDING",
       "answer_correctness": "PENDING",
       "solution_correctness": "PENDING",
@@ -172,7 +172,7 @@
     },
     {
       "question_id": "TMB-GATE-EE-NT-015",
-      "revision": 1,
+      "revision": 2,
       "technical_correctness": "PENDING",
       "answer_correctness": "PENDING",
       "solution_correctness": "PENDING",
@@ -183,7 +183,7 @@
     },
     {
       "question_id": "TMB-GATE-EE-NT-016",
-      "revision": 1,
+      "revision": 2,
       "technical_correctness": "PENDING",
       "answer_correctness": "PENDING",
       "solution_correctness": "PENDING",
@@ -194,7 +194,7 @@
     },
     {
       "question_id": "TMB-GATE-EE-NT-017",
-      "revision": 1,
+      "revision": 2,
       "technical_correctness": "PENDING",
       "answer_correctness": "PENDING",
       "solution_correctness": "PENDING",
@@ -205,7 +205,7 @@
     },
     {
       "question_id": "TMB-GATE-EE-NT-018",
-      "revision": 1,
+      "revision": 2,
       "technical_correctness": "PENDING",
       "answer_correctness": "PENDING",
       "solution_correctness": "PENDING",
@@ -216,7 +216,7 @@
     },
     {
       "question_id": "TMB-GATE-EE-NT-019",
-      "revision": 1,
+      "revision": 2,
       "technical_correctness": "PENDING",
       "answer_correctness": "PENDING",
       "solution_correctness": "PENDING",
@@ -227,7 +227,7 @@
     },
     {
       "question_id": "TMB-GATE-EE-NT-020",
-      "revision": 1,
+      "revision": 2,
       "technical_correctness": "PENDING",
       "answer_correctness": "PENDING",
       "solution_correctness": "PENDING",

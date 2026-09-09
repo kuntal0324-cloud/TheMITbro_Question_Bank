@@ -1,7 +1,7 @@
 {
   "candidate_contract": "GATE_EE_BATCH002_PAPER_ELIGIBILITY_CANDIDATE_V1",
   "batch_id": "BATCH_002",
-  "source_sha256": "23b749225f9128864b1e1545c865ba1d08b8ee706b3faf69e6202099b913db36",
+  "source_sha256": "2a2344b2ed353d0fb309ea98dada882b7371aaa7016e95ff6547d0dba6fb96e5",
   "formatter_version": "2.0.0",
   "formatter_pass": "20/20",
   "formatter_review_count": 0,

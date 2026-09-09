@@ -1,4 +1,4 @@
-# TheMITbro Day 01 / Batch 002 Handoff
+# TheMITbro Day 01 / Batch 002 Revision 2 Handoff
 
 Date: 2026-09-08
 
@@ -6,7 +6,7 @@ Stage: `BATCH_002_READY_FOR_HUMAN_FINAL_QA`
 
 ## Outcome
 
-The three supplied project snapshots were audited and advanced from Batch 001 certification into controlled Day-1 production. Batch 001 is now consistently represented as human-certified, paper-eligible and admitted. Batch 002 contributes 20 new Electric Circuits candidates and has passed the strict Formatter and independent-AI recomputation gates. It remains correctly blocked for named human final QA.
+The three supplied project snapshots were audited and advanced from Batch 001 certification into controlled Day-1 production. Batch 001 is consistently represented as human-certified, paper-eligible and admitted. Batch 002 contributes 20 new Electric Circuits candidates. Its first review rendering was rejected because it exposed ASCII-style formulas; all 20 records are now revision 2 with canonical LaTeX, refreshed evidence and a XeLaTeX review PDF. Batch 002 again passes the strict Formatter and independent-AI recomputation gates and remains correctly blocked for a fresh named human final QA.
 
 No complete paper or commercial release is claimed.
 
@@ -31,9 +31,10 @@ Day-1 allocation remains GA 150, Engineering Mathematics 150 and Electric Circui
 
 | Evidence | SHA-256 / result |
 |---|---|
-| Canonical source | `23b749225f9128864b1e1545c865ba1d08b8ee706b3faf69e6202099b913db36` |
-| Formatter qualification | `78bab267e0abc034fc0927952b39b0a6328bda0a82d32e1ce877e92c56eaa342` |
-| Independent-AI QA | `46353081807c711515a46655d95dbeb5cf23d008c81d7dfdd7ab62eb79e63e2d` |
+| Canonical source | `2a2344b2ed353d0fb309ea98dada882b7371aaa7016e95ff6547d0dba6fb96e5` |
+| Formatter qualification | `223878974b5e5999113b8a9a0a87a28d77306cdc2cc1f880108b9cbbfddd4883` |
+| Independent-AI QA | `5df1cddd1653fb2bcfc764a89293fe2991fa116ab03138e3a5ae5bcbc515c8ed` |
+| XeLaTeX human-QA PDF | `a206f7cb67af8755cbf07901586277b380a2b8be2867904b6aebb3584ed4773d` |
 | Formatter result | 20 PASS / 0 REVIEW / 0 invalid |
 | Independent recomputation | 20 / 20 PASS; not a human substitute |
 | Human final QA | PENDING |
@@ -44,17 +45,17 @@ Day-1 allocation remains GA 150, Engineering Mathematics 150 and Electric Circui
 ### Question Bank
 
 - Reconciled Batch 001 manifest, review and family-registry truth with its completed human certificate and Corpus V1 admission.
-- Added the 20-question Batch 002 Electric Circuits source, rendered Markdown, manifests, family records and Formatter handoff.
+- Reissued all 20 Batch 002 Electric Circuits records as revision 2 with canonical LaTeX, rendered Markdown, refreshed manifests and Formatter handoff.
 - Added strict Batch 002 structural, recomputation, qualification, human-signoff and eight-day progress validators.
 - Added a pending checksum-bound human-signoff JSON template.
-- Added a 21-page mobile-fillable AcroForm PDF with 145 field groups and 285 widgets.
+- Replaced the withdrawn ASCII-style packet with a 22-page XeLaTeX mobile-fillable AcroForm PDF containing 288 fields/widgets and embedded Latin Modern Math.
 - Added a PDF-to-JSON importer that rejects missing or inconsistent decisions.
 - Added the unified production-control GitHub Actions workflow.
 
 ### Formatter
 
 - Added the exact Batch 002 source/handoff and its deterministic 20-PASS report.
-- Hardened Electric Circuits classification, taxonomy, quality and domain validation without weakening strict gates.
+- Hardened Electric Circuits classification, taxonomy, quality and domain validation, including a source-math contract that rejects ASCII formula fallbacks.
 - Preserved `diagram: null` for text-defined questions unless the prompt explicitly requires a visual.
 - Added Batch 002 regression and production tests plus a dedicated workflow.
 
@@ -68,16 +69,16 @@ Day-1 allocation remains GA 150, Engineering Mathematics 150 and Electric Circui
 ## Verification evidence
 
 - Question Bank: every Batch 001, Batch 002, contract, Corpus V1 and eight-day control validator passed.
-- Formatter: 831 tests passed; two existing Python module-reexecution warnings, zero failures.
+- Formatter: 832 tests passed; two existing Python module-reexecution warnings, zero failures.
 - Website: 5 tests passed; zero npm audit vulnerabilities.
 - Cross-project source, handoff, Formatter-evidence hashes and inventory counters match.
-- JSON parse: 39 files passed. YAML parse: 32 files passed.
-- PDF: 21/21 pages rendered; 145 field groups, 285 widgets and zero missing appearance streams.
+- JSON parse: 82 files passed. JSONL parse: 5 files passed. YAML parse: 32 files passed across the three snapshots.
+- PDF: 22/22 pages rendered; 288 fields/widgets, zero missing appearance streams, embedded Latin Modern Math and zero learner-facing ASCII formula fallbacks.
 - PDF importer: synthetic complete 20-PASS form round-trip passed.
 
 ## Human-review procedure
 
-1. Open `output/pdf/GATE_EE_BATCH002_HUMAN_FINAL_QA_MOBILE_FILLABLE.pdf` in Adobe Acrobat Reader or another viewer that saves AcroForm fields. Do not fill it inside GitHub preview.
+1. Open only the revision-2 `output/pdf/GATE_EE_BATCH002_HUMAN_FINAL_QA_MOBILE_FILLABLE.pdf` in Adobe Acrobat Reader or another viewer that saves AcroForm fields. Do not fill it inside GitHub preview.
 2. Complete reviewer identity, exact attestation, five checks and one decision for every question. Add notes for every failed check, REVISE or REJECT decision.
 3. Save the completed PDF under a new filename.
 4. Import and validate it:

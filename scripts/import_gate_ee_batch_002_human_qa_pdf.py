@@ -45,6 +45,36 @@ def field_values(path: Path) -> dict[str, str]:
     return {name: normalize(field.get("/V")).strip() for name, field in fields.items()}
 
 
+def is_checked(value: str) -> bool:
+    return value not in {"", "Off", "0", "False", "None"}
+
+
+def lookup(values: dict[str, str], name: str) -> str:
+    """Read ReportLab-style names and XeLaTeX's underscore-normalized names."""
+    return values.get(name, values.get(name.replace("_", ""), ""))
+
+
+def checkbox_pair(values: dict[str, str], prefix: str, label: str, errors: list[str]) -> str:
+    pass_checked = is_checked(lookup(values, f"{prefix}_pass"))
+    fail_checked = is_checked(lookup(values, f"{prefix}_fail"))
+    if pass_checked == fail_checked:
+        errors.append(f"{label}: select exactly one of PASS or FAIL")
+        return ""
+    return "PASS" if pass_checked else "FAIL"
+
+
+def decision_checkboxes(values: dict[str, str], prefix: str, label: str, errors: list[str]) -> str:
+    selected = [
+        value
+        for value in ("PASS", "REVISE", "REJECT")
+        if is_checked(lookup(values, f"{prefix}_{value.lower()}"))
+    ]
+    if len(selected) != 1:
+        errors.append(f"{label}: select exactly one of PASS, REVISE or REJECT")
+        return ""
+    return selected[0]
+
+
 def build_payload(pdf_path: Path) -> dict[str, Any]:
     values = field_values(pdf_path)
     source_rows = [
@@ -59,12 +89,12 @@ def build_payload(pdf_path: Path) -> dict[str, Any]:
         errors.append("repository template is not locked to the current Batch 002 source")
 
     reviewer = {
-        "name": values.get("reviewer_name", ""),
-        "role_or_qualification": values.get("reviewer_qualification", ""),
-        "review_date": values.get("review_date", ""),
-        "attestation": values.get("reviewer_attestation", ""),
+        "name": lookup(values, "reviewer_name"),
+        "role_or_qualification": lookup(values, "reviewer_qualification"),
+        "review_date": lookup(values, "review_date"),
+        "attestation": lookup(values, "reviewer_attestation"),
     }
-    identifier = values.get("reviewer_identifier", "")
+    identifier = lookup(values, "reviewer_identifier")
     if identifier:
         reviewer["identifier"] = identifier
     for key in ("name", "role_or_qualification", "review_date", "attestation"):
@@ -74,6 +104,11 @@ def build_payload(pdf_path: Path) -> dict[str, Any]:
         errors.append("review date must use YYYY-MM-DD")
     if reviewer["attestation"] != template.get("required_attestation"):
         errors.append("reviewer attestation must exactly match the required text printed on page 1")
+    if not is_checked(lookup(values, "final_approve_reviewed_results")):
+        errors.append("final reviewed-results approval checkbox is not selected")
+    signature = lookup(values, "reviewer_signature")
+    if not signature:
+        errors.append("reviewer typed signature is missing")
 
     questions: list[dict[str, Any]] = []
     for index, source in enumerate(source_rows, 1):
@@ -84,13 +119,16 @@ def build_payload(pdf_path: Path) -> dict[str, Any]:
         }
         checks: list[str] = []
         for form_suffix, json_key in FORM_TO_JSON.items():
-            result = values.get(f"{prefix}_{form_suffix}", "")
+            result = checkbox_pair(
+                values,
+                f"{prefix}_{form_suffix}",
+                f"{source['id']} {json_key}",
+                errors,
+            )
             row[json_key] = result
             checks.append(result)
-            if result not in {"PASS", "FAIL"}:
-                errors.append(f"{source['id']}: select PASS or FAIL for {json_key}")
-        decision = values.get(f"{prefix}_decision", "")
-        notes = values.get(f"{prefix}_notes", "")
+        decision = decision_checkboxes(values, f"{prefix}_decision", source["id"], errors)
+        notes = lookup(values, f"{prefix}_notes")
         row["decision"] = decision
         row["notes"] = notes
         if decision not in {"PASS", "REVISE", "REJECT"}:
@@ -115,7 +153,9 @@ def build_payload(pdf_path: Path) -> dict[str, Any]:
     template["pdf_evidence"] = {
         "filename": pdf_path.name,
         "sha256": sha256(pdf_path),
-        "format": "ACROFORM_V1",
+        "format": "XELATEX_ACROFORM_V2",
+        "reviewer_signature": signature,
+        "final_comments": lookup(values, "final_comments"),
     }
     return template
 
