@@ -1,4 +1,4 @@
-# GATE EE Corpus V1 — Batch 002 Electric Circuits
+# GATE EE Production Batch 002 — Electric Circuits
 
 **Status:** DRAFT — NOT PAPER-ELIGIBLE
 **Questions:** 20
@@ -7,7 +7,7 @@ This is a deterministic view of the canonical JSONL source. Review decisions bel
 
 ---
 
-## TMB-GATE-EE-NT-001 — revision 1
+## TMB-GATE-EE-NT-001 — revision 2
 
 **Route:** Electrical Engineering → Electric Circuits → Network Elements
 **Type / marks / difficulty:** NAT / 1 / Easy
@@ -15,7 +15,7 @@ This is a deterministic view of the canonical JSONL source. Review decisions bel
 
 ### Question
 
-A 6 microfarad capacitor and a 3 microfarad capacitor are connected in series across an 18 V DC source. Determine the total energy stored by this capacitor network in millijoules.
+A $6\,\mu\mathrm{F}$ capacitor and a $3\,\mu\mathrm{F}$ capacitor are connected in series across an $18\,\mathrm{V}$ DC source. Determine the total energy stored by this capacitor network; enter the numerical value in $\mathrm{mJ}$.
 
 ### Declared answer
 
@@ -23,7 +23,7 @@ A 6 microfarad capacitor and a 3 microfarad capacitor are connected in series ac
 
 ### Canonical solution
 
-The series equivalent capacitance is C_eq=(6 x 3)/(6+3)=2 microfarads. The stored energy is (1/2) C_eq V^2=(1/2)(2 x 10^-6)(18)^2=324 x 10^-6 J=0.324 mJ.
+The series equivalent capacitance is $C_{\mathrm{eq}}=\frac{(6)(3)}{6+3}\,\mu\mathrm{F}=2\,\mu\mathrm{F}$. The stored energy is $W=\frac{1}{2}C_{\mathrm{eq}}V^2=\frac{1}{2}(2\times10^{-6})(18)^2=324\times10^{-6}\,\mathrm{J}=0.324\,\mathrm{mJ}$.
 Final answer: 0.324
 
 ### Review state
@@ -32,7 +32,7 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ---
 
-## TMB-GATE-EE-NT-002 — revision 1
+## TMB-GATE-EE-NT-002 — revision 2
 
 **Route:** Electrical Engineering → Electric Circuits → Network Elements
 **Type / marks / difficulty:** MCQ / 1 / Medium
@@ -40,14 +40,14 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ### Question
 
-Two coupled inductors in a series-aiding network have L1=4 H, L2=9 H and coefficient of coupling k=0.5. Determine the equivalent inductance.
+Two coupled inductors in a series-aiding network have $L_1=4\,\mathrm{H}$, $L_2=9\,\mathrm{H}$ and coefficient of coupling $k=0.5$. Determine the equivalent inductance.
 
 ### Options
 
-- A. 7 H
-- B. 13 H
-- C. 19 H
-- D. 25 H
+- A. $7\,\mathrm{H}$
+- B. $13\,\mathrm{H}$
+- C. $19\,\mathrm{H}$
+- D. $25\,\mathrm{H}$
 
 ### Declared answer
 
@@ -55,7 +55,7 @@ C
 
 ### Canonical solution
 
-The mutual inductance is M=k sqrt(L1 L2)=0.5 sqrt(4 x 9)=3 H. For a series-aiding connection, L_eq=L1+L2+2M=4+9+6=19 H.
+The mutual inductance is $M=k\sqrt{L_1L_2}=0.5\sqrt{(4)(9)}=3\,\mathrm{H}$. For a series-aiding connection, $L_{\mathrm{eq}}=L_1+L_2+2M=4+9+6=19\,\mathrm{H}$.
 Final answer: C
 
 ### Review state
@@ -64,7 +64,7 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ---
 
-## TMB-GATE-EE-NT-003 — revision 1
+## TMB-GATE-EE-NT-003 — revision 2
 
 **Route:** Electrical Engineering → Electric Circuits → Circuit Laws and Analysis
 **Type / marks / difficulty:** MCQ / 2 / Hard
@@ -72,14 +72,14 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ### Question
 
-At the input port of a linear network, a 4 ohm resistor is connected from the port to ground. A dependent current source of value 0.5 times the resistor current is also directed from the port to ground. Determine the resistance seen at the port.
+At the input port of a linear network, a $4\,\Omega$ resistor is connected from the port to ground. A dependent current source of value $0.5i_R$, where $i_R$ is the resistor current, is also directed from the port to ground. Determine the resistance seen at the port.
 
 ### Options
 
-- A. 2 ohm
-- B. 8/3 ohm
-- C. 4 ohm
-- D. 6 ohm
+- A. $2\,\Omega$
+- B. $\frac{8}{3}\,\Omega$
+- C. $4\,\Omega$
+- D. $6\,\Omega$
 
 ### Declared answer
 
@@ -87,7 +87,7 @@ B
 
 ### Canonical solution
 
-Apply a test voltage v at the port. The resistor current is v/4 and the dependent-source current is 0.5(v/4). Hence the total input current is i=(3v/8), so the driving-point resistance is v/i=8/3 ohm.
+Apply a test voltage $v$ at the port. The resistor current is $i_R=\frac{v}{4}$, and the dependent-source current is $0.5i_R$. Hence $i_{\mathrm{in}}=\frac{v}{4}+0.5\left(\frac{v}{4}\right)=\frac{3v}{8}$, so $R_{\mathrm{in}}=\frac{v}{i_{\mathrm{in}}}=\frac{8}{3}\,\Omega$.
 Final answer: B
 
 ### Review state
@@ -96,7 +96,7 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ---
 
-## TMB-GATE-EE-NT-004 — revision 1
+## TMB-GATE-EE-NT-004 — revision 2
 
 **Route:** Electrical Engineering → Electric Circuits → Network Elements
 **Type / marks / difficulty:** MSQ / 1 / Easy
@@ -108,8 +108,8 @@ Select every correct statement about ideal passive network elements under finite
 
 ### Options
 
-- A. The energy stored in a capacitor is (1/2)Cv^2.
-- B. The energy stored in an inductor is Li^2.
+- A. The energy stored in a capacitor is $\frac{1}{2}Cv^2$.
+- B. The energy stored in an inductor is $Li^2$.
 - C. A capacitor voltage cannot change instantaneously.
 - D. An inductor current cannot change instantaneously.
 
@@ -119,7 +119,7 @@ A, C, D
 
 ### Canonical solution
 
-Capacitor energy is (1/2)Cv^2 and inductor energy is (1/2)Li^2, so option B misses the factor 1/2. With finite impulse-free excitation, capacitor voltage and inductor current cannot change instantaneously. Therefore A, C and D are correct.
+Capacitor energy is $\frac{1}{2}Cv^2$, whereas inductor energy is $\frac{1}{2}Li^2$; therefore option B is missing the factor $\frac{1}{2}$. With finite, impulse-free excitation, capacitor voltage and inductor current cannot change instantaneously. Therefore A, C and D are correct.
 Final answer: A, C, D
 
 ### Review state
@@ -128,7 +128,7 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ---
 
-## TMB-GATE-EE-NT-005 — revision 1
+## TMB-GATE-EE-NT-005 — revision 2
 
 **Route:** Electrical Engineering → Electric Circuits → Circuit Laws and Analysis
 **Type / marks / difficulty:** NAT / 2 / Medium
@@ -136,7 +136,7 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ### Question
 
-In a resistive network, node v1 is connected to a 12 V voltage source through 3 ohm, to ground through 6 ohm, and to node v2 through 2 ohm. Node v2 is connected to ground through 4 ohm. Using KCL and node-voltage analysis, determine v2 in volts.
+In a resistive network, node $v_1$ is connected to a $12\,\mathrm{V}$ source through $3\,\Omega$, to ground through $6\,\Omega$, and to node $v_2$ through $2\,\Omega$. Node $v_2$ is connected to ground through $4\,\Omega$. Using KCL and node-voltage analysis, determine $v_2$; enter the numerical value in $\mathrm{V}$.
 
 ### Declared answer
 
@@ -144,7 +144,7 @@ In a resistive network, node v1 is connected to a 12 V voltage source through 3 
 
 ### Canonical solution
 
-KCL at v2 gives (v2-v1)/2+v2/4=0, hence v1=1.5v2. KCL at v1 gives (v1-12)/3+v1/6+(v1-v2)/2=0. Multiplying by 6 yields 6v1-3v2=24. Substitution gives 6(1.5v2)-3v2=24, so v2=4 V.
+KCL at $v_2$ gives $\frac{v_2-v_1}{2}+\frac{v_2}{4}=0$, hence $v_1=1.5v_2$. KCL at $v_1$ gives $\frac{v_1-12}{3}+\frac{v_1}{6}+\frac{v_1-v_2}{2}=0$. Multiplying by $6$ yields $6v_1-3v_2=24$. Substitution gives $6(1.5v_2)-3v_2=24$, so $v_2=4\,\mathrm{V}$.
 Final answer: 4
 
 ### Review state
@@ -153,7 +153,7 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ---
 
-## TMB-GATE-EE-NT-006 — revision 1
+## TMB-GATE-EE-NT-006 — revision 2
 
 **Route:** Electrical Engineering → Electric Circuits → Circuit Laws and Analysis
 **Type / marks / difficulty:** NAT / 2 / Hard
@@ -161,7 +161,7 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ### Question
 
-Two non-reference node voltages satisfy v1-v2=5 V because of an ideal voltage source between them. A 2 ohm branch connects v1 to ground, a 3 ohm branch connects v2 to ground, and a 4 A current source injects current into v2. Using supernode KCL, determine v1 in volts.
+Two non-reference node voltages satisfy $v_1-v_2=5\,\mathrm{V}$ because of an ideal voltage source between them. A $2\,\Omega$ branch connects $v_1$ to ground, a $3\,\Omega$ branch connects $v_2$ to ground, and a $4\,\mathrm{A}$ current source injects current into $v_2$. Using supernode KCL, determine $v_1$; enter the numerical value in $\mathrm{V}$.
 
 ### Declared answer
 
@@ -169,7 +169,7 @@ Two non-reference node voltages satisfy v1-v2=5 V because of an ideal voltage so
 
 ### Canonical solution
 
-KCL for the supernode is v1/2+v2/3=4. The voltage-source constraint is v1=v2+5. Substituting and multiplying by 6 gives 3(v2+5)+2v2=24, so v2=1.8 V and v1=6.8 V.
+KCL for the supernode is $\frac{v_1}{2}+\frac{v_2}{3}=4$. The voltage-source constraint is $v_1=v_2+5$. Substituting and multiplying by $6$ gives $3(v_2+5)+2v_2=24$, so $v_2=1.8\,\mathrm{V}$ and $v_1=6.8\,\mathrm{V}$.
 Final answer: 6.8
 
 ### Review state
@@ -178,7 +178,7 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ---
 
-## TMB-GATE-EE-NT-007 — revision 1
+## TMB-GATE-EE-NT-007 — revision 2
 
 **Route:** Electrical Engineering → Electric Circuits → Circuit Laws and Analysis
 **Type / marks / difficulty:** MCQ / 2 / Medium
@@ -186,14 +186,14 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ### Question
 
-Clockwise mesh currents I1 and I2 in a resistor network satisfy the KVL equations 5I1-2I2=8 and -2I1+4I2=2. Determine the current in their common branch, directed with I1.
+Clockwise mesh currents $I_1$ and $I_2$ in a resistor network satisfy $5I_1-2I_2=8$ and $-2I_1+4I_2=2$. Determine the current in their common branch, directed with $I_1$.
 
 ### Options
 
-- A. 0.625 A
-- B. 1.625 A
-- C. 2.250 A
-- D. 3.875 A
+- A. $0.625\,\mathrm{A}$
+- B. $1.625\,\mathrm{A}$
+- C. $2.250\,\mathrm{A}$
+- D. $3.875\,\mathrm{A}$
 
 ### Declared answer
 
@@ -201,7 +201,7 @@ A
 
 ### Canonical solution
 
-Solving the two mesh-current equations gives I1=36/16=2.25 A and I2=26/16=1.625 A. The common-branch current in the I1 direction is I1-I2=0.625 A.
+Solving the mesh-current equations gives $I_1=\frac{36}{16}=2.25\,\mathrm{A}$ and $I_2=\frac{26}{16}=1.625\,\mathrm{A}$. The common-branch current in the $I_1$ direction is $I_1-I_2=0.625\,\mathrm{A}$.
 Final answer: A
 
 ### Review state
@@ -210,7 +210,7 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ---
 
-## TMB-GATE-EE-NT-008 — revision 1
+## TMB-GATE-EE-NT-008 — revision 2
 
 **Route:** Electrical Engineering → Electric Circuits → Circuit Laws and Analysis
 **Type / marks / difficulty:** MSQ / 1 / Easy
@@ -224,7 +224,7 @@ Select every correct statement about node-voltage analysis of a connected electr
 
 - A. One node is selected as the reference node.
 - B. An ideal voltage source between two non-reference nodes can be handled using a supernode.
-- C. For n nodes, at most n-1 independent KCL node equations are required.
+- C. For $n$ nodes, at most $n-1$ independent KCL node equations are required.
 - D. The method cannot be used when dependent sources are present.
 
 ### Declared answer
@@ -233,7 +233,7 @@ A, B, C
 
 ### Canonical solution
 
-Node-voltage analysis selects a reference, uses supernodes for ideal voltage sources between unknown nodes, and requires at most n-1 independent KCL equations. Dependent sources are permitted when their controlling relations are included. Thus A, B and C are correct.
+Node-voltage analysis selects a reference, uses supernodes for ideal voltage sources between unknown nodes, and requires at most $n-1$ independent KCL equations. Dependent sources are permitted when their controlling relations are included. Thus A, B and C are correct.
 Final answer: A, B, C
 
 ### Review state
@@ -242,7 +242,7 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ---
 
-## TMB-GATE-EE-NT-009 — revision 1
+## TMB-GATE-EE-NT-009 — revision 2
 
 **Route:** Electrical Engineering → Electric Circuits → Network Theorems
 **Type / marks / difficulty:** MCQ / 2 / Medium
@@ -250,14 +250,14 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ### Question
 
-An 18 V ideal voltage source feeds a 3 ohm series resistor and an output node; a 6 ohm resistor connects that node to ground. A 4 ohm load is then connected from the output node to ground. Determine the load current using the Thevenin equivalent of the source network.
+An $18\,\mathrm{V}$ ideal source feeds a $3\,\Omega$ series resistor and an output node; a $6\,\Omega$ resistor connects that node to ground. A $4\,\Omega$ load is then connected from the output node to ground. Determine the load current using the Thevenin equivalent of the source network.
 
 ### Options
 
-- A. 1 A
-- B. 2 A
-- C. 3 A
-- D. 4 A
+- A. $1\,\mathrm{A}$
+- B. $2\,\mathrm{A}$
+- C. $3\,\mathrm{A}$
+- D. $4\,\mathrm{A}$
 
 ### Declared answer
 
@@ -265,7 +265,7 @@ B
 
 ### Canonical solution
 
-The open-circuit voltage is V_th=18(6/(3+6))=12 V. With the independent source deactivated, R_th=3 parallel 6=2 ohm. Therefore the 4 ohm load current is 12/(2+4)=2 A.
+The open-circuit voltage is $V_{\mathrm{th}}=18\left(\frac{6}{3+6}\right)=12\,\mathrm{V}$. With the independent source deactivated, $R_{\mathrm{th}}=3\parallel6=2\,\Omega$. Therefore $I_L=\frac{12}{2+4}=2\,\mathrm{A}$.
 Final answer: B
 
 ### Review state
@@ -274,7 +274,7 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ---
 
-## TMB-GATE-EE-NT-010 — revision 1
+## TMB-GATE-EE-NT-010 — revision 2
 
 **Route:** Electrical Engineering → Electric Circuits → Network Theorems
 **Type / marks / difficulty:** MCQ / 1 / Easy
@@ -282,14 +282,14 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ### Question
 
-A Norton network consists of a 3 A current source in parallel with 6 ohm. When a 3 ohm load is connected across the network, determine the load current.
+A Norton network consists of a $3\,\mathrm{A}$ current source in parallel with $6\,\Omega$. When a $3\,\Omega$ load is connected across the network, determine the load current.
 
 ### Options
 
-- A. 0.5 A
-- B. 1 A
-- C. 2 A
-- D. 3 A
+- A. $0.5\,\mathrm{A}$
+- B. $1\,\mathrm{A}$
+- C. $2\,\mathrm{A}$
+- D. $3\,\mathrm{A}$
 
 ### Declared answer
 
@@ -297,7 +297,7 @@ C
 
 ### Canonical solution
 
-By current division, the 3 A Norton current splits between 6 ohm and 3 ohm. The load current is 3[6/(6+3)]=2 A.
+By current division, the $3\,\mathrm{A}$ Norton current splits between $6\,\Omega$ and $3\,\Omega$. The load current is $I_L=3\left(\frac{6}{6+3}\right)=2\,\mathrm{A}$.
 Final answer: C
 
 ### Review state
@@ -306,7 +306,7 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ---
 
-## TMB-GATE-EE-NT-011 — revision 1
+## TMB-GATE-EE-NT-011 — revision 2
 
 **Route:** Electrical Engineering → Electric Circuits → Network Theorems
 **Type / marks / difficulty:** NAT / 2 / Hard
@@ -314,7 +314,7 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ### Question
 
-A sinusoidal network has Thevenin RMS voltage 10 V and Thevenin impedance 3+j4 ohm. A conjugately matched load is connected. Determine the maximum average load power in watts.
+A sinusoidal network has Thevenin RMS voltage $V_{\mathrm{th}}=10\,\mathrm{V}$ and Thevenin impedance $Z_{\mathrm{th}}=(3+j4)\,\Omega$. A conjugately matched load is connected. Determine the maximum average load power; enter the numerical value in $\mathrm{W}$.
 
 ### Declared answer
 
@@ -322,7 +322,7 @@ A sinusoidal network has Thevenin RMS voltage 10 V and Thevenin impedance 3+j4 o
 
 ### Canonical solution
 
-For conjugate matching, the load impedance is 3-j4 ohm. The maximum average load power is |V_th|^2/(4R_th)=10^2/(4 x 3)=8.333 W.
+For conjugate matching, $Z_L=Z_{\mathrm{th}}^*=(3-j4)\,\Omega$. The maximum average load power is $P_{\max}=\frac{|V_{\mathrm{th}}|^2}{4R_{\mathrm{th}}}=\frac{10^2}{4(3)}=8.333\,\mathrm{W}$.
 Final answer: 8.333
 
 ### Review state
@@ -331,7 +331,7 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ---
 
-## TMB-GATE-EE-NT-012 — revision 1
+## TMB-GATE-EE-NT-012 — revision 2
 
 **Route:** Electrical Engineering → Electric Circuits → Network Theorems
 **Type / marks / difficulty:** MSQ / 1 / Medium
@@ -363,7 +363,7 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ---
 
-## TMB-GATE-EE-NT-013 — revision 1
+## TMB-GATE-EE-NT-013 — revision 2
 
 **Route:** Electrical Engineering → Electric Circuits → Transient Analysis
 **Type / marks / difficulty:** NAT / 2 / Medium
@@ -371,7 +371,7 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ### Question
 
-In a first-order RC network, the capacitor voltage is initially 2 V and its steady-state value after switching is 10 V. The resistance is 2 kilo-ohm and the capacitance is 100 microfarad. Determine the capacitor voltage, in volts, one time constant after switching.
+In a first-order RC network, the capacitor voltage is initially $2\,\mathrm{V}$ and its steady-state value after switching is $10\,\mathrm{V}$. The resistance is $2\,\mathrm{k}\Omega$ and the capacitance is $100\,\mu\mathrm{F}$. Determine the capacitor voltage one time constant after switching; enter the numerical value in $\mathrm{V}$.
 
 ### Declared answer
 
@@ -379,7 +379,7 @@ In a first-order RC network, the capacitor voltage is initially 2 V and its stea
 
 ### Canonical solution
 
-The time constant is tau=RC=(2000)(100 x 10^-6)=0.2 s. At t=tau, v_C=10+(2-10)e^-1=10-8/e=7.057 V.
+The time constant is $\tau=RC=(2000)(100\times10^{-6})=0.2\,\mathrm{s}$. At $t=\tau$, $v_C(\tau)=10+(2-10)e^{-1}=10-\frac{8}{e}=7.057\,\mathrm{V}$.
 Final answer: 7.057
 
 ### Review state
@@ -388,7 +388,7 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ---
 
-## TMB-GATE-EE-NT-014 — revision 1
+## TMB-GATE-EE-NT-014 — revision 2
 
 **Route:** Electrical Engineering → Electric Circuits → Transient Analysis
 **Type / marks / difficulty:** NAT / 2 / Medium
@@ -396,7 +396,7 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ### Question
 
-A 12 V DC source is applied at t=0 to an initially unenergized series RL network with resistance 4 ohm and inductance 2 H. Determine the inductor current in amperes at t=0.5 ln(2) seconds.
+A $12\,\mathrm{V}$ DC source is applied at $t=0$ to an initially unenergized series RL network with resistance $R=4\,\Omega$ and inductance $L=2\,\mathrm{H}$. Determine the inductor current at $t=(0.5\ln 2)\,\mathrm{s}$; enter the numerical value in $\mathrm{A}$.
 
 ### Declared answer
 
@@ -404,7 +404,7 @@ A 12 V DC source is applied at t=0 to an initially unenergized series RL network
 
 ### Canonical solution
 
-The final current is 12/4=3 A and the time constant is tau=L/R=2/4=0.5 s. Here t/tau=ln(2), so i_L=3[1-e^(-ln(2))]=3(1-1/2)=1.5 A.
+The final current is $I_{\infty}=\frac{12}{4}=3\,\mathrm{A}$, and the time constant is $\tau=\frac{L}{R}=\frac{2}{4}=0.5\,\mathrm{s}$. Here $\frac{t}{\tau}=\ln 2$, so $i_L(t)=3\left(1-e^{-\ln 2}\right)=3\left(1-\frac{1}{2}\right)=1.5\,\mathrm{A}$.
 Final answer: 1.5
 
 ### Review state
@@ -413,7 +413,7 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ---
 
-## TMB-GATE-EE-NT-015 — revision 1
+## TMB-GATE-EE-NT-015 — revision 2
 
 **Route:** Electrical Engineering → Electric Circuits → Resonance and Two-Port Networks
 **Type / marks / difficulty:** MCQ / 1 / Easy
@@ -421,14 +421,14 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ### Question
 
-A series RLC network has inductance 50 mH and capacitance 20 microfarad. Determine its undamped resonant angular frequency.
+A series RLC network has inductance $L=50\,\mathrm{mH}$ and capacitance $C=20\,\mu\mathrm{F}$. Determine its undamped resonant angular frequency.
 
 ### Options
 
-- A. 100 rad/s
-- B. 500 rad/s
-- C. 1000 rad/s
-- D. 5000 rad/s
+- A. $100\,\mathrm{rad\,s^{-1}}$
+- B. $500\,\mathrm{rad\,s^{-1}}$
+- C. $1000\,\mathrm{rad\,s^{-1}}$
+- D. $5000\,\mathrm{rad\,s^{-1}}$
 
 ### Declared answer
 
@@ -436,7 +436,7 @@ C
 
 ### Canonical solution
 
-The resonant angular frequency is omega_0=1/sqrt(LC). Since LC=(50 x 10^-3)(20 x 10^-6)=10^-6, omega_0=1/10^-3=1000 rad/s.
+The resonant angular frequency is $\omega_0=\frac{1}{\sqrt{LC}}$. Since $LC=(50\times10^{-3})(20\times10^{-6})=10^{-6}$, $\omega_0=\frac{1}{10^{-3}}=1000\,\mathrm{rad\,s^{-1}}$.
 Final answer: C
 
 ### Review state
@@ -445,7 +445,7 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ---
 
-## TMB-GATE-EE-NT-016 — revision 1
+## TMB-GATE-EE-NT-016 — revision 2
 
 **Route:** Electrical Engineering → Electric Circuits → Resonance and Two-Port Networks
 **Type / marks / difficulty:** MCQ / 1 / Medium
@@ -453,14 +453,14 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ### Question
 
-A series RLC network has resistance 20 ohm and inductance 0.1 H. Determine its half-power bandwidth in angular frequency.
+A series RLC network has resistance $R=20\,\Omega$ and inductance $L=0.1\,\mathrm{H}$. Determine its half-power bandwidth in angular frequency.
 
 ### Options
 
-- A. 100 rad/s
-- B. 200 rad/s
-- C. 500 rad/s
-- D. 2000 rad/s
+- A. $100\,\mathrm{rad\,s^{-1}}$
+- B. $200\,\mathrm{rad\,s^{-1}}$
+- C. $500\,\mathrm{rad\,s^{-1}}$
+- D. $2000\,\mathrm{rad\,s^{-1}}$
 
 ### Declared answer
 
@@ -468,7 +468,7 @@ B
 
 ### Canonical solution
 
-For a series RLC resonance, the angular-frequency bandwidth is delta_omega=R/L=20/0.1=200 rad/s.
+For series RLC resonance, the angular-frequency bandwidth is $\Delta\omega=\frac{R}{L}=\frac{20}{0.1}=200\,\mathrm{rad\,s^{-1}}$.
 Final answer: B
 
 ### Review state
@@ -477,7 +477,7 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ---
 
-## TMB-GATE-EE-NT-017 — revision 1
+## TMB-GATE-EE-NT-017 — revision 2
 
 **Route:** Electrical Engineering → Electric Circuits → Sinusoidal Steady State
 **Type / marks / difficulty:** MSQ / 2 / Hard
@@ -485,14 +485,14 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ### Question
 
-A single-phase impedance load absorbs 8 kW at 0.8 lagging power factor. Select every correct statement about this sinusoidal steady-state network; one or more options may be correct.
+A single-phase impedance load absorbs $P=8\,\mathrm{kW}$ at a lagging power factor of $0.8$. Select every correct statement about this sinusoidal steady-state network; one or more options may be correct.
 
 ### Options
 
-- A. The load reactive power is 6 kvar.
-- B. The apparent power magnitude is 10 kVA.
+- A. The load reactive power is $6\,\mathrm{kVAr}$.
+- B. The apparent-power magnitude is $10\,\mathrm{kVA}$.
 - C. The load current leads the load voltage.
-- D. A 6 kvar shunt capacitor would correct the source power factor to unity.
+- D. A $6\,\mathrm{kVAr}$ shunt capacitor would correct the source power factor to unity.
 
 ### Declared answer
 
@@ -500,7 +500,7 @@ A, B, D
 
 ### Canonical solution
 
-With cos(phi)=0.8, tan(phi)=0.75. Hence the reactive power is 8 x 0.75=6 kvar and the apparent-power magnitude is 8/0.8=10 kVA. A lagging load current does not lead its voltage. A 6 kvar capacitive shunt cancels the inductive reactive power, so A, B and D are correct.
+With $\cos\phi=0.8$, $\tan\phi=0.75$. Hence $Q=P\tan\phi=(8)(0.75)=6\,\mathrm{kVAr}$ and $|S|=\frac{P}{\cos\phi}=\frac{8}{0.8}=10\,\mathrm{kVA}$. A lagging load current does not lead its voltage. A $6\,\mathrm{kVAr}$ capacitive shunt cancels the inductive reactive power, so A, B and D are correct.
 Final answer: A, B, D
 
 ### Review state
@@ -509,7 +509,7 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ---
 
-## TMB-GATE-EE-NT-018 — revision 1
+## TMB-GATE-EE-NT-018 — revision 2
 
 **Route:** Electrical Engineering → Electric Circuits → Balanced Three-Phase Circuits and Complex Power
 **Type / marks / difficulty:** NAT / 2 / Medium
@@ -517,7 +517,7 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ### Question
 
-A balanced three-phase, star-connected impedance load of 8+j6 ohm per phase is supplied at a line voltage of 400 V RMS. Determine the total real power in kilowatts.
+A balanced three-phase, star-connected load has per-phase impedance $Z_{\mathrm{ph}}=(8+j6)\,\Omega$ and is supplied at a line-to-line RMS voltage $V_L=400\,\mathrm{V}$. Determine the total real power in kilowatts.
 
 ### Declared answer
 
@@ -525,7 +525,7 @@ A balanced three-phase, star-connected impedance load of 8+j6 ohm per phase is s
 
 ### Canonical solution
 
-The phase-voltage magnitude is 400/sqrt(3) V, the phase-current magnitude is [400/sqrt(3)]/10 A, and the load power factor is 8/10. Thus the total real power is sqrt(3)(400)[400/(sqrt(3)10)](0.8)=12800 W=12.8 kW.
+The phase-voltage magnitude is $V_{\mathrm{ph}}=\frac{400}{\sqrt{3}}\,\mathrm{V}$, the phase-current magnitude is $I_{\mathrm{ph}}=\frac{400/\sqrt{3}}{10}\,\mathrm{A}$, and the load power factor is $\cos\phi=\frac{8}{10}=0.8$. Thus $P=\sqrt{3}V_LI_L\cos\phi=\sqrt{3}(400)\left(\frac{400}{10\sqrt{3}}\right)(0.8)=12800\,\mathrm{W}=12.8\,\mathrm{kW}$.
 Final answer: 12.8
 
 ### Review state
@@ -534,7 +534,7 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ---
 
-## TMB-GATE-EE-NT-019 — revision 1
+## TMB-GATE-EE-NT-019 — revision 2
 
 **Route:** Electrical Engineering → Electric Circuits → Resonance and Two-Port Networks
 **Type / marks / difficulty:** NAT / 2 / Hard
@@ -542,7 +542,7 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ### Question
 
-A two-port network has z11=4 ohm, z12=z21=2 ohm and z22=5 ohm. Port 2 is terminated by a 3 ohm load. Determine the input impedance in ohms.
+A two-port network has $z_{11}=4\,\Omega$, $z_{12}=z_{21}=2\,\Omega$, and $z_{22}=5\,\Omega$. Port 2 is terminated by a load $Z_L=3\,\Omega$. Determine the input impedance; enter the numerical value in $\Omega$.
 
 ### Declared answer
 
@@ -550,7 +550,7 @@ A two-port network has z11=4 ohm, z12=z21=2 ohm and z22=5 ohm. Port 2 is termina
 
 ### Canonical solution
 
-For a z-parameter two-port terminated by Z_L, the input impedance is Z_in=z11-(z12 z21)/(z22+Z_L). Therefore Z_in=4-(2 x 2)/(5+3)=4-0.5=3.5 ohm.
+For a $z$-parameter two-port terminated by $Z_L$, the input impedance is $Z_{\mathrm{in}}=z_{11}-\frac{z_{12}z_{21}}{z_{22}+Z_L}$. Therefore $Z_{\mathrm{in}}=4-\frac{(2)(2)}{5+3}=4-0.5=3.5\,\Omega$.
 Final answer: 3.5
 
 ### Review state
@@ -559,7 +559,7 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ---
 
-## TMB-GATE-EE-NT-020 — revision 1
+## TMB-GATE-EE-NT-020 — revision 2
 
 **Route:** Electrical Engineering → Electric Circuits → Balanced Three-Phase Circuits and Complex Power
 **Type / marks / difficulty:** MCQ / 2 / Medium
@@ -567,14 +567,14 @@ Technical, answer, solution, originality, duplicate-family and Formatter checks 
 
 ### Question
 
-A balanced three-phase, delta-connected impedance load has 12 ohm magnitude and 30 degree lagging phase angle per branch. It is supplied from a 240 V RMS line. Determine the approximate total real power.
+A balanced three-phase, delta-connected load has branch-impedance magnitude $|Z_{\Delta}|=12\,\Omega$ and lagging phase angle $30^{\circ}$. It is supplied at a line-to-line RMS voltage $V_L=240\,\mathrm{V}$. Determine the approximate total real power.
 
 ### Options
 
-- A. 7.20 kW
-- B. 12.47 kW
-- C. 14.40 kW
-- D. 24.94 kW
+- A. $7.20\,\mathrm{kW}$
+- B. $12.47\,\mathrm{kW}$
+- C. $14.40\,\mathrm{kW}$
+- D. $24.94\,\mathrm{kW}$
 
 ### Declared answer
 
@@ -582,7 +582,7 @@ B
 
 ### Canonical solution
 
-For a delta load the phase voltage equals the line voltage, so each phase current is 240/12=20 A. The total real power is 3(240)(20)cos(30 degrees)=12470.8 W, approximately 12.47 kW.
+For a delta load, $V_{\mathrm{ph}}=V_L=240\,\mathrm{V}$, so $I_{\mathrm{ph}}=\frac{240}{12}=20\,\mathrm{A}$. The total real power is $P=3V_{\mathrm{ph}}I_{\mathrm{ph}}\cos30^{\circ}=3(240)(20)\cos30^{\circ}=12470.8\,\mathrm{W}\approx12.47\,\mathrm{kW}$.
 Final answer: B
 
 ### Review state

@@ -44,6 +44,34 @@ topic_map = load(TOPIC_MAP)
 nt_domain = next((row for row in topic_map.get("domains", []) if row.get("code") == "NT"), {})
 allowed_subtopics = set(nt_domain.get("topics", []))
 
+
+ASCII_MATH_PATTERNS = (
+    ("ASCII unit name", re.compile(r"\b(?:microfarads?|kilo-ohms?|ohms?)\b", re.I)),
+    ("ASCII math function", re.compile(r"\b(?:sqrt|sin|cos|tan|ln|exp)\s*\(", re.I)),
+    ("ASCII multiplication", re.compile(r"(?<=\d)\s+x\s+(?=\d)", re.I)),
+    ("ASCII fraction", re.compile(r"\b\d+\s*/\s*\d+\b")),
+    ("undelimited subscript/power", re.compile(r"[A-Za-z0-9][_^][A-Za-z0-9({-]")),
+    ("undelimited electrical value", re.compile(r"\b\d+(?:\.\d+)?\s*(?:V|A|H|F|W|J|kW|kVA|kVAr|mH|mJ|rad/s)\b")),
+)
+
+
+def math_source_violations(question: dict) -> tuple[int, list[str]]:
+    values = [str(question.get("stem", "")), str(question.get("solution", ""))]
+    values.extend(str(option) for option in question.get("options", []))
+    math_segments = 0
+    violations: list[str] = []
+    for value in values:
+        parts = re.split(r"(?<!\\)\$", value)
+        if len(parts) % 2 == 0:
+            violations.append("unbalanced inline-math delimiter")
+            continue
+        math_segments += (len(parts) - 1) // 2
+        outside_math = " ".join(parts[::2])
+        for label, pattern in ASCII_MATH_PATTERNS:
+            if pattern.search(outside_math):
+                violations.append(label)
+    return math_segments, sorted(set(violations))
+
 for question in questions:
     qid = question.get("id", "?")
     missing = sorted(required - question.keys())
@@ -61,7 +89,7 @@ for question in questions:
     if question.get("type") not in {"MCQ", "MSQ", "NAT"}: errors.append(f"{qid}: invalid type")
     if question.get("marks") not in {1, 2}: errors.append(f"{qid}: invalid marks")
     if question.get("status") != "DRAFT": errors.append(f"{qid}: source must remain DRAFT")
-    if question.get("revision") != 1: errors.append(f"{qid}: initial batch revision must be 1")
+    if question.get("revision") != 2: errors.append(f"{qid}: render-quality revision must be 2")
     if question.get("provenance", {}).get("originality") != "ORIGINAL_THEMITBRO":
         errors.append(f"{qid}: originality provenance missing")
 
@@ -84,11 +112,17 @@ for question in questions:
     markers = re.findall(r"(?m)^Final answer:\s*([^\n]+)$", str(question.get("solution", "")))
     expected = ", ".join(answer) if isinstance(answer, list) else str(answer)
     if markers != [expected]: errors.append(f"{qid}: final-answer marker does not match structured answer")
+    math_segments, math_violations = math_source_violations(question)
+    if math_violations:
+        errors.append(f"{qid}: canonical mathematics contract failed: {', '.join(math_violations)}")
+    question["_math_segment_count"] = math_segments
 
 expected_ids = [f"TMB-GATE-EE-NT-{index:03d}" for index in range(1, 21)]
 if len(questions) != 20: errors.append(f"expected 20 questions, found {len(questions)}")
 if ids != expected_ids: errors.append("Batch 002 ID sequence mismatch")
 if len(families) != len(set(families)): errors.append("duplicate family inside Batch 002")
+if sum(question.get("_math_segment_count", 0) > 0 for question in questions) < 19:
+    errors.append("Batch 002 must contain canonical LaTeX mathematics in at least 19 questions")
 
 source_sha = hashlib.sha256(SOURCE.read_bytes()).hexdigest()
 manifest = load(MANIFEST)

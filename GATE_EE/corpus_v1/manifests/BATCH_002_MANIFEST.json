@@ -33,8 +33,8 @@
     "GATE_EE/corpus_v1/source_batches/BATCH_002_ELECTRIC_CIRCUITS.md",
     "GATE_EE/corpus_v1/source_batches/BATCH_002_ELECTRIC_CIRCUITS.jsonl"
   ],
-  "jsonl_sha256": "23b749225f9128864b1e1545c865ba1d08b8ee706b3faf69e6202099b913db36",
-  "formatter_evidence_sha256": "78bab267e0abc034fc0927952b39b0a6328bda0a82d32e1ce877e92c56eaa342",
-  "independent_ai_qa_sha256": "46353081807c711515a46655d95dbeb5cf23d008c81d7dfdd7ab62eb79e63e2d",
-  "qualification_note": "Day-1 production intake. Strict Formatter v2.0: 20 PASS / 0 REVIEW / 0 invalid. Independent AI technical/answer/solution recomputation: 20/20 PASS and explicitly not a human substitute. Named human final QA remains mandatory; no ID is paper-eligible."
+  "jsonl_sha256": "2a2344b2ed353d0fb309ea98dada882b7371aaa7016e95ff6547d0dba6fb96e5",
+  "formatter_evidence_sha256": "223878974b5e5999113b8a9a0a87a28d77306cdc2cc1f880108b9cbbfddd4883",
+  "independent_ai_qa_sha256": "5df1cddd1653fb2bcfc764a89293fe2991fa116ab03138e3a5ae5bcbc515c8ed",
+  "qualification_note": "Day-1 production intake, revision 2. All mathematical content now uses canonical LaTeX and the human-review packet is rendered by Pandoc/XeLaTeX with Latin Modern Math. Strict Formatter v2.0: 20 PASS / 0 REVIEW / 0 invalid. Independent AI technical/answer/solution recomputation: 20/20 PASS and explicitly not a human substitute. Named human final QA remains mandatory; no ID is paper-eligible."
 }
