@@ -1,6 +1,6 @@
 # Batch 002 Human Final-QA Certification Guide
 
-Batch 002 revision 2 is ready for a fresh named human final QA. It is **not** paper-eligible yet. Do not use the withdrawn revision-1 PDF.
+Batch 002 revision 2 completed named human final QA on 2026-09-09 with 20 PASS / 0 REVISE / 0 REJECT. Its approved IDs are now paper-eligibility certified and admitted to Corpus V1. The procedure below is retained as the audit trail; do not rerun it or use the withdrawn revision-1 PDF.
 
 ## Review
 
@@ -29,4 +29,4 @@ The importer writes `GATE_EE/corpus_v1/review_manifests/BATCH_002_HUMAN_FINAL_QA
 - Revision 2 is source-locked to canonical LaTeX and its PDF is rendered with XeLaTeX plus Latin Modern Math. ASCII formula fallback is forbidden by CI.
 - Do not edit paper-eligibility counters manually.
 - Do not claim a 65-question set or commercial release from this 20-question batch.
-- Promotion must be a separate, validator-controlled change after the human-signoff validator passes.
+- Promotion is recorded by the Batch 002 paper-eligibility certificate and Corpus V1 admission manifest. Any future source revision must invalidate and repeat the applicable qualification gates.

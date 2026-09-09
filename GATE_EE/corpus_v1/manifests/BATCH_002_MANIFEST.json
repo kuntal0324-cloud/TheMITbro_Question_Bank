@@ -1,11 +1,11 @@
 {
-  "manifest_version": "1.0.0",
+  "manifest_version": "1.1.0",
   "batch_id": "BATCH_002",
   "corpus": "GATE_EE_CORPUS_V1",
   "domain": "Electric Circuits",
   "question_count": 20,
-  "status": "READY_FOR_HUMAN_FINAL_QA",
-  "paper_eligible_count": 0,
+  "status": "PAPER_ELIGIBILITY_CERTIFIED_AND_ADMITTED",
+  "paper_eligible_count": 20,
   "type_counts": {
     "MCQ": 8,
     "MSQ": 4,
@@ -36,5 +36,5 @@
   "jsonl_sha256": "2a2344b2ed353d0fb309ea98dada882b7371aaa7016e95ff6547d0dba6fb96e5",
   "formatter_evidence_sha256": "223878974b5e5999113b8a9a0a87a28d77306cdc2cc1f880108b9cbbfddd4883",
   "independent_ai_qa_sha256": "5df1cddd1653fb2bcfc764a89293fe2991fa116ab03138e3a5ae5bcbc515c8ed",
-  "qualification_note": "Day-1 production intake, revision 2. All mathematical content now uses canonical LaTeX and the human-review packet is rendered by Pandoc/XeLaTeX with Latin Modern Math. Strict Formatter v2.0: 20 PASS / 0 REVIEW / 0 invalid. Independent AI technical/answer/solution recomputation: 20/20 PASS and explicitly not a human substitute. Named human final QA remains mandatory; no ID is paper-eligible."
+  "qualification_note": "Revision 2. Strict Formatter: 20 PASS / 0 REVIEW / 0 invalid. Independent AI technical/answer/solution recomputation: 20/20 PASS and not a human substitute. Named human final QA: 20 PASS / 0 REVISE / 0 REJECT. Approved IDs are certificate-bound and admitted to Corpus V1; no complete paper is released."
 }

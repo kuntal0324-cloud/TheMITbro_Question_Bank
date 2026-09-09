@@ -23,3 +23,7 @@ Author source batch → technical/answer/solution review → diagram/originality
 - `../../schemas/GATE_EE_CORPUS_V1.schema.json`
 
 This foundation intentionally does **not** declare the existing pilot questions commercially approved.
+
+## Current admitted inventory
+
+As of 2026-09-09, Batch 001 and Batch 002 each contribute 20 checksum-bound, named-human-certified questions. Corpus V1 therefore contains 40 admitted questions. This inventory is eligible for controlled blueprint selection; it is not a complete or released paper.
