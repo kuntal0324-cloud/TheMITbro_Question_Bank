@@ -26,4 +26,4 @@ This foundation intentionally does **not** declare the existing pilot questions 
 
 ## Current admitted inventory
 
-As of 2026-09-09, Batch 001 and Batch 002 each contribute 20 checksum-bound, named-human-certified questions. Corpus V1 therefore contains 40 admitted questions. This inventory is eligible for controlled blueprint selection; it is not a complete or released paper.
+As of 2026-09-09, Batch 001 and Batch 002 each contribute 20 checksum-bound, named-human-certified questions. Corpus V1 therefore contains 40 admitted questions. Batch 003 contributes another 20 General Aptitude draft candidates with strict Formatter and independent-recomputation passes; they are not admitted while named human final QA remains pending. The program inventory is 60 candidates, but only the 40 admitted records are eligible for controlled blueprint selection. No complete paper is released.

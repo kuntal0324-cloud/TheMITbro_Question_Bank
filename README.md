@@ -26,6 +26,6 @@ Fifty non-repeating papers require 3,250 unique paper-eligible questions. The pr
 
 ## Current production position
 
-As of 2026-09-09, Batches 001 and 002 contribute 40 human-certified, paper-eligible and Corpus V1-admitted records: 20 Engineering Mathematics plus 20 Electric Circuits. Batch 002 revision 2 is bound to 20/20 strict Formatter passes, 20/20 independent-AI recomputation passes and 20/20 named human PASS decisions. The validated live counters are in `GATE_EE/corpus_v1/production/EIGHT_DAY_PROGRESS.json`; no 65-question paper is complete or released.
+As of 2026-09-09, Batches 001 and 002 contribute 40 human-certified, paper-eligible and Corpus V1-admitted records: 20 Engineering Mathematics plus 20 Electric Circuits. Batch 003 adds 20 General Aptitude draft candidates covering all four official GA sections; it is bound to 20/20 strict Formatter passes and 20/20 independent-AI recomputation passes but awaits named human final QA. The validated live counters are therefore 60 program candidates, 60 Formatter passes and 40 paper-eligible/admitted records. They are maintained in `GATE_EE/corpus_v1/production/EIGHT_DAY_PROGRESS.json`; no 65-question paper is complete or released.
 
 Batch 002 promotion is reproducible with `scripts/promote_gate_ee_batch_002_paper_eligibility.py` and enforced by `scripts/validate_gate_ee_batch_002_paper_eligibility.py`. The completed signoff remains checksum-bound in `GATE_EE/corpus_v1/review_manifests/BATCH_002_HUMAN_FINAL_QA.json`.

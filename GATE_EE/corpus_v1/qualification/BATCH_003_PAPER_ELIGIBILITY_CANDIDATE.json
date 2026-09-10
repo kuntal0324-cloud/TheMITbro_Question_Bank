@@ -1,0 +1,21 @@
+{
+  "candidate_contract": "GATE_EE_BATCH003_PAPER_ELIGIBILITY_CANDIDATE_V1",
+  "batch_id": "BATCH_003",
+  "domain": "General Aptitude",
+  "source_sha256": "b00075f2ae17951baccc382ea59d149e8d0df73a21fd6398bc8e2af9038c902b",
+  "paper_eligibility_candidate_count": 20,
+  "paper_eligible_count": 0,
+  "candidate_question_ids": [
+    "TMB-GATE-EE-GA-001", "TMB-GATE-EE-GA-002", "TMB-GATE-EE-GA-003", "TMB-GATE-EE-GA-004",
+    "TMB-GATE-EE-GA-005", "TMB-GATE-EE-GA-006", "TMB-GATE-EE-GA-007", "TMB-GATE-EE-GA-008",
+    "TMB-GATE-EE-GA-009", "TMB-GATE-EE-GA-010", "TMB-GATE-EE-GA-011", "TMB-GATE-EE-GA-012",
+    "TMB-GATE-EE-GA-013", "TMB-GATE-EE-GA-014", "TMB-GATE-EE-GA-015", "TMB-GATE-EE-GA-016",
+    "TMB-GATE-EE-GA-017", "TMB-GATE-EE-GA-018", "TMB-GATE-EE-GA-019", "TMB-GATE-EE-GA-020"
+  ],
+  "prerequisites": {
+    "formatter": "20_PASS_0_REVIEW_0_INVALID",
+    "independent_ai_recomputation": "20_PASS",
+    "human_final_qa": "PENDING"
+  },
+  "release_gate": "BLOCKED_PENDING_HUMAN_FINAL_QA"
+}
