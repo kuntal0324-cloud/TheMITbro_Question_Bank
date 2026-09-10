@@ -1,0 +1,28 @@
+{
+  "registry_version": "1.0.0",
+  "batch": "BATCH_003",
+  "corpus": "GATE_EE_CORPUS_V1",
+  "admission_status": "NOT_ADMITTED",
+  "families": [
+    {"family_id": "GA-VA-SVA-001", "question_ids": ["TMB-GATE-EE-GA-001"]},
+    {"family_id": "GA-VA-VOCCTX-001", "question_ids": ["TMB-GATE-EE-GA-002"]},
+    {"family_id": "GA-VA-RC-PILOT-001", "question_ids": ["TMB-GATE-EE-GA-003"]},
+    {"family_id": "GA-VA-RC-CALIBRATION-001", "question_ids": ["TMB-GATE-EE-GA-004"]},
+    {"family_id": "GA-VA-NARRATIVE-001", "question_ids": ["TMB-GATE-EE-GA-005"]},
+    {"family_id": "GA-QA-PCTCHAIN-001", "question_ids": ["TMB-GATE-EE-GA-006"]},
+    {"family_id": "GA-QA-MIXREPLACE-001", "question_ids": ["TMB-GATE-EE-GA-007"]},
+    {"family_id": "GA-QA-TABLEACCEPT-001", "question_ids": ["TMB-GATE-EE-GA-008"]},
+    {"family_id": "GA-QA-LOGRECIP-001", "question_ids": ["TMB-GATE-EE-GA-009"]},
+    {"family_id": "GA-QA-ORDERCONSTRAINT-001", "question_ids": ["TMB-GATE-EE-GA-010"]},
+    {"family_id": "GA-QA-AREASCALE-001", "question_ids": ["TMB-GATE-EE-GA-011"]},
+    {"family_id": "GA-QA-PROBATLEAST2-001", "question_ids": ["TMB-GATE-EE-GA-012"]},
+    {"family_id": "GA-AA-SYLLOGISM-001", "question_ids": ["TMB-GATE-EE-GA-013"]},
+    {"family_id": "GA-AA-SCHEDULE-001", "question_ids": ["TMB-GATE-EE-GA-014"]},
+    {"family_id": "GA-AA-NUMANALOGY-001", "question_ids": ["TMB-GATE-EE-GA-015"]},
+    {"family_id": "GA-AA-CONDITIONAL-001", "question_ids": ["TMB-GATE-EE-GA-016"]},
+    {"family_id": "GA-SA-ROTREFLECT-001", "question_ids": ["TMB-GATE-EE-GA-017"]},
+    {"family_id": "GA-SA-FOLDHOLES-001", "question_ids": ["TMB-GATE-EE-GA-018"]},
+    {"family_id": "GA-SA-CUBEOPPOSITES-001", "question_ids": ["TMB-GATE-EE-GA-019"]},
+    {"family_id": "GA-SA-PAINTEDCUBE-001", "question_ids": ["TMB-GATE-EE-GA-020"]}
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "qualification_version": "1.0.0",
+  "batch_id": "BATCH_003",
+  "domain": "General Aptitude",
+  "current_stage": "READY_FOR_HUMAN_FINAL_QA",
+  "source_sha256": "b00075f2ae17951baccc382ea59d149e8d0df73a21fd6398bc8e2af9038c902b",
+  "formatter_evidence_sha256": "e517ed2606ede6dd5f81465dc50fe1b95cbd66d9699a779c45630a2dfd10d300",
+  "questions_total": 20,
+  "formatter_v2_qualification": {
+    "status": "PASS",
+    "passed": 20,
+    "review": 0,
+    "invalid": 0,
+    "render_passed": 20
+  },
+  "independent_ai_technical_recomputation": {
+    "status": "PASS",
+    "passed": 20,
+    "evidence_sha256": "0ac9d37a86fddc05f42f8c9960cf859a386f0adce525ea3d35fc303b338bd347",
+    "human_review_substitute": false
+  },
+  "human_final_qa": {
+    "status": "PENDING",
+    "passed": 0,
+    "revise": 0,
+    "reject": 0
+  },
+  "paper_eligible_count": 0,
+  "release_gate": "BLOCKED_PENDING_HUMAN_FINAL_QA",
+  "next_action": "Complete the fillable Batch 003 human final-QA packet, import it, validate the signoff and promote only explicitly approved IDs."
+}

@@ -37,13 +37,16 @@ At 447 candidates per day, the human-review load is substantial. A credible eigh
 
 ## Live contract position
 
-The execution clock starts on **2026-09-08** and ends on **2026-09-15** (eight inclusive calendar days). Day 1 is in progress.
+The execution clock starts on **2026-09-08** and ends on **2026-09-15** (eight inclusive calendar days). The calendar position is **Day 2 in progress**.
 
-- New sprint drafts: **20 / 3,575** (Batch 002 Electric Circuits).
-- Day-1 progress: **20 / 447**; 427 remain.
+- New sprint drafts: **40 / 3,575** (Batch 002 Electric Circuits plus Batch 003 General Aptitude).
+- Day 1 closed at **20 / 447**; the Day-1 shortfall carried forward is 427 drafts.
+- Day-2 progress: **20 / 447**; 427 remain against the original Day-2 allocation.
 - Opening inventory, excluded from Day-1 output: **20** Batch 001 Engineering Mathematics records.
-- Current program inventory: **40** unique candidates, all **40** human-certified, paper-eligible and admitted.
-- Formatter-passed inventory: **40**; Batch 002 also has 20/20 independent-AI recomputation passes and 20/20 named human PASS decisions.
+- Current program inventory: **60** unique candidates; **60** Formatter-passed.
+- Human-certified, paper-eligible and admitted inventory remains **40**. Batch 003 has 20/20 independent recomputation passes but is awaiting named human final QA.
 - Complete/released papers: **0 / 50**.
+
+The original 3,575-draft target is therefore **behind schedule**, not cancelled or silently reset. The immediate Set 01 recovery path is: finish Batch 003 human QA, then add at least 27 blueprint-compatible selected-subject records (principally core EE) before paper assembly.
 
 `GATE_EE/corpus_v1/production/EIGHT_DAY_PROGRESS.json` is the validated source of truth. It must be updated in the same change as every new source batch or certification event.

@@ -4,8 +4,8 @@
   "sprint": {
     "start_date": "2026-09-08",
     "planned_end_date": "2026-09-15",
-    "current_day": 1,
-    "state": "DAY_01_IN_PROGRESS",
+    "current_day": 2,
+    "state": "DAY_02_IN_PROGRESS",
     "draft_target": 3575,
     "daily_targets": [
       447,
@@ -17,7 +17,8 @@
       447,
       446
     ],
-    "drafts_produced_during_sprint": 20
+    "drafts_produced_during_sprint": 40,
+    "schedule_status": "BEHIND_ORIGINAL_DRAFT_TARGET"
   },
   "day_1": {
     "target": 447,
@@ -39,7 +40,31 @@
     },
     "source_batches": [
       "BATCH_002"
-    ]
+    ],
+    "state": "CLOSED_BELOW_TARGET"
+  },
+  "day_2": {
+    "target": 447,
+    "drafts_produced": 20,
+    "remaining": 427,
+    "allocation": {
+      "General Aptitude": {
+        "target": 150,
+        "produced": 20
+      },
+      "Engineering Mathematics": {
+        "target": 150,
+        "produced": 0
+      },
+      "Electric Circuits": {
+        "target": 147,
+        "produced": 0
+      }
+    },
+    "source_batches": [
+      "BATCH_003"
+    ],
+    "state": "IN_PROGRESS"
   },
   "opening_inventory": {
     "source_batches": [
@@ -54,10 +79,11 @@
   "program_inventory": {
     "source_batches": [
       "BATCH_001",
-      "BATCH_002"
+      "BATCH_002",
+      "BATCH_003"
     ],
-    "unique_candidates": 40,
-    "formatter_passed": 40,
+    "unique_candidates": 60,
+    "formatter_passed": 60,
     "human_final_qa_passed": 40,
     "paper_eligible": 40,
     "corpus_admitted": 40,
@@ -69,5 +95,5 @@
     "Draft totals are never reported as human-certified or paper-eligible totals.",
     "A commercial set exists only after all 65 selected records and the rendered paper pass every release gate."
   ],
-  "next_gate": "Continue the remaining Day-1 draft allocation and admit only independently reviewed, checksum-bound questions; Set 01 remains blocked until its exact blueprint is complete."
+  "next_gate": "Complete named human final QA for Batch 003 while continuing Day-2 authoring. Set 01 remains blocked until at least 27 additional selected-subject records can satisfy its exact Engineering Mathematics and core-EE blueprint."
 }

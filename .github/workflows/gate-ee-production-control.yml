@@ -34,6 +34,12 @@ jobs:
           python scripts/validate_gate_ee_batch_002_human_signoff.py
           python scripts/validate_gate_ee_batch_002_paper_eligibility.py
           python scripts/validate_gate_ee_batch_002_pdf.py
+      - name: Validate Batch 003 General Aptitude intake
+        run: |
+          python scripts/validate_gate_ee_batch_003.py
+          python scripts/recompute_gate_ee_batch_003.py --check
+          python scripts/validate_gate_ee_batch_003_human_signoff.py
+          python scripts/validate_gate_ee_batch_003_pdf.py
       - name: Validate eight-day progress ledger
         run: python scripts/validate_gate_ee_eight_day_progress.py
       - name: Reject whitespace errors
