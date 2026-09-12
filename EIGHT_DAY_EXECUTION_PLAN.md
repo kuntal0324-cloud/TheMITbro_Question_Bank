@@ -37,16 +37,17 @@ At 447 candidates per day, the human-review load is substantial. A credible eigh
 
 ## Live contract position
 
-The execution clock starts on **2026-09-08** and ends on **2026-09-15** (eight inclusive calendar days). The calendar position is **Day 2 in progress**.
+The execution clock starts on **2026-09-08** and ends on **2026-09-15** (eight inclusive calendar days). The calendar position is **Day 3 in progress**.
 
 - New sprint drafts: **40 / 3,575** (Batch 002 Electric Circuits plus Batch 003 General Aptitude).
 - Day 1 closed at **20 / 447**; the Day-1 shortfall carried forward is 427 drafts.
 - Day-2 progress: **20 / 447**; 427 remain against the original Day-2 allocation.
+- Day-3 progress: **0 / 447**; 447 remain against the original Day-3 allocation.
 - Opening inventory, excluded from Day-1 output: **20** Batch 001 Engineering Mathematics records.
 - Current program inventory: **60** unique candidates; **60** Formatter-passed.
-- Human-certified, paper-eligible and admitted inventory remains **40**. Batch 003 has 20/20 independent recomputation passes but is awaiting named human final QA.
+- Human-certified, paper-eligible and admitted inventory is **60**. Batch 003 completed named human final QA with 20 PASS / 0 REVISE / 0 REJECT.
 - Complete/released papers: **0 / 50**.
 
-The original 3,575-draft target is therefore **behind schedule**, not cancelled or silently reset. The immediate Set 01 recovery path is: finish Batch 003 human QA, then add at least 27 blueprint-compatible selected-subject records (principally core EE) before paper assembly.
+The original 3,575-draft target is therefore **behind schedule**, not cancelled or silently reset. The immediate Set 01 recovery path is to add at least 27 blueprint-compatible selected-subject records (principally core EE) and pass every qualification gate before paper assembly.
 
 `GATE_EE/corpus_v1/production/EIGHT_DAY_PROGRESS.json` is the validated source of truth. It must be updated in the same change as every new source batch or certification event.

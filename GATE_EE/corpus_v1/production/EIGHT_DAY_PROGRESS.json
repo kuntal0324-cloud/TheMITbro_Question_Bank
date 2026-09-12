@@ -1,11 +1,11 @@
 {
   "progress_contract": "GATE_EE_EIGHT_DAY_DRAFT_SPRINT_V1",
-  "as_of": "2026-09-09",
+  "as_of": "2026-09-10",
   "sprint": {
     "start_date": "2026-09-08",
     "planned_end_date": "2026-09-15",
-    "current_day": 2,
-    "state": "DAY_02_IN_PROGRESS",
+    "current_day": 3,
+    "state": "DAY_03_IN_PROGRESS",
     "draft_target": 3575,
     "daily_targets": [
       447,
@@ -64,7 +64,7 @@
     "source_batches": [
       "BATCH_003"
     ],
-    "state": "IN_PROGRESS"
+    "state": "CLOSED_BELOW_TARGET"
   },
   "opening_inventory": {
     "source_batches": [
@@ -84,9 +84,9 @@
     ],
     "unique_candidates": 60,
     "formatter_passed": 60,
-    "human_final_qa_passed": 40,
-    "paper_eligible": 40,
-    "corpus_admitted": 40,
+    "human_final_qa_passed": 60,
+    "paper_eligible": 60,
+    "corpus_admitted": 60,
     "complete_65_question_sets": 0,
     "released_sets": 0
   },
@@ -95,5 +95,26 @@
     "Draft totals are never reported as human-certified or paper-eligible totals.",
     "A commercial set exists only after all 65 selected records and the rendered paper pass every release gate."
   ],
-  "next_gate": "Complete named human final QA for Batch 003 while continuing Day-2 authoring. Set 01 remains blocked until at least 27 additional selected-subject records can satisfy its exact Engineering Mathematics and core-EE blueprint."
+  "next_gate": "Author and qualify at least 27 additional blueprint-compatible selected-subject records, principally core EE; Set 01 remains blocked until its exact 65-question blueprint is complete.",
+  "day_3": {
+    "target": 447,
+    "drafts_produced": 0,
+    "remaining": 447,
+    "allocation": {
+      "General Aptitude": {
+        "target": 150,
+        "produced": 0
+      },
+      "Engineering Mathematics": {
+        "target": 150,
+        "produced": 0
+      },
+      "Electromagnetic Fields": {
+        "target": 147,
+        "produced": 0
+      }
+    },
+    "source_batches": [],
+    "state": "IN_PROGRESS"
+  }
 }
