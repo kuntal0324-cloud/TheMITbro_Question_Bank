@@ -1,8 +1,8 @@
 {
-  "registry_version": "1.1.0",
+  "registry_version": "1.2.0",
   "corpus": "GATE_EE_CORPUS_V1",
   "rule": "One family per materially shared construction/reasoning skeleton. Set 01 permits at most one question from each family.",
-  "admitted_question_count": 40,
+  "admitted_question_count": 60,
   "families": [
     {
       "family_id": "EM-LA-EIG-001",
@@ -283,6 +283,146 @@
         "TMB-GATE-EE-NT-020"
       ],
       "admission_batch": "BATCH_002"
+    },
+    {
+      "family_id": "GA-VA-SVA-001",
+      "question_ids": [
+        "TMB-GATE-EE-GA-001"
+      ],
+      "admission_batch": "BATCH_003"
+    },
+    {
+      "family_id": "GA-VA-VOCCTX-001",
+      "question_ids": [
+        "TMB-GATE-EE-GA-002"
+      ],
+      "admission_batch": "BATCH_003"
+    },
+    {
+      "family_id": "GA-VA-RC-PILOT-001",
+      "question_ids": [
+        "TMB-GATE-EE-GA-003"
+      ],
+      "admission_batch": "BATCH_003"
+    },
+    {
+      "family_id": "GA-VA-RC-CALIBRATION-001",
+      "question_ids": [
+        "TMB-GATE-EE-GA-004"
+      ],
+      "admission_batch": "BATCH_003"
+    },
+    {
+      "family_id": "GA-VA-NARRATIVE-001",
+      "question_ids": [
+        "TMB-GATE-EE-GA-005"
+      ],
+      "admission_batch": "BATCH_003"
+    },
+    {
+      "family_id": "GA-QA-PCTCHAIN-001",
+      "question_ids": [
+        "TMB-GATE-EE-GA-006"
+      ],
+      "admission_batch": "BATCH_003"
+    },
+    {
+      "family_id": "GA-QA-MIXREPLACE-001",
+      "question_ids": [
+        "TMB-GATE-EE-GA-007"
+      ],
+      "admission_batch": "BATCH_003"
+    },
+    {
+      "family_id": "GA-QA-TABLEACCEPT-001",
+      "question_ids": [
+        "TMB-GATE-EE-GA-008"
+      ],
+      "admission_batch": "BATCH_003"
+    },
+    {
+      "family_id": "GA-QA-LOGRECIP-001",
+      "question_ids": [
+        "TMB-GATE-EE-GA-009"
+      ],
+      "admission_batch": "BATCH_003"
+    },
+    {
+      "family_id": "GA-QA-ORDERCONSTRAINT-001",
+      "question_ids": [
+        "TMB-GATE-EE-GA-010"
+      ],
+      "admission_batch": "BATCH_003"
+    },
+    {
+      "family_id": "GA-QA-AREASCALE-001",
+      "question_ids": [
+        "TMB-GATE-EE-GA-011"
+      ],
+      "admission_batch": "BATCH_003"
+    },
+    {
+      "family_id": "GA-QA-PROBATLEAST2-001",
+      "question_ids": [
+        "TMB-GATE-EE-GA-012"
+      ],
+      "admission_batch": "BATCH_003"
+    },
+    {
+      "family_id": "GA-AA-SYLLOGISM-001",
+      "question_ids": [
+        "TMB-GATE-EE-GA-013"
+      ],
+      "admission_batch": "BATCH_003"
+    },
+    {
+      "family_id": "GA-AA-SCHEDULE-001",
+      "question_ids": [
+        "TMB-GATE-EE-GA-014"
+      ],
+      "admission_batch": "BATCH_003"
+    },
+    {
+      "family_id": "GA-AA-NUMANALOGY-001",
+      "question_ids": [
+        "TMB-GATE-EE-GA-015"
+      ],
+      "admission_batch": "BATCH_003"
+    },
+    {
+      "family_id": "GA-AA-CONDITIONAL-001",
+      "question_ids": [
+        "TMB-GATE-EE-GA-016"
+      ],
+      "admission_batch": "BATCH_003"
+    },
+    {
+      "family_id": "GA-SA-ROTREFLECT-001",
+      "question_ids": [
+        "TMB-GATE-EE-GA-017"
+      ],
+      "admission_batch": "BATCH_003"
+    },
+    {
+      "family_id": "GA-SA-FOLDHOLES-001",
+      "question_ids": [
+        "TMB-GATE-EE-GA-018"
+      ],
+      "admission_batch": "BATCH_003"
+    },
+    {
+      "family_id": "GA-SA-CUBEOPPOSITES-001",
+      "question_ids": [
+        "TMB-GATE-EE-GA-019"
+      ],
+      "admission_batch": "BATCH_003"
+    },
+    {
+      "family_id": "GA-SA-PAINTEDCUBE-001",
+      "question_ids": [
+        "TMB-GATE-EE-GA-020"
+      ],
+      "admission_batch": "BATCH_003"
     }
   ]
 }

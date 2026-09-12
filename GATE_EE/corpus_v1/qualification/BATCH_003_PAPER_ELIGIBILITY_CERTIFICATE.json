@@ -1,0 +1,40 @@
+{
+  "certificate_contract": "GATE_EE_BATCH003_PAPER_ELIGIBILITY_CERTIFICATE_V1",
+  "batch_id": "BATCH_003",
+  "source_sha256": "b00075f2ae17951baccc382ea59d149e8d0df73a21fd6398bc8e2af9038c902b",
+  "formatter_evidence_sha256": "e517ed2606ede6dd5f81465dc50fe1b95cbd66d9699a779c45630a2dfd10d300",
+  "independent_ai_qa_sha256": "0ac9d37a86fddc05f42f8c9960cf859a386f0adce525ea3d35fc303b338bd347",
+  "human_signoff_sha256": "b78e2d796dff4e8e2accd7d1e3fbd0f501e6724594cabc06a3393f9b2116d93c",
+  "completed_pdf_sha256": "b18ec0bd1eb62f2c9151a8ba726857cb227cda1544660d5008ba82275a0de9e8",
+  "reviewer": {
+    "name": "KUNTAL DAS",
+    "role_or_qualification": "Diploma in Electrical Engineering",
+    "review_date": "2026-09-10"
+  },
+  "approved_question_ids": [
+    "TMB-GATE-EE-GA-001",
+    "TMB-GATE-EE-GA-002",
+    "TMB-GATE-EE-GA-003",
+    "TMB-GATE-EE-GA-004",
+    "TMB-GATE-EE-GA-005",
+    "TMB-GATE-EE-GA-006",
+    "TMB-GATE-EE-GA-007",
+    "TMB-GATE-EE-GA-008",
+    "TMB-GATE-EE-GA-009",
+    "TMB-GATE-EE-GA-010",
+    "TMB-GATE-EE-GA-011",
+    "TMB-GATE-EE-GA-012",
+    "TMB-GATE-EE-GA-013",
+    "TMB-GATE-EE-GA-014",
+    "TMB-GATE-EE-GA-015",
+    "TMB-GATE-EE-GA-016",
+    "TMB-GATE-EE-GA-017",
+    "TMB-GATE-EE-GA-018",
+    "TMB-GATE-EE-GA-019",
+    "TMB-GATE-EE-GA-020"
+  ],
+  "revise_question_ids": [],
+  "rejected_question_ids": [],
+  "paper_eligible_count": 20,
+  "decision": "CERTIFIED"
+}

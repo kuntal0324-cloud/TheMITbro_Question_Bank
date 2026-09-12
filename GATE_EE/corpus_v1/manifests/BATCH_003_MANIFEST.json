@@ -1,14 +1,25 @@
 {
-  "manifest_version": "1.0.0",
+  "manifest_version": "1.1.0",
   "batch_id": "BATCH_003",
   "corpus": "GATE_EE_CORPUS_V1",
   "domain": "General Aptitude",
   "question_count": 20,
-  "status": "READY_FOR_HUMAN_FINAL_QA",
-  "paper_eligible_count": 0,
-  "type_counts": {"MCQ": 8, "MSQ": 4, "NAT": 8},
-  "marks_counts": {"1": 10, "2": 10},
-  "difficulty_counts": {"Easy": 5, "Medium": 10, "Hard": 5},
+  "status": "PAPER_ELIGIBILITY_CERTIFIED_AND_ADMITTED",
+  "paper_eligible_count": 20,
+  "type_counts": {
+    "MCQ": 8,
+    "MSQ": 4,
+    "NAT": 8
+  },
+  "marks_counts": {
+    "1": 10,
+    "2": 10
+  },
+  "difficulty_counts": {
+    "Easy": 5,
+    "Medium": 10,
+    "Hard": 5
+  },
   "topic_counts": {
     "Verbal Aptitude": 5,
     "Quantitative Aptitude": 7,
@@ -40,5 +51,5 @@
   "jsonl_sha256": "b00075f2ae17951baccc382ea59d149e8d0df73a21fd6398bc8e2af9038c902b",
   "formatter_evidence_sha256": "e517ed2606ede6dd5f81465dc50fe1b95cbd66d9699a779c45630a2dfd10d300",
   "independent_ai_qa_sha256": "0ac9d37a86fddc05f42f8c9960cf859a386f0adce525ea3d35fc303b338bd347",
-  "qualification_note": "Twenty original General Aptitude candidates cover all four official syllabus sections. Strict Formatter: 20 PASS / 0 REVIEW / 0 invalid. Independent AI recomputation: 20/20 PASS and not a human substitute. The 30-mark reserve pool contains ten one-mark and ten two-mark records. No record is paper-eligible until named human final QA is complete."
+  "qualification_note": "General Aptitude Batch 003. Strict Formatter: 20 PASS / 0 REVIEW / 0 invalid. Independent AI technical/answer/solution recomputation: 20/20 PASS and not a human substitute. Named human final QA: 20 PASS / 0 REVISE / 0 REJECT. Approved IDs are certificate-bound and admitted to Corpus V1; no complete paper is released."
 }

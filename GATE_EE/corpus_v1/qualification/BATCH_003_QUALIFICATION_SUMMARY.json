@@ -1,8 +1,8 @@
 {
-  "qualification_version": "1.0.0",
+  "qualification_version": "1.1.0",
   "batch_id": "BATCH_003",
   "domain": "General Aptitude",
-  "current_stage": "READY_FOR_HUMAN_FINAL_QA",
+  "current_stage": "PAPER_ELIGIBILITY_CERTIFIED",
   "source_sha256": "b00075f2ae17951baccc382ea59d149e8d0df73a21fd6398bc8e2af9038c902b",
   "formatter_evidence_sha256": "e517ed2606ede6dd5f81465dc50fe1b95cbd66d9699a779c45630a2dfd10d300",
   "questions_total": 20,
@@ -20,12 +20,14 @@
     "human_review_substitute": false
   },
   "human_final_qa": {
-    "status": "PENDING",
-    "passed": 0,
+    "status": "COMPLETE",
+    "review_date": "2026-09-10",
+    "passed": 20,
     "revise": 0,
     "reject": 0
   },
-  "paper_eligible_count": 0,
-  "release_gate": "BLOCKED_PENDING_HUMAN_FINAL_QA",
-  "next_action": "Complete the fillable Batch 003 human final-QA packet, import it, validate the signoff and promote only explicitly approved IDs."
+  "paper_eligible_count": 20,
+  "release_gate": "BLOCKED_NO_COMPLETE_65_QUESTION_SET",
+  "next_action": "Use admitted questions only for controlled blueprint selection; continue Day-3 authoring with at least 27 additional blueprint-compatible selected-subject records before attempting Set 01 assembly.",
+  "remaining_gates": []
 }
