@@ -1,0 +1,230 @@
+{
+  "qa_contract": "GATE_EE_BATCH004_INDEPENDENT_AI_QA_V1",
+  "batch_id": "BATCH_004",
+  "status": "PASS",
+  "qa_date": "2026-09-12",
+  "performed_by": "OpenAI Codex",
+  "reviewer_kind": "AI_ASSISTED_INDEPENDENT_RECOMPUTATION",
+  "source_sha256": "0d0eb24d9f82f1f511f8dcb879dd78d5684fa73c444a8319d6bc01bdd7961b66",
+  "formatter_report_sha256": "25f128b7778a9504e0ddd76380b91be92fea82511952f400ede72f827b201834",
+  "evidence_valid_for_current_source": true,
+  "technical_pass_count": 15,
+  "answer_recomputed_pass_count": 15,
+  "solution_consistency_pass_count": 15,
+  "machine_final_marker_pass_count": 15,
+  "formatter_pass_count": 15,
+  "formatter_review_count": 0,
+  "invalid_count": 0,
+  "paper_eligibility_candidate_count": 15,
+  "paper_eligible_count": 0,
+  "human_final_qa_required": true,
+  "human_review_substitute": false,
+  "automated_oracle": "scripts/gate_ee_recovery_batches.py",
+  "release_gate": "BLOCKED_PENDING_HUMAN_FINAL_QA",
+  "questions": [
+    {
+      "question_id": "TMB-GATE-EE-SS-001",
+      "revision": 1,
+      "declared_answer": "C",
+      "recomputed_answer": "C",
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "The component angular frequencies have greatest common divisor $2\\,\\mathrm{rad/s}$, giving $T_0=\\pi\\,\\mathrm{s}$.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-SS-002",
+      "revision": 1,
+      "declared_answer": 1.333,
+      "recomputed_answer": 1.333,
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "The squared sequence is $(1/4)^n u[n]$, whose geometric sum is $4/3=1.333$.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-SS-003",
+      "revision": 1,
+      "declared_answer": [
+        "A",
+        "C",
+        "D"
+      ],
+      "recomputed_answer": [
+        "A",
+        "C",
+        "D"
+      ],
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "Multiplication by $t$ is linear, memoryless and causal, but a time shift does not commute with the multiplier.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-SS-004",
+      "revision": 1,
+      "declared_answer": "C",
+      "recomputed_answer": "C",
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "Even symmetry gives $2\\int_0^2(2-t)^2dt=16/3$.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-SS-005",
+      "revision": 1,
+      "declared_answer": 0.25,
+      "recomputed_answer": 0.25,
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "Direct convolution gives $e^{-t}-e^{-2t}$ for $t\\geq0$ and hence $1/4$ at $t=\\ln2$.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-SS-006",
+      "revision": 1,
+      "declared_answer": 3,
+      "recomputed_answer": 3,
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "The LTI frequency-response magnitude at $2\\,\\mathrm{rad/s}$ is $3$, so the output amplitude is $3$.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-SS-007",
+      "revision": 1,
+      "declared_answer": "C",
+      "recomputed_answer": "C",
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "At $n=2$, three overlapping unit samples contribute to the convolution.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-SS-008",
+      "revision": 1,
+      "declared_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "recomputed_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "Weighted averaging gives $-1$; constant squared magnitude gives RMS $2$ and power $4$.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-SS-009",
+      "revision": 1,
+      "declared_answer": 27,
+      "recomputed_answer": 27,
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "Orthogonal output components contribute $1^2+4^2/2+6^2/2=27$.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-SS-010",
+      "revision": 1,
+      "declared_answer": "C",
+      "recomputed_answer": "C",
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "The right-sided term requires $\\operatorname{Re}(s)>-2$ and the left-sided term requires $\\operatorname{Re}(s)<3$.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-SS-011",
+      "revision": 1,
+      "declared_answer": 0.667,
+      "recomputed_answer": 0.667,
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "The final-value theorem gives $\\lim_{s\\to0}(s+4)/[(s+2)(s+3)]=2/3=0.667$.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-SS-012",
+      "revision": 1,
+      "declared_answer": "A",
+      "recomputed_answer": "A",
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "The ROC outside both poles makes both inverse-Z components right sided.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-SS-013",
+      "revision": 1,
+      "declared_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "recomputed_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "Only the annular ROC contains the unit circle; outer and inner ROCs are causal and anti-causal respectively and both unstable.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-SS-014",
+      "revision": 1,
+      "declared_answer": 8,
+      "recomputed_answer": 8,
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "The highest occupied frequency is $4\\,\\mathrm{kHz}$, so conventional Nyquist sampling requires $8\\,\\mathrm{kHz}$.",
+      "human_originality_check": "PENDING"
+    },
+    {
+      "question_id": "TMB-GATE-EE-SS-015",
+      "revision": 1,
+      "declared_answer": "B",
+      "recomputed_answer": "B",
+      "technical_result": "PASS",
+      "answer_result": "PASS",
+      "solution_consistency_result": "PASS",
+      "machine_final_marker_result": "PASS",
+      "derivation_summary": "Sampling at $4\\,\\mathrm{kHz}$ folds $2.6\\,\\mathrm{kHz}$ to $1.4\\,\\mathrm{kHz}$ while preserving $1\\,\\mathrm{kHz}$.",
+      "human_originality_check": "PENDING"
+    }
+  ]
+}

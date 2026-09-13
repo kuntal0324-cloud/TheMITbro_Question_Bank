@@ -1,0 +1,36 @@
+{
+  "qualification_version": "1.1.0",
+  "batch_id": "BATCH_005",
+  "domain": "Electromagnetic Fields",
+  "current_stage": "READY_FOR_HUMAN_FINAL_QA",
+  "source_sha256": "f30c6d8b1a522d75effdc46b147c87a723e57ecc0a43ef74624daa9da25fb89e",
+  "formatter_evidence_sha256": "d1ed63b24f739b5df1b81ca035b3b52b5ecee81c56c6b72036143e12ec96dd8b",
+  "questions_total": 12,
+  "formatter_v2_qualification": {
+    "status": "PASS",
+    "passed": 12,
+    "review": 0,
+    "invalid": 0,
+    "render_passed": 12
+  },
+  "independent_ai_technical_recomputation": {
+    "status": "PASS",
+    "passed": 12,
+    "evidence_sha256": "c6d44cc3c8601a2a57402a58f079a563e03b7508f55605d51d8b69e5ef7debe8",
+    "human_review_substitute": false
+  },
+  "human_final_qa": {
+    "status": "PENDING",
+    "passed": 0,
+    "revise": 0,
+    "reject": 0
+  },
+  "paper_eligible_count": 0,
+  "release_gate": "BLOCKED_PENDING_HUMAN_FINAL_QA",
+  "next_action": "Complete named human final QA for all 12 checksum-bound Electromagnetic Fields candidates; promote only explicit PASS records.",
+  "remaining_gates": [
+    "Named human final QA",
+    "Paper-eligibility promotion",
+    "Corpus V1 admission"
+  ]
+}

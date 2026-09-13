@@ -55,7 +55,7 @@ def raw_tex(text: str) -> str:
     return f"```{{=latex}}\n{text}\n```"
 
 
-def form_table(prefix: str) -> str:
+def form_table(prefix: str, notes_height_mm: int = 18) -> str:
     rows = []
     for short, label in CHECKS:
         rows.append(
@@ -75,7 +75,7 @@ def form_table(prefix: str) -> str:
             rf"\quad REVISE\,\CheckBox[name={prefix}_decision_revise,width=4mm,height=4mm]{{}}",
             rf"\quad REJECT\,\CheckBox[name={prefix}_decision_reject,width=4mm,height=4mm]{{}}",
             r"\par\vspace{2mm}\textbf{Notes / independent calculation summary:}\par",
-            rf"\TextField[multiline=true,name={prefix}_notes,width=\linewidth,height=18mm,bordercolor={{0.35 0.35 0.35}}]{{}}",
+            rf"\TextField[multiline=true,name={prefix}_notes,width=\linewidth,height={notes_height_mm}mm,bordercolor={{0.35 0.35 0.35}}]{{}}",
         ]
     )
 

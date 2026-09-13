@@ -1,0 +1,58 @@
+{
+  "manifest_version": "1.1.0",
+  "batch_id": "BATCH_005",
+  "corpus": "GATE_EE_CORPUS_V1",
+  "domain": "Electromagnetic Fields",
+  "question_count": 12,
+  "status": "READY_FOR_HUMAN_FINAL_QA",
+  "paper_eligible_count": 0,
+  "type_counts": {
+    "MCQ": 5,
+    "NAT": 5,
+    "MSQ": 2
+  },
+  "marks_counts": {
+    "1": 6,
+    "2": 6
+  },
+  "difficulty_counts": {
+    "Easy": 3,
+    "Hard": 3,
+    "Medium": 6
+  },
+  "topic_counts": {
+    "Electromagnetic Fields": 12
+  },
+  "subtopics": {
+    "Electrostatics": 6,
+    "Magnetostatics": 2,
+    "Magnetic Circuits": 1,
+    "Electromagnetic Induction": 3
+  },
+  "visual_question_count": 3,
+  "source_files": [
+    "GATE_EE/corpus_v1/source_batches/BATCH_005_ELECTROMAGNETIC_FIELDS.md",
+    "GATE_EE/corpus_v1/source_batches/BATCH_005_ELECTROMAGNETIC_FIELDS.jsonl"
+  ],
+  "diagram_assets": [
+    {
+      "question_id": "TMB-GATE-EE-EMFT-003",
+      "path": "GATE_EE/corpus_v1/assets/batch_005/EMFT-003-dielectric-interface.svg",
+      "sha256": "ddc129f8a5fb9ccab868cae1de525b7c4484e4cd015ca4f279c6c9fdb8c7f595"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EMFT-007",
+      "path": "GATE_EE/corpus_v1/assets/batch_005/EMFT-007-parallel-conductors.svg",
+      "sha256": "2154a4fcc35d3a56a88eafb1308f34599ad3379a4764b934c44fbc8aaa9b9249"
+    },
+    {
+      "question_id": "TMB-GATE-EE-EMFT-012",
+      "path": "GATE_EE/corpus_v1/assets/batch_005/EMFT-012-solenoid-cross-section.svg",
+      "sha256": "03dd9ee5b5de5b9159d5213d7e402a5bf4868b768ce1b75b080e62621a4534f9"
+    }
+  ],
+  "jsonl_sha256": "f30c6d8b1a522d75effdc46b147c87a723e57ecc0a43ef74624daa9da25fb89e",
+  "formatter_evidence_sha256": "d1ed63b24f739b5df1b81ca035b3b52b5ecee81c56c6b72036143e12ec96dd8b",
+  "independent_ai_qa_sha256": "c6d44cc3c8601a2a57402a58f079a563e03b7508f55605d51d8b69e5ef7debe8",
+  "qualification_note": "Electromagnetic Fields BATCH_005. Strict Formatter: 12 PASS / 0 REVIEW / 0 invalid. Independent AI technical/answer/solution recomputation: 12/12 PASS and not a human substitute. Named human final QA remains pending; no record is PAPER_ELIGIBLE and no paper is released."
+}

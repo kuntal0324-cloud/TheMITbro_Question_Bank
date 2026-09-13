@@ -1,0 +1,80 @@
+{
+  "registry_version": "1.2.0",
+  "batch": "BATCH_005",
+  "corpus": "GATE_EE_CORPUS_V1",
+  "admission_status": "NOT_ADMITTED_PENDING_HUMAN_FINAL_QA",
+  "families": [
+    {
+      "family_id": "EMFT-ES-GAUSSFLUX-001",
+      "question_ids": [
+        "TMB-GATE-EE-EMFT-001"
+      ]
+    },
+    {
+      "family_id": "EMFT-ES-LINECHARGE-001",
+      "question_ids": [
+        "TMB-GATE-EE-EMFT-002"
+      ]
+    },
+    {
+      "family_id": "EMFT-ES-DIELBOUND-001",
+      "question_ids": [
+        "TMB-GATE-EE-EMFT-003"
+      ]
+    },
+    {
+      "family_id": "EMFT-ES-SPHCAP-001",
+      "question_ids": [
+        "TMB-GATE-EE-EMFT-004"
+      ]
+    },
+    {
+      "family_id": "EMFT-ES-SPHEREPOT-001",
+      "question_ids": [
+        "TMB-GATE-EE-EMFT-005"
+      ]
+    },
+    {
+      "family_id": "EMFT-ES-PARTDIEL-001",
+      "question_ids": [
+        "TMB-GATE-EE-EMFT-006"
+      ]
+    },
+    {
+      "family_id": "EMFT-MS-TWOWIRE-001",
+      "question_ids": [
+        "TMB-GATE-EE-EMFT-007"
+      ]
+    },
+    {
+      "family_id": "EMFT-MS-BOUNDARY-001",
+      "question_ids": [
+        "TMB-GATE-EE-EMFT-008"
+      ]
+    },
+    {
+      "family_id": "EMFT-MC-GAPTOROID-001",
+      "question_ids": [
+        "TMB-GATE-EE-EMFT-009"
+      ]
+    },
+    {
+      "family_id": "EMFT-EI-FARADAY-001",
+      "question_ids": [
+        "TMB-GATE-EE-EMFT-010"
+      ]
+    },
+    {
+      "family_id": "EMFT-EI-MOTIONAL-001",
+      "question_ids": [
+        "TMB-GATE-EE-EMFT-011"
+      ]
+    },
+    {
+      "family_id": "EMFT-EI-SOLENOID-E-001",
+      "question_ids": [
+        "TMB-GATE-EE-EMFT-012"
+      ]
+    }
+  ]
+}

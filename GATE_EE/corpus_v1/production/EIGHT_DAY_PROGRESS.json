@@ -1,11 +1,11 @@
 {
   "progress_contract": "GATE_EE_EIGHT_DAY_DRAFT_SPRINT_V1",
-  "as_of": "2026-09-10",
+  "as_of": "2026-09-13",
   "sprint": {
     "start_date": "2026-09-08",
     "planned_end_date": "2026-09-15",
-    "current_day": 3,
-    "state": "DAY_03_IN_PROGRESS",
+    "current_day": 6,
+    "state": "DAY_06_IN_PROGRESS",
     "draft_target": 3575,
     "daily_targets": [
       447,
@@ -17,7 +17,7 @@
       447,
       446
     ],
-    "drafts_produced_during_sprint": 40,
+    "drafts_produced_during_sprint": 67,
     "schedule_status": "BEHIND_ORIGINAL_DRAFT_TARGET"
   },
   "day_1": {
@@ -80,10 +80,12 @@
     "source_batches": [
       "BATCH_001",
       "BATCH_002",
-      "BATCH_003"
+      "BATCH_003",
+      "BATCH_004",
+      "BATCH_005"
     ],
-    "unique_candidates": 60,
-    "formatter_passed": 60,
+    "unique_candidates": 87,
+    "formatter_passed": 87,
     "human_final_qa_passed": 60,
     "paper_eligible": 60,
     "corpus_admitted": 60,
@@ -95,7 +97,7 @@
     "Draft totals are never reported as human-certified or paper-eligible totals.",
     "A commercial set exists only after all 65 selected records and the rendered paper pass every release gate."
   ],
-  "next_gate": "Author and qualify at least 27 additional blueprint-compatible selected-subject records, principally core EE; Set 01 remains blocked until its exact 65-question blueprint is complete.",
+  "next_gate": "Complete named human final QA for all 27 Batch 004/005 recovery candidates, then promote only explicit PASS records. Structural Set 01 capacity now preflights at 65 questions/100 marks, but assembly and release remain blocked until all selected records are PAPER_ELIGIBLE.",
   "day_3": {
     "target": 447,
     "drafts_produced": 0,
@@ -111,6 +113,74 @@
       },
       "Electromagnetic Fields": {
         "target": 147,
+        "produced": 0
+      }
+    },
+    "source_batches": [],
+    "state": "CLOSED_BELOW_TARGET"
+  },
+  "day_4": {
+    "target": 447,
+    "drafts_produced": 0,
+    "remaining": 447,
+    "allocation": {
+      "Signals and Systems": {
+        "target": 260,
+        "produced": 0
+      },
+      "Electromagnetic Fields": {
+        "target": 73,
+        "produced": 0
+      },
+      "Electrical Machines": {
+        "target": 114,
+        "produced": 0
+      }
+    },
+    "source_batches": [],
+    "state": "CLOSED_BELOW_TARGET"
+  },
+  "day_5": {
+    "target": 447,
+    "drafts_produced": 27,
+    "remaining": 420,
+    "allocation": {
+      "Electrical Machines": {
+        "target": 266,
+        "produced": 0
+      },
+      "Power Systems": {
+        "target": 181,
+        "produced": 0
+      },
+      "Signals and Systems": {
+        "target": 0,
+        "produced": 15,
+        "carried_from_day": 4
+      },
+      "Electromagnetic Fields": {
+        "target": 0,
+        "produced": 12,
+        "carried_from_day": 4
+      }
+    },
+    "source_batches": [
+      "BATCH_004",
+      "BATCH_005"
+    ],
+    "state": "CLOSED_BELOW_TARGET_WITH_DAY4_RECOVERY"
+  },
+  "day_6": {
+    "target": 447,
+    "drafts_produced": 0,
+    "remaining": 447,
+    "allocation": {
+      "Power Systems": {
+        "target": 269,
+        "produced": 0
+      },
+      "Control Systems": {
+        "target": 178,
         "produced": 0
       }
     },
