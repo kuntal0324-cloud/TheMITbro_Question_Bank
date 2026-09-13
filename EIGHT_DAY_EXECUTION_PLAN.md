@@ -37,17 +37,19 @@ At 447 candidates per day, the human-review load is substantial. A credible eigh
 
 ## Live contract position
 
-The execution clock starts on **2026-09-08** and ends on **2026-09-15** (eight inclusive calendar days). The calendar position is **Day 3 in progress**.
+The execution clock starts on **2026-09-08** and ends on **2026-09-15** (eight inclusive calendar days). The calendar position is **Day 6 in progress** as of **2026-09-13**. The earlier Day-3 ledger was a recorded checkpoint, not permission to pause or reset the fixed clock.
 
-- New sprint drafts: **40 / 3,575** (Batch 002 Electric Circuits plus Batch 003 General Aptitude).
+- New sprint drafts: **67 / 3,575** (Batches 002–005).
 - Day 1 closed at **20 / 447**; the Day-1 shortfall carried forward is 427 drafts.
-- Day-2 progress: **20 / 447**; 427 remain against the original Day-2 allocation.
-- Day-3 progress: **0 / 447**; 447 remain against the original Day-3 allocation.
+- Day 2 closed at **20 / 447**; 427 remain against the original Day-2 allocation.
+- Days 3 and 4 closed at **0 / 447** each.
+- Day 5 closed at **27 / 447**: 15 Signals and Systems plus 12 Electromagnetic Fields candidates carried forward from the Day-4 allocation. The original Day-5 Electrical Machines and Power Systems allocation remains unfilled.
+- Day-6 progress is **0 / 447**; its Power Systems and Control Systems allocation is still unfilled while Batches 004 and 005 wait at the named-human gate.
 - Opening inventory, excluded from Day-1 output: **20** Batch 001 Engineering Mathematics records.
-- Current program inventory: **60** unique candidates; **60** Formatter-passed.
-- Human-certified, paper-eligible and admitted inventory is **60**. Batch 003 completed named human final QA with 20 PASS / 0 REVISE / 0 REJECT.
+- Current program inventory: **87** unique candidates; **87** Formatter-passed.
+- Human-certified, paper-eligible and admitted inventory remains **60**. Batches 004 and 005 are independently recomputed and Formatter-passed, but their 27 records remain `DRAFT` and await named human final QA.
 - Complete/released papers: **0 / 50**.
 
-The original 3,575-draft target is therefore **behind schedule**, not cancelled or silently reset. The immediate Set 01 recovery path is to add at least 27 blueprint-compatible selected-subject records (principally core EE) and pass every qualification gate before paper assembly.
+The original 3,575-draft target is therefore **behind schedule**, not cancelled or silently reset. The 27-record Set 01 core-EE capacity gap is now filled structurally: a deterministic preflight satisfies 65 questions, 100 marks, the 15/13/72 section-mark split and all balance ranges. It selects 38 already eligible records plus the 27 pending records, so it is not a paper manifest and release remains blocked. The immediate gate is named human final QA, paper-eligibility promotion and Corpus V1 admission for Batches 004 and 005.
 
 `GATE_EE/corpus_v1/production/EIGHT_DAY_PROGRESS.json` is the validated source of truth. It must be updated in the same change as every new source batch or certification event.

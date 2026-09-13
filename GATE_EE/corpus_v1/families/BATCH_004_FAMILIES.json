@@ -1,0 +1,98 @@
+{
+  "registry_version": "1.2.0",
+  "batch": "BATCH_004",
+  "corpus": "GATE_EE_CORPUS_V1",
+  "admission_status": "NOT_ADMITTED_PENDING_HUMAN_FINAL_QA",
+  "families": [
+    {
+      "family_id": "SS-SIG-PERIOD-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-001"
+      ]
+    },
+    {
+      "family_id": "SS-SIG-ENERGY-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-002"
+      ]
+    },
+    {
+      "family_id": "SS-SIG-SYSPROP-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-003"
+      ]
+    },
+    {
+      "family_id": "SS-SIG-TRIENERGY-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-004"
+      ]
+    },
+    {
+      "family_id": "SS-LTI-CONVEXP-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-005"
+      ]
+    },
+    {
+      "family_id": "SS-LTI-EIGEN-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-006"
+      ]
+    },
+    {
+      "family_id": "SS-LTI-DISCCONV-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-007"
+      ]
+    },
+    {
+      "family_id": "SS-FA-TWOLEVEL-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-008"
+      ]
+    },
+    {
+      "family_id": "SS-FA-HARMPOWER-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-009"
+      ]
+    },
+    {
+      "family_id": "SS-LT-ROC-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-010"
+      ]
+    },
+    {
+      "family_id": "SS-LT-FINALVALUE-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-011"
+      ]
+    },
+    {
+      "family_id": "SS-ZT-INVERSE-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-012"
+      ]
+    },
+    {
+      "family_id": "SS-ZT-ROCSTAB-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-013"
+      ]
+    },
+    {
+      "family_id": "SS-SAMP-NYQUIST-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-014"
+      ]
+    },
+    {
+      "family_id": "SS-SAMP-ALIAS-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-015"
+      ]
+    }
+  ]
+}

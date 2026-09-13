@@ -26,8 +26,12 @@ Fifty non-repeating papers require 3,250 unique paper-eligible questions. The pr
 
 ## Current production position
 
-As of 2026-09-10, Batches 001-003 contribute 60 checksum-bound, named-human-certified, paper-eligible and Corpus V1-admitted records: 20 Engineering Mathematics, 20 Electric Circuits and 20 General Aptitude. Batch 003 received 20 PASS / 0 REVISE / 0 REJECT in named human final QA after its 20/20 strict Formatter and independent-recomputation passes. The validated live counters are therefore 60 program candidates, 60 Formatter passes and 60 paper-eligible/admitted records. They are maintained in `GATE_EE/corpus_v1/production/EIGHT_DAY_PROGRESS.json`; no 65-question paper is complete or released.
+As of 2026-09-13 (calendar Day 6), Batches 001-003 contribute 60 checksum-bound, named-human-certified, paper-eligible and Corpus V1-admitted records: 20 Engineering Mathematics, 20 Electric Circuits and 20 General Aptitude. Batches 004 and 005 add 27 core-EE candidates—15 Signals and Systems plus 12 Electromagnetic Fields—with 27/27 strict Formatter and independent-recomputation PASS. Their named human final QA is pending, so they contribute zero paper-eligible records. The validated counters are 87 program candidates, 87 Formatter passes and 60 paper-eligible/admitted records; no paper is complete or released.
 
 Batch 002 promotion is reproducible with `scripts/promote_gate_ee_batch_002_paper_eligibility.py` and enforced by `scripts/validate_gate_ee_batch_002_paper_eligibility.py`. The completed signoff remains checksum-bound in `GATE_EE/corpus_v1/review_manifests/BATCH_002_HUMAN_FINAL_QA.json`.
 
 Batch 003 promotion is reproducible with `scripts/promote_gate_ee_batch_003_paper_eligibility.py` and enforced by `scripts/validate_gate_ee_batch_003_paper_eligibility.py`. Its completed signoff remains checksum-bound in `GATE_EE/corpus_v1/review_manifests/BATCH_003_HUMAN_FINAL_QA.json`.
+
+Batches 004 and 005 are validated together with `scripts/validate_gate_ee_recovery_batches.py`. `blueprints/GATE_EE_SET_01_CAPACITY_PREFLIGHT.json` proves that their 27 records close the structural Set 01 deficit, but the preflight explicitly selects 27 human-QA-pending records and is not a paper manifest or release authorization.
+
+Reviewers use `output/pdf/GATE_EE_BATCH004_HUMAN_FINAL_QA_MOBILE_FILLABLE.pdf` and `output/pdf/GATE_EE_BATCH005_HUMAN_FINAL_QA_MOBILE_FILLABLE.pdf`. After each form is completed, import it with `scripts/import_gate_ee_recovery_human_qa_pdf.py --batch BATCH_004|BATCH_005 <completed.pdf>` and validate it with `scripts/validate_gate_ee_recovery_human_signoff.py --batch BATCH_004|BATCH_005`. Blank or partially completed forms are rejected.

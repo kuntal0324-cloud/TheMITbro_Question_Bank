@@ -2,10 +2,14 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 from pathlib import Path
 
 
-def render_question(question: dict) -> str:
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def render_question(question: dict, output: Path) -> str:
     answer = question["answer"]
     if isinstance(answer, list):
         answer = ", ".join(answer)
@@ -27,6 +31,18 @@ def render_question(question: dict) -> str:
         for label, value in zip("ABCD", question["options"]):
             lines.append(f"- {label}. {value}")
         lines.append("")
+    diagram = question.get("diagram")
+    if diagram:
+        asset = ROOT / diagram["asset"]
+        relative_asset = Path(os.path.relpath(asset, output.parent)).as_posix()
+        lines.extend([
+            "### Figure",
+            "",
+            f"![{diagram['alt_text']}]({relative_asset})",
+            "",
+            f"*{diagram['caption']}*",
+            "",
+        ])
     lines.extend([
         "### Declared answer",
         "",
@@ -69,7 +85,7 @@ def main() -> int:
         "---",
         "",
     ]
-    body.extend(render_question(question) for question in questions)
+    body.extend(render_question(question, args.output.resolve()) for question in questions)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text("\n".join(body).rstrip() + "\n", encoding="utf-8")
     return 0

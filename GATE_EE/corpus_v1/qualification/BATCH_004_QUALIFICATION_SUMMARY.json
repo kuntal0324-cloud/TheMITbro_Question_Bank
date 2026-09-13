@@ -1,0 +1,36 @@
+{
+  "qualification_version": "1.1.0",
+  "batch_id": "BATCH_004",
+  "domain": "Signals and Systems",
+  "current_stage": "READY_FOR_HUMAN_FINAL_QA",
+  "source_sha256": "0d0eb24d9f82f1f511f8dcb879dd78d5684fa73c444a8319d6bc01bdd7961b66",
+  "formatter_evidence_sha256": "25f128b7778a9504e0ddd76380b91be92fea82511952f400ede72f827b201834",
+  "questions_total": 15,
+  "formatter_v2_qualification": {
+    "status": "PASS",
+    "passed": 15,
+    "review": 0,
+    "invalid": 0,
+    "render_passed": 15
+  },
+  "independent_ai_technical_recomputation": {
+    "status": "PASS",
+    "passed": 15,
+    "evidence_sha256": "103680ad556101ae092de337adeb22ba3e42aabc081ff8451fafded16f65e94b",
+    "human_review_substitute": false
+  },
+  "human_final_qa": {
+    "status": "PENDING",
+    "passed": 0,
+    "revise": 0,
+    "reject": 0
+  },
+  "paper_eligible_count": 0,
+  "release_gate": "BLOCKED_PENDING_HUMAN_FINAL_QA",
+  "next_action": "Complete named human final QA for all 15 checksum-bound Signals and Systems candidates; promote only explicit PASS records.",
+  "remaining_gates": [
+    "Named human final QA",
+    "Paper-eligibility promotion",
+    "Corpus V1 admission"
+  ]
+}
