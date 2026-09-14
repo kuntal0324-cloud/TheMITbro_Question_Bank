@@ -26,6 +26,6 @@ This foundation intentionally does **not** declare the existing pilot questions 
 
 ## Current inventory
 
-As of 2026-09-13, Batches 001, 002 and 003 each contribute 20 checksum-bound, named-human-certified questions. Corpus V1 therefore contains 60 admitted questions: 20 Engineering Mathematics, 20 Electric Circuits and 20 General Aptitude.
+As of 2026-09-14, Batches 001-005 contribute 87 checksum-bound, named-human-certified questions. Corpus V1 contains 20 Engineering Mathematics, 20 Electric Circuits, 20 General Aptitude, 15 Signals and Systems and 12 Electromagnetic Fields records.
 
-Batches 004 and 005 add 27 original, Formatter-passed and independently recomputed candidates: 15 Signals and Systems and 12 Electromagnetic Fields. They remain outside the admitted family registry and have `paper_eligible_count: 0` until named human final QA is completed. The program inventory is 87 candidates / 87 Formatter PASS / 60 paper-eligible and admitted. The Set 01 capacity preflight is structurally complete, but no actual paper manifest or release exists.
+Batches 004 and 005 record 15/15 and 12/12 named-human final-QA PASS. Their certificate-bound records are `PAPER_ELIGIBLE` and admitted to the global family registry. The program inventory is 87 candidates / 87 Formatter PASS / 87 paper-eligible and admitted. The Set 01 capacity preflight selects 65 eligible records and passes every structural constraint, but no actual paper manifest or release exists.

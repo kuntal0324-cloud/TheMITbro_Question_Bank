@@ -1,8 +1,8 @@
 {
-  "registry_version": "1.2.0",
+  "registry_version": "1.3.0",
   "corpus": "GATE_EE_CORPUS_V1",
   "rule": "One family per materially shared construction/reasoning skeleton. Set 01 permits at most one question from each family.",
-  "admitted_question_count": 60,
+  "admitted_question_count": 87,
   "families": [
     {
       "family_id": "EM-LA-EIG-001",
@@ -423,6 +423,195 @@
         "TMB-GATE-EE-GA-020"
       ],
       "admission_batch": "BATCH_003"
+    },
+    {
+      "family_id": "SS-SIG-PERIOD-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-001"
+      ],
+      "admission_batch": "BATCH_004"
+    },
+    {
+      "family_id": "SS-SIG-ENERGY-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-002"
+      ],
+      "admission_batch": "BATCH_004"
+    },
+    {
+      "family_id": "SS-SIG-SYSPROP-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-003"
+      ],
+      "admission_batch": "BATCH_004"
+    },
+    {
+      "family_id": "SS-SIG-TRIENERGY-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-004"
+      ],
+      "admission_batch": "BATCH_004"
+    },
+    {
+      "family_id": "SS-LTI-CONVEXP-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-005"
+      ],
+      "admission_batch": "BATCH_004"
+    },
+    {
+      "family_id": "SS-LTI-EIGEN-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-006"
+      ],
+      "admission_batch": "BATCH_004"
+    },
+    {
+      "family_id": "SS-LTI-DISCCONV-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-007"
+      ],
+      "admission_batch": "BATCH_004"
+    },
+    {
+      "family_id": "SS-FA-TWOLEVEL-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-008"
+      ],
+      "admission_batch": "BATCH_004"
+    },
+    {
+      "family_id": "SS-FA-HARMPOWER-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-009"
+      ],
+      "admission_batch": "BATCH_004"
+    },
+    {
+      "family_id": "SS-LT-ROC-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-010"
+      ],
+      "admission_batch": "BATCH_004"
+    },
+    {
+      "family_id": "SS-LT-FINALVALUE-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-011"
+      ],
+      "admission_batch": "BATCH_004"
+    },
+    {
+      "family_id": "SS-ZT-INVERSE-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-012"
+      ],
+      "admission_batch": "BATCH_004"
+    },
+    {
+      "family_id": "SS-ZT-ROCSTAB-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-013"
+      ],
+      "admission_batch": "BATCH_004"
+    },
+    {
+      "family_id": "SS-SAMP-NYQUIST-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-014"
+      ],
+      "admission_batch": "BATCH_004"
+    },
+    {
+      "family_id": "SS-SAMP-ALIAS-001",
+      "question_ids": [
+        "TMB-GATE-EE-SS-015"
+      ],
+      "admission_batch": "BATCH_004"
+    },
+    {
+      "family_id": "EMFT-ES-GAUSSFLUX-001",
+      "question_ids": [
+        "TMB-GATE-EE-EMFT-001"
+      ],
+      "admission_batch": "BATCH_005"
+    },
+    {
+      "family_id": "EMFT-ES-LINECHARGE-001",
+      "question_ids": [
+        "TMB-GATE-EE-EMFT-002"
+      ],
+      "admission_batch": "BATCH_005"
+    },
+    {
+      "family_id": "EMFT-ES-DIELBOUND-001",
+      "question_ids": [
+        "TMB-GATE-EE-EMFT-003"
+      ],
+      "admission_batch": "BATCH_005"
+    },
+    {
+      "family_id": "EMFT-ES-SPHCAP-001",
+      "question_ids": [
+        "TMB-GATE-EE-EMFT-004"
+      ],
+      "admission_batch": "BATCH_005"
+    },
+    {
+      "family_id": "EMFT-ES-SPHEREPOT-001",
+      "question_ids": [
+        "TMB-GATE-EE-EMFT-005"
+      ],
+      "admission_batch": "BATCH_005"
+    },
+    {
+      "family_id": "EMFT-ES-PARTDIEL-001",
+      "question_ids": [
+        "TMB-GATE-EE-EMFT-006"
+      ],
+      "admission_batch": "BATCH_005"
+    },
+    {
+      "family_id": "EMFT-MS-TWOWIRE-001",
+      "question_ids": [
+        "TMB-GATE-EE-EMFT-007"
+      ],
+      "admission_batch": "BATCH_005"
+    },
+    {
+      "family_id": "EMFT-MS-BOUNDARY-001",
+      "question_ids": [
+        "TMB-GATE-EE-EMFT-008"
+      ],
+      "admission_batch": "BATCH_005"
+    },
+    {
+      "family_id": "EMFT-MC-GAPTOROID-001",
+      "question_ids": [
+        "TMB-GATE-EE-EMFT-009"
+      ],
+      "admission_batch": "BATCH_005"
+    },
+    {
+      "family_id": "EMFT-EI-FARADAY-001",
+      "question_ids": [
+        "TMB-GATE-EE-EMFT-010"
+      ],
+      "admission_batch": "BATCH_005"
+    },
+    {
+      "family_id": "EMFT-EI-MOTIONAL-001",
+      "question_ids": [
+        "TMB-GATE-EE-EMFT-011"
+      ],
+      "admission_batch": "BATCH_005"
+    },
+    {
+      "family_id": "EMFT-EI-SOLENOID-E-001",
+      "question_ids": [
+        "TMB-GATE-EE-EMFT-012"
+      ],
+      "admission_batch": "BATCH_005"
     }
   ]
 }

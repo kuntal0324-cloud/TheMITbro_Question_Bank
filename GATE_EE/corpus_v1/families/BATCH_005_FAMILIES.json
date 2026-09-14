@@ -1,8 +1,8 @@
 {
-  "registry_version": "1.2.0",
+  "registry_version": "1.3.0",
   "batch": "BATCH_005",
   "corpus": "GATE_EE_CORPUS_V1",
-  "admission_status": "NOT_ADMITTED_PENDING_HUMAN_FINAL_QA",
+  "admission_status": "ADMITTED_TO_CORPUS_V1",
   "families": [
     {
       "family_id": "EMFT-ES-GAUSSFLUX-001",

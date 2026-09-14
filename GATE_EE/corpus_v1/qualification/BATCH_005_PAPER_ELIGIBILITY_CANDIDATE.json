@@ -4,7 +4,7 @@
   "domain": "Electromagnetic Fields",
   "source_sha256": "f30c6d8b1a522d75effdc46b147c87a723e57ecc0a43ef74624daa9da25fb89e",
   "paper_eligibility_candidate_count": 12,
-  "paper_eligible_count": 0,
+  "paper_eligible_count": 12,
   "candidate_question_ids": [
     "TMB-GATE-EE-EMFT-001",
     "TMB-GATE-EE-EMFT-002",
@@ -22,7 +22,23 @@
   "prerequisites": {
     "formatter": "12_PASS_0_REVIEW_0_INVALID",
     "independent_ai_recomputation": "12_PASS",
-    "human_final_qa": "PENDING"
+    "human_final_qa": "COMPLETE"
   },
-  "release_gate": "BLOCKED_PENDING_HUMAN_FINAL_QA"
+  "release_gate": "PAPER_ELIGIBILITY_CERTIFIED",
+  "human_final_qa": "COMPLETE",
+  "certified_paper_eligible_question_ids": [
+    "TMB-GATE-EE-EMFT-001",
+    "TMB-GATE-EE-EMFT-002",
+    "TMB-GATE-EE-EMFT-003",
+    "TMB-GATE-EE-EMFT-004",
+    "TMB-GATE-EE-EMFT-005",
+    "TMB-GATE-EE-EMFT-006",
+    "TMB-GATE-EE-EMFT-007",
+    "TMB-GATE-EE-EMFT-008",
+    "TMB-GATE-EE-EMFT-009",
+    "TMB-GATE-EE-EMFT-010",
+    "TMB-GATE-EE-EMFT-011",
+    "TMB-GATE-EE-EMFT-012"
+  ],
+  "human_signoff_sha256": "d3ed54f2dea8850dda44ce782b6e994439921c4b7fdee5b7d9421b1a2af3b531"
 }

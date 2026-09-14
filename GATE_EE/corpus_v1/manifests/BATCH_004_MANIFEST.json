@@ -1,11 +1,11 @@
 {
-  "manifest_version": "1.1.0",
+  "manifest_version": "1.2.0",
   "batch_id": "BATCH_004",
   "corpus": "GATE_EE_CORPUS_V1",
   "domain": "Signals and Systems",
   "question_count": 15,
-  "status": "READY_FOR_HUMAN_FINAL_QA",
-  "paper_eligible_count": 0,
+  "status": "PAPER_ELIGIBILITY_CERTIFIED_AND_ADMITTED",
+  "paper_eligible_count": 15,
   "type_counts": {
     "MCQ": 6,
     "NAT": 6,
@@ -56,5 +56,5 @@
   "jsonl_sha256": "0d0eb24d9f82f1f511f8dcb879dd78d5684fa73c444a8319d6bc01bdd7961b66",
   "formatter_evidence_sha256": "25f128b7778a9504e0ddd76380b91be92fea82511952f400ede72f827b201834",
   "independent_ai_qa_sha256": "103680ad556101ae092de337adeb22ba3e42aabc081ff8451fafded16f65e94b",
-  "qualification_note": "Signals and Systems BATCH_004. Strict Formatter: 15 PASS / 0 REVIEW / 0 invalid. Independent AI technical/answer/solution recomputation: 15/15 PASS and not a human substitute. Named human final QA remains pending; no record is PAPER_ELIGIBLE and no paper is released."
+  "qualification_note": "Signals and Systems BATCH_004. Strict Formatter: 15 PASS / 0 REVIEW / 0 invalid. Independent technical/answer/solution recomputation: 15/15 PASS and not a human substitute. Named human final QA: 15 PASS / 0 REVISE / 0 REJECT. Approved IDs are certificate-bound and admitted to Corpus V1; no complete paper is released."
 }
