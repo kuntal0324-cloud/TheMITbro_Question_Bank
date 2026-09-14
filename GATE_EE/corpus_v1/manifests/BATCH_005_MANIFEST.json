@@ -1,11 +1,11 @@
 {
-  "manifest_version": "1.1.0",
+  "manifest_version": "1.2.0",
   "batch_id": "BATCH_005",
   "corpus": "GATE_EE_CORPUS_V1",
   "domain": "Electromagnetic Fields",
   "question_count": 12,
-  "status": "READY_FOR_HUMAN_FINAL_QA",
-  "paper_eligible_count": 0,
+  "status": "PAPER_ELIGIBILITY_CERTIFIED_AND_ADMITTED",
+  "paper_eligible_count": 12,
   "type_counts": {
     "MCQ": 5,
     "NAT": 5,
@@ -54,5 +54,5 @@
   "jsonl_sha256": "f30c6d8b1a522d75effdc46b147c87a723e57ecc0a43ef74624daa9da25fb89e",
   "formatter_evidence_sha256": "d1ed63b24f739b5df1b81ca035b3b52b5ecee81c56c6b72036143e12ec96dd8b",
   "independent_ai_qa_sha256": "c6d44cc3c8601a2a57402a58f079a563e03b7508f55605d51d8b69e5ef7debe8",
-  "qualification_note": "Electromagnetic Fields BATCH_005. Strict Formatter: 12 PASS / 0 REVIEW / 0 invalid. Independent AI technical/answer/solution recomputation: 12/12 PASS and not a human substitute. Named human final QA remains pending; no record is PAPER_ELIGIBLE and no paper is released."
+  "qualification_note": "Electromagnetic Fields BATCH_005. Strict Formatter: 12 PASS / 0 REVIEW / 0 invalid. Independent technical/answer/solution recomputation: 12/12 PASS and not a human substitute. Named human final QA: 12 PASS / 0 REVISE / 0 REJECT. Approved IDs are certificate-bound and admitted to Corpus V1; no complete paper is released."
 }

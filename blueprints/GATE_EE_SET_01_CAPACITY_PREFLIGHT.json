@@ -1,17 +1,17 @@
 {
   "preflight_contract": "GATE_EE_SET01_STRUCTURAL_CAPACITY_PREFLIGHT_V1",
-  "generated_on": "2026-09-12",
+  "generated_on": "2026-09-14",
   "blueprint": "blueprints/GATE_EE_SET_01_V1.json",
   "blueprint_sha256": "7f73392cd21a77e1d9226724488990864aaf4bb6da57bf48e6bb76224350af84",
-  "status": "STRUCTURALLY_COMPLETE_PENDING_HUMAN_FINAL_QA",
-  "purpose": "Proves that the current 87-candidate pool can satisfy the Set 01 structure after the 27 named-human approvals. It is not a paper manifest or release authorization.",
+  "status": "READY_FOR_CONTROLLED_MANIFEST_ASSEMBLY",
+  "purpose": "Proves that the selected 65 records satisfy the Set 01 structure and are all PAPER_ELIGIBLE. It is not a paper manifest or release authorization.",
   "inventory": {
     "program_candidates": 87,
     "formatter_passed": 87,
-    "human_certified_paper_eligible_admitted": 60,
+    "human_certified_paper_eligible_admitted": 87,
     "selected_in_preflight": 65,
-    "selected_already_paper_eligible": 38,
-    "selected_pending_human_final_qa": 27
+    "selected_already_paper_eligible": 65,
+    "selected_pending_human_final_qa": 0
   },
   "structure": {
     "paper": {
@@ -651,7 +651,7 @@
       "difficulty": "Easy",
       "estimated_time_seconds": 90,
       "visual": false,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     },
     {
       "position": 40,
@@ -666,7 +666,7 @@
       "difficulty": "Easy",
       "estimated_time_seconds": 100,
       "visual": false,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     },
     {
       "position": 41,
@@ -681,7 +681,7 @@
       "difficulty": "Hard",
       "estimated_time_seconds": 180,
       "visual": false,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     },
     {
       "position": 42,
@@ -696,7 +696,7 @@
       "difficulty": "Medium",
       "estimated_time_seconds": 140,
       "visual": true,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     },
     {
       "position": 43,
@@ -711,7 +711,7 @@
       "difficulty": "Medium",
       "estimated_time_seconds": 180,
       "visual": false,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     },
     {
       "position": 44,
@@ -726,7 +726,7 @@
       "difficulty": "Easy",
       "estimated_time_seconds": 100,
       "visual": false,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     },
     {
       "position": 45,
@@ -741,7 +741,7 @@
       "difficulty": "Medium",
       "estimated_time_seconds": 160,
       "visual": false,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     },
     {
       "position": 46,
@@ -756,7 +756,7 @@
       "difficulty": "Medium",
       "estimated_time_seconds": 130,
       "visual": true,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     },
     {
       "position": 47,
@@ -771,7 +771,7 @@
       "difficulty": "Hard",
       "estimated_time_seconds": 210,
       "visual": false,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     },
     {
       "position": 48,
@@ -786,7 +786,7 @@
       "difficulty": "Easy",
       "estimated_time_seconds": 100,
       "visual": false,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     },
     {
       "position": 49,
@@ -801,7 +801,7 @@
       "difficulty": "Medium",
       "estimated_time_seconds": 160,
       "visual": false,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     },
     {
       "position": 50,
@@ -816,7 +816,7 @@
       "difficulty": "Medium",
       "estimated_time_seconds": 130,
       "visual": false,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     },
     {
       "position": 51,
@@ -831,7 +831,7 @@
       "difficulty": "Hard",
       "estimated_time_seconds": 210,
       "visual": false,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     },
     {
       "position": 52,
@@ -846,7 +846,7 @@
       "difficulty": "Medium",
       "estimated_time_seconds": 120,
       "visual": true,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     },
     {
       "position": 53,
@@ -861,7 +861,7 @@
       "difficulty": "Hard",
       "estimated_time_seconds": 180,
       "visual": false,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     },
     {
       "position": 54,
@@ -876,7 +876,7 @@
       "difficulty": "Easy",
       "estimated_time_seconds": 90,
       "visual": false,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     },
     {
       "position": 55,
@@ -891,7 +891,7 @@
       "difficulty": "Easy",
       "estimated_time_seconds": 110,
       "visual": false,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     },
     {
       "position": 56,
@@ -906,7 +906,7 @@
       "difficulty": "Hard",
       "estimated_time_seconds": 210,
       "visual": true,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     },
     {
       "position": 57,
@@ -921,7 +921,7 @@
       "difficulty": "Medium",
       "estimated_time_seconds": 100,
       "visual": false,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     },
     {
       "position": 58,
@@ -936,7 +936,7 @@
       "difficulty": "Medium",
       "estimated_time_seconds": 180,
       "visual": false,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     },
     {
       "position": 59,
@@ -951,7 +951,7 @@
       "difficulty": "Easy",
       "estimated_time_seconds": 100,
       "visual": false,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     },
     {
       "position": 60,
@@ -966,7 +966,7 @@
       "difficulty": "Medium",
       "estimated_time_seconds": 180,
       "visual": true,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     },
     {
       "position": 61,
@@ -981,7 +981,7 @@
       "difficulty": "Medium",
       "estimated_time_seconds": 130,
       "visual": false,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     },
     {
       "position": 62,
@@ -996,7 +996,7 @@
       "difficulty": "Hard",
       "estimated_time_seconds": 220,
       "visual": false,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     },
     {
       "position": 63,
@@ -1011,7 +1011,7 @@
       "difficulty": "Medium",
       "estimated_time_seconds": 100,
       "visual": false,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     },
     {
       "position": 64,
@@ -1026,7 +1026,7 @@
       "difficulty": "Medium",
       "estimated_time_seconds": 180,
       "visual": false,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     },
     {
       "position": 65,
@@ -1041,7 +1041,7 @@
       "difficulty": "Hard",
       "estimated_time_seconds": 210,
       "visual": true,
-      "eligibility_state": "READY_FOR_HUMAN_FINAL_QA"
+      "eligibility_state": "PAPER_ELIGIBLE"
     }
   ],
   "gate_state": {
@@ -1049,11 +1049,11 @@
     "unique_question_ids": "PASS",
     "unique_family_ids": "PASS",
     "formatter_v2": "PASS_65_OF_65",
-    "allowed_status_paper_eligible": "BLOCKED_27_PENDING_HUMAN_FINAL_QA",
+    "allowed_status_paper_eligible": "PASS_65_OF_65",
     "paper_manifest": "NOT_CREATED",
     "final_pdf": "NOT_CREATED",
     "release_authorized": false,
     "sale_authorized": false
   },
-  "remaining_gate": "Named human final QA, paper-eligibility promotion and Corpus V1 admission for all 27 Batch 004/005 records, followed by controlled assembly and final paper QA."
+  "remaining_gate": "Create the immutable Set 01 manifest from these 65 PAPER_ELIGIBLE records, validate the exact blueprint, render the final PDF, and obtain named-human technical and visual QA."
 }

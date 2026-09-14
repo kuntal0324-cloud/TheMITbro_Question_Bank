@@ -48,6 +48,7 @@ jobs:
           python scripts/validate_gate_ee_recovery_batches.py
           python scripts/build_gate_ee_set01_capacity_preflight.py --check
           python scripts/validate_gate_ee_recovery_human_signoff.py
+          python scripts/validate_gate_ee_recovery_paper_eligibility.py
           python scripts/validate_gate_ee_recovery_pdf.py
       - name: Validate eight-day progress ledger
         run: python scripts/validate_gate_ee_eight_day_progress.py

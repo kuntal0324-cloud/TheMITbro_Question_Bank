@@ -1,11 +1,11 @@
 {
   "progress_contract": "GATE_EE_EIGHT_DAY_DRAFT_SPRINT_V1",
-  "as_of": "2026-09-13",
+  "as_of": "2026-09-14",
   "sprint": {
     "start_date": "2026-09-08",
     "planned_end_date": "2026-09-15",
-    "current_day": 6,
-    "state": "DAY_06_IN_PROGRESS",
+    "current_day": 7,
+    "state": "DAY_07_IN_PROGRESS",
     "draft_target": 3575,
     "daily_targets": [
       447,
@@ -86,9 +86,9 @@
     ],
     "unique_candidates": 87,
     "formatter_passed": 87,
-    "human_final_qa_passed": 60,
-    "paper_eligible": 60,
-    "corpus_admitted": 60,
+    "human_final_qa_passed": 87,
+    "paper_eligible": 87,
+    "corpus_admitted": 87,
     "complete_65_question_sets": 0,
     "released_sets": 0
   },
@@ -97,7 +97,7 @@
     "Draft totals are never reported as human-certified or paper-eligible totals.",
     "A commercial set exists only after all 65 selected records and the rendered paper pass every release gate."
   ],
-  "next_gate": "Complete named human final QA for all 27 Batch 004/005 recovery candidates, then promote only explicit PASS records. Structural Set 01 capacity now preflights at 65 questions/100 marks, but assembly and release remain blocked until all selected records are PAPER_ELIGIBLE.",
+  "next_gate": "Assemble the exact Set 01 manifest from the 65 preflight-selected PAPER_ELIGIBLE records, validate the blueprint, render the final PDF, and obtain named-human technical and visual signoff. Release and sale remain blocked.",
   "day_3": {
     "target": 447,
     "drafts_produced": 0,
@@ -181,6 +181,27 @@
       },
       "Control Systems": {
         "target": 178,
+        "produced": 0
+      }
+    },
+    "source_batches": [],
+    "state": "CLOSED_BELOW_TARGET"
+  },
+  "day_7": {
+    "target": 447,
+    "drafts_produced": 0,
+    "remaining": 447,
+    "allocation": {
+      "Control Systems": {
+        "target": 122,
+        "produced": 0
+      },
+      "Electrical and Electronic Measurements": {
+        "target": 180,
+        "produced": 0
+      },
+      "Analog and Digital Electronics": {
+        "target": 145,
         "produced": 0
       }
     },

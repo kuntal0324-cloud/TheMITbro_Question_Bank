@@ -8,145 +8,152 @@
     "independent_ai_recomputation": "12_PASS"
   },
   "reviewer": {
-    "name": "",
-    "role_or_qualification": "",
-    "review_date": "",
-    "attestation": ""
+    "name": "KUNTAL DAS",
+    "role_or_qualification": "Diploma in Electrical Engineering",
+    "review_date": "2026-09-14",
+    "attestation": "I independently reviewed the Batch 005 questions, answers and solutions and approve only the question IDs marked PASS below."
   },
   "required_attestation": "I independently reviewed the Batch 005 questions, answers and solutions and approve only the question IDs marked PASS below.",
-  "final_decision": "PENDING",
+  "final_decision": "APPROVE_REVIEWED_RESULTS",
   "questions": [
     {
       "question_id": "TMB-GATE-EE-EMFT-001",
       "revision": 1,
-      "technical_correctness": "PENDING",
-      "answer_correctness": "PENDING",
-      "solution_correctness": "PENDING",
-      "clarity_ambiguity": "PENDING",
-      "originality_conflict_check": "PENDING",
-      "decision": "PENDING",
-      "notes": ""
+      "technical_correctness": "PASS",
+      "answer_correctness": "PASS",
+      "solution_correctness": "PASS",
+      "clarity_ambiguity": "PASS",
+      "originality_conflict_check": "PASS",
+      "decision": "PASS",
+      "notes": "According to Gauss's Law for electric fields in terms of the electric flux density D, the total outward electric flux through any closed surface is equal to the total free charge enclosed by that surface."
     },
     {
       "question_id": "TMB-GATE-EE-EMFT-002",
       "revision": 1,
-      "technical_correctness": "PENDING",
-      "answer_correctness": "PENDING",
-      "solution_correctness": "PENDING",
-      "clarity_ambiguity": "PENDING",
-      "originality_conflict_check": "PENDING",
-      "decision": "PENDING",
-      "notes": ""
+      "technical_correctness": "PASS",
+      "answer_correctness": "PASS",
+      "solution_correctness": "PASS",
+      "clarity_ambiguity": "PASS",
+      "originality_conflict_check": "PASS",
+      "decision": "PASS",
+      "notes": "The electric field (E) of an infinite line charge decreases inversely with distance (r), yielding 10 kV/m for this configuration."
     },
     {
       "question_id": "TMB-GATE-EE-EMFT-003",
       "revision": 1,
-      "technical_correctness": "PENDING",
-      "answer_correctness": "PENDING",
-      "solution_correctness": "PENDING",
-      "clarity_ambiguity": "PENDING",
-      "originality_conflict_check": "PENDING",
-      "decision": "PENDING",
-      "notes": ""
+      "technical_correctness": "PASS",
+      "answer_correctness": "PASS",
+      "solution_correctness": "PASS",
+      "clarity_ambiguity": "PASS",
+      "originality_conflict_check": "PASS",
+      "decision": "PASS",
+      "notes": "At a charge-free dielectric boundary, tangential E and normal D are continuous. Hence the normal electric field in medium 2 is 1.2 V/m and its tangential component is 4 V/m."
     },
     {
       "question_id": "TMB-GATE-EE-EMFT-004",
       "revision": 1,
-      "technical_correctness": "PENDING",
-      "answer_correctness": "PENDING",
-      "solution_correctness": "PENDING",
-      "clarity_ambiguity": "PENDING",
-      "originality_conflict_check": "PENDING",
-      "decision": "PENDING",
-      "notes": ""
+      "technical_correctness": "PASS",
+      "answer_correctness": "PASS",
+      "solution_correctness": "PASS",
+      "clarity_ambiguity": "PASS",
+      "originality_conflict_check": "PASS",
+      "decision": "PASS",
+      "notes": "Integrating the radial electric field between radii a and b gives C = 4 pi epsilon a b / (b - a), so option B is correct."
     },
     {
       "question_id": "TMB-GATE-EE-EMFT-005",
       "revision": 1,
-      "technical_correctness": "PENDING",
-      "answer_correctness": "PENDING",
-      "solution_correctness": "PENDING",
-      "clarity_ambiguity": "PENDING",
-      "originality_conflict_check": "PENDING",
-      "decision": "PENDING",
-      "notes": ""
+      "technical_correctness": "PASS",
+      "answer_correctness": "PASS",
+      "solution_correctness": "PASS",
+      "clarity_ambiguity": "PASS",
+      "originality_conflict_check": "PASS",
+      "decision": "PASS",
+      "notes": "For a uniformly charged solid sphere, the centre-to-surface potential difference is Q / (8 pi epsilon0 R). Substitution gives 359.5 V."
     },
     {
       "question_id": "TMB-GATE-EE-EMFT-006",
       "revision": 1,
-      "technical_correctness": "PENDING",
-      "answer_correctness": "PENDING",
-      "solution_correctness": "PENDING",
-      "clarity_ambiguity": "PENDING",
-      "originality_conflict_check": "PENDING",
-      "decision": "PENDING",
-      "notes": ""
+      "technical_correctness": "PASS",
+      "answer_correctness": "PASS",
+      "solution_correctness": "PASS",
+      "clarity_ambiguity": "PASS",
+      "originality_conflict_check": "PASS",
+      "decision": "PASS",
+      "notes": "When a parallel-plate capacitor is divided sideways, it forms a parallel combination, causing the ratio of capacitances to equal the average of the relative permittivities of the two halves, which is (3 + 1) / 2 = 2"
     },
     {
       "question_id": "TMB-GATE-EE-EMFT-007",
       "revision": 1,
-      "technical_correctness": "PENDING",
-      "answer_correctness": "PENDING",
-      "solution_correctness": "PENDING",
-      "clarity_ambiguity": "PENDING",
-      "originality_conflict_check": "PENDING",
-      "decision": "PENDING",
-      "notes": ""
+      "technical_correctness": "PASS",
+      "answer_correctness": "PASS",
+      "solution_correctness": "PASS",
+      "clarity_ambiguity": "PASS",
+      "originality_conflict_check": "PASS",
+      "decision": "PASS",
+      "notes": "The magnetic fields from both wires point in the same direction at the midpoint, adding up to a total magnetic-flux-density of 30 \u00b5T"
     },
     {
       "question_id": "TMB-GATE-EE-EMFT-008",
       "revision": 1,
-      "technical_correctness": "PENDING",
-      "answer_correctness": "PENDING",
-      "solution_correctness": "PENDING",
-      "clarity_ambiguity": "PENDING",
-      "originality_conflict_check": "PENDING",
-      "decision": "PENDING",
-      "notes": ""
+      "technical_correctness": "PASS",
+      "answer_correctness": "PASS",
+      "solution_correctness": "PASS",
+      "clarity_ambiguity": "PASS",
+      "originality_conflict_check": "PASS",
+      "decision": "PASS",
+      "notes": "Without magnetic monopoles, normal B remains continuous, while tangential H becomes discontinuous due to free surface currents."
     },
     {
       "question_id": "TMB-GATE-EE-EMFT-009",
       "revision": 1,
-      "technical_correctness": "PENDING",
-      "answer_correctness": "PENDING",
-      "solution_correctness": "PENDING",
-      "clarity_ambiguity": "PENDING",
-      "originality_conflict_check": "PENDING",
-      "decision": "PENDING",
-      "notes": ""
+      "technical_correctness": "PASS",
+      "answer_correctness": "PASS",
+      "solution_correctness": "PASS",
+      "clarity_ambiguity": "PASS",
+      "originality_conflict_check": "PASS",
+      "decision": "PASS",
+      "notes": "The flux density is calculated by dividing total magnetomotive force by total reluctance per unit area."
     },
     {
       "question_id": "TMB-GATE-EE-EMFT-010",
       "revision": 1,
-      "technical_correctness": "PENDING",
-      "answer_correctness": "PENDING",
-      "solution_correctness": "PENDING",
-      "clarity_ambiguity": "PENDING",
-      "originality_conflict_check": "PENDING",
-      "decision": "PENDING",
-      "notes": ""
+      "technical_correctness": "PASS",
+      "answer_correctness": "PASS",
+      "solution_correctness": "PASS",
+      "clarity_ambiguity": "PASS",
+      "originality_conflict_check": "PASS",
+      "decision": "PASS",
+      "notes": "Induced emf is the time derivative of the magnetic flux, which yields 6 mV at t = 0.5 s by differentiating \u03a6(t) = 4t^2 + 2t"
     },
     {
       "question_id": "TMB-GATE-EE-EMFT-011",
       "revision": 1,
-      "technical_correctness": "PENDING",
-      "answer_correctness": "PENDING",
-      "solution_correctness": "PENDING",
-      "clarity_ambiguity": "PENDING",
-      "originality_conflict_check": "PENDING",
-      "decision": "PENDING",
-      "notes": ""
+      "technical_correctness": "PASS",
+      "answer_correctness": "PASS",
+      "solution_correctness": "PASS",
+      "clarity_ambiguity": "PASS",
+      "originality_conflict_check": "PASS",
+      "decision": "PASS",
+      "notes": "The external force required to maintain constant speed is 320 millinewtons, balancing the backward magnetic force \nF = ILB"
     },
     {
       "question_id": "TMB-GATE-EE-EMFT-012",
       "revision": 1,
-      "technical_correctness": "PENDING",
-      "answer_correctness": "PENDING",
-      "solution_correctness": "PENDING",
-      "clarity_ambiguity": "PENDING",
-      "originality_conflict_check": "PENDING",
-      "decision": "PENDING",
-      "notes": ""
+      "technical_correctness": "PASS",
+      "answer_correctness": "PASS",
+      "solution_correctness": "PASS",
+      "clarity_ambiguity": "PASS",
+      "originality_conflict_check": "PASS",
+      "decision": "PASS",
+      "notes": "The induced electric field E outside a solenoid depends entirely on the changing magnetic flux within its inner cross-section and decreases inversely with distance r."
     }
-  ]
+  ],
+  "pdf_evidence": {
+    "filename": "GATE_EE_BATCH005_HUMAN_FINAL_QA_MOBILE_FILLABLE(1)(2).pdf",
+    "sha256": "dfe7bc900f7878e7cd9eee00a349c199e78af57de947e03f9479d220a486fd7f",
+    "format": "XELATEX_ACROFORM_V2",
+    "reviewer_signature": "Kuntal Das",
+    "final_comments": ""
+  }
 }

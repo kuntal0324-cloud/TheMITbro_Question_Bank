@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the checksum-bound, pre-human lifecycle for Batches 004 and 005."""
+"""Validate checksum-bound source and lifecycle state for Batches 004 and 005."""
 
 from __future__ import annotations
 
@@ -68,7 +68,7 @@ def validate_answer(question: dict, errors: list[str]) -> None:
             errors.append(f"{qid}: control character inside inline math")
 
 
-def validate_batch(batch: RecoveryBatch, admitted_families: set[str]) -> list[str]:
+def validate_batch(batch: RecoveryBatch, global_rows: list[dict]) -> list[str]:
     errors: list[str] = []
     questions = load_questions(batch)
     source_sha = sha256(batch.source)
@@ -130,9 +130,14 @@ def validate_batch(batch: RecoveryBatch, admitted_families: set[str]) -> list[st
         errors.append(f"expected {batch.expected_count} questions, found {len(questions)}")
     if len(ids) != len(set(ids)) or len(families) != len(set(families)):
         errors.append("question IDs and families must be unique inside the batch")
-    collision = admitted_families.intersection(families)
+    other_admitted_families = {
+        row.get("family_id")
+        for row in global_rows
+        if row.get("admission_batch") != batch.batch_id
+    }
+    collision = other_admitted_families.intersection(families)
     if collision:
-        errors.append(f"pending families collide with admitted registry: {sorted(collision)}")
+        errors.append(f"families collide with another admitted batch: {sorted(collision)}")
     if Counter(q["marks"] for q in questions) != Counter({1: batch.expected_one_mark, 2: batch.expected_two_mark}):
         errors.append("one-mark/two-mark composition mismatch")
     if len(diagrams) != batch.expected_visual:
@@ -150,8 +155,23 @@ def validate_batch(batch: RecoveryBatch, admitted_families: set[str]) -> list[st
             errors.append(f"manifest {key} mismatch")
     if manifest.get("jsonl_sha256") != source_sha or manifest.get("question_count") != len(questions):
         errors.append("manifest source checksum/count mismatch")
-    if manifest.get("status") != "READY_FOR_HUMAN_FINAL_QA" or manifest.get("paper_eligible_count") != 0:
-        errors.append("manifest lifecycle state is not safely pre-human")
+    stage = summary.get("current_stage")
+    if stage not in {"READY_FOR_HUMAN_FINAL_QA", "PAPER_ELIGIBILITY_CERTIFIED"}:
+        errors.append(f"unsupported qualification lifecycle stage: {stage!r}")
+    certified = stage == "PAPER_ELIGIBILITY_CERTIFIED"
+    expected_manifest_status = (
+        "PAPER_ELIGIBILITY_CERTIFIED_AND_ADMITTED"
+        if certified else "READY_FOR_HUMAN_FINAL_QA"
+    )
+    expected_eligible = (
+        sum(row.get("decision") == "PASS" for row in human.get("questions", []))
+        if certified else 0
+    )
+    if (
+        manifest.get("status") != expected_manifest_status
+        or manifest.get("paper_eligible_count") != expected_eligible
+    ):
+        errors.append("manifest lifecycle state mismatch")
     if manifest.get("formatter_evidence_sha256") != sha256(batch.formatter_evidence):
         errors.append("manifest Formatter evidence checksum mismatch")
     if manifest.get("independent_ai_qa_sha256") != sha256(batch.independent_qa):
@@ -177,8 +197,12 @@ def validate_batch(batch: RecoveryBatch, admitted_families: set[str]) -> list[st
     for question in questions:
         if family_map.get(question["family_id"]) != [question["id"]]:
             errors.append(f"{question['id']}: family mapping mismatch")
-    if family_file.get("admission_status") != "NOT_ADMITTED_PENDING_HUMAN_FINAL_QA":
-        errors.append("pending family file has an unsafe admission state")
+    expected_family_status = (
+        "ADMITTED_TO_CORPUS_V1"
+        if certified else "NOT_ADMITTED_PENDING_HUMAN_FINAL_QA"
+    )
+    if family_file.get("admission_status") != expected_family_status:
+        errors.append("batch-family lifecycle state mismatch")
 
     strict_tuple = (
         formatter.get("status"), formatter.get("source_sha256"),
@@ -218,21 +242,45 @@ def validate_batch(batch: RecoveryBatch, admitted_families: set[str]) -> list[st
         if row.get("recomputed_answer") != question["answer"]:
             errors.append(f"{question['id']}: committed recomputation mismatch")
 
-    if summary.get("current_stage") != "READY_FOR_HUMAN_FINAL_QA" or summary.get("paper_eligible_count") != 0:
+    if summary.get("paper_eligible_count") != expected_eligible:
         errors.append("qualification summary lifecycle mismatch")
-    if candidate.get("candidate_question_ids") != ids or candidate.get("paper_eligible_count") != 0:
+    if (
+        candidate.get("candidate_question_ids") != ids
+        or candidate.get("paper_eligible_count") != expected_eligible
+    ):
         errors.append("paper-eligibility candidate artifact mismatch")
-    if human.get("final_decision") != "PENDING" or human.get("required_attestation") != batch.attestation:
-        errors.append("human-QA template is not clean and pending")
+    if human.get("required_attestation") != batch.attestation:
+        errors.append("human-QA attestation contract mismatch")
     reviewer = human.get("reviewer", {})
-    if any(str(reviewer.get(k, "")).strip() for k in ("name", "role_or_qualification", "review_date", "attestation")):
-        errors.append("pending human-QA template contains reviewer data")
+    if certified:
+        if human.get("final_decision") != "APPROVE_REVIEWED_RESULTS":
+            errors.append("certified lifecycle requires completed human approval")
+        if not all(
+            str(reviewer.get(k, "")).strip()
+            for k in ("name", "role_or_qualification", "review_date", "attestation")
+        ):
+            errors.append("certified lifecycle has incomplete reviewer data")
+    else:
+        if human.get("final_decision") not in {"PENDING", "APPROVE_REVIEWED_RESULTS"}:
+            errors.append("pre-promotion human-QA decision is invalid")
+        if human.get("final_decision") == "PENDING" and any(
+            str(reviewer.get(k, "")).strip()
+            for k in ("name", "role_or_qualification", "review_date", "attestation")
+        ):
+            errors.append("pending human-QA template contains reviewer data")
     human_rows = human.get("questions", [])
     if [row.get("question_id") for row in human_rows] != ids:
         errors.append("human-QA template IDs mismatch")
     for row in human_rows:
-        if row.get("decision") != "PENDING" or any(row.get(field) != "PENDING" for field in CHECK_FIELDS):
-            errors.append(f"{row.get('question_id', '?')}: human-QA template contains a premature decision")
+        if certified or human.get("final_decision") == "APPROVE_REVIEWED_RESULTS":
+            if row.get("decision") not in {"PASS", "REVISE", "REJECT"}:
+                errors.append(f"{row.get('question_id', '?')}: completed human decision is invalid")
+            if any(row.get(field) not in {"PASS", "FAIL"} for field in CHECK_FIELDS):
+                errors.append(f"{row.get('question_id', '?')}: completed human checks are invalid")
+        elif row.get("decision") != "PENDING" or any(
+            row.get(field) != "PENDING" for field in CHECK_FIELDS
+        ):
+            errors.append(f"{row.get('question_id', '?')}: pending template contains a partial decision")
 
     markdown = batch.markdown.read_text(encoding="utf-8")
     if any(markdown.count(qid) != 1 for qid in ids):
@@ -242,10 +290,10 @@ def validate_batch(batch: RecoveryBatch, admitted_families: set[str]) -> list[st
 
 def main() -> int:
     global_registry = load(BASE / "families/FAMILY_REGISTRY.json")
-    admitted_families = {row.get("family_id") for row in global_registry.get("families", [])}
+    global_rows = global_registry.get("families", [])
     errors: list[str] = []
     for batch in BATCHES.values():
-        errors.extend(f"{batch.batch_id}: {error}" for error in validate_batch(batch, admitted_families))
+        errors.extend(f"{batch.batch_id}: {error}" for error in validate_batch(batch, global_rows))
 
     questions = [q for batch in BATCHES.values() for q in load_questions(batch)]
     if len(questions) != 27 or Counter(q["marks"] for q in questions) != Counter({1: 14, 2: 13}):
@@ -261,7 +309,15 @@ def main() -> int:
     print("Batch 004: 15 Formatter PASS / 0 REVIEW / 0 invalid")
     print("Batch 005: 12 Formatter PASS / 0 REVIEW / 0 invalid")
     print("Combined: 27 candidates / 40 marks / 6 checksum-bound SVGs")
-    print("Paper-eligible: 0 | human final QA: PENDING | release gate: BLOCKED")
+    certified_count = sum(
+        load(batch.candidate).get("paper_eligible_count", 0)
+        for batch in BATCHES.values()
+    )
+    human_state = "COMPLETE" if certified_count == 27 else "PENDING_OR_READY"
+    print(
+        f"Paper-eligible: {certified_count} | human final QA: {human_state} | "
+        "release gate: BLOCKED"
+    )
     return 0
 
 

@@ -14,7 +14,6 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "GATE_EE/corpus_v1"
 BLUEPRINT = ROOT / "blueprints/GATE_EE_SET_01_V1.json"
 OUTPUT = ROOT / "blueprints/GATE_EE_SET_01_CAPACITY_PREFLIGHT.json"
-BUILD_DATE = "2026-09-12"
 
 SOURCES = {
     "BATCH_001": BASE / "source_batches/BATCH_001_ENGINEERING_MATHEMATICS.jsonl",
@@ -48,6 +47,7 @@ def load_jsonl(path: Path) -> list[dict]:
 def build() -> dict:
     blueprint = json.loads(BLUEPRINT.read_text(encoding="utf-8"))
     registry = json.loads((BASE / "families/FAMILY_REGISTRY.json").read_text(encoding="utf-8"))
+    progress = json.loads((BASE / "production/EIGHT_DAY_PROGRESS.json").read_text(encoding="utf-8"))
     admitted_ids = {
         qid
         for family in registry.get("families", [])
@@ -97,18 +97,41 @@ def build() -> dict:
     core_rows = [row for row in rows if row["subject"] == "Electrical Engineering"]
     eligible = [row for row in rows if row["eligibility_state"] == "PAPER_ELIGIBLE"]
     pending = [row for row in rows if row["eligibility_state"] == "READY_FOR_HUMAN_FINAL_QA"]
+    all_eligible = not pending
+    status = (
+        "READY_FOR_CONTROLLED_MANIFEST_ASSEMBLY"
+        if all_eligible else "STRUCTURALLY_COMPLETE_PENDING_HUMAN_FINAL_QA"
+    )
+    purpose = (
+        "Proves that the selected 65 records satisfy the Set 01 structure and are all "
+        "PAPER_ELIGIBLE. It is not a paper manifest or release authorization."
+        if all_eligible else
+        "Proves that the current candidate pool can satisfy the Set 01 structure after "
+        "the remaining named-human approvals. It is not a paper manifest or release authorization."
+    )
+    eligibility_gate = (
+        "PASS_65_OF_65"
+        if all_eligible else f"BLOCKED_{len(pending)}_PENDING_HUMAN_FINAL_QA"
+    )
+    remaining_gate = (
+        "Create the immutable Set 01 manifest from these 65 PAPER_ELIGIBLE records, validate "
+        "the exact blueprint, render the final PDF, and obtain named-human technical and visual QA."
+        if all_eligible else
+        "Complete named human final QA, paper-eligibility promotion and Corpus V1 admission "
+        "for every pending record, followed by controlled assembly and final paper QA."
+    )
 
     payload = {
         "preflight_contract": "GATE_EE_SET01_STRUCTURAL_CAPACITY_PREFLIGHT_V1",
-        "generated_on": BUILD_DATE,
+        "generated_on": progress["as_of"],
         "blueprint": str(BLUEPRINT.relative_to(ROOT)),
         "blueprint_sha256": sha256(BLUEPRINT),
-        "status": "STRUCTURALLY_COMPLETE_PENDING_HUMAN_FINAL_QA",
-        "purpose": "Proves that the current 87-candidate pool can satisfy the Set 01 structure after the 27 named-human approvals. It is not a paper manifest or release authorization.",
+        "status": status,
+        "purpose": purpose,
         "inventory": {
-            "program_candidates": 87,
-            "formatter_passed": 87,
-            "human_certified_paper_eligible_admitted": 60,
+            "program_candidates": progress["program_inventory"]["unique_candidates"],
+            "formatter_passed": progress["program_inventory"]["formatter_passed"],
+            "human_certified_paper_eligible_admitted": registry["admitted_question_count"],
             "selected_in_preflight": len(rows),
             "selected_already_paper_eligible": len(eligible),
             "selected_pending_human_final_qa": len(pending),
@@ -134,13 +157,13 @@ def build() -> dict:
             "unique_question_ids": "PASS",
             "unique_family_ids": "PASS",
             "formatter_v2": "PASS_65_OF_65",
-            "allowed_status_paper_eligible": "BLOCKED_27_PENDING_HUMAN_FINAL_QA",
+            "allowed_status_paper_eligible": eligibility_gate,
             "paper_manifest": "NOT_CREATED",
             "final_pdf": "NOT_CREATED",
             "release_authorized": False,
             "sale_authorized": False,
         },
-        "remaining_gate": "Named human final QA, paper-eligibility promotion and Corpus V1 admission for all 27 Batch 004/005 records, followed by controlled assembly and final paper QA.",
+        "remaining_gate": remaining_gate,
     }
 
     # Evaluate the machine-checkable structural constraints while building.
@@ -162,9 +185,12 @@ def build() -> dict:
     assert balance["estimated_time_seconds"]["min"] <= payload["balance"]["estimated_time_seconds"] <= balance["estimated_time_seconds"]["max"]
     assert len({row["question_id"] for row in rows}) == len(rows)
     assert len({row["family_id"] for row in rows}) == len(rows)
-    assert len(pending) == 27 and len(eligible) == 38
     assert all(row["batch_id"] in {"BATCH_004", "BATCH_005"} for row in pending)
-    assert all(row["batch_id"] in {"BATCH_001", "BATCH_002", "BATCH_003"} for row in eligible)
+    assert len(pending) + len(eligible) == 65
+    if all_eligible:
+        assert len(eligible) == 65
+    else:
+        assert all(row["batch_id"] in {"BATCH_001", "BATCH_002", "BATCH_003"} for row in eligible)
     for batch_id, source in SOURCES.items():
         formatter_path = BASE / "qualification" / f"{batch_id}_FORMATTER_FINAL_EVIDENCE.json"
         formatter = json.loads(formatter_path.read_text(encoding="utf-8"))
@@ -182,7 +208,8 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
-    serialized = json.dumps(build(), indent=2, ensure_ascii=False) + "\n"
+    build_payload = build()
+    serialized = json.dumps(build_payload, indent=2, ensure_ascii=False) + "\n"
     if args.check:
         if not OUTPUT.exists() or OUTPUT.read_text(encoding="utf-8") != serialized:
             raise SystemExit("Set 01 capacity preflight is stale")
@@ -191,8 +218,13 @@ def main() -> int:
         print(f"Wrote {OUTPUT}")
     print("GATE EE SET 01 CAPACITY PREFLIGHT: PASSED")
     print("65 questions / 100 marks / 180-minute blueprint")
-    print("Selected: 38 PAPER_ELIGIBLE + 27 PENDING_HUMAN_FINAL_QA")
-    print("Paper/release creation: BLOCKED")
+    print(
+        f"Selected: {len([row for row in build_payload['selection'] if row['eligibility_state'] == 'PAPER_ELIGIBLE'])} "
+        "PAPER_ELIGIBLE + "
+        f"{len([row for row in build_payload['selection'] if row['eligibility_state'] != 'PAPER_ELIGIBLE'])} "
+        "PENDING_HUMAN_FINAL_QA"
+    )
+    print("Paper manifest/release: NOT CREATED / BLOCKED")
     return 0
 
 
