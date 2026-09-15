@@ -232,7 +232,7 @@ def main() -> int:
     if all(state == "CERTIFIED" for _, state, _ in results):
         print("GATE EE BATCHES 004-005 PAPER-ELIGIBILITY CERTIFICATION: PASSED")
         print(f"Corpus V1 admitted total: {registry['admitted_question_count']}")
-        print("Paper release gate: BLOCKED (manifest and final paper QA pending)")
+        print("Paper release gate: BLOCKED (complete-paper human QA and release certification pending)")
     return 0
 
 

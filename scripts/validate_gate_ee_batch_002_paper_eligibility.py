@@ -185,7 +185,7 @@ def main() -> int:
         print("BATCH 002 PAPER-ELIGIBILITY CERTIFICATION: PASSED")
         print(f"Certified paper-eligible: {len(approved)}")
         print("Corpus V1 admission manifest: PASSED")
-        print("Paper release gate: BLOCKED (no complete blueprint)")
+        print("Paper release gate: BLOCKED (complete-paper human QA and release certification pending)")
     return 0
 
 

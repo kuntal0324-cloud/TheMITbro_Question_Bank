@@ -106,6 +106,6 @@ print("Unique IDs/families: PASSED")
 print("Formatter v2.0 handoff checksum: PASSED")
 print(f"Paper-eligible: {summary.get('paper_eligible_count', 0)}")
 if stage == "PAPER_ELIGIBILITY_CERTIFIED":
-    print("Next gate: Corpus V1 admission and production planning")
+    print("Next gate: complete-paper QA and separate release certification")
 else:
     print("Next gate: named human technical and final review")

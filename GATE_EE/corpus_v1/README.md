@@ -28,4 +28,6 @@ This foundation intentionally does **not** declare the existing pilot questions 
 
 As of 2026-09-14, Batches 001-005 contribute 87 checksum-bound, named-human-certified questions. Corpus V1 contains 20 Engineering Mathematics, 20 Electric Circuits, 20 General Aptitude, 15 Signals and Systems and 12 Electromagnetic Fields records.
 
-Batches 004 and 005 record 15/15 and 12/12 named-human final-QA PASS. Their certificate-bound records are `PAPER_ELIGIBLE` and admitted to the global family registry. The program inventory is 87 candidates / 87 Formatter PASS / 87 paper-eligible and admitted. The Set 01 capacity preflight selects 65 eligible records and passes every structural constraint, but no actual paper manifest or release exists.
+Batches 004 and 005 record 15/15 and 12/12 named-human final-QA PASS. Their certificate-bound records are `PAPER_ELIGIBLE` and admitted to the global family registry. The program inventory is 87 candidates / 87 Formatter PASS / 87 paper-eligible and admitted.
+
+The Set 01 review manifest now freezes the exact 65 eligible revisions and passes every structural, balance, source, family and evidence-binding constraint. Deterministic review-only question and solution PDFs plus a 465-widget whole-paper QA form are committed under `output/pdf/`. They do not constitute a complete or released paper: named-human complete-paper QA, reviewer-metadata reconfirmation and a separate release certificate remain outstanding.

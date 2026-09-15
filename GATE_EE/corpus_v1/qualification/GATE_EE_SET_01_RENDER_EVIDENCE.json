@@ -1,0 +1,58 @@
+{
+  "render_evidence_contract": "GATE_EE_SET01_REVIEW_RENDER_EVIDENCE_V1",
+  "paper_id": "GATE_2027_EE_SET_01",
+  "rendered_on": "2026-09-14",
+  "manifest": {
+    "path": "GATE_EE/corpus_v1/paper_manifests/GATE_EE_SET_01_V1.json",
+    "file_sha256": "66c07b363788e76872a62642585946639a96c9f75f4cae242513e2b315c19924",
+    "content_sha256": "0a5a9c14cdca6c92db41317239a36afe73da6efda2b5ae642625649a94b03cc8"
+  },
+  "formatter_handoff": {
+    "path": "GATE_EE/corpus_v1/formatter_handoff/GATE_EE_SET_01_V1_FORMATTER_HANDOFF.json",
+    "file_sha256": "76aa106f6489a6de09d5cea87c65253ef5000b702e5c025b712b5c31da9c49ea",
+    "content_sha256": "429a79bfc3d7f215fe838a5da79f14df8b143863dc98258d1540f2422da8ed4e"
+  },
+  "renderer": {
+    "contract": "XELATEX_CANONICAL_MATH_WITH_CHECKSUM_BOUND_SVG_ASSETS_V1",
+    "pandoc": "pandoc 3.1.3",
+    "xelatex": "XeTeX 3.141592653-2.6-0.999995 (TeX Live 2023/Debian)",
+    "source_date_epoch": "1789344000",
+    "math_font": "Latin Modern Math"
+  },
+  "artifacts": {
+    "question_pdf": {
+      "path": "output/pdf/GATE_EE_SET_01_QUESTION_PAPER_REVIEW.pdf",
+      "sha256": "97e6c26a9ad0e7638aac19053252c830b2406ed6ff70f7eeddee7f1af1701655",
+      "bytes": 307952,
+      "pages": 18,
+      "producer": "xdvipdfmx (20220710)"
+    },
+    "solution_pdf": {
+      "path": "output/pdf/GATE_EE_SET_01_SOLUTIONS_REVIEW.pdf",
+      "sha256": "a3847bfd1d5a490ae65bf8e110a1965e4f0649f187dde00d0fea9a0325a7798a",
+      "bytes": 342192,
+      "pages": 23,
+      "producer": "xdvipdfmx (20220710)"
+    },
+    "human_qa_pdf": {
+      "path": "output/pdf/GATE_EE_SET_01_HUMAN_FINAL_QA_MOBILE_FILLABLE.pdf",
+      "sha256": "c30fa91c5305e8f2d3072afab3fd29e418e767b5dcbdc17d7d3a72435bb1beee",
+      "bytes": 295503,
+      "pages": 15,
+      "producer": "ReportLab PDF Library - (opensource)"
+    },
+    "human_qa_json": {
+      "path": "GATE_EE/corpus_v1/review_manifests/GATE_EE_SET_01_HUMAN_FINAL_QA.json",
+      "sha256": "f6dcddf3bbd5890ae2f47b6a3deef3fb40640cc830cfff62cc71de83670b154a",
+      "bytes": 21625
+    }
+  },
+  "gate_state": {
+    "manifest_validation": "PASS",
+    "render_validation": "PENDING_INDEPENDENT_VALIDATOR",
+    "complete_paper_human_qa": "PENDING",
+    "release_authorized": false,
+    "sale_authorized": false
+  },
+  "evidence_content_sha256": "2b6ce680df3adb534e24e36389a67096f958db0ebe0138a251edc930d50d0f91"
+}

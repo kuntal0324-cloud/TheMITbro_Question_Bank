@@ -224,7 +224,7 @@ def main() -> int:
         f"{len([row for row in build_payload['selection'] if row['eligibility_state'] != 'PAPER_ELIGIBLE'])} "
         "PENDING_HUMAN_FINAL_QA"
     )
-    print("Paper manifest/release: NOT CREATED / BLOCKED")
+    print("Capacity preflight release authorization: NONE (manifest and paper-QA gates are separate)")
     return 0
 
 
