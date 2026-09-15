@@ -25,7 +25,9 @@ The current mathematics pool contains only four one-mark questions. Therefore a 
 1. **Complete:** named human final QA for Batches 004 and 005 using the checksum-bound fillable PDFs.
 2. **Complete:** promote and admit only explicit PASS records; all 27 records passed.
 3. **Complete:** re-run the capacity preflight; all 65 selected records are admitted and eligible.
-4. Select the exact 65-question manifest from paper-eligible records and validate every question, mark, type, difficulty, family, visual and timing constraint.
-5. Render the paper, complete final human technical and visual QA, then integrate the immutable manifest-backed release with the website.
+4. **Complete:** select the exact 65-question immutable review manifest and validate every question, mark, type, difficulty, family, visual, timing and evidence-binding constraint.
+5. **Complete:** render and mechanically validate the checksum-bound review question paper, paired solutions and mobile-fillable 65-question QA form.
+6. **Current gate:** obtain named-human complete-paper technical and visual QA, including explicit reviewer-qualification metadata reconfirmation.
+7. Resolve any returned items and repeat rendering/whole-paper QA as necessary; only an all-PASS result may advance to separate release certification and website integration.
 
 This is a first-paper recovery lane. It does not replace the larger 50-set production contract.

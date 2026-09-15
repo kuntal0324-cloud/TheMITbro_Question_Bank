@@ -97,7 +97,20 @@
     "Draft totals are never reported as human-certified or paper-eligible totals.",
     "A commercial set exists only after all 65 selected records and the rendered paper pass every release gate."
   ],
-  "next_gate": "Assemble the exact Set 01 manifest from the 65 preflight-selected PAPER_ELIGIBLE records, validate the blueprint, render the final PDF, and obtain named-human technical and visual signoff. Release and sale remain blocked.",
+  "set_01_review_checkpoint": {
+    "paper_id": "GATE_2027_EE_SET_01",
+    "status": "AWAITING_NAMED_HUMAN_COMPLETE_PAPER_QA",
+    "manifest_content_sha256": "0a5a9c14cdca6c92db41317239a36afe73da6efda2b5ae642625649a94b03cc8",
+    "formatter_handoff_content_sha256": "429a79bfc3d7f215fe838a5da79f14df8b143863dc98258d1540f2422da8ed4e",
+    "question_pdf_sha256": "97e6c26a9ad0e7638aac19053252c830b2406ed6ff70f7eeddee7f1af1701655",
+    "solution_pdf_sha256": "a3847bfd1d5a490ae65bf8e110a1965e4f0649f187dde00d0fea9a0325a7798a",
+    "human_qa_template_pdf_sha256": "c30fa91c5305e8f2d3072afab3fd29e418e767b5dcbdc17d7d3a72435bb1beee",
+    "complete_paper_human_qa": "PENDING",
+    "reviewer_metadata_reconfirmation": "REQUIRED",
+    "release_authorized": false,
+    "sale_authorized": false
+  },
+  "next_gate": "Complete the checksum-bound Set 01 whole-paper human QA form, reconfirm accurate reviewer metadata, import and validate the signoff, and resolve every non-PASS item before separate release certification. Release and sale remain blocked.",
   "day_3": {
     "target": 447,
     "drafts_produced": 0,

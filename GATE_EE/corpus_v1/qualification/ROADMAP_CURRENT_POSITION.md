@@ -6,9 +6,9 @@
 
 **Qualification checkpoint:** Batches 001–005 are checksum-bound, named-human-certified, paper-eligible and admitted to Corpus V1.
 
-**Set 01 checkpoint:** the capacity preflight selects 65 `PAPER_ELIGIBLE` records and passes the 65-question / 100-mark / 180-minute structure. It is not yet an immutable paper manifest.
+**Set 01 checkpoint:** the exact 65 `PAPER_ELIGIBLE` revisions are frozen in an immutable review manifest. The 65-question / 100-mark / 180-minute structure, 15/13/72 mark split, balance ranges and every source/evidence checksum pass. Review-only question, solution and fillable whole-paper QA PDFs have been rendered and validated.
 
-**Release checkpoint:** blocked; no complete final paper PDF has received named-human technical and visual signoff.
+**Release checkpoint:** blocked; the complete rendered paper has not received named-human technical and visual signoff. Historical reviewer-qualification metadata also requires explicit reconfirmation before release certification.
 
 Batch 001 contributes 20 Engineering Mathematics records, Batch 002 contributes 20 Electric Circuits records and Batch 003 contributes 20 General Aptitude records.
 
@@ -38,10 +38,11 @@ The original schedule has not been reset. Its accumulated shortfall remains visi
 
 ## Exact next gates
 
-1. Convert the exact 65-record capacity-preflight selection into an immutable Set 01 manifest using only `PAPER_ELIGIBLE` revisions and one question per family.
-2. Validate the manifest against the official 65-question, 100-mark, 180-minute pattern; the 15/13/72 mark split; question-type, difficulty, visual and timing ranges; and all source/evidence checksums.
-3. Render the final Set 01 question paper and solution PDF from the validated manifest.
-4. Obtain named-human final technical and visual QA for the complete rendered paper.
-5. Only after those gates pass may the immutable manifest-backed artifact be integrated with the website. No sale or release is currently authorized.
+1. **Complete:** freeze the exact 65-record selection in an immutable review manifest using only `PAPER_ELIGIBLE` revisions and one question per family.
+2. **Complete:** validate the official structure, 15/13/72 mark split, balance ranges and every source/evidence checksum.
+3. **Complete:** deterministically render and mechanically validate the review question paper, paired solutions and blank whole-paper QA form.
+4. Have a named reviewer complete the exact checksum-bound form, including the reviewer-qualification metadata reconfirmation, and import it without altering the issued PDFs.
+5. Resolve every `REVISE` or `REJECT`, rerender if needed, and repeat complete-paper QA until all 65 positions pass.
+6. Only then create a separate immutable release certificate and integrate the certified artifacts with the website. No sale or release is currently authorized.
 
 The authoring lane remains behind the larger 3,575-draft / 50-set contract and must continue independently of this first-paper recovery lane. The authoritative machine-readable counter is `production/EIGHT_DAY_PROGRESS.json`.
