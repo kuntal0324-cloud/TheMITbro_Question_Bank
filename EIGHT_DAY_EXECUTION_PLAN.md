@@ -37,7 +37,7 @@ At 447 candidates per day, the human-review load is substantial. A credible eigh
 
 ## Live contract position
 
-The execution clock starts on **2026-09-08** and ends on **2026-09-15** (eight inclusive calendar days). The calendar position is **Day 7 in progress** as of **2026-09-14**. Earlier ledgers are recorded checkpoints, not permission to pause or reset the fixed clock.
+The execution clock ran from **2026-09-08** through **2026-09-15** (eight inclusive calendar days). The sprint is closed; it was not reset or extended.
 
 - New sprint drafts: **67 / 3,575** (Batches 002–005).
 - Day 1 closed at **20 / 447**; the Day-1 shortfall carried forward is 427 drafts.
@@ -45,12 +45,13 @@ The execution clock starts on **2026-09-08** and ends on **2026-09-15** (eight i
 - Days 3 and 4 closed at **0 / 447** each.
 - Day 5 closed at **27 / 447**: 15 Signals and Systems plus 12 Electromagnetic Fields candidates carried forward from the Day-4 allocation. The original Day-5 Electrical Machines and Power Systems allocation remains unfilled.
 - Day 6 closed at **0 / 447**; its Power Systems and Control Systems allocation remains unfilled.
-- Day-7 progress is **0 / 447**; its Control Systems, Measurements and Analog/Digital Electronics allocation is unfilled.
+- Day 7 closed at **0 / 447**; its Control Systems, Measurements and Analog/Digital Electronics allocation is unfilled.
+- Day 8 closed at **0 / 446**; its Analog/Digital Electronics, Power Electronics, GA, Engineering Mathematics and Electric Circuits allocation is unfilled.
 - Opening inventory, excluded from Day-1 output: **20** Batch 001 Engineering Mathematics records.
 - Current program inventory: **87** unique candidates; **87** Formatter-passed.
 - Human-certified, paper-eligible and admitted inventory is **87**. Batches 004 and 005 add 27 checksum-bound records with 27/27 named-human final-QA PASS.
-- Complete/released papers: **0 / 50**.
+- Complete/released papers: **1 / 0**. Set 01 passed whole-paper QA and has a validated RC1 learner candidate; exact-artifact release authorization is pending.
 
-The original 3,575-draft target is therefore **behind schedule**, not cancelled or silently reset. The first-paper structural and eligibility deficits are closed: a deterministic preflight selects 65 `PAPER_ELIGIBLE` records and satisfies 65 questions, 100 marks, the 15/13/72 section-mark split and all balance ranges. It is still not a paper manifest. The immediate gate is immutable Set 01 manifest assembly, final rendering and named-human paper-level technical and visual QA.
+The original 3,575-draft target therefore closed **3,508 drafts short**. The first-paper structural, eligibility and whole-paper-QA deficits are closed. The immediate gate is checksum-bound authorization of the exact RC1 learner artifacts; release, pricing, storefront activation and sale remain blocked.
 
 `GATE_EE/corpus_v1/production/EIGHT_DAY_PROGRESS.json` is the validated source of truth. It must be updated in the same change as every new source batch or certification event.

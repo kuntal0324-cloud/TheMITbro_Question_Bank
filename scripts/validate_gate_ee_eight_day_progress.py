@@ -6,6 +6,20 @@ import json
 from pathlib import Path
 import re
 
+from gate_ee_set01 import (
+    COMPLETED_SIGNOFF,
+    FORMATTER_RELEASE_EVIDENCE,
+    HUMAN_QA,
+    RELEASE_AUTHORIZATION_PDF,
+    RELEASE_CANDIDATE,
+    RELEASE_LEARNER_PACK_PDF,
+    RELEASE_QUESTION_PDF,
+    RELEASE_SOLUTION_PDF,
+    content_sha256,
+    sha256,
+)
+from validate_gate_ee_set01_human_signoff import validate_completed_signoff
+
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "GATE_EE/corpus_v1"
@@ -144,8 +158,53 @@ if opening.get("human_final_qa_passed") != opening_eligible:
     errors.append("opening human-final-QA PASS count mismatch")
 if program.get("human_final_qa_passed") != program_eligible:
     errors.append("program human-final-QA PASS count mismatch")
-if program.get("complete_65_question_sets") != 0 or program.get("released_sets") != 0:
-    errors.append("no complete or released set may be claimed at the current inventory")
+complete_sets = 0
+if COMPLETED_SIGNOFF.is_file():
+    completed_payload = load(COMPLETED_SIGNOFF)
+    signoff_errors, all_pass = validate_completed_signoff(completed_payload, load(HUMAN_QA))
+    if signoff_errors:
+        errors.extend(f"Set 01 completed signoff: {error}" for error in signoff_errors)
+    elif all_pass:
+        complete_sets = 1
+if program.get("complete_65_question_sets") != complete_sets:
+    errors.append("complete 65-question set count does not match the completed whole-paper signoff")
+if program.get("released_sets") != 0:
+    errors.append("no released set may be claimed before a promoted release manifest exists")
+
+checkpoint = ledger.get("set_01_review_checkpoint", {})
+if complete_sets:
+    if checkpoint.get("complete_paper_human_qa") != "PASSED_65_OF_65":
+        errors.append("Set 01 ledger checkpoint does not record the completed 65/65 human-QA PASS")
+    if checkpoint.get("reviewer_metadata_reconfirmation") != "RESOLVED":
+        errors.append("Set 01 reviewer metadata resolution is not recorded")
+    formatter = load(FORMATTER_RELEASE_EVIDENCE)
+    candidate = load(RELEASE_CANDIDATE)
+    hash_bindings = {
+        "completed_human_qa_json_sha256": sha256(COMPLETED_SIGNOFF),
+        "completed_human_qa_content_sha256": completed_payload.get("signoff_content_sha256"),
+        "completed_human_qa_pdf_sha256": completed_payload.get("completed_pdf", {}).get("sha256"),
+        "formatter_release_evidence_sha256": sha256(FORMATTER_RELEASE_EVIDENCE),
+        "formatter_release_evidence_content_sha256": formatter.get("evidence_content_sha256"),
+        "release_candidate_manifest_sha256": sha256(RELEASE_CANDIDATE),
+        "release_candidate_content_sha256": candidate.get("candidate_content_sha256"),
+        "release_question_pdf_sha256": sha256(RELEASE_QUESTION_PDF),
+        "release_solution_pdf_sha256": sha256(RELEASE_SOLUTION_PDF),
+        "release_learner_pack_pdf_sha256": sha256(RELEASE_LEARNER_PACK_PDF),
+        "release_authorization_template_pdf_sha256": sha256(RELEASE_AUTHORIZATION_PDF),
+    }
+    for field, expected in hash_bindings.items():
+        if checkpoint.get(field) != expected:
+            errors.append(f"Set 01 ledger checkpoint {field} mismatch")
+    if formatter.get("evidence_content_sha256") != content_sha256(formatter, "evidence_content_sha256"):
+        errors.append("Set 01 Formatter release evidence self-hash is invalid")
+    if candidate.get("candidate_content_sha256") != content_sha256(candidate, "candidate_content_sha256"):
+        errors.append("Set 01 release candidate self-hash is invalid")
+    if checkpoint.get("release_candidate") != "RC1_VALIDATED":
+        errors.append("Set 01 RC1 validation state is not recorded")
+    if checkpoint.get("exact_artifact_release_authorization") != "PENDING":
+        errors.append("Set 01 exact-artifact authorization must remain pending at this checkpoint")
+    if checkpoint.get("release_authorized") is not False or checkpoint.get("sale_authorized") is not False:
+        errors.append("Set 01 ledger checkpoint improperly authorizes release or sale")
 if not str(ledger.get("next_gate", "")).strip(): errors.append("next gate is missing")
 
 if errors:
@@ -160,4 +219,4 @@ print(f"Eight-day sprint drafts: {sprint_count}/{sprint['draft_target']} ({sprin
 print(f"Program candidates: {program_count}")
 print(f"Formatter-passed: {sum(formatter_passed[batch] for batch in program_batches)}")
 print(f"Paper-eligible/admitted: {program_eligible}/{program_admitted}")
-print("Complete/released sets: 0/0")
+print(f"Complete/released sets: {complete_sets}/{program['released_sets']}")
