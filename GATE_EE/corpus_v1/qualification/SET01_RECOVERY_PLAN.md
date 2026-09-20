@@ -1,4 +1,4 @@
-# Set 01 Recovery Plan — Day 7 Certification Checkpoint
+# Set 01 Recovery Plan — RC1 Authorization Checkpoint
 
 ## Purpose
 
@@ -10,7 +10,7 @@ This plan accelerates the first valid paper without changing the eight-day 3,575
 - 20 admitted Electric Circuits questions.
 - 20 admitted General Aptitude questions.
 - 15 admitted Signals and Systems and 12 admitted Electromagnetic Fields questions with strict Formatter, independent-recomputation and named-human final-QA PASS.
-- 0 complete or released papers.
+- 1 complete whole-paper-QA-approved paper; 0 released papers.
 
 ## Why raw inventory count is insufficient
 
@@ -27,7 +27,8 @@ The current mathematics pool contains only four one-mark questions. Therefore a 
 3. **Complete:** re-run the capacity preflight; all 65 selected records are admitted and eligible.
 4. **Complete:** select the exact 65-question immutable review manifest and validate every question, mark, type, difficulty, family, visual, timing and evidence-binding constraint.
 5. **Complete:** render and mechanically validate the checksum-bound review question paper, paired solutions and mobile-fillable 65-question QA form.
-6. **Current gate:** obtain named-human complete-paper technical and visual QA, including explicit reviewer-qualification metadata reconfirmation.
-7. Resolve any returned items and repeat rendering/whole-paper QA as necessary; only an all-PASS result may advance to separate release certification and website integration.
+6. **Complete:** named-human complete-paper technical and visual QA; all 65 positions passed and the reviewer-qualification metadata inconsistency was explicitly resolved.
+7. **Complete:** aggregate all 65 Formatter results, render clean learner-facing RC1 question/solution/combined-pack PDFs, remove internal review markings, and validate exact checksums and page concatenation.
+8. **Current gate:** complete and import the RC1 exact-artifact release-authorization form. A later promotion must separately create the immutable release manifest, set the price and activate storefront delivery.
 
 This is a first-paper recovery lane. It does not replace the larger 50-set production contract.

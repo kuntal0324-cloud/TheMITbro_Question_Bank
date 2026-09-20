@@ -55,7 +55,11 @@ jobs:
           python scripts/build_gate_ee_set01_manifest.py --check
           python scripts/validate_gate_ee_set01_manifest.py
           python scripts/validate_gate_ee_set01_review_artifacts.py
-          python scripts/validate_gate_ee_set01_human_signoff.py
+          python scripts/validate_gate_ee_set01_human_signoff.py --require-complete
+      - name: Validate Set 01 learner release candidate
+        run: |
+          python scripts/validate_gate_ee_set01_release_candidate.py
+          python scripts/validate_gate_ee_set01_release_authorization.py
       - name: Validate eight-day progress ledger
         run: python scripts/validate_gate_ee_eight_day_progress.py
       - name: Reject whitespace errors

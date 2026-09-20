@@ -250,12 +250,19 @@ def solution_markdown(handoff: dict, manifest_hash: str, diagrams: dict[str, Pat
     return "\n".join(body).rstrip() + "\n"
 
 
-def run_pandoc(markdown: str, output: Path, staging: Path, stem: str) -> None:
+def run_pandoc(
+    markdown: str,
+    output: Path,
+    staging: Path,
+    stem: str,
+    *,
+    source_date_epoch: str = FIXED_SOURCE_DATE_EPOCH,
+) -> None:
     source = staging / f"{stem}.md"
     tex = staging / f"{stem}.tex"
     source.write_text(markdown, encoding="utf-8")
     env = os.environ.copy()
-    env.update({"SOURCE_DATE_EPOCH": FIXED_SOURCE_DATE_EPOCH, "TZ": "UTC"})
+    env.update({"SOURCE_DATE_EPOCH": source_date_epoch, "TZ": "UTC"})
     pandoc_command = [
         "pandoc", str(source), "--from=markdown+raw_tex+tex_math_dollars+link_attributes",
         "--standalone", "--metadata=linkcolor:themitblue", "--output", str(tex),

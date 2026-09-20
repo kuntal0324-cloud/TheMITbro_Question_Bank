@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "GATE_EE/corpus_v1"
 BLUEPRINT = ROOT / "blueprints/GATE_EE_SET_01_V1.json"
 OUTPUT = ROOT / "blueprints/GATE_EE_SET_01_CAPACITY_PREFLIGHT.json"
+PREFLIGHT_GENERATED_ON = "2026-09-14"
 
 SOURCES = {
     "BATCH_001": BASE / "source_batches/BATCH_001_ENGINEERING_MATHEMATICS.jsonl",
@@ -123,7 +124,9 @@ def build() -> dict:
 
     payload = {
         "preflight_contract": "GATE_EE_SET01_STRUCTURAL_CAPACITY_PREFLIGHT_V1",
-        "generated_on": progress["as_of"],
+        # This is an immutable selection checkpoint.  Do not bind its hash to
+        # the mutable sprint ledger date after the checkpoint has been signed.
+        "generated_on": PREFLIGHT_GENERATED_ON,
         "blueprint": str(BLUEPRINT.relative_to(ROOT)),
         "blueprint_sha256": sha256(BLUEPRINT),
         "status": status,
