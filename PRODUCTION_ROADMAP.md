@@ -27,4 +27,4 @@
 ## Eight-day boundary
 The 3,575-question quota equals about 447 candidates per day. That is a draft-generation target, not a truthful solo-review target. For a fast public launch, release the first few fully reviewed sets while the remaining draft pool continues through QA. Claiming 50 commercial-grade sets after automated generation alone would be dishonest and risky.
 
-The fixed 2026-09-08 through 2026-09-15 sprint closed at 67/3,575 new drafts. Set 01 is the only complete 65-question paper and has a validated clean RC1 candidate; it is not released until the exact-artifact authorization and later storefront promotion gates pass.
+The fixed 2026-09-08 through 2026-09-15 sprint closed at 67/3,575 new drafts. Set 01 is the only complete 65-question paper. Its clean RC1 artifacts have exact-artifact release authorization, but it is not commercially released until an explicit price, separate sale authorization, immutable commercial manifest, storefront promotion and controlled payment/download test all pass.

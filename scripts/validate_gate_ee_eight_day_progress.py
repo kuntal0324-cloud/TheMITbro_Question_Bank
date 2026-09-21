@@ -11,6 +11,8 @@ from gate_ee_set01 import (
     FORMATTER_RELEASE_EVIDENCE,
     HUMAN_QA,
     RELEASE_AUTHORIZATION_PDF,
+    RELEASE_AUTHORIZATION_COMPLETED,
+    RELEASE_AUTHORIZATION_COMPLETED_PDF,
     RELEASE_CANDIDATE,
     RELEASE_LEARNER_PACK_PDF,
     RELEASE_QUESTION_PDF,
@@ -73,7 +75,11 @@ try:
     end = date.fromisoformat(sprint.get("planned_end_date", ""))
     as_of = date.fromisoformat(ledger.get("as_of", ""))
     if end != start + timedelta(days=7): errors.append("planned end must be the eighth inclusive calendar day")
-    if current_day in range(1, 9) and as_of != start + timedelta(days=current_day - 1):
+    expected_day = start + timedelta(days=current_day - 1)
+    if str(sprint.get("state", "")).startswith("SPRINT_CLOSED"):
+        if as_of < end:
+            errors.append("a closed sprint ledger cannot predate its planned end")
+    elif current_day in range(1, 9) and as_of != expected_day:
         errors.append("current_day does not match the ledger as_of date")
 except ValueError:
     errors.append("invalid sprint calendar date")
@@ -179,6 +185,11 @@ if complete_sets:
         errors.append("Set 01 reviewer metadata resolution is not recorded")
     formatter = load(FORMATTER_RELEASE_EVIDENCE)
     candidate = load(RELEASE_CANDIDATE)
+    if not RELEASE_AUTHORIZATION_COMPLETED.is_file():
+        errors.append("Set 01 completed release authorization record is missing")
+        authorization = {}
+    else:
+        authorization = load(RELEASE_AUTHORIZATION_COMPLETED)
     hash_bindings = {
         "completed_human_qa_json_sha256": sha256(COMPLETED_SIGNOFF),
         "completed_human_qa_content_sha256": completed_payload.get("signoff_content_sha256"),
@@ -191,6 +202,15 @@ if complete_sets:
         "release_solution_pdf_sha256": sha256(RELEASE_SOLUTION_PDF),
         "release_learner_pack_pdf_sha256": sha256(RELEASE_LEARNER_PACK_PDF),
         "release_authorization_template_pdf_sha256": sha256(RELEASE_AUTHORIZATION_PDF),
+        "release_authorization_json_file_sha256": (
+            sha256(RELEASE_AUTHORIZATION_COMPLETED)
+            if RELEASE_AUTHORIZATION_COMPLETED.is_file() else None
+        ),
+        "release_authorization_content_sha256": authorization.get("authorization_content_sha256"),
+        "release_authorization_completed_pdf_sha256": (
+            sha256(RELEASE_AUTHORIZATION_COMPLETED_PDF)
+            if RELEASE_AUTHORIZATION_COMPLETED_PDF.is_file() else None
+        ),
     }
     for field, expected in hash_bindings.items():
         if checkpoint.get(field) != expected:
@@ -199,12 +219,48 @@ if complete_sets:
         errors.append("Set 01 Formatter release evidence self-hash is invalid")
     if candidate.get("candidate_content_sha256") != content_sha256(candidate, "candidate_content_sha256"):
         errors.append("Set 01 release candidate self-hash is invalid")
+    if authorization:
+        if authorization.get("authorization_content_sha256") != content_sha256(
+            authorization, "authorization_content_sha256"
+        ):
+            errors.append("Set 01 release authorization self-hash is invalid")
+        if (
+            authorization.get("candidate_id") != candidate.get("candidate_id")
+            or authorization.get("paper_id") != candidate.get("paper_id")
+            or authorization.get("candidate_content_sha256") != candidate.get("candidate_content_sha256")
+        ):
+            errors.append("Set 01 release authorization/candidate binding mismatch")
+        for key in ("question_pdf", "solution_pdf", "learner_pack_pdf"):
+            expected_artifact = {
+                "path": candidate.get("artifacts", {}).get(key, {}).get("path"),
+                "sha256": candidate.get("artifacts", {}).get(key, {}).get("sha256"),
+            }
+            if authorization.get("authorized_artifacts", {}).get(key) != expected_artifact:
+                errors.append(f"Set 01 release authorization {key} binding mismatch")
+        if authorization.get("completed_pdf", {}).get("sha256") != (
+            sha256(RELEASE_AUTHORIZATION_COMPLETED_PDF)
+            if RELEASE_AUTHORIZATION_COMPLETED_PDF.is_file() else None
+        ):
+            errors.append("Set 01 completed release-authorization PDF checksum mismatch")
+        if (
+            authorization.get("status") != "EXACT_ARTIFACT_RELEASE_AUTHORIZED"
+            or authorization.get("release_authorized") is not True
+        ):
+            errors.append("Set 01 release authorization is not complete")
+        for field in ("price_set", "storefront_activated", "sale_authorized"):
+            if authorization.get(field) is not False:
+                errors.append(f"Set 01 authorization improperly sets {field}")
     if checkpoint.get("release_candidate") != "RC1_VALIDATED":
         errors.append("Set 01 RC1 validation state is not recorded")
-    if checkpoint.get("exact_artifact_release_authorization") != "PENDING":
-        errors.append("Set 01 exact-artifact authorization must remain pending at this checkpoint")
-    if checkpoint.get("release_authorized") is not False or checkpoint.get("sale_authorized") is not False:
-        errors.append("Set 01 ledger checkpoint improperly authorizes release or sale")
+    if checkpoint.get("status") != "RELEASE_AUTHORIZED_AWAITING_PRICING_AND_STOREFRONT":
+        errors.append("Set 01 post-authorization checkpoint status is invalid")
+    if checkpoint.get("exact_artifact_release_authorization") != "PASSED":
+        errors.append("Set 01 exact-artifact authorization PASS is not recorded")
+    if checkpoint.get("release_authorized") is not True:
+        errors.append("Set 01 ledger checkpoint does not record release authorization")
+    for field in ("price_set", "storefront_activated", "sale_authorized"):
+        if checkpoint.get(field) is not False:
+            errors.append(f"Set 01 ledger checkpoint improperly sets {field}")
 if not str(ledger.get("next_gate", "")).strip(): errors.append("next gate is missing")
 
 if errors:
@@ -220,3 +276,5 @@ print(f"Program candidates: {program_count}")
 print(f"Formatter-passed: {sum(formatter_passed[batch] for batch in program_batches)}")
 print(f"Paper-eligible/admitted: {program_eligible}/{program_admitted}")
 print(f"Complete/released sets: {complete_sets}/{program['released_sets']}")
+print(f"Set 01 exact-artifact authorization: {checkpoint.get('exact_artifact_release_authorization', 'NOT_RECORDED')}")
+print("Commercial release: BLOCKED pending pricing, sale and storefront authorization")

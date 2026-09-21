@@ -50,8 +50,8 @@ The execution clock ran from **2026-09-08** through **2026-09-15** (eight inclus
 - Opening inventory, excluded from Day-1 output: **20** Batch 001 Engineering Mathematics records.
 - Current program inventory: **87** unique candidates; **87** Formatter-passed.
 - Human-certified, paper-eligible and admitted inventory is **87**. Batches 004 and 005 add 27 checksum-bound records with 27/27 named-human final-QA PASS.
-- Complete/released papers: **1 / 0**. Set 01 passed whole-paper QA and has a validated RC1 learner candidate; exact-artifact release authorization is pending.
+- Complete/released papers: **1 / 0**. Set 01 passed whole-paper QA, Formatter release qualification and exact-artifact RC1 release authorization; pricing, commercial sale authorization and storefront activation remain pending.
 
-The original 3,575-draft target therefore closed **3,508 drafts short**. The first-paper structural, eligibility and whole-paper-QA deficits are closed. The immediate gate is checksum-bound authorization of the exact RC1 learner artifacts; release, pricing, storefront activation and sale remain blocked.
+The original 3,575-draft target therefore closed **3,508 drafts short**. The first-paper structural, eligibility, whole-paper-QA and exact-artifact authorization deficits are closed. The immediate gate is a separate explicit commercial decision covering price, sale authorization and storefront activation, followed by immutable release-manifest promotion and controlled payment/download testing.
 
 `GATE_EE/corpus_v1/production/EIGHT_DAY_PROGRESS.json` is the validated source of truth. It must be updated in the same change as every new source batch or certification event.
