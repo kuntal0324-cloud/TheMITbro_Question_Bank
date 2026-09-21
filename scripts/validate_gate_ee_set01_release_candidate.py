@@ -201,7 +201,8 @@ def main() -> int:
     print("GATE EE SET 01 RELEASE CANDIDATE VALIDATION: PASSED")
     print(f"Question/Solution/Learner-pack pages: {len(question_reader.pages)}/{len(solution_reader.pages)}/{len(pack_reader.pages)}")
     print("Learner-copy hygiene, embedded math font, exact concatenation and blank 14-field authorization form: PASSED")
-    print("Release authorization: PENDING; sale and storefront activation: BLOCKED")
+    print("Immutable candidate record: PRE-AUTHORIZATION; validate the separate completed authorization for current state.")
+    print("Sale and storefront activation: BLOCKED")
     return 0
 
 

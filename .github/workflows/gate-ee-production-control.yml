@@ -59,7 +59,7 @@ jobs:
       - name: Validate Set 01 learner release candidate
         run: |
           python scripts/validate_gate_ee_set01_release_candidate.py
-          python scripts/validate_gate_ee_set01_release_authorization.py
+          python scripts/validate_gate_ee_set01_release_authorization.py --require-complete
       - name: Validate eight-day progress ledger
         run: python scripts/validate_gate_ee_eight_day_progress.py
       - name: Reject whitespace errors

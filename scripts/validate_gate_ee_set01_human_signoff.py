@@ -151,7 +151,7 @@ def main() -> int:
     if all_pass:
         print("GATE EE SET 01 HUMAN-QA SIGNOFF: PASSED")
         print("65/65 complete-paper decisions: PASS")
-        print("Release and sale gates remain BLOCKED pending separate release certification.")
+        print("This human-QA record alone does not authorize release or sale; validate later gates separately.")
         return 0
     print("GATE EE SET 01 HUMAN-QA SIGNOFF: VALID RETURN FOR REVISION")
     print("Release and sale gates: BLOCKED")

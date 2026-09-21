@@ -18,8 +18,9 @@ def main() -> int:
     print(f"Formatter handoff: {handoff['handoff_content_sha256']}")
     print("Exact blueprint, source, evidence, eligibility and admission bindings: PASSED")
     if manifest["reviewer_metadata_consistency"]["status"] != "CONSISTENT":
-        print("Reviewer qualification metadata: RECONFIRMATION REQUIRED BEFORE RELEASE")
-    print("Release and sale gates: BLOCKED")
+        print("Immutable manifest history: reviewer qualification reconfirmation was required.")
+        print("Validate the completed human-QA record for the resolved current state.")
+    print("This review manifest alone does not authorize release or sale.")
     return 0
 
 

@@ -1,6 +1,6 @@
 {
   "progress_contract": "GATE_EE_EIGHT_DAY_DRAFT_SPRINT_V1",
-  "as_of": "2026-09-15",
+  "as_of": "2026-09-21",
   "sprint": {
     "start_date": "2026-09-08",
     "planned_end_date": "2026-09-15",
@@ -99,7 +99,7 @@
   ],
   "set_01_review_checkpoint": {
     "paper_id": "GATE_2027_EE_SET_01",
-    "status": "RELEASE_CANDIDATE_AWAITING_EXACT_ARTIFACT_AUTHORIZATION",
+    "status": "RELEASE_AUTHORIZED_AWAITING_PRICING_AND_STOREFRONT",
     "manifest_content_sha256": "0a5a9c14cdca6c92db41317239a36afe73da6efda2b5ae642625649a94b03cc8",
     "formatter_handoff_content_sha256": "429a79bfc3d7f215fe838a5da79f14df8b143863dc98258d1540f2422da8ed4e",
     "question_pdf_sha256": "97e6c26a9ad0e7638aac19053252c830b2406ed6ff70f7eeddee7f1af1701655",
@@ -116,14 +116,19 @@
     "release_solution_pdf_sha256": "8ba106686bbb7b405de96dfb9ab6308bdf4e93b958882cafb67360a7fb4e1f19",
     "release_learner_pack_pdf_sha256": "f6526a7ed7a16e12339f12206a8ca4ec88c5177f159f9a276ef3f2ef4298be58",
     "release_authorization_template_pdf_sha256": "a907ead03a603a358bfd62ee1bc4620d2a6ad887ab0c47e8f936e18b480b53f3",
+    "release_authorization_json_file_sha256": "68b4c5f41c3d832123dd18946c8d8ae55319fc1f5af6928f554f931b836402bd",
+    "release_authorization_content_sha256": "5b3a1adebf05b47d78012fe90ca328d1a20073dfaa64cd37debeabc10bb130b9",
+    "release_authorization_completed_pdf_sha256": "9f9551f861b512457d13dc0c3e971e1f33826fe798a4e2bb73aac719157188ad",
     "complete_paper_human_qa": "PASSED_65_OF_65",
     "reviewer_metadata_reconfirmation": "RESOLVED",
     "release_candidate": "RC1_VALIDATED",
-    "exact_artifact_release_authorization": "PENDING",
-    "release_authorized": false,
+    "exact_artifact_release_authorization": "PASSED",
+    "release_authorized": true,
+    "price_set": false,
+    "storefront_activated": false,
     "sale_authorized": false
   },
-  "next_gate": "Complete and import the checksum-bound Set 01 RC1 exact-artifact release-authorization form. Only after that may a release manifest be promoted and a price/storefront change be proposed. Sale remains blocked.",
+  "next_gate": "Obtain an explicit INR price and separate commercial sale/storefront authorization, then promote an immutable commercial release manifest, stage only the authorized learner pack and run controlled Razorpay payment/download tests. Sale remains blocked until every commercial gate passes.",
   "day_3": {
     "target": 447,
     "drafts_produced": 0,
